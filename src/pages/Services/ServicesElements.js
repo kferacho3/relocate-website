@@ -122,6 +122,7 @@ export const ServicesLogoWrap = styled.div`
     margin-left: 50%;
     transform: translateX(-50%);
     zoom: 0.7;
+    margin-top: -50px;
 
 `
 export const ServicesDeco1 = styled.img`
@@ -263,17 +264,20 @@ export const Heading = styled.h1`
     height: 31px;
     margin-left: 50%;
     transform: translateX(-50%);
-
+    white-space: nowrap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 50px;
     /* or 94% */
 
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
 
     color: #000000;
 
@@ -286,7 +290,8 @@ export const Subtitle = styled.p`
     
     width: 449px;
     height: 122px;
-    margin-top: -10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
     

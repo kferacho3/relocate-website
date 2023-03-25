@@ -110,7 +110,7 @@ export const service4 = {
 
 export const service5 = {
     id: 'overnight',
-    lightBg: false,
+    lightBg: true,
     lightText: false,
     lightTextDesc: true,
     topLine: '',
@@ -158,7 +158,7 @@ export const service6 = {
 
 export const service7 = {
     id: 'storage',
-    lightBg: false,
+    lightBg: true,
     lightText: false,
     lightTextDesc: true,
     topLine: '',
@@ -187,7 +187,7 @@ export const service8 = {
     lightTextDesc: true,
     topLine: '',
     headline: 'TV Mounting',
-    description: '',
+    description: 'Simple jobs such as T.V. mounting can be done by our Handy-man! We also mount speakers, frames, or anything that would require brackets to support various furniture.',
     imgStart: false,
     divStart: false,
     shadow: true,

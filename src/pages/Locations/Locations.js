@@ -20,7 +20,7 @@ function NewlineText(props) {
   const text = props.text;
   return text.split('\n').map(str => <p>{str}</p>);
 }
-const Locations = ({lightBg, id, imgStart, lightText,  img,darkText, description,
+const Locations = ({lightBg, id, imgStart, lightText, topLine, img,darkText, description,
    alt, headline}) => {
 
   return (
@@ -35,8 +35,8 @@ const Locations = ({lightBg, id, imgStart, lightText,  img,darkText, description
 
                     <Column1  >
                       <TextWrapper>
-                            <TopLine lightText={lightText}>{lightText}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
+                            <TopLine lightText={lightText}>{topLine}</TopLine>
                             <Subtitle darkText={darkText} ><NewlineText text ={description}/></Subtitle>
                     
                             

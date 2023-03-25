@@ -40,7 +40,7 @@ function NewlineText(props) {
   const text = props.text;
   return text.split('\n').map(str => <p>{str}</p>);
 }
-const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, description, headLine, alt}) => {
+const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, description, headline, alt}) => {
 
   return (
       
@@ -62,7 +62,7 @@ const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, 
                       <ServicesLogo src={logo.default}/>
                   </ServicesLogoWrap>
                   <ServicesDeco2 src={deco2}/>
-                  <Heading>{headLine}</Heading>
+                  <Heading>{headline}</Heading>
                   <TextWrapper>
                       
                       <Subtitle darkText={darkText} class='font2'><NewlineText text ={description}/></Subtitle> 

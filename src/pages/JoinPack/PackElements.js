@@ -158,7 +158,7 @@ export const PackLogo = styled.img`
 `
 export const PackName = styled.img`
     width: 100%;
-    margin: 0 0 10px 0;
+    margin: 0 0 80px 0;
     padding-right: 0;
 `
 
@@ -167,7 +167,7 @@ export const PackTextContainer = styled.div`
     width: 662px;
     height: 377px;
     left: 757px;
-    top: 496px;
+    margin-bottom: -125px;
     overflow: hidden;
     background: linear-gradient(180deg, #C3F8D1 0%, #67DD68 28.65%, #38D538 63.54%, #00BB01 99.99%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);

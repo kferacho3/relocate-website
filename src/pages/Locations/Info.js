@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { LocationsInfoSection, LocationsInfoBg, LocationsInfoWrapper, LocationsInfoRow,
          LocationsInfoHeader, LocationsInfoTextSection, LocationsInfoIcon, LocationsInfoTextHeader,
-         LocationsInfoText, LocationsInfoButton  } from './LocationsElements';
+         LocationsInfoText, LocationsInfoButton, LocationsInfoIconWrap, Column1, Column2, Column3 } from './LocationsElements';
+
 
 
 import deco1 from './LocationsImg/locDeco0.svg';
@@ -30,33 +31,46 @@ const Info = () => {
       <>
      <LocationsInfoSection >
         
-         <LocationsInfoHeader></LocationsInfoHeader>
+         <LocationsInfoHeader>Moving services we can coordinate for you.</LocationsInfoHeader>
          <LocationsInfoWrapper>
              <LocationsInfoRow>
-                <LocationsInfoTextSection>
+                <Column1>
                 <LocationsInfoBg style = {{backgroundImage: `url${deco1}` }} />
-                    <LocationsInfoIcon style = {{backgroundImage: `url${sm}` }} />
-                    <LocationsInfoTextHeader>Standard Moving</LocationsInfoTextHeader>
-                    <LocationsInfoText></LocationsInfoText>
-                    <LocationsInfoButton>Book Now</LocationsInfoButton>
-                </LocationsInfoTextSection>
-                 
-                <LocationsInfoTextSection>
-                <LocationsInfoBg style = {{backgroundImage: `url${deco2}` }} />
-                    <LocationsInfoIcon style = {{backgroundImage: `url${ldm}` }} />
-                    <LocationsInfoTextHeader>Long Distance Moving</LocationsInfoTextHeader>
-                    <LocationsInfoText></LocationsInfoText>
-                    <LocationsInfoButton>Book Now</LocationsInfoButton>
-                </LocationsInfoTextSection>
-
-                <LocationsInfoTextSection>
-                <LocationsInfoBg style = {{backgroundImage: `url${deco3}` }} />
-                    <LocationsInfoIcon style = {{backgroundImage: `url${hl}` }} />
-                    <LocationsInfoTextHeader>Hourly Labor</LocationsInfoTextHeader>
-                    <LocationsInfoText></LocationsInfoText>
-                    <LocationsInfoButton>Book Now</LocationsInfoButton>
-                </LocationsInfoTextSection>
+                    <LocationsInfoTextSection>
+                        <LocationsInfoIconWrap>
+                        <LocationsInfoIcon style = {{backgroundImage: `url${sm}` }} />
+                        </LocationsInfoIconWrap>
+                        <LocationsInfoTextHeader>Standard Moving</LocationsInfoTextHeader>
+                        <LocationsInfoText>Standard In-state moving service that includes Loading & Unloading services together or individually. A standard moving service includes Loading & Unloading, or both separate if need be.</LocationsInfoText>
+                        <LocationsInfoButton>Book Now</LocationsInfoButton>
+                    </LocationsInfoTextSection>
+                </Column1>
                 
+                <Column2>
+                <LocationsInfoBg style = {{backgroundImage: `url${deco2}` }} />
+                        <LocationsInfoTextSection>
+                            <LocationsInfoIconWrap>
+                            <LocationsInfoIcon style = {{backgroundImage: `url${ldm}` }} />
+                            </LocationsInfoIconWrap>
+                            <LocationsInfoTextHeader>Long Distance Moving</LocationsInfoTextHeader>
+                            <LocationsInfoText>We offer budget friendly moving services to accommodate long-distance moves in which the final destination is out of state. We can combine this with our storage options and labor only for each part of the moving service.</LocationsInfoText>
+                            <LocationsInfoButton>Book Now</LocationsInfoButton>
+                        </LocationsInfoTextSection>
+                </Column2>
+                <LocationsInfoBg style = {{backgroundImage: `url${deco3}` }} />
+                <Column3>
+                
+                    <LocationsInfoTextSection>
+                
+                        
+                        <LocationsInfoIconWrap>
+                        <LocationsInfoIcon style = {{backgroundImage: `url${hl}` }} />
+                        </LocationsInfoIconWrap>
+                        <LocationsInfoTextHeader>Hourly Labor</LocationsInfoTextHeader>
+                        <LocationsInfoText>Physical Jobs that require strong hands can be done with the Hourly Labor Service. We will send a pack of workers to complete your task.</LocationsInfoText>
+                        <LocationsInfoButton>Book Now</LocationsInfoButton>
+                    </LocationsInfoTextSection>
+                </Column3>
              </LocationsInfoRow>
          </LocationsInfoWrapper>
      </LocationsInfoSection>

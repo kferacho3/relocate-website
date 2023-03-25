@@ -29,7 +29,7 @@ export const LocationsHeaderContainer = styled.div`
 `
 
 export const LocationsHeaderText = styled.h1`
-    position: absolute;
+    
     width: 946px;
     height: 174px;
     left: 283px;
@@ -48,19 +48,18 @@ export const LocationsHeaderText = styled.h1`
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 export const LocationsDemographicContainer = styled.div`
-    position: relative;
+   
     width: 100vw;
     height: 800px;
-  
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 `
 
 export const LocationsDemoHeader = styled.h2`
-    position: absolute;
+  
     width: 946px;
     height: 174px;
-    left: 50%;
+    margin-left: 50%;
     transform: translateX(-50%);
 
     font-family: 'Inter';
@@ -76,17 +75,18 @@ export const LocationsDemoHeader = styled.h2`
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);`
 
 export const LocationsDemoImg = styled.div`
-    position: absolute;
-    width: 1512px;
+   
+    width: 100%;
     height: 413px;
     left: 0px;
     top: 350px;
-
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 `
 export const LocationsBg = styled.div`
-    position: absolute;
+    
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -119,7 +119,7 @@ export const LocationsBg = styled.div`
 
 
 export const Col1 = styled.div`
-    position: relative;
+   
     height: 1200px;
     left: 100px;
     top: 0px;
@@ -140,7 +140,7 @@ export const Col1 = styled.div`
 `
 
 export const Col2 = styled.div`
-    position: relative;
+    
 
     height: 1200px;
     right: 0px;
@@ -212,6 +212,12 @@ export const Column2 = styled.div`
     grid-area: col2;
     
 `;
+export const Column3 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col3;
+    
+`;
 
 
 export const TextWrapper = styled.div`
@@ -262,8 +268,7 @@ export const Subtitle = styled.p`
     
     width: 502px;
     height: 191px;
-    left: 790px;
-    top: 400px;
+
 
     font-family: 'Inter';
     font-style: normal;
@@ -313,11 +318,11 @@ export const Img1 = styled.img`
 `;
 
 export const LocationsInfoSection = styled.div`
-    position: relative;
-    width: 1512px;
+  
+    width: 100vw;
     height: 835px;
     left: 0px;
-
+         z-index: 999;
     background: #376392;
 `
 
@@ -338,7 +343,7 @@ export const LocationsInfoRow = styled.div`
     grid-auto-columns: 1fr 1fr 1fr;
     gap: 125px;
     align-items: center;
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
 
     @media screen and (max-width: 768px) {
         
@@ -347,11 +352,11 @@ export const LocationsInfoRow = styled.div`
     } 
 `;
 export const LocationsInfoHeader = styled.div`
-    position: absolute;
+ 
     width: 631px;
     height: 44px;
-    left: calc(50% - 631px/2 - 5.5px);
-    top: 52px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 
     font-family: 'Inter';
     font-style: normal;
@@ -368,13 +373,8 @@ export const LocationsInfoHeader = styled.div`
 `
 export const LocationsInfoTextSection = styled.div`
     box-sizing: border-box;
-
-    position: absolute;
     width: 386px;
     height: 489px;
-    left: 1079px;
-    top: 228px;
-
     background: linear-gradient(180deg, #BAFCBA 0%, #CCFFCC 18.23%, #BDFFBD 58.85%, #5BFF5B 100%);
     border: 0.25px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -382,19 +382,23 @@ export const LocationsInfoTextSection = styled.div`
 
 `
 export const LocationsInfoIcon = styled.div`
-    position: absolute;
-    width: 493px;
-    height: 141px;
-    left: -45px;
-    top: 14px;
+    
+    width: 100%;
+    height: 100%;
+
+`
+export const LocationsInfoIconWrap = styled.div`
+width: 101px;
+height: 105px;
+
+
 `
 export const LocationsInfoTextHeader = styled.p`
-    position: absolute;
-    width: 267px;
+   
     height: 31px;
-    left: calc(50% - 267px/2 - 0.5px);
-    top: 170px;
-
+    white-space: nowrap;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -404,17 +408,17 @@ export const LocationsInfoTextHeader = styled.p`
 
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
 
     color: #000000;
 `
 export const LocationsInfoText = styled.p`
 
-    position: absolute;
     width: 316px;
     height: 146px;
-    left: calc(50% - 316px/2 - 3px);
-    top: 225px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 
     font-family: 'Inter';
     font-style: normal;
@@ -434,12 +438,25 @@ export const LocationsInfoButton = styled.button`
     flex-direction: row;
     align-items: flex-start;
     padding: 11.5px 42.9078px 11.5px 43.0922px;
+    font-family: 'Inter';
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    white-space: nowrap;
+    /* identical to box height */
 
-    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.248px;
+
+    color: #FFFFFF;
     width: 247px;
     height: 63px;
-    left: calc(50% - 247px/2 - 0.5px);
-    top: calc(50% - 63px/2 + 191px);
+
 
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
@@ -447,9 +464,12 @@ export const LocationsInfoButton = styled.button`
 `
 export const LocationsInfoBg = styled.div`
     position: absolute;
+  justify-content: center;
+  margin-left: -75px;
+  margin-top: -55px;
+    z-index: 9999999;
     width: 525.54px;
     height: 624.69px;
     left: 0px;
-    
 
 `
