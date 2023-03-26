@@ -51,11 +51,11 @@ const JoinPack = ({lightBg, id, imgStart, divStart, darkText, description, divBg
         <PackRow imgStart={imgStart}>
             <Column1>
               <PackDivBg divStart={divStart} style = {{backgroundImage: `url(${divBg})`}}></PackDivBg>
-              <PackName src={name.default}/>
+              <PackName src={name}/>
               <PackTextContainer>
                   <PackDeco1 src={deco1}/>
                   <PackLogoWrap>
-                    <PackLogo src={logo.default}/>
+                    <PackLogo src={logo}/>
                   </PackLogoWrap>
                   <PackDeco2 src={deco2}/>
              
@@ -69,7 +69,7 @@ const JoinPack = ({lightBg, id, imgStart, divStart, darkText, description, divBg
 
             <Column2>
               <ImgWrap>
-                <Img src={img.default} alt={alt} />
+                <Img src={img} alt={alt} />
               </ImgWrap>
             </Column2>
             

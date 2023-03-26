@@ -31,7 +31,7 @@ import "./services.scss";
 import { motion} from 'framer-motion';
 import deco1 from '../../images/deco1.svg';
 import deco2 from '../../images/deco2.svg';
-import deco3 from './ServicesImg/servDeco.svg';
+//import deco3 from './ServicesImg/servDeco.svg';
 
 
 
@@ -54,12 +54,12 @@ const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, 
                 
                 <Column1  >
               
-                <DivBg divStart={divStart} src={divBg.default}/> 
+                <DivBg divStart={divStart} src={divBg}/> 
 
                 <ServicesTextContainer>
                   <ServicesDeco1 src={deco1}/>
                   <ServicesLogoWrap>
-                      <ServicesLogo src={logo.default}/>
+                      <ServicesLogo src={logo}/>
                   </ServicesLogoWrap>
                   <ServicesDeco2 src={deco2}/>
                   <Heading>{headline}</Heading>
@@ -76,7 +76,7 @@ const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, 
 
                     <Column2>
                       <ImgWrap>
-                        <Img  src={img.default} alt={alt} />
+                        <Img  src={img} alt={alt} />
                       </ImgWrap>
                     </Column2>
                     

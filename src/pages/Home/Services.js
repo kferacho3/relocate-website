@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
-import Home from './Home';
-import { home1, home2, homeV, home4, home5, home6, home7 } from './Data';
 import { HeroServContainer, HeroServImg, HeroServTextSection, HeroServTextHeader, HeroServImgContainer,
          HeroServeWrapper, HeroServeRow, HeroServText, HeroTestSection, HeroTestBookSection, HeroServicesSection} from './HeroElements';
-import Testimonials from './Testimonials';
 
 import house from '../../logos/HouseIcon.svg';
 import pack from '../../logos/PackingIcon.svg';

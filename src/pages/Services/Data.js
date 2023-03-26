@@ -1,12 +1,4 @@
-import house from '../../logos/HouseIcon.svg';
-import pack from '../../logos/PackingIcon.svg';
-import hour from '../../logos/ClockIcon.svg';
-import trash from '../../logos/TrashIcon.svg';
 
-import night from '../../logos/NightIcon.svg';
-import vip from '../../logos/VIPIcon.svg';
-import storage from '../../logos/StorageIcon.svg';
-import tv from '../../logos/TVIcon.svg';
 
 export const service1 = {
     id: 'standard',
@@ -20,8 +12,8 @@ export const service1 = {
     imgStart: true,
     divStart: true,
     shadow: true,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/houseTemp.svg'),
+    //divBg: require('./ServicesImg/servDeco.svg'),
+    //img: require('./ServicesImg/houseTemp.svg'),
     logo: require('../../logos/HouseIcon.svg'),
     bg: null,
     dark: false,
@@ -43,8 +35,8 @@ export const service2 = {
     imgStart: false,
     divStart: false,
     shadow: false,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/packingTemp.svg'),
+   // divBg: require('./ServicesImg/servDeco.svg'),
+    //img: require('./ServicesImg/packingTemp.svg'),
     logo: require('../../logos/PackingIcon.svg'),
     bg: '',
     alt: '',
@@ -68,8 +60,8 @@ export const service3 = {
     imgStart: true,
     divStart: true,
     shadow: true,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/laborTemp.svg'),
+   // divBg: require('./ServicesImg/servDeco.svg'),
+    //img: require('./ServicesImg/laborTemp.svg'),
     logo: require('../../logos/ClockIcon.svg'),
     bg: '',
     alt: '',
@@ -95,8 +87,8 @@ export const service4 = {
     imgStart: false,
     divStart: false,
     shadow: false,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/junkTemp.svg'),
+   // divBg: require('./ServicesImg/servDeco.svg'),
+  //  img: require('./ServicesImg/junkTemp.svg'),
     logo: require('../../logos/TrashIcon.svg'),
     bg: '',
     alt: '',
@@ -119,8 +111,8 @@ export const service5 = {
     imgStart: true,
     divStart: true,
     shadow: true,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/nightTemp.svg'),
+   // divBg: require('./ServicesImg/servDeco.svg'),
+    //img: require('./ServicesImg/nightTemp.svg'),
     logo: require('../../logos/NightIcon.svg'),
     bg: '',
     alt: 'theArt',
@@ -143,8 +135,8 @@ export const service6 = {
     imgStart: false,
     divStart: false,
     shadow: true,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/vipTemp.svg'),
+    //divBg: require('./ServicesImg/servDeco.svg'),
+    //img: require('./ServicesImg/vipTemp.svg'),
     logo: require('../../logos/VIPIcon.svg'),
     bg: '',
     alt: 'theArt',
@@ -167,8 +159,8 @@ export const service7 = {
     imgStart: true,
     divStart: true,
     shadow: true,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/storageTemp.svg'),
+    //divBg: require('./ServicesImg/servDeco.svg'),
+    ///img: require('./ServicesImg/storageTemp.svg'),
     logo: require('../../logos/StorageIcon.svg'),
     bg: '',
     alt: 'theArt',
@@ -191,8 +183,8 @@ export const service8 = {
     imgStart: false,
     divStart: false,
     shadow: true,
-    divBg: require('./ServicesImg/servDeco.svg'),
-    img: require('./ServicesImg/tvTemp.svg'),
+   // divBg: require('./ServicesImg/servDeco.svg'),
+    //img: require('./ServicesImg/tvTemp.svg'),
     logo: require('../../logos/TVIcon.svg'),
     bg: '',
     alt: 'theArt',

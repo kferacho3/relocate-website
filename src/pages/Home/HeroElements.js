@@ -611,7 +611,7 @@ export const TopLine = styled.p`
     width: 62px;
     height: 13px;
     top: 74.5px;
- white-space: nowrap;
+    white-space: nowrap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
