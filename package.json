@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aws-amplify": "^5.0.22",
     "aws-amplify-react": "^5.1.43",
+    "aws-sdk": "^2.1343.0",
     "framer-motion": "^10.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

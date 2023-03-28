@@ -90,7 +90,7 @@ BOOK NOW
     <NavBottomText style={{ color:`#218207` }}>Click here to apply!</NavBottomText>
 </NavBottom>
                 <NavIcon style={{ color: '#000' }} to='#'>
-                        <FaBars style={{ color: '#8ca12c' }} onClick={showSidebar} />
+                        <FaBars style={{ color: '#218207' }} onClick={showSidebar} />
                 </NavIcon>
                  
                 <SidebarNav sidebar={sidebar}>

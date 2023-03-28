@@ -11,105 +11,42 @@ export const JoinPackContainer = styled.div`
     width: 100vw;
     left: 0px;
     border-radius: 0px;
+
  
   
-  @media screen and (max-width: 550px) {
-    top: -200px;
-    }
+ 
     
-`;
-
-export const JoinPackBg = styled.div`
-    position: absolute;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-
-    left: 50%;
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;  
-    
-    @media screen and (max-width: 1400px) {
-        zoom: 0.9;
-    }
-  
-  
-  @media screen and (max-width: 1200px) {
-        zoom: 0.8;
-
-    }
-  
-  @media screen and (max-width: 850px) {
-      grid-template-columns: 1fr;
-      zoom: 0.5;
-    }
-
 `;
 
 
 
 
 
-export const Col1 = styled.div`
-    position: relative;
-    height: 1200px;
-    left: 100px;
-    top: 0px;
-    margin-bottom: 200px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    
- 
-  
-  @media screen and (max-width: 850px) {
-      left: 50%;
-      transform: translateX(-35%);
-    
-    }
-       @media screen and (max-width: 850px) {
-      
-    }
-`
-
-export const Col2 = styled.div`
-    position: relative;
-
-    height: 1200px;
-    right: 0px;
-    top: 0px;
-    @media screen and (max-width: 850px) {
-        
-    }
-`
 
 export const PackContainer = styled.div`
-    color: #fff;
-    margin-top: 75px;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F0F8FF;    
+    height: 1200px;
+    width: 100vw;
+    left: 0px;
+    border-radius: 0px;
+    overflow: hidden;
     //background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#010606')};
 
     @media screen and (max-width: 640px) {
-        padding: 50px 0;
-        height: 150vh;
-        margin: auto;
-        margin-top: 75px;
+
     }
 `;
 
-export const PackContainer1 = styled.div`
-    color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#660099')};
 
-    @media screen and (max-width: 768px) {
-        padding: 150px 0;
-    }
-`;
 
 export const PackWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 800px;
+    height: 1000px;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -121,16 +58,18 @@ export const PackWrapper = styled.div`
 
 export const PackRow = styled.div`
     display: grid;
-    grid-auto-columns: 1fr 1fr 1fr;
-    gap: 125px;
+    grid-auto-columns: 1fr 1fr;
+    gap: 100px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
-    @media screen and (max-width: 768px) {
-        
-        
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+ 
+@media screen and (max-width: 768px) {
+    grid-auto-columns: 1fr;
+    gap: 400px;
+    grid-template-areas: 'col1' 'col2';   
     }
+
 `;
 
 export const PackBanner = styled.div`
@@ -138,10 +77,15 @@ export const PackBanner = styled.div`
 
     width: 100vw;
     height: 300px;
-    margin-top: 80px;
-   position: absolute;
+    margin-top: -550px;
+    position: absolute;
 
     background: #E2E6E3;
+    @media screen and (max-width: 768px) {
+        zoom: 0.6;
+    }
+
+
 
 `
 export const PackLogoWrap = styled.div`
@@ -158,15 +102,21 @@ export const PackLogo = styled.img`
 `
 export const PackName = styled.img`
     width: 100%;
-    margin: 0 0 80px 0;
-    padding-right: 0;
+    height: 100%;
+    margin-top: -140px;
+`
+
+export const PackNameWrap = styled.div`
+
+    width: 700px;
+    height: 350px;
+
 `
 
 export const PackTextContainer = styled.div`
    
     width: 662px;
     height: 377px;
-    left: 757px;
     margin-bottom: -125px;
     overflow: hidden;
     background: linear-gradient(180deg, #C3F8D1 0%, #67DD68 28.65%, #38D538 63.54%, #00BB01 99.99%);
@@ -195,12 +145,17 @@ export const PackDeco2 = styled.img`
 
     transform: matrix(1, 0, 0, -1, 0, 0);
 `
-export const PackDivBg = styled.div`
+export const PackDivBg = styled.img`
    
-    width: 700px;
-    height: 620px;
-  position: absolute;
-    transform: ${({divStart}) => (divStart ? `scaleX(-1)` : `scaleX(1)`)};
+    width: 775px;
+    height: 600px;
+    margin-top: -100px;
+    margin-left: -50px;
+    z-index: -999;
+    justify-content: center;
+
+    position: absolute;
+    transform: ${({divStart}) => (divStart ? `scaleX(1)` : `scaleX(-1)`)};
 `
 export const PackButton = styled.button`
     display: flex;
@@ -218,20 +173,35 @@ export const PackButton = styled.button`
     border-radius: 6px;
 `
 
+
 export const Column1 = styled.div`
     margin-bottom: 15px;
-    z-index: 1;
     padding: 0 15px;
+    z-index: 1;
     grid-area: col1;
-
+    @media screen and (max-width: 768px) {
+    
+    
+        margin-left: 50%;
+        transform: translateX(-50%) scale(0.5);
+    }
 `;
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
-    z-index: 1;
     padding: 0 15px;
+ 
+    z-index: 1;
     grid-area: col2;
-    
+
+    @media screen and (max-width: 768px) {
+        
+        justify-content: center;
+        align-items: center;
+        margin-top: -500px;
+        margin-left: 50%;
+        transform: translateX(-38%) scale(0.7);
+    }
 `;
 
 
@@ -302,19 +272,15 @@ export const BtnWrap = styled.div`
 `
 
 export const ImgWrap = styled.div`
-    width: 500px;
-    height: 708.07px;
+    width: 446.7px;
+    height: 677px;
 `;
 
 export const Img = styled.img`
     width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
+    height: 100%;
     
-    @media screen and (max-width: 768px) {
-        transform: scale(0.7) translateY(-300px);
-        margin: auto;
-         }
+
 `;
 
 export const Img1 = styled.img`

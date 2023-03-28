@@ -14,42 +14,11 @@ export const HomeContainer = styled.div`
     border-radius: 0px;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-        height: 1000px;
+        height: 1200px;
+        zoom: 0.8;
          }
 
   
-  @media screen and (max-width: 550px) {
-    top: -200px;
-    }
-    
-`;
-
-export const HomeBg = styled.div`
-   
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-
-    left: 50%;
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;  
-    
-    @media screen and (max-width: 1400px) {
-        zoom: 0.9;
-    }
-  
-  
-  @media screen and (max-width: 1200px) {
-        zoom: 0.8;
-
-    }
-  
-  @media screen and (max-width: 850px) {
-      grid-template-columns: 1fr;
-      zoom: 0.5;
-    }
 
 `;
 
@@ -57,59 +26,10 @@ export const HomeBg = styled.div`
 
 
 
-export const Col1 = styled.div`
-  
-    height: 1200px;
-    left: 100px;
-    top: 0px;
-    margin-bottom: 200px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    
- 
-  
-  @media screen and (max-width: 850px) {
-      left: 50%;
-      transform: translateX(-35%);
-    
-    }
-       @media screen and (max-width: 850px) {
-      
-    }
-`
 
-export const Col2 = styled.div`
-   
 
-    height: 1200px;
-    right: 0px;
-    top: 0px;
-    @media screen and (max-width: 850px) {
-        
-    }
-`
-/*
-export const HomeContainer = styled.div`
-    color: #fff;
-    margin-top: 75px;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#010606')};
 
-    @media screen and (max-width: 640px) {
-        padding: 50px 0;
-        height: 150vh;
-        margin: auto;
-        margin-top: 75px;
-    }
-`;*/
-
-export const HomeContainer1 = styled.div`
-    color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#660099')};
-
-    @media screen and (max-width: 768px) {
-        padding: 150px 0;
-    }
-`;
 
 export const HomeWrapper = styled.div`
     display: grid;
@@ -120,26 +40,27 @@ export const HomeWrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-    @media screen and (max-width: 768px) {
-        margin-left: 50%;
-    transform: translateX(-50%);
-    }
- 
+
 
 `;
 
 export const HomeRow = styled.div`
     display: grid;
-    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr 1fr;
     gap: 125px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
+      
+        grid-template-columns: 1fr;
+        grid-template-areas:  'col1' 'col2';
+        justify-content: center;
+        //transform: scale(0.7);
+        zoom: 0.7;
         
-        
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
+ 
 `;
 export const HomeButton = styled(LinkR)`
    
@@ -156,14 +77,18 @@ export const HomeButton = styled(LinkR)`
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
-
+    margin-left: 50%;
+    transform: translateX(-50%);
     background: linear-gradient(180deg, #00FF01 0%, #218207 100%);
-    border-radius: 80px;
+    border-radius: 180px;
+    width: 250px;
+    margin-top: 25px;
 `
 
 export const BtnWrap = styled.div`
     display: flex;
     justify-content: flex-start;
+    height: 15px;
 
     @media screen and (max-width: 640px) {
         align-items: center;
@@ -185,6 +110,9 @@ export const HeroServicesSection = styled.div`
    
 
     background: #376392;
+    @media screen and (max-width: 768px) {
+       height: 1200px;
+    }
    
 `
 export const HeroServContainer = styled.div`
@@ -197,11 +125,13 @@ export const HeroServContainer = styled.div`
     width: 500px;
     height: 150px;
     
+
+    
  
 `
 export const HeroServImgContainer = styled.div`
 
-    width: 125px;
+    width: 128px;
     height: 125px;
 
 `
@@ -255,6 +185,8 @@ export const HeroServeWrapper = styled.div`
     margin-left: auto;
     justify-content: center;
 
+  
+
 `;
 
 export const HeroServeRow = styled.div`
@@ -264,10 +196,13 @@ export const HeroServeRow = styled.div`
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
+   
     @media screen and (max-width: 768px) {
-        
-        
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:  'col1' 'col2';
+        justify-content: center;
+       transform: scale(0.7);
     }
 `;
 export const HeroServText = styled.div`
@@ -354,7 +289,7 @@ export const HeroTestSection = styled.div`
   
  
 
-
+    overflow: hidden;
     background: #376392;
  
     width: 100vw;
@@ -398,7 +333,7 @@ export const HeroTestTextSection = styled.div`
     box-sizing: border-box;
     
     width: 359.95px;
-    height: 266.45px;
+    max-height: 100%;
 
     background: linear-gradient(180deg, #000100 0%, rgba(39, 210, 11, 0.35) 100%);
     border: 1px solid #FFFFFF;
@@ -509,12 +444,13 @@ export const HeroBookSection = styled.div`
     width: 100vw;
     left: 0%;
     right: 0%;
+    overflow: hidden;
     display: flex;
     align-items: flex-start;
     background: #376392;
 
 `
-export const HeroBookImg = styled.div`
+export const HeroBookImg = styled.img`
 
     height: 600px;
     width: 500px;
@@ -588,13 +524,28 @@ export const Column1 = styled.div`
     height: 375px;
 
     grid-area: col1;
+    @media screen and (max-width: 768px) {
+        
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-left: 50%;
+       transform: translateX(-50%);
+    }
 
 `;
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
-    padding: 0 15px;
+    
     grid-area: col2;
+    @media screen and (max-width: 768px) {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+     }
     
 `;
 
@@ -603,6 +554,7 @@ export const TextWrapper = styled.div`
     max-width: 540;
     padding-top: 0;
     padding-bottom: 60px;
+  
 
 `;
 
@@ -615,7 +567,7 @@ export const TopLine = styled.p`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    font-size: 11px;
+    font-size: 15px;
     line-height: 13px;
 
     color: #69F490;
@@ -652,7 +604,7 @@ export const Subtitle = styled.p`
     width: 524px;
     height: 140px;
     left: 70px;
-    top: 113.5px;
+    margin-top: 50px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -673,7 +625,7 @@ export const Subtitle = styled.p`
 
 export const ImgWrap = styled.div`
     width: 625px;
-height: 500px;
+    height: 500px;
 `;
 
 export const Img = styled.img`

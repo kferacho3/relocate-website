@@ -3,7 +3,6 @@ import { HeroBookSection,  HeroBookTextSection, HeroBookImg,
          HeroBookText, HeroBookHead, HeroBookButton, } from './HeroElements';
 
 
-import hero7 from './HomeImg/hero7.svg';
 
 
 const Book = () => {
@@ -20,7 +19,7 @@ const Book = () => {
      
       <>
       <HeroBookSection>
-        <HeroBookImg style = {{backgroundImage: `url(${hero7})`}} />
+        <HeroBookImg src = {'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/HomeImg/hero5.svg'} />
 
         <HeroBookTextSection>
             <HeroBookHead>BOOK A SERVICE</HeroBookHead>

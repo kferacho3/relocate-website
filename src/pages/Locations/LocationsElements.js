@@ -13,6 +13,11 @@ export const LocationsContainer = styled.div`
     width: 100vw;
     overflow: hidden;
     border-radius: 0px;
+  
+    @media screen and (max-width: 768px) {
+        
+        height: 1200px;
+    }
  
   
   @media screen and (max-width: 550px) {
@@ -49,6 +54,7 @@ export const LocationsHeaderText = styled.h1`
 `
 export const LocationsDemographicContainer = styled.div`
    
+   overflow: hidden;
     width: 100vw;
     height: 800px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -72,9 +78,13 @@ export const LocationsDemoHeader = styled.h2`
     color: #000000;
 
     border: 1px solid #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);`
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media screen and (max-width: 768px) {
+        zoom: 0.5;
+   }
+    `
 
-export const LocationsDemoImg = styled.div`
+export const LocationsDemoImg = styled.img`
    
     width: 100%;
     height: 413px;
@@ -85,92 +95,14 @@ export const LocationsDemoImg = styled.div`
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 `
-export const LocationsBg = styled.div`
-    
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-
-    left: 50%;
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;  
-    
-    @media screen and (max-width: 1400px) {
-        zoom: 0.9;
-    }
-  
-  
-  @media screen and (max-width: 1200px) {
-        zoom: 0.8;
-
-    }
-  
-  @media screen and (max-width: 850px) {
-      grid-template-columns: 1fr;
-      zoom: 0.5;
-    }
-
-`;
 
 
 
 
 
-export const Col1 = styled.div`
-   
-    height: 1200px;
-    left: 100px;
-    top: 0px;
-    margin-bottom: 200px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    
- 
-  
-  @media screen and (max-width: 850px) {
-      left: 50%;
-      transform: translateX(-35%);
-    
-    }
-       @media screen and (max-width: 850px) {
-      
-    }
-`
 
-export const Col2 = styled.div`
-    
 
-    height: 1200px;
-    right: 0px;
-    top: 0px;
-    @media screen and (max-width: 850px) {
-        
-    }
-`
-/*
-export const LocationsContainer = styled.div`
-    color: #fff;
-    margin-top: 75px;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#010606')};
-
-    @media screen and (max-width: 640px) {
-        padding: 50px 0;
-        height: 150vh;
-        margin: auto;
-        margin-top: 75px;
-    }
-`;*/
-
-export const LocationsContainer1 = styled.div`
-    color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#660099')};
-
-    @media screen and (max-width: 768px) {
-        padding: 150px 0;
-    }
-`;
 
 export const LocationsWrapper = styled.div`
     display: grid;
@@ -204,18 +136,27 @@ export const Column1 = styled.div`
     padding: 0 15px;
     grid-area: col1;
 
+    @media screen and (max-width: 768px) {
+        zoom: 0.8;
+   }
 `;
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
+    @media screen and (max-width: 768px) {
+        zoom: 0.8;
+   }
     
 `;
 export const Column3 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col3;
+    @media screen and (max-width: 768px) {
+        zoom: 0.8;
+   }
     
 `;
 
@@ -255,7 +196,6 @@ export const Heading = styled.h1`
     font-weight: 600;
     font-size: 72px;
     line-height: 87px;
-    text-align: center;
 
     color: #FFFFFF;
 
@@ -319,11 +259,14 @@ export const Img1 = styled.img`
 
 export const LocationsInfoSection = styled.div`
   
+  overflow: hidden;
     width: 100vw;
     height: 835px;
     left: 0px;
-         z-index: 999;
     background: #376392;
+    @media screen and (max-width: 768px) {
+        height: 1800px;
+   }
 `
 
 export const LocationsInfoWrapper = styled.div`
@@ -344,19 +287,20 @@ export const LocationsInfoRow = styled.div`
     gap: 125px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
-
+    z-index: 999;
     @media screen and (max-width: 768px) {
-        
-        
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        margin-top: 100px;
+        margin-left: 50%;
+        transform: translateX(-100%);
+        grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col1 col1' 'col2 col2 col2' 'col3 col3 col3'`)};
     } 
 `;
-export const LocationsInfoHeader = styled.div`
+export const LocationsInfoHeader = styled.h2`
  
     width: 631px;
     height: 44px;
     margin-left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50px);
 
     font-family: 'Inter';
     font-style: normal;
@@ -368,8 +312,11 @@ export const LocationsInfoHeader = styled.div`
     display: flex;
     align-items: center;
     text-align: center;
-
+    justify-content: center;
     color: #CEE9D2;
+    @media screen and (max-width: 768px) {
+        zoom: 0.6;
+   }
 `
 export const LocationsInfoTextSection = styled.div`
     box-sizing: border-box;
@@ -381,15 +328,18 @@ export const LocationsInfoTextSection = styled.div`
     border-radius: 20px;
 
 `
-export const LocationsInfoIcon = styled.div`
+export const LocationsInfoIcon = styled.img`
     
     width: 100%;
     height: 100%;
+    
 
 `
 export const LocationsInfoIconWrap = styled.div`
 width: 101px;
 height: 105px;
+margin-left: 50%;
+    transform: translateX(-50%);
 
 
 `
@@ -462,14 +412,14 @@ export const LocationsInfoButton = styled.button`
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
 `
-export const LocationsInfoBg = styled.div`
+export const LocationsInfoBg = styled.img`
     position: absolute;
-  justify-content: center;
-  margin-left: -75px;
-  margin-top: -55px;
-    z-index: 9999999;
+    justify-content: center;
+    margin-left: -60px;
+    margin-top: -70px;
+    z-index: -1;
     width: 525.54px;
     height: 624.69px;
-    left: 0px;
+    
 
 `

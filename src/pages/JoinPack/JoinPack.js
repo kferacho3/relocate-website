@@ -28,7 +28,8 @@ import {
   BtnWrap,
   ImgWrap,
   Img,
-  PackLogoWrap
+  PackLogoWrap,
+  PackNameWrap
   
 } from './PackElements'
 
@@ -50,8 +51,11 @@ const JoinPack = ({lightBg, id, imgStart, divStart, darkText, description, divBg
     <PackWrapper>
         <PackRow imgStart={imgStart}>
             <Column1>
-              <PackDivBg divStart={divStart} style = {{backgroundImage: `url(${divBg})`}}></PackDivBg>
+             
+              <PackNameWrap>
               <PackName src={name}/>
+              </PackNameWrap>
+              <PackDivBg divStart={divStart} src = {divBg.default}></PackDivBg>
               <PackTextContainer>
                   <PackDeco1 src={deco1}/>
                   <PackLogoWrap>

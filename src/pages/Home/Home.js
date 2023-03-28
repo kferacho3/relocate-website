@@ -64,7 +64,7 @@ const Home = ({lightBg, id, imgStart, lightText, img, darkText, alt,
 
                     <Column2>
                     <ImgWrap>
-                        <Img  src={img.default} alt={alt} />
+                        <Img  src={img} alt={alt} />
                         </ImgWrap>
                     </Column2>
                     

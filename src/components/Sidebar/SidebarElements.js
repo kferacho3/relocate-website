@@ -1,7 +1,7 @@
 
 
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.div`
@@ -11,15 +11,14 @@ export const Nav = styled.div`
   
 `;
 
-export const NavIcon = styled(Link)`
+export const NavIcon = styled(LinkR)`
 
     display: none;
-   margin-right: 50px;
+    margin-right: 50px;
 
-   margin-top: 2%;
    
     @media screen and (max-width: 870px) {
-        font-size: 3.5rem;
+        font-size: 3rem;
         height: 80px;
         z-index: 999999999;
 
@@ -50,7 +49,7 @@ export const SidebarWrap = styled.div`
 `;
 
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLink = styled(LinkR)`
   display: flex;
   color: #fff;
   justify-content: space-between;
@@ -71,7 +70,7 @@ export const SidebarLabel = styled.span`
   margin-left: 16px;
 `;
 
-export const DropdownLink = styled(Link)`
+export const DropdownLink = styled(LinkR)`
   background: #000;
   height: 60px;
   padding-left: 3rem;

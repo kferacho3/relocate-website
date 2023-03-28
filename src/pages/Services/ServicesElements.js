@@ -7,6 +7,7 @@ export const ServicesContainer = styled.div`
     justify-content: center;
     align-items: center;
 
+    overflow: hidden;
     background: #fff;    
     height: 1200px;
     width: 100vw;
@@ -16,99 +17,28 @@ export const ServicesContainer = styled.div`
  
  
   
-  @media screen and (max-width: 550px) {
-    top: -200px;
-    }
-    
-`;
-
-export const ServicesBg = styled.div`
-  
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-
-    left: 50%;
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;  
-    
-    @media screen and (max-width: 1400px) {
-        zoom: 0.9;
-    }
-  
-  
-  @media screen and (max-width: 1200px) {
-        zoom: 0.8;
-
-    }
-  
-  @media screen and (max-width: 850px) {
-      grid-template-columns: 1fr;
-      zoom: 0.5;
-    }
-
-`;
-
-
-
-
-
-export const Col1 = styled.div`
-    
-    height: 1200px;
-    left: 100px;
-    top: 0px;
-    margin-bottom: 200px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-    
  
-  
-  @media screen and (max-width: 850px) {
-      left: 50%;
-      transform: translateX(-35%);
     
-    }
-       @media screen and (max-width: 850px) {
-      
-    }
-`
+`;
 
-export const Col2 = styled.div`
-   
 
-    height: 1200px;
-    right: 0px;
-    top: 0px;
-    @media screen and (max-width: 850px) {
-        
-    }
-`
-/*
-export const ServicesContainer = styled.div`
-    color: #fff;
-    margin-top: 75px;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#010606')};
 
-    @media screen and (max-width: 640px) {
-        padding: 50px 0;
-        height: 150vh;
-        margin: auto;
-        margin-top: 75px;
-    }
-`;*/
+
+
+
+
+
 export const ServicesTextContainer = styled.div`
     width: 545px;
     height: 513px;
-    left: 876px;
-    top: 234px;
+   
     overflow: hidden;
     background: linear-gradient(180deg, #A4FFA4 0%, #C5FCC5 17.71%, #4CFF4C 71.87%, #4CC24C 90.62%);
     border: 0.25px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    
+    
 `
 export const ServicesLogo = styled.img`
 width: 100%;
@@ -147,14 +77,20 @@ export const ServicesDeco2 = styled.img`
 
 export const DivBg = styled.img`
    
+    overflow: hidden;
     width: 700px;
     height: 620px;
-  justify-content: center;
-  margin-left: -75px;
-  margin-top: -55px;
- position: absolute;
+    justify-content: center;
+    margin-left: -75px;
+    margin-top: -55px;
+    position: absolute;
     z-index: -9999999;
     transform: ${({divStart}) => (divStart ? `scaleX(-1)` : `scaleX(1)`)};
+    @media screen and (max-width: 768px) {
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+  
  
 `
 
@@ -188,21 +124,13 @@ export const ServicesButton = styled.button`
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 6px;
 `
-export const ServicesContainer1 = styled.div`
-    color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#660099')};
 
-    @media screen and (max-width: 768px) {
-        padding: 150px 0;
-    }
-`;
 
 export const ServicesWrapper = styled.div`
     display: grid;
     z-index: 1;
     height: 800px;
     width: 100%;
-    max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -217,10 +145,10 @@ export const ServicesRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-        
-        
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-    }
+        grid-auto-rows: 1fr 1fr;
+        gap: 100px;
+        grid-template-areas: 'col1' 'col2';   
+        }
 `;
 
 export const Column1 = styled.div`
@@ -228,7 +156,15 @@ export const Column1 = styled.div`
     padding: 0 15px;
  
     grid-area: col1;
-
+    @media screen and (max-width: 768px) {
+      
+        
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-left: 50%;
+       transform: translateX(-50%) scale(0.65);
+    }
 `;
 
 export const Column2 = styled.div`
@@ -237,6 +173,14 @@ export const Column2 = styled.div`
     zoom: 0.85;
     grid-area: col2;
     
+    @media screen and (max-width: 768px) {
+        
+        justify-content: center;
+        align-items: center;
+        grid-auto-flow: row;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 `;
 
 

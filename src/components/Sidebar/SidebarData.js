@@ -14,22 +14,22 @@ export const SidebarData = [
   },
 
   {
-    title: 'About',
-    path: 'about',
+    title: 'Services',
+    path: 'services',
     icon: <RiIcons.RiInformationLine />
   },
   {
-    title: 'Services',
-    path: 'services',
+    title: 'Locations',
+    path: 'locations',
     icon: <MdIcons.MdOutlineMiscellaneousServices/>
   },
   {
-    title: 'Projects',
-    path: 'projects',
+    title: 'Join the Pack!',
+    path: 'pack',
     icon: <MdIcons.MdRoofing />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
-
+/*
     subNav: [
       {
         title: 'Gallery',
@@ -38,16 +38,11 @@ export const SidebarData = [
         cName: 'sub-nav'
       }
     ]
+    */
   },
   {
-    title: 'Testimonials',
-    path: 'testimonials',
+    title: 'Book Move',
+    path: 'book',
     icon: <MdIcons.MdOutlineConnectWithoutContact />
-  },
-
-  {
-    title: 'Contact Us!',
-    path: 'contact',
-    icon: <RiIcons.RiMessage2Line />
   }
 ];

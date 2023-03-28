@@ -54,12 +54,12 @@ const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, 
                 
                 <Column1  >
               
-                <DivBg divStart={divStart} src={divBg}/> 
+                <DivBg divStart={divStart} src={divBg.default}/> 
 
                 <ServicesTextContainer>
                   <ServicesDeco1 src={deco1}/>
                   <ServicesLogoWrap>
-                      <ServicesLogo src={logo}/>
+                      <ServicesLogo src={logo.default}/>
                   </ServicesLogoWrap>
                   <ServicesDeco2 src={deco2}/>
                   <Heading>{headline}</Heading>

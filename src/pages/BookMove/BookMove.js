@@ -32,7 +32,7 @@ function BookMove({isOpen, toggle}) {
 
   return (
 <>
-<BookMoveContainer id= 'contact'>
+<BookMoveContainer id= 'book'>
     <BookMoveContainerImg  style = {{ backgroundImage: `url(${bg})`}}/>
  
 

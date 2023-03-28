@@ -14,7 +14,7 @@ export const FooterContainer = styled.footer`
     padding: 4rem 0 2rem 0;
     top: 0;
     left: 0;
-    
+    overflow: hidden;
     background: #FFFFFF;
     position: relative;
 
@@ -30,7 +30,7 @@ export const FooterContainer = styled.footer`
   
   @media screen and (max-width: 850px) {
     
-      zoom: 0.5;
+      zoom: 0.4;
     }
     
     
@@ -234,7 +234,7 @@ export const FooterIcon = styled(LinkR)`
 
 `
 
-export const FooterText = styled(LinkS)`
+export const FooterText = styled(LinkR)`
     font-family: 'Roboto';
     color: #8B9F2C;
     font-size: 16px;

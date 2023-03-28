@@ -38,16 +38,13 @@ const Locations = ({lightBg, id, imgStart, lightText, topLine, img,darkText, des
                             <Heading lightText={lightText}>{headline}</Heading>
                             <TopLine lightText={lightText}>{topLine}</TopLine>
                             <Subtitle darkText={darkText} ><NewlineText text ={description}/></Subtitle>
-                    
-                            
-                          
                         </TextWrapper>
                  
                     </Column1>
 
 
                     <Column2>
-                        <Img  src={img.default} alt={alt} />
+                        <Img  src={img} alt={alt} />
                     </Column2>
                     
                 </LocationsRow>

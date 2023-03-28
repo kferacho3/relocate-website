@@ -25,7 +25,7 @@ const PageL = () => {
 
             <LocationsDemographicContainer id={'geographic'}>
               <LocationsDemoHeader>Future Demographic Expansion</LocationsDemoHeader>
-              <LocationsDemoImg style={{ backgroundImage:`url(${maps})` }}/>
+              <LocationsDemoImg src={'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/LocationsImg/maps.svg'}/>
             </LocationsDemographicContainer>
             <Info id={'info'}/>
            

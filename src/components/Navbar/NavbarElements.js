@@ -40,15 +40,15 @@ export const NavLogoCont = styled.div`
     display: flex;
     align-items: center;
     width: 235px;
-height: 49px;
+    height: 49px;
 
 
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
    
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 870px)  {
-        margin-left: -20px;
+        margin-left: 20px;
         zoom: 0.8;
        
     }
@@ -110,14 +110,13 @@ export const NavMenu = styled.ul`
     list-style: none;
     text-align: center;
     font-family: Lato;
-    
             
     
 @media screen and (max-width: 1350px) {
     transform: scale(0.9) translateX(-100px);
 }
 @media screen and (max-width: 1150px) {
-    transform:scale(0.85) translateX(-150px);
+    transform:scale(0.7) translateX(-150px);
 }
 @media screen and (max-width: 950px) {
     transform: scale(0.7) translateX(-200px);
@@ -130,9 +129,8 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled(LinkS)`
     
-    height: 100%;
-    width: 100%;
-    margin-right: -100px;
+    height: 100px;
+    margin-right: -50px;
     white-space: nowrap;
     padding: 10px 80px;
     font-family: 'Roboto';
@@ -151,11 +149,11 @@ export const NavItem = styled(LinkS)`
    
   
     &:hover {
-        color: #8B9F2C;
+        color: #218207;
       
     }
     &:active {
-        color: #8B9F2C;
+        color: #218207;
     }
     
      
@@ -166,7 +164,7 @@ export const NavBottom = styled.div`
     flex-direction: row;
     align-items: flex-start;
     padding: 8px 476.908px 8px 477.092px;
-
+    overflow: hidden;
     position: absolute;
     height: 15px;
     width: 100vw;
@@ -179,7 +177,7 @@ export const NavBottomText = styled.p`
     width: 250px;
     height: 0px;
     margin-top: 7.5px;
-    
+    white-space: nowrap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -195,7 +193,6 @@ export const NavBottomText = styled.p`
 `
 export const NavLinks = styled(LinkR)`
     
-    width: 69px;
     height: 28px;
 
     font-family: 'Inter';
@@ -204,33 +201,30 @@ export const NavLinks = styled(LinkR)`
     font-size: 15px;
     line-height: 28px;
     /* identical to box height, or 187% */
-
     display: flex;
     align-items: center;
 
     color: #376392;
     text-decoration: none;
+    width: 100px;
 
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px -0.264063px;
     &:hover {
-        color: #8B9F2C;
-        text-decoration: underline;
+        color: #218207;
+        background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
+        //border: 2px solid #69F490;
+        border-radius: 80px;
       
     }
     &:active {
-        color: #8B9F2C;
-        text-shadow: 5px 5px #FFF;
-        text-decoration: underline;
+        color: #218207;
+        background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
+        //border: 2px solid #69F490;
+        border-radius: 80px;
+        width: 100vw;
     }
 
     @media screen and (max-width: 1350px) {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 850px) {
