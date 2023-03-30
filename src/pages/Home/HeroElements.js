@@ -149,21 +149,19 @@ export const HeroServImg = styled.div`
 `
 export const HeroServTextSection = styled.div`
     width: 415px;
-    height: 101.27px;
-
+    //height: 130px;
 
     /* Inside auto layout */
 
-    display: grid;
-    flex-direction: column;
     order: 0;
+    
     flex-grow: 0;
 `
 export const HeroServTextHeader = styled.div`
  
     width: 245px;
     height: 75px;
-   
+    margin-bottom: -20px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -300,6 +298,8 @@ export const HeroTestSection = styled.div`
  
     width: 100vw;
     height: 1000px;
+
+  
   
 `
 export const HeroTestContainer = styled.div`
@@ -321,6 +321,14 @@ export const HeroTestContainer = styled.div`
     order: 1;
     flex-grow: 0;
     z-index: 1;
+    @media screen and (max-width: 768px) {
+      
+      //transform: scale(0.7);
+      zoom: 0.6;
+      height: 150vh;
+      
+      
+  }
 `
 
 export const HeroTestDivContainer = styled.div`
@@ -333,6 +341,16 @@ export const HeroTestDivContainer = styled.div`
     justify-content: center;
     position: relative;
     grid-template-areas: 'col1 col2 col3';
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-areas:  'col1' 'col2' 'col3';
+        justify-content: center;
+       margin-top: 350px;
+        
+    }
 
 `
 export const HeroTestTextSection = styled.div`
@@ -442,6 +460,11 @@ export const HeroTestButton = styled.button`
     flex: none;
     order: 1;
     flex-grow: 0;
+    @media screen and (max-width: 768px) {
+   
+       margin-top: 350px;
+        
+    }
 `
 
 export const HeroBookSection = styled.div`
@@ -454,6 +477,16 @@ export const HeroBookSection = styled.div`
     display: flex;
     align-items: flex-start;
     background: #376392;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-areas:  'col1' 'col2';
+        justify-content: center;
+
+       height: 150vh;
+        
+    }
 
 `
 export const HeroBookImg = styled.img`
@@ -462,6 +495,10 @@ export const HeroBookImg = styled.img`
     width: 500px;
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and (max-width: 768px) {
+       width: 130vw;
+        
+    }
 
 
 `
@@ -471,6 +508,11 @@ export const HeroBookTextSection = styled.div`
     width: 750px;
     position: relative;
     right: -15%;
+    @media screen and (max-width: 768px) {
+        zoom: 0.6;
+        width: 500px;
+        
+    }
 
 `
 export const HeroBookHead = styled.h4`
