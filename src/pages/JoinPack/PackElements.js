@@ -81,7 +81,7 @@ export const PackBanner = styled.div`
     background: #E2E6E3;
     @media screen and (max-width: 768px) {
         height: 150px;
-        margin-top: -330px;
+        margin-top: -650px;
     }
 
 

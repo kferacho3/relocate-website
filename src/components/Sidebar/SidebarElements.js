@@ -29,7 +29,7 @@ export const NavIcon = styled(LinkR)`
 `;
 
 export const SidebarNav = styled.nav`
-  margin-top: 102%;
+  margin-top: 185%;
   background: #218207;
   width: 250px;
   height: 100vh;
