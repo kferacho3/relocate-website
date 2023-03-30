@@ -6,7 +6,7 @@ import {Link as LinkR} from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
     width: 100vw;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,23 +18,32 @@ export const FooterContainer = styled.footer`
     background: #FFFFFF;
     position: relative;
 
+  
+  @media screen and (max-width: 850px) {
     
+    height: 200px;
+    }
+    
+  
+    
+    
+`;
+export const FooterMainContainer = styled.div`
+    margin-top: -50px;
     @media screen and (max-width: 1400px) {
-        zoom: 0.9;
+       transform: scale(0.9);
     }
   
   
   @media screen and (max-width: 1200px) {
-        zoom: 0.8;
+    transform: scale(0.7);
     }
   
   @media screen and (max-width: 850px) {
     
-      zoom: 0.4;
+    transform: scale(0.3);
     }
-    
-    
-`;
+`
 
 export const FooterWrapper = styled.div`
     display: grid;
@@ -50,7 +59,7 @@ export const FooterWrapper = styled.div`
 export const FooterRow = styled.div`
     display: grid;
     grid-auto-columns: 0.5fr 1fr 0.5fr;
-    gap: 50px;
+    gap: 100px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
 
@@ -65,9 +74,9 @@ export const FooterRow = styled.div`
 export const FooterLeftContainer = styled.div`
     display: flex;
     flex-direction: column;
-    
-    width: 425px;
-    gap: 10px;
+    height: 265px;
+    width: 250px;
+    gap: 25px;
     left: 0px;
 
 `
@@ -167,8 +176,16 @@ export const FooterLeftButton = styled.button`
     align-items: flex-start;
     padding: 16px 46px 18px 24px;
     isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFFFFF;
 
-    height: 57px;
+    height: 40px;
     left: 59px;
     right: 1221px;
 
@@ -181,7 +198,7 @@ export const FooterMidContainer = styled.div`
     flex-direction: row;
     align-items: flex-start;
     padding: 0px 0px 0px 0px;
-    gap: 45px;
+    gap: 25px;
 
 
     width: 500px;
@@ -222,7 +239,6 @@ export const FooterIconWrap = styled.div`
 
 `
 export const FooterIcon = styled(LinkR)`
-    position: absolute;
     position: absolute;
     width: 366px;
     height: 339px;
@@ -276,6 +292,7 @@ export const FooterLinkTitle = styled.div`
     letter-spacing: 0em;
     font-family: 'Roboto';
     font-style: normal;
+    white-space: nowrap;
     /* or 120% */
 
     display: flex;
@@ -292,34 +309,55 @@ export const FooterLinkTitle = styled.div`
 
 
 export const FooterBottomSection = styled.div`
+    display: flex;
     position: absolute;
-    width: 1083.56px;
-    height: 45.11px;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 99999;
+    width: 100vw;
+    height: 80px;
+    margin-top: 450px;
+    margin-left: 50%;
+    @media screen and (max-width: 850px) {
+    zoom: 0.5;
+    margin-left: 0%;
+
+    }
 `
 
 
 export const SocialMediaWrap = styled.div`
-    position: absolute;
-    left: 67.66%;
-    right: 14.18%;
-    top: 98.8%;
-    bottom: 0.57%;
-   
+
+    display: flex;
+
    
 
  
 `;
 
-export const SocialLogo = styled(Link)`
+export const SocialLogo = styled.img`
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    left: 67.66%;
-    right: 30.34%;
-    top: 98.83%;
-    bottom: 0.59%;
+    height: 100%;
+    width: 100%;
+  
+
+
+    @media screen and (max-width: 520px) {
+        transform: scale(0.8);
+        background-color: #4267B2;
+        }
+    
+`;
+
+export const SocialLogoWrap = styled(LinkR)`
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+        margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
 
     @media screen and (max-width: 520px) {
         transform: scale(0.8);
@@ -331,21 +369,19 @@ export const SocialLogo = styled(Link)`
 export const FooterBottomLeftContainer = styled.div`
 
     width: 325px;
-    height: 40px;
-    left: 213px;
+    height: 60px;
 `
 
 export const WebsiteRights = styled.small`
   
-    width: 187px;
+    width: 250px;
     height: 17px;
-    left: 0px;
-    top: 4px;
-
+ 
+    white-space: nowrap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 27px;
     /* or 177% */
 
@@ -357,16 +393,15 @@ export const WebsiteRights = styled.small`
 `;
 
 export const WebsiteTermsPolicy = styled.small`
-    position: absolute;
+
     width: 47px;
     height: 17px;
-    left: 199px;
-    top: 4px;
+    margin-top: 5px;
 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 27px;
     /* or 177% */
 
@@ -377,7 +412,7 @@ export const WebsiteTermsPolicy = styled.small`
 `
 
 export const SocialIconSection = styled.div`
-    position: absolute;
+   
     width: 420.56px;
     height: 38px;
     left: 0px;

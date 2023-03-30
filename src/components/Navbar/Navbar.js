@@ -19,7 +19,9 @@ import {
      NavBtn,
      NavNumber,
      NavBottom,
-     NavBottomText
+     NavBottomText,
+     NavBottomText2,
+     NavBottomTextSection
 } from './NavbarElements';
 
 import { NavIcon } from '../Sidebar/SidebarElements';
@@ -76,35 +78,39 @@ const Navbar = ({ toggle}) => {
                     </NavItem>
 
                     <NavItem>
-                    <NavNumber>+1-(234)-567-8910</NavNumber>
+                        <NavNumber>+1-(234)-567-8910</NavNumber>
+                        <NavBtn >
+                            BOOK NOW 
+                        </NavBtn>
                     </NavItem>
                     
                 </NavMenu>
 
+                <NavBottom>
+                    <NavBottomTextSection>
+                        <NavBottomText>WE ARE HIRING MOVERS & DRIVERS!  <NavBottomText2>Click here to apply!</NavBottomText2></NavBottomText>
+                    </NavBottomTextSection>
+                </NavBottom>
 
-<NavBtn >
-BOOK NOW 
-</NavBtn>
-<NavBottom>
-    <NavBottomText>WE ARE HIRING MOVERS & DRIVERS!</NavBottomText>
-    <NavBottomText style={{ color:`#218207` }}>Click here to apply!</NavBottomText>
-</NavBottom>
+
+
                 <NavIcon style={{ color: '#000' }} to='#'>
                         <FaBars style={{ color: '#218207' }} onClick={showSidebar} />
                 </NavIcon>
-                 
-                <SidebarNav sidebar={sidebar}>
-                <SidebarWrap>
-                    <NavIcon to='#'>
-                    <AiIcons.AiOutlineClose  onClick={showSidebar} />
-                    </NavIcon>
-                    {SidebarData.map((item, index) => {
-                    return <SubMenu item={item} key={index} />;
-                    })}
-                </SidebarWrap>
-                </SidebarNav>
+          
 
             </NavbarContainer>
+                   
+            <SidebarNav sidebar={sidebar}>
+                    <SidebarWrap>
+                        <NavIcon to='#'>
+                        <AiIcons.AiOutlineClose  onClick={showSidebar} />
+                        </NavIcon>
+                        {SidebarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />;
+                        })}
+                    </SidebarWrap>
+                </SidebarNav>
         </Nav>
         </IconContext.Provider>
         </>

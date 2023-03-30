@@ -36,9 +36,7 @@ export const PackContainer = styled.div`
     overflow: hidden;
     //background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#010606')};
 
-    @media screen and (max-width: 640px) {
-
-    }
+  
 `;
 
 
@@ -82,7 +80,8 @@ export const PackBanner = styled.div`
 
     background: #E2E6E3;
     @media screen and (max-width: 768px) {
-        zoom: 0.6;
+        height: 150px;
+        margin-top: -330px;
     }
 
 

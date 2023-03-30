@@ -259,11 +259,11 @@ export const Img1 = styled.img`
 
 export const LocationsInfoSection = styled.div`
   
-  overflow: hidden;
+    overflow: hidden;
     width: 100vw;
     height: 835px;
-    left: 0px;
     background: #376392;
+    
     @media screen and (max-width: 768px) {
         height: 1800px;
    }
@@ -284,7 +284,7 @@ export const LocationsInfoWrapper = styled.div`
 export const LocationsInfoRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
-    gap: 125px;
+    gap: 75px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
     z-index: 999;
@@ -326,6 +326,7 @@ export const LocationsInfoTextSection = styled.div`
     border: 0.25px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+  
 
 `
 export const LocationsInfoIcon = styled.img`

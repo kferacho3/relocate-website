@@ -18,11 +18,9 @@ export const NavIcon = styled(LinkR)`
 
    
     @media screen and (max-width: 870px) {
-        font-size: 3rem;
+        font-size: 2rem;
         height: 80px;
-        z-index: 999999999;
-
-        color: #000;
+        z-index: 9999;
         display: flex;
         }   
 
@@ -31,17 +29,15 @@ export const NavIcon = styled(LinkR)`
 `;
 
 export const SidebarNav = styled.nav`
-  margin-top: 120px;
-  background: #8ca12c;
+  margin-top: 102%;
+  background: #218207;
   width: 250px;
   height: 100vh;
-  display: flex;
   justify-content: center;
   position: fixed;
-  top: 0;
   right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
-  z-index: 10;
+  z-index: 9999999;
 `;
 
 export const SidebarWrap = styled.div`

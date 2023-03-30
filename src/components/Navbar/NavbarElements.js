@@ -110,13 +110,13 @@ export const NavMenu = styled.ul`
     list-style: none;
     text-align: center;
     font-family: Lato;
-            
-    
+
+        
 @media screen and (max-width: 1350px) {
-    transform: scale(0.9) translateX(-100px);
+    transform: scale(0.9);
 }
 @media screen and (max-width: 1150px) {
-    transform:scale(0.7) translateX(-150px);
+    transform:scale(0.7);
 }
 @media screen and (max-width: 950px) {
     transform: scale(0.7) translateX(-200px);
@@ -125,9 +125,11 @@ export const NavMenu = styled.ul`
     @media screen and (max-width: 870px) {
        display: none;
     }
+            
+
 `;
 
-export const NavItem = styled(LinkS)`
+export const NavItem = styled.p`
     
     height: 100px;
     margin-right: -50px;
@@ -139,7 +141,7 @@ export const NavItem = styled(LinkS)`
     font-size: 14px;
     margin-bottom: 25px;
     /* or 429% */
-
+    margin-left: -50px;
     display: flex;
     align-items: center;
     letter-spacing: 1px;
@@ -161,35 +163,82 @@ export const NavItem = styled(LinkS)`
 
 export const NavBottom = styled.div`
     display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'col1 col2';
     flex-direction: row;
     align-items: flex-start;
-    padding: 8px 476.908px 8px 477.092px;
     overflow: hidden;
     position: absolute;
-    height: 15px;
+    height: 30px;
     width: 100vw;
-    top: 90px;
-
+    top: 90px; 
     background: #F5F7F9;
 
 `
 export const NavBottomText = styled.p`
-    width: 250px;
-    height: 0px;
-    margin-top: 7.5px;
+    width: 500px;
+    height: 20px;
+    margin-top: -10px;
     white-space: nowrap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 13.5008px;
     line-height: 28px;
+    text-align: center;
+    justify-content: center;
     /* identical to box height, or 207% */
-    margin-left: 85px;
+    //margin-left: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    grid-template-areas: col1;
+    color: #376392;
+    @media screen and (max-width: 870px) {
+      justify-content: center;
+      text-align: center;
+      font-size: 10px;
+  }
+  
+`
+
+export const NavBottomText2 = styled.p`
+    width: 500px;
+    height: 20px;
+    white-space: nowrap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13.5008px;
+    line-height: 28px;
+    text-align: center;
+    justify-content: center;
+    grid-template-areas: col2;
+   // margin-left: -50px;
+    cursor: pointer;
+    /* identical to box height, or 207% */
+   
     display: flex;
     align-items: center;
     text-align: center;
 
-    color: #376392;
+    color: #218207;
+    @media screen and (max-width: 870px) {
+        margin-left: -150px;
+        font-size: 10px;
+    }
+  
+`
+export const NavBottomTextSection = styled.p`
+        position: absolute;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    @media screen and (max-width: 870px) {
+        transform: translateX(-32.5%);
+        justify-content: center;
+        text-align: center;
+
+    }
 `
 export const NavLinks = styled(LinkR)`
     
@@ -206,31 +255,25 @@ export const NavLinks = styled(LinkR)`
 
     color: #376392;
     text-decoration: none;
-    width: 100px;
 
     &:hover {
         color: #218207;
         background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
         //border: 2px solid #69F490;
         border-radius: 80px;
+        width: 100%;
+        height: 30%;
       
     }
     &:active {
         color: #218207;
-        background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
-        //border: 2px solid #69F490;
+        border: 2px solid #69F490;
         border-radius: 80px;
-        width: 100vw;
+        width: 150%;
+        height: 30%;
     }
 
-    @media screen and (max-width: 1350px) {
-    font-size: 1.5rem;
-}
 
-@media screen and (max-width: 850px) {
-        font-size: 1.5rem;
-
-    }
 `;
 
 export const NavBtn = styled.button`
@@ -242,15 +285,16 @@ export const NavBtn = styled.button`
 
     height: 45px;
     margin-right: 35px;
+ 
+    /* identical to box height, or 100% */
+
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 14px;
-    /* identical to box height, or 100% */
-
-    display: flex;
-    align-items: center;
-
     color: #FFFFFF;
 
 
@@ -263,10 +307,7 @@ export const NavBtn = styled.button`
     background: #218207;
     border-radius: 80px;
     
-    @media screen and (max-width: 990px) {
-        transform: scale(0.70) translateX(-120px) translateY(20px);
-       
-     }
+ 
     @media screen and (max-width: 870px) {
         display: none;
     }
@@ -289,6 +330,7 @@ export const NavNumber = styled(LinkR)`
     outline: none;
     border: none;
     cursor: pointer;
+    margin-left: 50px;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     z-index: 9999;

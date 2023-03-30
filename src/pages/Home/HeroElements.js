@@ -14,8 +14,9 @@ export const HomeContainer = styled.div`
     border-radius: 0px;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-        height: 1200px;
-        zoom: 0.8;
+        margin-top: 175px;
+        height: 800px;
+        
          }
 
   
@@ -40,7 +41,7 @@ export const HomeWrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-
+  
 
 `;
 
@@ -52,12 +53,14 @@ export const HomeRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-      
+        display: flex;
+        flex-direction: column;
         grid-template-columns: 1fr;
         grid-template-areas:  'col1' 'col2';
         justify-content: center;
         //transform: scale(0.7);
         zoom: 0.7;
+        
         
     }
  
@@ -111,7 +114,7 @@ export const HeroServicesSection = styled.div`
 
     background: #376392;
     @media screen and (max-width: 768px) {
-       height: 1200px;
+       height: 850px;
     }
    
 `
@@ -184,7 +187,10 @@ export const HeroServeWrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-
+    @media screen and (max-width: 768px) {
+       margin-left: -20px;
+       margin-top: -240px
+    }
   
 
 `;
@@ -202,7 +208,7 @@ export const HeroServeRow = styled.div`
         grid-template-columns: 1fr;
         grid-template-areas:  'col1' 'col2';
         justify-content: center;
-       transform: scale(0.7);
+        transform: scale(0.6);
     }
 `;
 export const HeroServText = styled.div`
@@ -529,8 +535,7 @@ export const Column1 = styled.div`
        display: flex;
        align-items: center;
        justify-content: center;
-       margin-left: 50%;
-       transform: translateX(-50%);
+      
     }
 
 `;
@@ -554,6 +559,7 @@ export const TextWrapper = styled.div`
     max-width: 540;
     padding-top: 0;
     padding-bottom: 60px;
+    
   
 
 `;
@@ -589,7 +595,7 @@ export const Heading = styled.h1`
 
     display: flex;
     align-items: center;
-    text-align: center;
+    //text-align: center;
 
     color: #376392;
 
@@ -601,7 +607,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.p`
     
   
-    width: 524px;
+    width: 470px;
     height: 140px;
     left: 70px;
     margin-top: 50px;

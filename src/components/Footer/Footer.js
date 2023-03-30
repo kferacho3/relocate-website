@@ -14,6 +14,7 @@ import {
     FooterIcon,
     FooterLinksWrapper,
     SocialLogo, 
+    SocialLogoWrap,
     SocialMediaWrap,
     FooterLeftHead,
     FooterLeftAddress,
@@ -22,7 +23,10 @@ import {
     FooterLeftNumber,
     FooterBottomLine,
     FooterBottomLeftContainer,
-    FooterBottomSection
+    FooterBottomSection,
+    FooterMainContainer,
+    WebsiteRights,
+    WebsiteTermsPolicy
 
    
   } from './FooterElements';
@@ -53,83 +57,97 @@ const Footer = () => {
 
     return (
         <FooterContainer  >
-        <FooterTopLine/>
-            
-           <FooterWrapper>
-              <FooterRow>
-              <FooterLeftContainer>
-              <FooterLeftHead>CORPORATE HEADQUARTERS</FooterLeftHead>
-              <FooterLeftAddress>Atl, Georgia</FooterLeftAddress>
-              <FooterLeftEmail>relocate@gmail.com</FooterLeftEmail>
-             <FooterLeftNumber>1-234-567-8910</FooterLeftNumber>
-              <FooterLeftButton>BOOK A MOVE</FooterLeftButton>
-              </FooterLeftContainer>
+         <FooterMainContainer>
+         <FooterTopLine/>
+              
+            <FooterWrapper>
+                <FooterRow>
+                <FooterLeftContainer>
+                <FooterLeftHead>CORPORATE HEADQUARTERS</FooterLeftHead>
+                <FooterLeftAddress>Atl, Georgia</FooterLeftAddress>
+                <FooterLeftEmail>relocate@gmail.com</FooterLeftEmail>
+              <FooterLeftNumber>1-234-567-8910</FooterLeftNumber>
+                <FooterLeftButton>BOOK A MOVE</FooterLeftButton>
+                </FooterLeftContainer>
 
-                <FooterMidContainer>
+                  <FooterMidContainer>
+                      
                     
-                  
-                    <FooterLinksWrapper>
-                          <FooterLinkTitle> Home </FooterLinkTitle>
-                                <FooterText to='about'>About Us</FooterText>
-                                <FooterText to='mission'>Mission Statement</FooterText>
-                                <FooterText to='services'>Services</FooterText>
-                                <FooterText to='how'>How It Works</FooterText>
-                                <FooterText to='market'>Market</FooterText>  
-                                <FooterText to='testimonials'>Testimonials</FooterText> 
-                                <FooterText to='book'>Book Now!</FooterText> 
-                    </FooterLinksWrapper> 
+                      <FooterLinksWrapper>
+                            <FooterLinkTitle> Home </FooterLinkTitle>
+                                  <FooterText to='about'>About Us</FooterText>
+                                  <FooterText to='mission'>Mission Statement</FooterText>
+                                  <FooterText to='services'>Services</FooterText>
+                                  <FooterText to='how'>How It Works</FooterText>
+                                  <FooterText to='market'>Market</FooterText>  
+                                  <FooterText to='testimonials'>Testimonials</FooterText> 
+                                  <FooterText to='book'>Book Now!</FooterText> 
+                      </FooterLinksWrapper> 
 
-                    <FooterLinksWrapper>
-                          <FooterLinkTitle> Services </FooterLinkTitle>
-                              <FooterText to='standard'>Standard Moving</FooterText>
-                                <FooterText to='packing'>Packing & Unpacking</FooterText>
-                                <FooterText to='hourly'>Hourly Labor</FooterText>
-                                <FooterText to='junk'>Junk Removal</FooterText>  
-                                <FooterText to='overnight'>Overnight Moves</FooterText> 
-                                <FooterText to='vip'>VIP Moving Service</FooterText>
-                                <FooterText to='storage'>Storage</FooterText>  
-                                <FooterText to='tv'>TV Mounting</FooterText> 
-                    </FooterLinksWrapper> 
+                      <FooterLinksWrapper>
+                            <FooterLinkTitle> Services </FooterLinkTitle>
+                                <FooterText to='standard'>Standard Moving</FooterText>
+                                  <FooterText to='packing'>Packing & Unpacking</FooterText>
+                                  <FooterText to='hourly'>Hourly Labor</FooterText>
+                                  <FooterText to='junk'>Junk Removal</FooterText>  
+                                  <FooterText to='overnight'>Overnight Moves</FooterText> 
+                                  <FooterText to='vip'>VIP Moving Service</FooterText>
+                                  <FooterText to='storage'>Storage</FooterText>  
+                                  <FooterText to='tv'>TV Mounting</FooterText> 
+                      </FooterLinksWrapper> 
 
-                    <FooterLinksWrapper>
-                          <FooterLinkTitle> Locations </FooterLinkTitle>
-                                <FooterText to='atlanta'>Atlanta Market</FooterText>
-                                <FooterText to='chicago'>Chicago Market</FooterText>
-                                <FooterText to='geographic'>Geographic Planning</FooterText>
-                                <FooterText to='info'>Info</FooterText>  
-                                <FooterText to='book'></FooterText> 
-                    </FooterLinksWrapper> 
+                      <FooterLinksWrapper>
+                            <FooterLinkTitle> Locations </FooterLinkTitle>
+                                  <FooterText to='atlanta'>Atlanta Market</FooterText>
+                                  <FooterText to='chicago'>Chicago Market</FooterText>
+                                  <FooterText to='geographic'>Geographic Planning</FooterText>
+                                  <FooterText to='info'>Info</FooterText>  
+                                  <FooterText to='book'></FooterText> 
+                      </FooterLinksWrapper> 
 
-                    <FooterLinksWrapper>
-                          <FooterLinkTitle> Join the Pack! </FooterLinkTitle>
-                                <FooterText to='packer'>Packer</FooterText>
-                                <FooterText to='driver'>Driver</FooterText>
-                                <FooterText to='handman'>Hand-man</FooterText>
-                                <FooterText to='packman'>Pack-man</FooterText>  
-                                <FooterText to='carrier'>Carrier</FooterText> 
-                    </FooterLinksWrapper> 
-                </FooterMidContainer>
-                <FooterRightContainer>
-                <FooterIcon to='/' style={{ backgroundImage:`url(${logo})` }}/>
-                </FooterRightContainer>
-              </FooterRow>
-          </FooterWrapper>
+                      <FooterLinksWrapper>
+                            <FooterLinkTitle> Join the Pack! </FooterLinkTitle>
+                                  <FooterText to='packer'>Packer</FooterText>
+                                  <FooterText to='driver'>Driver</FooterText>
+                                  <FooterText to='handman'>Hand-man</FooterText>
+                                  <FooterText to='packman'>Pack-man</FooterText>  
+                                  <FooterText to='carrier'>Carrier</FooterText> 
+                      </FooterLinksWrapper> 
+                  </FooterMidContainer>
+                  <FooterRightContainer>
+                  <FooterIcon to='/' style={{ backgroundImage:`url(${logo})` }}/>
+                  </FooterRightContainer>
+                </FooterRow>
+            </FooterWrapper>
 
-          <FooterBottomLine/>
-
+            <FooterBottomLine/>
+         </FooterMainContainer>
 
             <FooterBottomSection>
-            <FooterBottomLeftContainer>
-
-            </FooterBottomLeftContainer>
-            
+                <FooterBottomLeftContainer>
+                    <WebsiteRights>Relocate © {new Date().getFullYear()} All rights reserved</WebsiteRights>
+                    <WebsiteTermsPolicy>Terms</WebsiteTermsPolicy>
+                    <WebsiteTermsPolicy>FAQ</WebsiteTermsPolicy>
+                </FooterBottomLeftContainer>
+                
                 <SocialMediaWrap>
-                  <SocialLogo style={{ backgroundImage:`url(${fb})` }} />
-                  <SocialLogo style={{ backgroundImage:`url(${ig})` }} />
-                  <SocialLogo style={{ backgroundImage:`url(${ldin})` }} />
-                  <SocialLogo style={{ backgroundImage:`url(${tw})` }} />
-                  <SocialLogo style={{ backgroundImage:`url(${yt})` }} />
+                    <SocialLogoWrap>
+                      <SocialLogo src={fb} />
+                    </SocialLogoWrap>
+                    <SocialLogoWrap>
+                      <SocialLogo src={ig}/>
+                    <SocialLogoWrap>
+                    </SocialLogoWrap>
+                      <SocialLogo src={ldin}/>
+                    <SocialLogoWrap>
+                    </SocialLogoWrap>
+                      <SocialLogo src={tw} />
+                    <SocialLogoWrap>
+                    </SocialLogoWrap>
+                      <SocialLogo src={yt} />
+                    </SocialLogoWrap>
                 </SocialMediaWrap>
+
             </FooterBottomSection>
         </FooterContainer>
     )
