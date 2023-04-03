@@ -106,7 +106,7 @@ export const ServicesButton = styled.button`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    font-family: 'Inter';
+
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -187,7 +187,7 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
 align-items: center;
 text-align: center;
-    max-width: 540;
+    max-width: 540px;
 
 `;
 
@@ -209,7 +209,7 @@ export const Heading = styled.h1`
     margin-left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    font-family: 'Inter';
+   
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -240,7 +240,7 @@ export const Subtitle = styled.p`
     transform: translateX(-50%);
     
 
-    font-family: 'Inter';
+
     font-style: normal;
     font-weight: 700;
     font-size: 18px;

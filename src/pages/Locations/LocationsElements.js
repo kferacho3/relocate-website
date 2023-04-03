@@ -40,7 +40,6 @@ export const LocationsHeaderText = styled.h1`
     left: 283px;
     top: 9px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 72px;
@@ -68,7 +67,6 @@ export const LocationsDemoHeader = styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 72px;
@@ -77,8 +75,8 @@ export const LocationsDemoHeader = styled.h2`
 
     color: #000000;
 
-    border: 1px solid #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //border: 1px solid #FFFFFF;
+    //text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     @media screen and (max-width: 768px) {
         zoom: 0.5;
    }
@@ -92,7 +90,7 @@ export const LocationsDemoImg = styled.img`
     top: 350px;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 `
 
@@ -174,7 +172,6 @@ export const TopLine = styled.p`
     width: 154px;
     height: 39px;
   
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -191,7 +188,6 @@ export const Heading = styled.h1`
     height: 87px;
   
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 72px;
@@ -210,7 +206,6 @@ export const Subtitle = styled.p`
     height: 191px;
 
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -302,7 +297,6 @@ export const LocationsInfoHeader = styled.h2`
     margin-left: 50%;
     transform: translate(-50%, 50px);
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 30.704px;
@@ -350,7 +344,7 @@ export const LocationsInfoTextHeader = styled.p`
     white-space: nowrap;
     margin-left: 50%;
     transform: translateX(-50%);
-    font-family: 'Inter';
+
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -371,7 +365,6 @@ export const LocationsInfoText = styled.p`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -389,7 +382,7 @@ export const LocationsInfoButton = styled.button`
     flex-direction: row;
     align-items: flex-start;
     padding: 11.5px 42.9078px 11.5px 43.0922px;
-    font-family: 'Inter';
+    
     margin-left: 50%;
     transform: translateX(-50%);
     font-style: normal;

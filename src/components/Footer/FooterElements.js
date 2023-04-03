@@ -21,7 +21,7 @@ export const FooterContainer = styled.footer`
   
   @media screen and (max-width: 850px) {
     
-    height: 200px;
+    height: 1000px;
     }
     
   
@@ -41,7 +41,7 @@ export const FooterMainContainer = styled.div`
   
   @media screen and (max-width: 850px) {
     
-    transform: scale(0.3);
+    transform: scale(0.6);
     }
 `
 
@@ -64,10 +64,13 @@ export const FooterRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
 
     @media screen and (max-width: 768px) {
+        height: 200vh;
         
-        
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2' 'col3'` : `'col1 col1 col1' 'col2 col2 col2' 'col3 col3 col3'`)};
+        grid-auto-rows: 1fr;
+        gap: 100px;
+        grid-template-areas: 'col2' 'col1' 'col3';
     }
+
 `;
 
 
@@ -78,6 +81,15 @@ export const FooterLeftContainer = styled.div`
     width: 250px;
     gap: 25px;
     left: 0px;
+    grid-area: col1;
+    @media screen and (max-width: 768px) {
+       
+        margin-left: 50%;
+        transform: translateX(-50%);
+        
+       margin-top: 250px;
+
+    }
 
 `
 export const FooterTopLine = styled.hr`
@@ -93,6 +105,9 @@ export const FooterTopLine = styled.hr`
     flex: none;
     order: 0;
     flex-grow: 0;
+    @media screen and (max-width: 768px) {
+   zoom: 0.4;
+    }
 `
 export const FooterBottomLine = styled.hr`
     box-sizing: border-box;
@@ -111,6 +126,9 @@ export const FooterBottomLine = styled.hr`
     flex: none;
     order: 0;
     flex-grow: 0;
+    @media screen and (max-width: 768px) {
+   zoom: 0.4;
+    }
 `
 
 export const FooterLeftHead = styled.div`
@@ -120,7 +138,6 @@ export const FooterLeftHead = styled.div`
     left: 59px;
   
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -134,7 +151,6 @@ export const FooterLeftAddress = styled.div`
     right: 72.16%;
 
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -148,7 +164,7 @@ export const FooterLeftNumber = styled.div`
     right: 85.14%;
   
 
-    font-family: 'Open Sans';
+
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -162,7 +178,6 @@ export const FooterLeftEmail = styled.div`
     right: 80.95%;
 
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -184,7 +199,7 @@ export const FooterLeftButton = styled.button`
     font-size: 14px;
     line-height: 14px;
     color: #FFFFFF;
-
+    cursor: pointer;
     height: 40px;
     left: 59px;
     right: 1221px;
@@ -203,6 +218,17 @@ export const FooterMidContainer = styled.div`
 
     width: 500px;
     height: 265px;
+    grid-area: col2;
+        
+
+    @media screen and (max-width: 768px) {
+        
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        gap: 50px;
+        grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+
+    }
 
 `
 export const FooterMidHead = styled.p`
@@ -212,6 +238,7 @@ export const FooterRightContainer = styled.div`
     width: 409px;
     height: 366px;
     right: 0px;
+    grid-area: col3;
 `
 export const FooterLinksWrapper = styled.li`
     display: flex;
@@ -251,7 +278,7 @@ export const FooterIcon = styled(LinkR)`
 `
 
 export const FooterText = styled(LinkR)`
-    font-family: 'Roboto';
+    
     color: #8B9F2C;
     font-size: 16px;
     font-weight: 400;
@@ -260,13 +287,13 @@ export const FooterText = styled(LinkR)`
     white-space: nowrap;
     text-align: left;
     cursor: pointer;
+    text-decoration: none;
 
 
 `
 export const FooterLinksContainer = styled.ul`
    
     align-items: center;
-    justify-content: right;
     width: 100vw;
 
   
@@ -290,7 +317,7 @@ export const FooterLinkTitle = styled.div`
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
-    font-family: 'Roboto';
+  
     font-style: normal;
     white-space: nowrap;
     /* or 120% */
@@ -317,9 +344,11 @@ export const FooterBottomSection = styled.div`
     margin-top: 450px;
     margin-left: 50%;
     @media screen and (max-width: 850px) {
+       
+    margin-top: 950px;
     zoom: 0.5;
-    margin-left: 0%;
-
+    margin-left: 50%;
+    transform: translateX(-35%);
     }
 `
 
@@ -341,10 +370,7 @@ export const SocialLogo = styled.img`
   
 
 
-    @media screen and (max-width: 520px) {
-        transform: scale(0.8);
-        background-color: #4267B2;
-        }
+   
     
 `;
 
@@ -360,8 +386,7 @@ export const SocialLogoWrap = styled(LinkR)`
 
 
     @media screen and (max-width: 520px) {
-        transform: scale(0.8);
-        background-color: #4267B2;
+        //transform: scale(0.8);
         }
     
 `;
@@ -378,7 +403,7 @@ export const WebsiteRights = styled.small`
     height: 17px;
  
     white-space: nowrap;
-    font-family: 'Inter';
+   
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -398,7 +423,6 @@ export const WebsiteTermsPolicy = styled.small`
     height: 17px;
     margin-top: 5px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -426,7 +450,7 @@ export const SocialIconText = styled.div`
     top: 98.96%;
     bottom: 0.36%;
 
-    font-family: 'Open Sans';
+
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

@@ -242,7 +242,6 @@ export const Subtitle = styled.p`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;

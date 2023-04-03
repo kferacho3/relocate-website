@@ -162,8 +162,7 @@ export const HeroServTextHeader = styled.div`
     width: 245px;
     height: 75px;
     margin-bottom: -20px;
-
-    font-family: 'Inter';
+    white-space: nowrap;
     font-style: normal;
     font-weight: 700;
     font-size: 23px;
@@ -215,7 +214,6 @@ export const HeroServText = styled.div`
     height: 61px;
   
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -232,7 +230,6 @@ export const HeroTestHeader = styled.h2`
     
  
 
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
     font-size: 48px;
@@ -245,10 +242,8 @@ export const HeroTestMain = styled.p`
     
     width: 711.26px;
     height: 120px;
-    left: calc(50% - 711.26px/2 + 0.1px);
-    top: 155.5px;
+  
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
@@ -325,7 +320,7 @@ export const HeroTestContainer = styled.div`
       
       //transform: scale(0.7);
       zoom: 0.6;
-      height: 150vh;
+      height: 160vh;
       
       
   }
@@ -361,6 +356,7 @@ export const HeroTestTextSection = styled.div`
 
     background: linear-gradient(180deg, #000100 0%, rgba(39, 210, 11, 0.35) 100%);
     border: 1px solid #FFFFFF;
+    
 
     /* Inside auto layout */
 
@@ -374,11 +370,12 @@ export const HeroTestNameHead = styled.h3`
     left: 2.26px;
     top: -0.5px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
+    text-align: center;
+    white-space: nowrap;
     /* identical to box height, or 100% */
 
     display: flex;
@@ -392,8 +389,8 @@ export const HeroTestNameDate = styled.h3`
     height: 20px;
     left: 2px;
     top: 16px;
+    white-space: nowrap;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 9px;
@@ -417,15 +414,14 @@ export const HeroTestTop = styled.div`
 `
 export const HeroTestText = styled.p`
 
-    width: 305.4px;
+    width: 320px;
     height: 144px;
-    left: 21px;
-    top: 100.95px;
 
-    font-family: 'Inter';
+    text-align: center;
+
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 24px;
     /* or 171% */
 
@@ -450,6 +446,7 @@ export const HeroTestButton = styled.button`
 
     width: 250px;
     height: 48px;
+    cursor: pointer;
 
     background: rgba(0, 255, 1, 0.3);
     border: 2px solid #69F490;
@@ -462,7 +459,7 @@ export const HeroTestButton = styled.button`
     flex-grow: 0;
     @media screen and (max-width: 768px) {
    
-       margin-top: 350px;
+       margin-top: 325px;
         
     }
 `
@@ -522,7 +519,6 @@ export const HeroBookHead = styled.h4`
     right: 28.83%;
     top: 66px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 47px;
@@ -542,7 +538,6 @@ export const HeroBookText = styled.p`
     right: 3.42%;
     top: 0px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
@@ -561,7 +556,7 @@ export const HeroBookButton = styled.button`
     left: 39.83%;
     right: 37.9%;
     top: 389px;
-
+    cursor: pointer;
     background: #69F490;
     border-radius: 50px;
 
@@ -612,7 +607,6 @@ export const TopLine = styled.p`
     height: 13px;
     top: 74.5px;
     white-space: nowrap;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
     font-size: 15px;
@@ -628,7 +622,6 @@ export const Heading = styled.h1`
     left: 99px;
     top: -43.5px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
@@ -654,7 +647,6 @@ export const Subtitle = styled.p`
     left: 70px;
     margin-top: 50px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16.5px;

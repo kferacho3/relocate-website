@@ -35,12 +35,13 @@ export const NavbarContainer = styled.div`
 
 
 export const NavLogoCont = styled.div`
-    height: 160px;
-    width: 240px;
+    margin-top: 1%;
+    margin-left: 100px;
     display: flex;
     align-items: center;
-    width: 235px;
-    height: 49px;
+    width: 190px;
+    height: 40px;
+    cursor: pointer;
 
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -48,7 +49,7 @@ export const NavLogoCont = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 870px)  {
-        margin-left: 20px;
+        margin-left: 50px;
         zoom: 0.8;
        
     }
@@ -59,7 +60,6 @@ export const NavLogo = styled(LinkR)`
 
     height: 100%;
     width: 100%;
-    padding: 20px 80px;
     justify-self: flex-start;
     cursor: pointer;
     
@@ -135,7 +135,6 @@ export const NavItem = styled.p`
     margin-right: -50px;
     white-space: nowrap;
     padding: 10px 80px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -180,7 +179,6 @@ export const NavBottomText = styled.p`
     height: 20px;
     margin-top: -10px;
     white-space: nowrap;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 13.5008px;
@@ -206,7 +204,6 @@ export const NavBottomText2 = styled.p`
     width: 500px;
     height: 20px;
     white-space: nowrap;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 13.5008px;
@@ -244,7 +241,6 @@ export const NavLinks = styled(LinkR)`
     
     height: 28px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -282,7 +278,7 @@ export const NavBtn = styled.button`
     align-items: flex-start;
     padding: 16px 46px 18px 24px;
     isolation: isolate;
-
+    cursor: pointer;
     height: 45px;
     margin-right: 35px;
  
@@ -322,7 +318,7 @@ export const NavNumber = styled(LinkR)`
     white-space: nowrap;
     padding: 10px 20px;
     margin-left: 0px;
-    font-family: 'Inter';
+
     font-style: normal;
     font-weight: 400;
     font-size: 14.5008px;
