@@ -10,7 +10,8 @@ import {
   TopLine,
   Heading,
   Subtitle,
-  Img
+  Img,
+  ImgWrap
   
 } from './LocationsElements';
 import "./Locations.scss";
@@ -44,7 +45,9 @@ const Locations = ({lightBg, id, imgStart, lightText, topLine, img,darkText, des
 
 
                     <Column2>
+                      <ImgWrap>
                         <Img  src={img} alt={alt} />
+                      </ImgWrap>
                     </Column2>
                     
                 </LocationsRow>

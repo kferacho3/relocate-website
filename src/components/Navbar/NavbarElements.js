@@ -18,6 +18,7 @@ export const Nav = styled.nav`
     left: 0;
     overflow: hidden;
     z-index: 9999999999;
+    margin-bottom: 80px;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
@@ -27,7 +28,7 @@ export const NavbarContainer = styled.div`
     
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 120px;
     z-index: 1;
     width: 100%;
     
@@ -35,8 +36,8 @@ export const NavbarContainer = styled.div`
 
 
 export const NavLogoCont = styled.div`
-    margin-top: 1%;
-    margin-left: 100px;
+    margin-top: 2%;
+    margin-left: 60px;
     display: flex;
     align-items: center;
     width: 190px;
@@ -44,10 +45,11 @@ export const NavLogoCont = styled.div`
     cursor: pointer;
 
 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
    
     background-repeat: no-repeat;
     background-size: cover;
+    
     @media screen and (max-width: 870px)  {
         margin-left: 50px;
         zoom: 0.8;
@@ -109,7 +111,7 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    font-family: Lato;
+ 
 
         
 @media screen and (max-width: 1350px) {
@@ -131,19 +133,17 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.p`
     
-    height: 100px;
-    margin-right: -50px;
+    margin-right: -75px;
     white-space: nowrap;
-    padding: 10px 80px;
+    padding: 20px 80px;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     /* or 429% */
     margin-left: -50px;
     display: flex;
     align-items: center;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     text-decoration: none;
     color: #222222;
     transition: all 0.2s ease-in-out;
@@ -243,7 +243,7 @@ export const NavLinks = styled(LinkR)`
 
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 28px;
     /* identical to box height, or 187% */
     display: flex;
@@ -272,6 +272,25 @@ export const NavLinks = styled(LinkR)`
 
 `;
 
+export const NavIcon = styled.div`
+    width: 25px;
+    height: 24px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+    display: flex;
+    align-items: center;
+
+    color: #376392;
+    text-decoration: none;
+
+
+
+`;
+
 export const NavBtn = styled.button`
     display: flex;
     flex-direction: row;
@@ -281,7 +300,8 @@ export const NavBtn = styled.button`
     cursor: pointer;
     height: 45px;
     margin-right: 35px;
- 
+   
+    border: none;
     /* identical to box height, or 100% */
 
     margin-left: 10px;

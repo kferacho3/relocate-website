@@ -2,6 +2,7 @@ import React from 'react';
 import * as AiIcons from 'react-icons/ai';
 import * as RiIcons from 'react-icons/ri';
 import * as MdIcons from 'react-icons/md';
+import * as ImIcons from 'react-icons/im';
 
 export const SidebarData = [
   {
@@ -16,17 +17,17 @@ export const SidebarData = [
   {
     title: 'Services',
     path: 'services',
-    icon: <RiIcons.RiInformationLine />
+    icon: <MdIcons.MdOutlineMiscellaneousServices />
   },
   {
     title: 'Locations',
     path: 'locations',
-    icon: <MdIcons.MdOutlineMiscellaneousServices/>
+    icon: <MdIcons.MdLocationPin/>
   },
   {
     title: 'Join the Pack!',
     path: 'pack',
-    icon: <MdIcons.MdRoofing />,
+    icon: <ImIcons.ImPacman />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 /*
@@ -43,6 +44,6 @@ export const SidebarData = [
   {
     title: 'Book Move',
     path: 'book',
-    icon: <MdIcons.MdOutlineConnectWithoutContact />
+    icon: <MdIcons.MdBookmarks />
   }
 ];

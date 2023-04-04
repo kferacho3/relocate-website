@@ -181,8 +181,7 @@ export const Column1 = styled.div`
     @media screen and (max-width: 768px) {
     
     
-        margin-left: 50%;
-        transform: translateX(-50%) scale(0.5);
+        transform: scale(0.5);
     }
 `;
 
@@ -198,8 +197,8 @@ export const Column2 = styled.div`
         justify-content: center;
         align-items: center;
         margin-top: -500px;
-        margin-left: 50%;
-        transform: translateX(-38%) scale(0.7);
+       
+        transform:  scale(0.7);
     }
 `;
 
@@ -270,8 +269,8 @@ export const BtnWrap = styled.div`
 `
 
 export const ImgWrap = styled.div`
-    width: 446.7px;
-    height: 677px;
+    width: 700px;
+    height: 700px;
 `;
 
 export const Img = styled.img`

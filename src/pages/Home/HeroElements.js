@@ -414,7 +414,7 @@ export const HeroTestTop = styled.div`
 `
 export const HeroTestText = styled.p`
 
-    width: 320px;
+    width: 360px;
     height: 144px;
 
     text-align: center;
@@ -481,7 +481,7 @@ export const HeroBookSection = styled.div`
         grid-template-areas:  'col1' 'col2';
         justify-content: center;
 
-       height: 150vh;
+       height: 160vh;
         
     }
 
@@ -493,7 +493,7 @@ export const HeroBookImg = styled.img`
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 768px) {
-       width: 130vw;
+       width: 135vw;
         
     }
 
@@ -507,7 +507,8 @@ export const HeroBookTextSection = styled.div`
     right: -15%;
     @media screen and (max-width: 768px) {
         zoom: 0.6;
-        width: 500px;
+        width: 550px;
+       
         
     }
 
@@ -534,9 +535,7 @@ export const HeroBookHead = styled.h4`
 export const HeroBookText = styled.p`
    
     height: 110px;
-    left: 0%;
-    right: 3.42%;
-    top: 0px;
+    margin-top: 50px;
 
     font-style: normal;
     font-weight: 400;

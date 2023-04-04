@@ -3,6 +3,7 @@ import {FaBars} from 'react-icons/fa';
 import {IconContext} from 'react-icons/lib';
 import {animateScroll as scroll} from 'react-scroll';
 import logo from '../../images/navbarLogo.svg';
+import pac from '../../images/pacman-svg.svg';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../Sidebar/SidebarData';
 
@@ -17,6 +18,7 @@ import {
      NavItem,
      NavLinks, 
      NavBtn,
+     NavIcon,
      NavNumber,
      NavBottom,
      NavBottomText,
@@ -24,7 +26,7 @@ import {
      NavBottomTextSection
 } from './NavbarElements';
 
-import { NavIcon } from '../Sidebar/SidebarElements';
+import { NavLink } from 'react-router-dom';
 const Navbar = ({ toggle}) => {
   
     const [sidebar, setSidebar] = useState(false);
@@ -70,7 +72,7 @@ const Navbar = ({ toggle}) => {
                     </NavItem>
 
                     <NavItem >
-                        <NavLinks to='/pack'  smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'>Join the Pack!</NavLinks>
+                        <NavLinks to='/pack'  smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'><NavIcon style={{ backgroundImage:`url(${pac})` }}>   </NavIcon>Join the Pack!</NavLinks>
                     </NavItem>
 
                     <NavItem>

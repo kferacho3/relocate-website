@@ -6,17 +6,20 @@ export const ServicesContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
     overflow: hidden;
     background: #fff;    
-    height: 1200px;
+    height: 1000px;
     width: 100vw;
     left: 0px;
     border-radius: 0px;
     background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#376392')};
  
  
-  
+    @media screen and (max-width: 768px) {
+        
+        height: 800px;  
+      }
  
     
 `;
@@ -26,10 +29,8 @@ export const ServicesContainer = styled.div`
 
 
 
-
-
 export const ServicesTextContainer = styled.div`
-    width: 545px;
+    width: 500px;
     height: 513px;
    
     overflow: hidden;
@@ -60,19 +61,19 @@ export const ServicesDeco1 = styled.img`
     width: 144px;
     height: 55px;
     margin-top: 20px;
-    margin-left: -20px;
+    margin-left: -25px;
 
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
 `
 export const ServicesDeco2 = styled.img`
   
     width: 159px;
     height: 60px;
-    margin-left: 410px;
+    margin-left: 375px;
     //margin-right: -20px;
-    margin-top: -30px;
+    margin-top: -25px;
 
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
 `
 
 export const DivBg = styled.img`
@@ -87,9 +88,12 @@ export const DivBg = styled.img`
     z-index: -9999999;
     transform: ${({divStart}) => (divStart ? `scaleX(-1)` : `scaleX(1)`)};
     @media screen and (max-width: 768px) {
-        margin-top: -10px;
-        margin-left: -10px;
+        
+       margin-top: 0px;
+       margin-left: 0px;
+       
     }
+
   
  
 `
@@ -135,6 +139,11 @@ export const ServicesWrapper = styled.div`
     margin-left: auto;
     justify-content: center;
 
+    @media screen and (max-width: 768px) {
+        
+          height: 400px;  
+        }
+
 `;
 
 export const ServicesRow = styled.div`
@@ -145,9 +154,10 @@ export const ServicesRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-        grid-auto-rows: 1fr 1fr;
-        gap: 100px;
-        grid-template-areas: 'col1' 'col2';   
+        grid-auto-rows: 0.5fr;
+       
+        gap: 0px;
+        grid-template-areas: 'col2' 'col1';   
         }
 `;
 
@@ -161,25 +171,26 @@ export const Column1 = styled.div`
         
         display: flex;
        align-items: center;
+       padding: 0%;
        justify-content: center;
-       margin-left: 50%;
-       transform: translateX(-50%) scale(0.65);
+        zoom: 0.5;
     }
 `;
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
-    zoom: 0.85;
+    
     grid-area: col2;
     
     @media screen and (max-width: 768px) {
-        
+        zoom: 0.85;
         justify-content: center;
         align-items: center;
         grid-auto-flow: row;
-        margin-left: 50%;
-        transform: translateX(-50%);
+        padding: 0%;
+        margin-bottom: -200px;
+       
     }
 `;
 

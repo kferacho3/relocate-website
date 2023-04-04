@@ -21,7 +21,8 @@ export const FooterContainer = styled.footer`
   
   @media screen and (max-width: 850px) {
     
-    height: 1000px;
+    padding: 0 0 0 0;
+    height: 900px;
     }
     
   
@@ -41,7 +42,8 @@ export const FooterMainContainer = styled.div`
   
   @media screen and (max-width: 850px) {
     
-    transform: scale(0.6);
+    transform: scale(0.7);
+    margin-top: 100px;
     }
 `
 
@@ -49,9 +51,8 @@ export const FooterWrapper = styled.div`
     display: grid;
     z-index: 1;
     width: 100%;
-    max-width: 1100px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 1200px;
+ 
     justify-content: center;
 
 `;
@@ -67,7 +68,7 @@ export const FooterRow = styled.div`
         height: 200vh;
         
         grid-auto-rows: 1fr;
-        gap: 100px;
+      
         grid-template-areas: 'col2' 'col1' 'col3';
     }
 
@@ -84,8 +85,8 @@ export const FooterLeftContainer = styled.div`
     grid-area: col1;
     @media screen and (max-width: 768px) {
        
-        margin-left: 50%;
-        transform: translateX(-50%);
+        margin-left: -10%;
+        //transform: translateX(-50%);
         
        margin-top: 250px;
 
@@ -106,19 +107,17 @@ export const FooterTopLine = styled.hr`
     order: 0;
     flex-grow: 0;
     @media screen and (max-width: 768px) {
-   zoom: 0.4;
+   zoom: 0.35;
     }
 `
 export const FooterBottomLine = styled.hr`
     box-sizing: border-box;
 
-    transform: matrix(1, 0, 0, -1, 0, 0);
-
     box-sizing: border-box;
 
     width: 1360px;
     height: 1px;
-    top: 150%;
+    //top: 150%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 
     /* Inside auto layout */
@@ -127,7 +126,8 @@ export const FooterBottomLine = styled.hr`
     order: 0;
     flex-grow: 0;
     @media screen and (max-width: 768px) {
-   zoom: 0.4;
+        transform: translateY(-800px);
+   zoom: 0.35;
     }
 `
 
@@ -213,19 +213,24 @@ export const FooterMidContainer = styled.div`
     flex-direction: row;
     align-items: flex-start;
     padding: 0px 0px 0px 0px;
-    gap: 25px;
 
 
-    width: 500px;
+
+    width: 30px;
     height: 265px;
     grid-area: col2;
+    gap: 50px;
         
 
     @media screen and (max-width: 768px) {
-        
+        width: 330px;
+    height: 265px;
         display: grid;
         grid-auto-columns: 1fr 1fr;
-        gap: 50px;
+      
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 50px;
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     }
@@ -238,11 +243,26 @@ export const FooterRightContainer = styled.div`
     width: 409px;
     height: 366px;
     right: 0px;
+    margin-left: 60%;
     grid-area: col3;
+    @media screen and (max-width: 768px) {
+        
+        margin-left: 35%;
+        margin-top: -220%;
+        //transform: translateX(-50%);
+    }
+    @media screen and (max-width: 500px) {
+        
+        margin-left: 35%;
+        margin-top: -170%;
+        //transform: translateX(-50%);
+    }
+ 
 `
 export const FooterLinksWrapper = styled.li`
     display: flex;
     flex-direction: column;
+
 
 
 `;
@@ -345,10 +365,10 @@ export const FooterBottomSection = styled.div`
     margin-left: 50%;
     @media screen and (max-width: 850px) {
        
-    margin-top: 950px;
-    zoom: 0.5;
+    margin-top: 1000px;
+    zoom: 0.7;
     margin-left: 50%;
-    transform: translateX(-35%);
+    transform: translateX(-50%);
     }
 `
 
@@ -357,8 +377,12 @@ export const SocialMediaWrap = styled.div`
 
     display: flex;
 
-   
-
+    width: 300px;
+    @media screen and (max-width: 850px) {
+       
+       margin-top: 50px;
+    
+       }
  
 `;
 
@@ -375,13 +399,11 @@ export const SocialLogo = styled.img`
 `;
 
 export const SocialLogoWrap = styled(LinkR)`
-    background-repeat: no-repeat;
-    background-size: cover;
+  
     height: 40px;
-        margin-left: 10px;
+    width: 40px;
+    margin-left: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
   
 
 

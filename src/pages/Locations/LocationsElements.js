@@ -8,7 +8,7 @@ export const LocationsContainer = styled.div`
     align-items: center;
     position: relative;
     background: #fff;   
-    height: 801px;
+    height: 1000px;
     background: #376392;
     width: 100vw;
     overflow: hidden;
@@ -16,12 +16,12 @@ export const LocationsContainer = styled.div`
   
     @media screen and (max-width: 768px) {
         
-        height: 1200px;
+        height: 800px;
     }
  
   
   @media screen and (max-width: 550px) {
-    top: -200px;
+   
     }
     
 `;
@@ -56,8 +56,10 @@ export const LocationsDemographicContainer = styled.div`
    overflow: hidden;
     width: 100vw;
     height: 800px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
+    //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    @media screen and (max-width: 550px) {
+   height: 400px;
+}
 `
 
 export const LocationsDemoHeader = styled.h2`
@@ -91,7 +93,9 @@ export const LocationsDemoImg = styled.img`
     background-repeat: no-repeat;
     background-size: cover;
     //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
+    @media screen and (max-width: 550px) {
+        margin-top: -100px;
+}
 `
 
 
@@ -122,8 +126,8 @@ export const LocationsRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-        
-        
+        gap: 100px;
+        grid-auto-columns: 1fr;
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
 `;
@@ -135,16 +139,27 @@ export const Column1 = styled.div`
     grid-area: col1;
 
     @media screen and (max-width: 768px) {
-        zoom: 0.8;
+        zoom: 0.75;
    }
 `;
 
 export const Column2 = styled.div`
+    
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
     @media screen and (max-width: 768px) {
-        zoom: 0.8;
+        zoom: 0.7;
+   }
+    
+`;
+export const Column22 = styled.div`
+    margin-bottom: 115px;
+    padding: 0 15px;
+    grid-area: col2;
+    @media screen and (max-width: 768px) {
+        zoom: 0.75;
+        margin-bottom: 15px;
    }
     
 `;
@@ -153,7 +168,7 @@ export const Column3 = styled.div`
     padding: 0 15px;
     grid-area: col3;
     @media screen and (max-width: 768px) {
-        zoom: 0.8;
+        zoom: 0.75;
    }
     
 `;
@@ -229,12 +244,13 @@ export const BtnWrap = styled.div`
 `
 
 export const ImgWrap = styled.div`
-    max-width: 555px;
-    height: 100%;
+   width: 544px;
+height: 689px;
 `;
 
 export const Img = styled.img`
     width: 100%;
+    height: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
     
@@ -295,7 +311,7 @@ export const LocationsInfoHeader = styled.h2`
     width: 631px;
     height: 44px;
     margin-left: 50%;
-    transform: translate(-50%, 50px);
+    transform: translate(-50%, 20px);
 
     font-style: normal;
     font-weight: 400;

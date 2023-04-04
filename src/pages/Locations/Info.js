@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { LocationsInfoSection, LocationsInfoBg, LocationsInfoWrapper, LocationsInfoRow,
          LocationsInfoHeader, LocationsInfoTextSection, LocationsInfoIcon, LocationsInfoTextHeader,
-         LocationsInfoText, LocationsInfoButton, LocationsInfoIconWrap, Column1, Column2, Column3 } from './LocationsElements';
+         LocationsInfoText, LocationsInfoButton, LocationsInfoIconWrap, Column1, Column22, Column3 } from './LocationsElements';
 
 
 
@@ -46,7 +46,7 @@ const Info = () => {
                     </LocationsInfoTextSection>
                 </Column1>
                 
-                <Column2>
+                <Column22>
                 <LocationsInfoBg src = {deco2} />
                         <LocationsInfoTextSection>
                             <LocationsInfoIconWrap>
@@ -56,7 +56,7 @@ const Info = () => {
                             <LocationsInfoText>We offer budget friendly moving services to accommodate long-distance moves in which the final destination is out of state. We can combine this with our storage options and labor only for each part of the moving service.</LocationsInfoText>
                             <LocationsInfoButton>Book Now</LocationsInfoButton>
                         </LocationsInfoTextSection>
-                </Column2>
+                </Column22>
                 
                 <Column3>
                 <LocationsInfoBg src = {deco3} />
