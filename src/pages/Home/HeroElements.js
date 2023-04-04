@@ -493,7 +493,9 @@ export const HeroBookImg = styled.img`
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 768px) {
-       width: 135vw;
+ 
+       margin-left: 0%;
+       
         
     }
 

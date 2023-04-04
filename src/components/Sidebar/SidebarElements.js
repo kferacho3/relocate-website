@@ -11,7 +11,7 @@ export const Nav = styled.div`
   
 `;
 
-export const NavIcon = styled(LinkR)`
+export const SideIcon = styled(LinkR)`
 
     display: none;
     margin-right: 50px;
@@ -22,6 +22,7 @@ export const NavIcon = styled(LinkR)`
         height: 80px;
         z-index: 9999;
         display: flex;
+        margin-top: 25px;
         }   
 
  

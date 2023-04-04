@@ -59,14 +59,15 @@ export const FooterWrapper = styled.div`
 
 export const FooterRow = styled.div`
     display: grid;
-    grid-auto-columns: 0.5fr 1fr 0.5fr;
+    grid-auto-columns: 1fr 1fr 1fr;
     gap: 100px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
 
     @media screen and (max-width: 768px) {
-        height: 200vh;
-        
+        height: 250vh;
+        margin-top: -300px;
+        margin-bottom: 50px;
         grid-auto-rows: 1fr;
       
         grid-template-areas: 'col2' 'col1' 'col3';
@@ -88,7 +89,7 @@ export const FooterLeftContainer = styled.div`
         margin-left: -10%;
         //transform: translateX(-50%);
         
-       margin-top: 250px;
+        margin-top: 30%;
 
     }
 
@@ -126,7 +127,7 @@ export const FooterBottomLine = styled.hr`
     order: 0;
     flex-grow: 0;
     @media screen and (max-width: 768px) {
-        transform: translateY(-800px);
+        transform: translateY(-900px);
    zoom: 0.35;
     }
 `
@@ -224,13 +225,12 @@ export const FooterMidContainer = styled.div`
 
     @media screen and (max-width: 768px) {
         width: 330px;
-    height: 265px;
+        height: 330px;
         display: grid;
         grid-auto-columns: 1fr 1fr;
       
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 50px;
+  
+        margin-top: 350px;
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     }
@@ -254,7 +254,7 @@ export const FooterRightContainer = styled.div`
     @media screen and (max-width: 500px) {
         
         margin-left: 35%;
-        margin-top: -170%;
+        margin-top: -180%;
         //transform: translateX(-50%);
     }
  

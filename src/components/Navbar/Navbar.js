@@ -7,7 +7,7 @@ import pac from '../../images/pacman-svg.svg';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../Sidebar/SidebarData';
 
-import {   SidebarNav, SidebarWrap} from '../Sidebar/SidebarElements';
+import {   SidebarNav, SidebarWrap, SideIcon} from '../Sidebar/SidebarElements';
 import SubMenu from '../Sidebar/SubMenu';
 import "./Navbar.scss";
 import {
@@ -96,9 +96,9 @@ const Navbar = ({ toggle}) => {
 
 
 
-                <NavIcon style={{ color: '#000' }} to='#'>
+                <SideIcon style={{ color: '#000' }} to='#'>
                         <FaBars style={{ color: '#218207' }} onClick={showSidebar} />
-                </NavIcon>
+                </SideIcon>
           
 
             </NavbarContainer>
