@@ -12,7 +12,7 @@ export const JoinPackContainer = styled.div`
     left: 0px;
     border-radius: 0px;
 
- 
+    overflow: hidden;
   
  
     
@@ -25,7 +25,7 @@ export const JoinPackContainer = styled.div`
 
 
 export const PackContainer = styled.div`
-       display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     background: #F0F8FF;    
@@ -57,14 +57,14 @@ export const PackWrapper = styled.div`
 export const PackRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
-    gap: 100px;
+    gap: 0px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-
+    zoom: 0.95;
  
 @media screen and (max-width: 768px) {
     grid-auto-columns: 1fr;
-    gap: 400px;
+    gap: 200px;
     grid-template-areas: 'col1' 'col2';   
     }
 
@@ -73,15 +73,17 @@ export const PackRow = styled.div`
 export const PackBanner = styled.div`
    
 
-    width: 100vw;
+    width: 100%;
     height: 300px;
-    margin-top: -550px;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, -95%);
 
     background: #E2E6E3;
+    overflow: hidden;
     @media screen and (max-width: 768px) {
         height: 150px;
-        margin-top: -650px;
+        transform: translate(-50%, -225%);
     }
 
 
@@ -164,8 +166,6 @@ export const PackButton = styled.button`
 
     width: 260px;
     height: 63px;
-    left: calc(50% - 260px/2);
-    top: calc(50% - 63px/2 + 124px);
 
     background: linear-gradient(180deg, #16BC97 0%, #0044DC 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
@@ -178,6 +178,7 @@ export const Column1 = styled.div`
     padding: 0 15px;
     z-index: 1;
     grid-area: col1;
+   
     @media screen and (max-width: 768px) {
     
     
@@ -269,8 +270,13 @@ export const BtnWrap = styled.div`
 `
 
 export const ImgWrap = styled.div`
-    width: 700px;
+    margin-top: 250px;
+    width: 800px;
+    height: 800px;
+    @media screen and (max-width: 768px) {
+        width: 700px;
     height: 700px;
+    }
 `;
 
 export const Img = styled.img`

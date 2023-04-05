@@ -46,14 +46,17 @@ const JoinPack = ({lightBg, id, imgStart, divStart, darkText, description, divBg
       
     <PackContainer lightBg={lightBg} id={id} >
         
-      
-    <PackBanner/>
+        <PackBanner/>
+  
     <PackWrapper>
         <PackRow imgStart={imgStart}>
+       
             <Column1>
              
               <PackNameWrap>
+              
               <PackName src={name}/>
+             
               </PackNameWrap>
               <PackDivBg divStart={divStart} src = {divBg.default}></PackDivBg>
               <PackTextContainer>

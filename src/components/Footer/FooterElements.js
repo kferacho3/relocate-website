@@ -31,6 +31,8 @@ export const FooterContainer = styled.footer`
 `;
 export const FooterMainContainer = styled.div`
     margin-top: -50px;
+    justify-content: center;
+    align-items: center;
     @media screen and (max-width: 1400px) {
        transform: scale(0.9);
     }
@@ -40,11 +42,7 @@ export const FooterMainContainer = styled.div`
     transform: scale(0.7);
     }
   
-  @media screen and (max-width: 850px) {
-    
-    transform: scale(0.7);
-    margin-top: 10px;
-    }
+
 `
 
 export const FooterWrapper = styled.div`
@@ -65,12 +63,10 @@ export const FooterRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
 
     @media screen and (max-width: 768px) {
-        height: 100vh;
-        margin-top: -300px;
-        margin-bottom: 50px;
-        grid-auto-rows: 1fr;
        
-        grid-template-areas: 'col2' 'col1col3';
+        height: 100vh;
+        //margin-top: -300px;
+
     }
 
 `;
@@ -85,11 +81,12 @@ export const FooterLeftContainer = styled.div`
     left: 0px;
     grid-area: col1;
     @media screen and (max-width: 768px) {
-       
-        margin-left: -80%;
+        position: absolute;
+        left: -60%;
+       top: 70%;
         //transform: translateX(-50%);
         
-        margin-top: -25%;
+        
 
     }
 
@@ -99,24 +96,38 @@ export const FooterTopLine = styled.hr`
 
     width: 1360px;
     height: 1px;
-    top: 200px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    transform: translate(-50%, -225px);
 
+    left: 50%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    position: absolute;
     /* Inside auto layout */
 
     flex: none;
     order: 0;
     flex-grow: 0;
+
+    @media screen and (max-width: 1400px) {
+      zoom: 0.9;
+    }
+  
+  
+  @media screen and (max-width: 1200px) {
+  zoom: 0.7;
+    }
     @media screen and (max-width: 768px) {
-        transform: translateY(-1000px);
-   zoom: 0.35;
+        position: absolute;
+        transform: translate(-50%, -1825px);
+        zoom: 0.25;
     }
 `
 export const FooterBottomLine = styled.hr`
     box-sizing: border-box;
-
+    position: absolute;
     box-sizing: border-box;
+    transform: translate(-50%, 150px);
 
+    left: 50%;
     width: 1360px;
     height: 1px;
     //top: 150%;
@@ -127,9 +138,17 @@ export const FooterBottomLine = styled.hr`
     flex: none;
     order: 0;
     flex-grow: 0;
+    @media screen and (max-width: 1400px) {
+      zoom: 0.9;
+    }
+  
+  
+  @media screen and (max-width: 1200px) {
+  zoom: 0.7;
+    }
     @media screen and (max-width: 768px) {
-        
-   zoom: 0.35;
+        transform: translate(-50%, 1300px);
+        zoom: 0.25;
     }
 `
 
@@ -229,9 +248,12 @@ export const FooterMidContainer = styled.div`
         height: 330px;
         display: grid;
         grid-auto-columns: 1fr 1fr;
-        margin-left: 100%;
-  
-        margin-top: 0px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -15%;
+        zoom: 1.1;
+        
  
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
@@ -250,12 +272,12 @@ export const FooterRightContainer = styled.div`
     @media screen and (max-width: 768px) {
         
        // margin-left: 35%;
+       position: absolute;
 
-
-       margin-left: -45%;
+       left: -50%;
+       top: 65%;
         //transform: translateX(-50%);
-        
-        margin-top: -25%;      
+          
         //transform: translateX(-50%);
     }
 
@@ -366,11 +388,11 @@ export const FooterBottomSection = styled.div`
     margin-top: 450px;
     margin-left: 50%;
     @media screen and (max-width: 850px) {
-       
-    margin-top: 1100px;
-    zoom: 0.7;
-    margin-left: 50%;
-    transform: translateX(-50%);
+        margin-left: 0%;
+        margin-top: 1300px;
+        zoom: 0.6;
+        left: 50%;
+        transform: translateX(-50%);
     }
 `
 
@@ -417,13 +439,9 @@ export const SocialLogoWrap = styled(LinkR)`
 
 export const FooterBottomLeftContainer = styled.div`
 
-    width: 325px;
+    width: 350px;
     height: 60px;
-    @media screen and (max-width: 850px) {
-       
-       margin-left: 30px;
-    
-       }
+
 
 `
 

@@ -62,8 +62,9 @@ const Footer = () => {
 
     return (
         <FooterContainer  >
-         <FooterMainContainer>
          <FooterTopLine/>
+         <FooterMainContainer>
+        
               
             <FooterWrapper>
                 <FooterRow>
@@ -125,9 +126,9 @@ const Footer = () => {
                 </FooterRow>
             </FooterWrapper>
 
-            <FooterBottomLine/>
+           
          </FooterMainContainer>
-
+         <FooterBottomLine/>
             <FooterBottomSection>
                 <FooterBottomLeftContainer>
                     <WebsiteRights>Relocate © {new Date().getFullYear()} All rights reserved</WebsiteRights>
