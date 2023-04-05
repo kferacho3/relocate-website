@@ -18,7 +18,7 @@ export const Nav = styled.nav`
     left: 0;
     overflow: hidden;
   
-    z-index: 99999;
+    z-index: 9999999;
     margin-bottom: 120px;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -32,7 +32,7 @@ export const NavbarContainer = styled.div`
     height: 120px;
   overflow: hidden;
     width: 100%;
-    z-index: 99999;
+    z-index: 9999999;
     overflow: hidden;
     position: absolute;
 `;

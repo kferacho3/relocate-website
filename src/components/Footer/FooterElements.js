@@ -86,7 +86,7 @@ export const FooterLeftContainer = styled.div`
     grid-area: col1;
     @media screen and (max-width: 768px) {
        
-        margin-left: -70%;
+        margin-left: -100%;
         //transform: translateX(-50%);
         
         margin-top: -25%;
@@ -229,7 +229,7 @@ export const FooterMidContainer = styled.div`
         height: 330px;
         display: grid;
         grid-auto-columns: 1fr 1fr;
-        margin-left: 90%;
+        margin-left: 100%;
   
         margin-top: 0px;
  
@@ -252,7 +252,7 @@ export const FooterRightContainer = styled.div`
        // margin-left: 35%;
 
 
-       margin-left: -35%;
+       margin-left: -65%;
         //transform: translateX(-50%);
         
         margin-top: -25%;      

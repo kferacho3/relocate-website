@@ -100,7 +100,12 @@ const Navbar = ({ toggle}) => {
                         <FaBars style={{ color: '#218207' }} onClick={showSidebar} />
                 </SideIcon>
           
-                <SidebarNav onClick={showSidebar} sidebar={sidebar}>
+         
+            </NavbarContainer>
+                   
+       
+        </Nav>
+        <SidebarNav onClick={showSidebar} sidebar={sidebar}>
                     <SidebarWrap>
                         <NavIcon  to='#'>
                         <AiIcons.AiOutlineClose style={{ fontSize: '72px' }}  onClick={showSidebar} />
@@ -110,11 +115,6 @@ const Navbar = ({ toggle}) => {
                         })}
                     </SidebarWrap>
                 </SidebarNav>
-            </NavbarContainer>
-                   
-       
-        </Nav>
-    
         </IconContext.Provider>
         </>
     );
