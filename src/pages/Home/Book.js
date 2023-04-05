@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import { HeroBookSection,  HeroBookTextSection, HeroBookImg, 
-         HeroBookText, HeroBookHead, HeroBookButton, } from './HeroElements';
+import { HeroBookSection,  HeroBookTextSection, HeroBookImg, HeroBookImgWrap,
+         HeroBookText, HeroBookHead, HeroBookButton,  } from './HeroElements';
 
 
 
@@ -19,8 +19,9 @@ const Book = () => {
      
       <>
       <HeroBookSection>
+      <HeroBookImgWrap>
         <HeroBookImg src = {'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/HomeImg/hero5.svg'} />
-
+</HeroBookImgWrap>
         <HeroBookTextSection>
             <HeroBookHead>BOOK A SERVICE</HeroBookHead>
             <HeroBookText>

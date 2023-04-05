@@ -31,9 +31,6 @@ export const BookMoveContainer = styled.div`
     overflow-x: hidden;
 
   
-  @media screen and (max-width: 850px) {
-      display: none;
 
-    }
 `;
 

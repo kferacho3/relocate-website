@@ -8,7 +8,7 @@ export const Nav = styled.nav`
    
     height: 120px;
     width: 100vw;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 
@@ -17,21 +17,24 @@ export const Nav = styled.nav`
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 9999999999;
-    margin-bottom: 80px;
+  
+    z-index: 99999;
+    margin-bottom: 120px;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
 `;
 
 export const NavbarContainer = styled.div`
-    
+ 
     display: flex;
     justify-content: space-between;
     height: 120px;
-    z-index: 1;
+  overflow: hidden;
     width: 100%;
-    
+    z-index: 99999;
+    overflow: hidden;
+    position: absolute;
 `;
 
 
@@ -251,13 +254,13 @@ export const NavLinks = styled(LinkR)`
 
     color: #376392;
     text-decoration: none;
-
+    z-index: 99999;
     &:hover {
         color: #218207;
         background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
         //border: 2px solid #69F490;
         border-radius: 80px;
-        width: 100%;
+        width: 110%;
         height: 30%;
       
     }
@@ -273,13 +276,15 @@ export const NavLinks = styled(LinkR)`
 `;
 
 export const NavIcon = styled.div`
-    width: 25px;
-    height: 24px;
-
+    width: 40px;
+    height: 40px;
+    margin-left: 7.5px;
+    z-index: 9999;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    cursor: pointer;
     /* identical to box height, or 187% */
     display: flex;
     align-items: center;

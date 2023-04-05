@@ -14,8 +14,8 @@ export const HomeContainer = styled.div`
     border-radius: 0px;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-        margin-top: 175px;
-        height: 800px;
+        margin-top: 140px;
+        height: 700px;
         
          }
 
@@ -487,15 +487,29 @@ export const HeroBookSection = styled.div`
 
 `
 export const HeroBookImg = styled.img`
-
-    height: 600px;
-    width: 500px;
+    
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 768px) {
  
        margin-left: 0%;
-       
+        width: 500px;
+        
+    }
+
+
+`
+
+export const HeroBookImgWrap = styled.div`
+    
+    height: 650px;
+    width: 500px;
+ 
+    @media screen and (max-width: 768px) {
+ 
+       margin-left: 0%;
+       width: 100%;
         
     }
 
@@ -510,7 +524,8 @@ export const HeroBookTextSection = styled.div`
     @media screen and (max-width: 768px) {
         zoom: 0.6;
         width: 550px;
-       
+        right: -7.5%;
+        justify-content: center;
         
     }
 

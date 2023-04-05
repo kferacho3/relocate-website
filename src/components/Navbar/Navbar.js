@@ -25,7 +25,7 @@ import {
      NavBottomText2,
      NavBottomTextSection
 } from './NavbarElements';
-
+import * as ImIcons from 'react-icons/im';
 import { NavLink } from 'react-router-dom';
 const Navbar = ({ toggle}) => {
   
@@ -52,8 +52,8 @@ const Navbar = ({ toggle}) => {
     };
     return (
         <>
-        <IconContext.Provider value={{ color: '#fff'}}>
-        <Nav scrollNav={scrollNav}>
+        <IconContext.Provider style={{ zIndex:`999999` }} value={{ color: '#fff'}}>
+        <Nav style={{ zIndex:`999999` }} scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogoCont style={{ backgroundImage:`url(${logo})` }} to='/' onClick={toggleHome} ></NavLogoCont>
               
@@ -72,7 +72,7 @@ const Navbar = ({ toggle}) => {
                     </NavItem>
 
                     <NavItem >
-                        <NavLinks to='/pack'  smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'><NavIcon style={{ backgroundImage:`url(${pac})` }}>   </NavIcon>Join the Pack!</NavLinks>
+                        <NavLinks to='/pack'  smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'> <ImIcons.ImPacman style={{ color:`#376392` }}/>Join the Pack!</NavLinks>
                     </NavItem>
 
                     <NavItem>
@@ -80,7 +80,7 @@ const Navbar = ({ toggle}) => {
                     </NavItem>
 
                     <NavItem>
-                        <NavNumber>+1-(234)-567-8910</NavNumber>
+                        <NavNumber>+1-(312)-933-4773</NavNumber>
                         <NavBtn >
                             BOOK NOW 
                         </NavBtn>
@@ -100,20 +100,21 @@ const Navbar = ({ toggle}) => {
                         <FaBars style={{ color: '#218207' }} onClick={showSidebar} />
                 </SideIcon>
           
-
-            </NavbarContainer>
-                   
-            <SidebarNav sidebar={sidebar}>
+                <SidebarNav onClick={showSidebar} sidebar={sidebar}>
                     <SidebarWrap>
-                        <NavIcon to='#'>
-                        <AiIcons.AiOutlineClose  onClick={showSidebar} />
+                        <NavIcon  to='#'>
+                        <AiIcons.AiOutlineClose style={{ fontSize: '72px' }}  onClick={showSidebar} />
                         </NavIcon>
                         {SidebarData.map((item, index) => {
-                        return <SubMenu item={item} key={index} />;
+                        return <SubMenu  item={item} key={index} />;
                         })}
                     </SidebarWrap>
                 </SidebarNav>
+            </NavbarContainer>
+                   
+       
         </Nav>
+    
         </IconContext.Provider>
         </>
     );

@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
 
   height: 20px;
   display: flex;
-  
+  z-index: -999;
 `;
 
 export const SideIcon = styled(LinkR)`
@@ -30,15 +30,17 @@ export const SideIcon = styled(LinkR)`
 `;
 
 export const SidebarNav = styled.nav`
-  margin-top: 185%;
+  margin-top: ${({ sidebar }) => (sidebar ? '120px' : '0px')};
+ //margin-top: 120px;
   background: #218207;
-  width: 250px;
+  width: 100vw;
   height: 100vh;
   justify-content: center;
   position: fixed;
-  right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  top: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
-  z-index: 9999999;
+  z-index: 999;
+
 `;
 
 export const SidebarWrap = styled.div`

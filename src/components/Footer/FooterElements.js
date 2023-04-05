@@ -22,7 +22,7 @@ export const FooterContainer = styled.footer`
   @media screen and (max-width: 850px) {
     
     padding: 0 0 0 0;
-    height: 900px;
+    height: 120vh;
     }
     
   
@@ -43,7 +43,7 @@ export const FooterMainContainer = styled.div`
   @media screen and (max-width: 850px) {
     
     transform: scale(0.7);
-    margin-top: 100px;
+    margin-top: 10px;
     }
 `
 
@@ -65,12 +65,12 @@ export const FooterRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
 
     @media screen and (max-width: 768px) {
-        height: 250vh;
+        height: 100vh;
         margin-top: -300px;
         margin-bottom: 50px;
         grid-auto-rows: 1fr;
-      
-        grid-template-areas: 'col2' 'col1' 'col3';
+       
+        grid-template-areas: 'col2' 'col1col3';
     }
 
 `;
@@ -86,10 +86,10 @@ export const FooterLeftContainer = styled.div`
     grid-area: col1;
     @media screen and (max-width: 768px) {
        
-        margin-left: -10%;
+        margin-left: -70%;
         //transform: translateX(-50%);
         
-        margin-top: 30%;
+        margin-top: -25%;
 
     }
 
@@ -108,6 +108,7 @@ export const FooterTopLine = styled.hr`
     order: 0;
     flex-grow: 0;
     @media screen and (max-width: 768px) {
+        transform: translateY(-1000px);
    zoom: 0.35;
     }
 `
@@ -127,7 +128,7 @@ export const FooterBottomLine = styled.hr`
     order: 0;
     flex-grow: 0;
     @media screen and (max-width: 768px) {
-        transform: translateY(-900px);
+        
    zoom: 0.35;
     }
 `
@@ -228,9 +229,10 @@ export const FooterMidContainer = styled.div`
         height: 330px;
         display: grid;
         grid-auto-columns: 1fr 1fr;
-      
+        margin-left: 90%;
   
-        margin-top: 350px;
+        margin-top: 0px;
+ 
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     }
@@ -247,16 +249,16 @@ export const FooterRightContainer = styled.div`
     grid-area: col3;
     @media screen and (max-width: 768px) {
         
-        margin-left: 35%;
-        margin-top: -220%;
+       // margin-left: 35%;
+
+
+       margin-left: -35%;
         //transform: translateX(-50%);
-    }
-    @media screen and (max-width: 500px) {
         
-        margin-left: 35%;
-        margin-top: -180%;
+        margin-top: -25%;      
         //transform: translateX(-50%);
     }
+
  
 `
 export const FooterLinksWrapper = styled.li`
@@ -365,7 +367,7 @@ export const FooterBottomSection = styled.div`
     margin-left: 50%;
     @media screen and (max-width: 850px) {
        
-    margin-top: 1000px;
+    margin-top: 1100px;
     zoom: 0.7;
     margin-left: 50%;
     transform: translateX(-50%);

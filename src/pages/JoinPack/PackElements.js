@@ -115,7 +115,7 @@ export const PackNameWrap = styled.div`
 export const PackTextContainer = styled.div`
    
     width: 662px;
-    height: 377px;
+    height: 400px;
     margin-bottom: -125px;
     overflow: hidden;
     background: linear-gradient(180deg, #C3F8D1 0%, #67DD68 28.65%, #38D538 63.54%, #00BB01 99.99%);
@@ -142,7 +142,7 @@ export const PackDeco2 = styled.img`
     margin-left: 558px;
     margin-top: -75px;
 
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
 `
 export const PackDivBg = styled.img`
    
@@ -205,7 +205,7 @@ export const Column2 = styled.div`
 
 export const TextWrapper = styled.div`
     max-width: 540;
-    padding-top: 0;
+    padding-top: 30px;
     padding-bottom: 60px;
 
 `;

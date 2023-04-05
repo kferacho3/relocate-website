@@ -31,7 +31,12 @@ import {
    
   } from './FooterElements';
 
+  import * as AiIcons from 'react-icons/ai';
 
+  
+
+
+  
 import fb from './FooterImg/Facebook.svg'
 import ig from './FooterImg/Instagram.svg'
 import ldin from './FooterImg/LinkdIn.svg'
@@ -63,11 +68,11 @@ const Footer = () => {
             <FooterWrapper>
                 <FooterRow>
                 <FooterLeftContainer>
-                <FooterLeftHead>CORPORATE HEADQUARTERS</FooterLeftHead>
-                <FooterLeftAddress>Atl, Georgia</FooterLeftAddress>
-                <FooterLeftEmail>relocate@gmail.com</FooterLeftEmail>
-              <FooterLeftNumber>1-234-567-8910</FooterLeftNumber>
-                <FooterLeftButton>BOOK A MOVE</FooterLeftButton>
+                <FooterLeftHead> CORPORATE HEADQUARTERS</FooterLeftHead>
+                <FooterLeftAddress> <AiIcons.AiFillHome />Atlanta , Georgia</FooterLeftAddress>
+                <FooterLeftEmail> <AiIcons.AiTwotoneMail />kristian@getrelocate.com</FooterLeftEmail>
+              <FooterLeftNumber><AiIcons.AiFillPhone />+1-(312)-933-4773</FooterLeftNumber>
+                <FooterLeftButton> <AiIcons.AiFillBook />BOOK A MOVE</FooterLeftButton>
                 </FooterLeftContainer>
 
                   <FooterMidContainer>
