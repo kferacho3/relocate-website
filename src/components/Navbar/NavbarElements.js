@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 120px;
-  overflow: hidden;
+    overflow: hidden;
     width: 100%;
     z-index: 9999999;
     overflow: hidden;
