@@ -3,8 +3,9 @@ import Locations from './Locations';
 import maps from './LocationsImg/maps.svg'
 import { LocationsDemoHeader, LocationsHeaderContainer, LocationsDemographicContainer, 
          LocationsDemoImg  } from './LocationsElements';
+import LocationsGeo from './LocationsGeo';
 import Info from './Info';
-import { pack1, pack2 } from './Data';
+import { pack1, pack2, geo } from './Data';
 const PageL = () => {
     const [isOpen, setIsOpen] = useState(false)
    
@@ -25,8 +26,8 @@ const PageL = () => {
 
             <LocationsDemographicContainer id={'geographic'}>
               <LocationsDemoHeader>Future Demographic Expansion</LocationsDemoHeader>
-              <LocationsDemoImg src={'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/LocationsImg/maps.svg'}/>
-            </LocationsDemographicContainer>
+              <LocationsGeo {...geo}/>
+              </LocationsDemographicContainer>
             <Info id={'info'}/>
            
             

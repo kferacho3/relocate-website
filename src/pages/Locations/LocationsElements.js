@@ -16,7 +16,7 @@ export const LocationsContainer = styled.div`
   
     @media screen and (max-width: 768px) {
         
-        height: 800px;
+        height: 1000px;
     }
  
   
@@ -55,7 +55,7 @@ export const LocationsDemographicContainer = styled.div`
    
    overflow: hidden;
     width: 100vw;
-    height: 800px;
+    height: 100%;
     //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     @media screen and (max-width: 550px) {
    height: 400px;
@@ -126,7 +126,7 @@ export const LocationsRow = styled.div`
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-        gap: 100px;
+        gap: 220px;
         grid-auto-columns: 1fr;
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }

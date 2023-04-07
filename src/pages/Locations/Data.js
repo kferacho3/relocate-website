@@ -7,7 +7,7 @@ export const pack1 = {
     lightTextDesc: true,
     topLine: 'ATLANTA',
     headline: 'Georgia',
-    description: 'Our primary market will be located in Atlanta, Georgia along with surrounding counties. As we expand, we hope to be able to cover all of Georgia and its neigboring states. Atlanta is one of the best cities to start a moving and logistics company as we believe that Georgia is a growing city for outsiders moving in to the south. This is especially due to the recent surge in pricing within the realestate market. We plan to take advantage of this by offering our service to make these moves affordable and possible. The Georgia atmosphere also has a large density of experienced workers for the business which will help us accomodate all clients by delivering a humanitarian based service from our associates. ',
+    description: 'Our company is strategically targeting the Atlanta, Georgia market and surrounding counties as our primary focus. Our vision is to expand our reach to cover all of Georgia and its neighboring states in the near future. As we set our sights on establishing ourselves as a reliable moving and logistics company, we believe that Atlanta presents a great opportunity due to its rapid growth and potential for an influx of newcomers moving to the South. With recent surges in real estate pricing, we see a high demand for our services to help make these moves more affordable and accessible. Moreover, the Georgia atmosphere is highly conducive to a successful business, as there is a wealth of experienced workers who are capable of delivering a quality service to our clients. At the core of our business, we aim to prioritize the needs of our clients and provide a customer-centric, humane service through our dedicated associates.',
     buttonLabel: 'Discover',
     //bg: packerT,
     //logo: packerL,
@@ -29,7 +29,7 @@ export const pack2 = {
     lightTextDesc: true,
     topLine: 'CHICAGO',
     headline: 'Illinois',
-    description: 'Chicago, Illinois is another great city to start with as it is not only the our founder’s home city, but also another city effected by the recent housing market pricing. There will be a surplus of individuals relocating into these areas to which we will supply them with teams of movers to help them make these moves possible. Chicago inhabits many individuals in the same work force too so introducing a formal and legit moving company would make it easy to transition workers into our platform.',
+    description: "Chicago, Illinois is a prime location for our moving and logistics company, not only because it is the hometown of our founder but also due to the recent changes in the housing market. With many individuals relocating to the city, there is a high demand for reliable and affordable moving services. Our company is well-equipped to meet this demand, and we are committed to providing top-notch service to every customer. In addition to serving residents, we plan to tap into the city's large workforce and provide our services to businesses and corporations looking to relocate. With a diverse and experienced team of movers, we are confident that we can deliver the level of service that will set us apart from our competitors. As we continue to grow, we hope to expand our services to other cities in the Midwest and beyond.",
     buttonLabel: 'Learn More',
     //bg: driverT,
     //logo: driverL,
@@ -41,5 +41,29 @@ export const pack2 = {
     dark: true,
     primary: true,
     darkText: false
+
+};
+
+
+export const geo = {
+    id: 'geographic',
+    lightBg: true,
+    lightText: true,
+    lightTextDesc: true,
+    topLine: '',
+    headline: 'Georgia',
+    description: 'Our company is strategically targeting the Atlanta, Georgia market and surrounding counties as our primary focus. Our vision is to expand our reach to cover all of Georgia and its neighboring states in the near future. As we set our sights on establishing ourselves as a reliable moving and logistics company, we believe that Atlanta presents a great opportunity due to its rapid growth and potential for an influx of newcomers moving to the South. With recent surges in real estate pricing, we see a high demand for our services to help make these moves more affordable and accessible. Moreover, the Georgia atmosphere is highly conducive to a successful business, as there is a wealth of experienced workers who are capable of delivering a quality service to our clients. At the core of our business, we aim to prioritize the needs of our clients and provide a customer-centric, humane service through our dedicated associates.',
+    buttonLabel: 'Discover',
+    //bg: packerT,
+    //logo: GeoLogo,
+
+    imgStart: false,
+    divBg: require('../../images/locDeco.svg'),
+    img: 'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/LocationsImg/GeoMaps.svg',
+    alt: 'georgia',
+    too: 'georgia',
+    dark: true,
+    primary: true,
+    darkText: true
 
 };

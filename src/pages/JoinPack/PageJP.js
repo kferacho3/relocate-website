@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import JoinPack from './JoinPack';
-import { pack1, pack2, pack3, pack4, pack5 } from './Data';
-
+import { hero, pack1, pack2, pack3, pack4, pack5 } from './Data';
+import PackHero from './PackHero';
+import Info from './PackInfo';
 const PageJP = () => {
     const [isOpen, setIsOpen] = useState(false)
    
@@ -13,7 +14,8 @@ const PageJP = () => {
       <>
           <>
             <>
-        
+            <PackHero {...hero}/>
+            <Info/>
             <JoinPack id={'/pack'}  {...pack1}/>
             <JoinPack {...pack2}/>
             <JoinPack {...pack3}/>

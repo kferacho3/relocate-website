@@ -1,14 +1,14 @@
 import React from 'react';
 import { BottomToTop} from '../../components/animations/animations';
-
+import "./services.scss";
 
 //import insp from '../../images/inspection.svg'
 
 import { 
-  PackHeroHeroContainer,
-  PackHeroWrapper,
-  PackHeroRow, 
-  PackHeroHeroButton,
+  ServicesHeroContainer,
+  ServicesWrapper,
+  ServicesRow, 
+  ServicesHeroButton,
   Column1, 
   Column2, 
   TextWrapper, 
@@ -18,11 +18,11 @@ import {
   ImgWrap,
   Img
   
-} from './PackHeroElements';
-
+} from './ServicesHeroElements';
+import "./services.scss";
 import { motion} from 'framer-motion';
 
-//import deco3 from './PackHeroImg/servDeco.svg';
+//import deco3 from './ServicesImg/servDeco.svg';
 
 
 
@@ -31,16 +31,16 @@ function NewlineText(props) {
   const text = props.text;
   return text.split('\n').map(str => <p>{str}</p>);
 }
-const PackHero = ({lightBg, id, imgStart, topLine, img, divBg, logo, darkText, description, headline, alt}) => {
+const ServicesHero = ({lightBg, id, imgStart, topLine, img, divBg, logo, darkText, description, headline, alt}) => {
 
   return (
       
-        <PackHeroHeroContainer lightBg={lightBg} id={id} className='background2'>
+        <ServicesHeroContainer lightBg={lightBg} id={id} className='background2'>
         
   
         
-            <PackHeroWrapper>
-                <PackHeroRow imgStart={imgStart}>
+            <ServicesWrapper>
+                <ServicesRow imgStart={imgStart}>
      
                 
                 <Column1  >
@@ -52,7 +52,7 @@ const PackHero = ({lightBg, id, imgStart, topLine, img, divBg, logo, darkText, d
                       <Subtitle darkText={darkText} class='font2'><NewlineText text ={description}/></Subtitle> 
                   </TextWrapper>
                   
-                  <PackHeroHeroButton>Get started</PackHeroHeroButton>
+                  <ServicesHeroButton>Check Expenses</ServicesHeroButton>
                
                  
                     </Column1>
@@ -64,13 +64,13 @@ const PackHero = ({lightBg, id, imgStart, topLine, img, divBg, logo, darkText, d
                       </ImgWrap>
                     </Column2>
                     
-                </PackHeroRow>
-            </PackHeroWrapper>
+                </ServicesRow>
+            </ServicesWrapper>
 
-            </PackHeroHeroContainer>  
+            </ServicesHeroContainer>  
             
       
   )
 }
 
-export default PackHero
+export default ServicesHero

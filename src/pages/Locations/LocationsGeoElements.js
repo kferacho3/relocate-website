@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom';
 
-export const ServicesContainer = styled.div`
+export const LocationsGeoContainer = styled.div`
     
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@ export const ServicesContainer = styled.div`
     width: 100vw;
     left: 0px;
     border-radius: 0px;
-    background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#376392')};
+    background: ${({lightBg}) => (lightBg ? '#ffffff' : '#376392')};
  
  
     @media screen and (max-width: 768px) {
@@ -29,34 +29,34 @@ export const ServicesContainer = styled.div`
 
 
 
-export const ServicesTextContainer = styled.div`
-    width: 525px;
-    height: 525px;
+export const LocationsGeoTextContainer = styled.div`
+   width: 600px;
+    height: 600px;
    
     overflow: hidden;
-    background: linear-gradient(180deg, #A4FFA4 0%, #C5FCC5 17.71%, #4CFF4C 71.87%, #4CC24C 90.62%);
-    border: 0.25px solid #000000;
+    background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
+    border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     
     
 `
-export const ServicesLogo = styled.img`
+export const LocationsGeoLogo = styled.img`
 width: 100%;
 
 
 `
 
-export const ServicesLogoWrap = styled.div`
-    width: 172px;
-    height: 131px;
+export const LocationsGeoLogoWrap = styled.div`
+    width: 125px;
+    height: 125px;
     margin-left: 50%;
     transform: translateX(-50%);
     zoom: 0.7;
     margin-top: -50px;
 
 `
-export const ServicesDeco1 = styled.img`
+export const LocationsGeoDeco1 = styled.img`
   
     width: 144px;
     height: 55px;
@@ -65,11 +65,11 @@ export const ServicesDeco1 = styled.img`
 
     transform: matrix(1, 0, 0, 1, 0, 0);
 `
-export const ServicesDeco2 = styled.img`
+export const LocationsGeoDeco2 = styled.img`
   
     width: 159px;
     height: 60px;
-    margin-left: 400px;
+    margin-left: 475px;
     //margin-right: -20px;
     margin-top: -25px;
 
@@ -98,7 +98,7 @@ export const DivBg = styled.img`
  
 `
 
-export const ServicesButton = styled.button`
+export const LocationsGeoButton = styled.button`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -130,7 +130,7 @@ export const ServicesButton = styled.button`
 `
 
 
-export const ServicesWrapper = styled.div`
+export const LocationsGeoWrapper = styled.div`
     display: grid;
     z-index: 1;
     height: 800px;
@@ -146,7 +146,7 @@ export const ServicesWrapper = styled.div`
 
 `;
 
-export const ServicesRow = styled.div`
+export const LocationsGeoRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
     gap: 125px;
@@ -198,7 +198,7 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
 align-items: center;
 text-align: center;
-    max-width: 540px;
+    max-width: 600px;
 
 `;
 
@@ -243,9 +243,9 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     
-    width: 449px;
+    width: 550px;
     height: 122px;
-    margin-top: 10px;
+    margin-top: 160px;
     margin-bottom: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -255,14 +255,17 @@ export const Subtitle = styled.p`
     font-style: normal;
     font-weight: 700;
     font-size: 16.5px;
-    line-height: 24px;
-    /* or 133% */
+    line-height: 28px;
+    /* or 170% */
 
     display: flex;
     align-items: center;
     text-align: center;
 
-    color: #000000;
+    color: #FFFFFF;
+    /* or 133% */
+
+  
 `;
 
 export const BtnWrap = styled.div`

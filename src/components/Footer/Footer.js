@@ -68,13 +68,13 @@ const Footer = () => {
               
             <FooterWrapper>
                 <FooterRow>
-                <FooterLeftContainer>
-                <FooterLeftHead> CORPORATE HEADQUARTERS</FooterLeftHead>
-                <FooterLeftAddress> <AiIcons.AiFillHome />Atlanta , Georgia</FooterLeftAddress>
-                <FooterLeftEmail> <AiIcons.AiTwotoneMail />kristian@getrelocate.com</FooterLeftEmail>
-              <FooterLeftNumber><AiIcons.AiFillPhone />+1-(312)-933-4773</FooterLeftNumber>
-                <FooterLeftButton> <AiIcons.AiFillBook />BOOK A MOVE</FooterLeftButton>
-                </FooterLeftContainer>
+                  <FooterLeftContainer>
+                    <FooterLeftHead> CORPORATE HEADQUARTERS</FooterLeftHead>
+                    <FooterLeftAddress> <AiIcons.AiFillHome />Atlanta , Georgia</FooterLeftAddress>
+                    <FooterLeftEmail> <AiIcons.AiTwotoneMail />kristian@getrelocate.com</FooterLeftEmail>
+                    <FooterLeftNumber><AiIcons.AiFillPhone />+1-(312)-933-4773</FooterLeftNumber>
+                    <FooterLeftButton> <AiIcons.AiFillBook />BOOK A MOVE</FooterLeftButton>
+                  </FooterLeftContainer>
 
                   <FooterMidContainer>
                       

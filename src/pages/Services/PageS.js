@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import Services from './Services';
-import { service1, service2, service3, service4, service5, service6, service7, service8 } from './Data';
+import ServicesHero from './SericesHero';
+import Info2 from './ServicesInfo2';
+import Info from './ServicesInfo';
+import { hero, service1, service2, service3, service4, service5, service6, service7, service8 } from './Data';
 const PageS = () => {
     const [isOpen, setIsOpen] = useState(false)
    
@@ -12,7 +15,7 @@ const PageS = () => {
       <>
           <>
             <>
-        
+            <ServicesHero {...hero}/>
             <Services id={'services'}  {...service1}/>
             <Services {...service2}/>
             <Services {...service3}/>
@@ -21,6 +24,8 @@ const PageS = () => {
             <Services {...service6}/>
             <Services {...service7}/>
             <Services {...service8}/>
+            <Info/>
+            <Info2/>
             
            </>
           </>

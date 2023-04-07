@@ -82,10 +82,11 @@ export const HomeButton = styled(LinkR)`
     transition: all 0.2s ease-in-out;
     margin-left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(180deg, #00FF01 0%, #218207 100%);
+    background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border-radius: 180px;
-    width: 250px;
-    margin-top: 25px;
+    height: 0px;
+    width: 400px;
+    margin-top: 75px;
 `
 
 export const BtnWrap = styled.div`
@@ -367,19 +368,19 @@ export const HeroTestNameHead = styled.h3`
   
     width: 235px;
     height: 16px;
-    left: 2.26px;
-    top: -0.5px;
+    
 
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 16px;
     text-align: center;
     white-space: nowrap;
     /* identical to box height, or 100% */
-
+    margin-left: 10px;
     display: flex;
     align-items: center;
+    
 
     color: #FFFFFF;
 `
@@ -393,8 +394,10 @@ export const HeroTestNameDate = styled.h3`
 
     font-style: normal;
     font-weight: 600;
-    font-size: 9px;
+    font-size: 16px;
     line-height: 19px;
+    margin-top: -12px;
+    margin-left: 10px;
     /* identical to box height, or 213% */
 
     display: flex;
@@ -439,7 +442,8 @@ export const HeroTestRating = styled.div`
     width: 90px;
     height: 18px;
     left: 134px;
-    top: 52px;
+    margin-left: 10px;
+    margin-top: -12px;
 `
 export const HeroTestButton = styled.button`
     box-sizing: border-box;
@@ -494,7 +498,7 @@ export const HeroBookImg = styled.img`
     @media screen and (max-width: 768px) {
  
        margin-left: 0%;
-        width: 500px;
+        width: 550px;
         
     }
 
@@ -584,7 +588,7 @@ export const Column1 = styled.div`
 
     grid-area: col1;
     @media screen and (max-width: 768px) {
-        
+        margin-top: 100px;
        display: flex;
        align-items: center;
        justify-content: center;
@@ -674,6 +678,9 @@ export const Subtitle = styled.p`
     letter-spacing: 0.04em;
 
     color: #747C82;
+    @media screen and (max-width: 768px) {
+     
+    }
 `;
 
 
