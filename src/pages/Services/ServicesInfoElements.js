@@ -7,6 +7,7 @@ export const ServicesInfoSection = styled.div`
     height: 835px;
     background: #ffffff;
     
+    
     @media screen and (max-width: 768px) {
         height: 1500px;
    }
@@ -15,7 +16,7 @@ export const ServicesInfoSection = styled.div`
 export const ServicesInfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 800px;
+    height: 600px;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;

@@ -29,9 +29,9 @@ const Info2 = () => {
          
      
       <>
-     <ServicesInfoSection >
+     <ServicesInfoSection style = {{marginBottom: `-150px`}}>
         
-         <ServicesInfoHeader>Our packers provide:</ServicesInfoHeader>
+         <ServicesInfoHeader style = {{marginBottom: `-50px`}}>Our packers provide:</ServicesInfoHeader>
          <ServicesInfoWrapper>
              <ServicesInfoRow>
                 <Column1>

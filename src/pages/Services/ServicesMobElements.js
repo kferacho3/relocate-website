@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom';
 
-export const PackHeroHeroContainer = styled.div`
+export const ServicesMobContainer = styled.div`
     
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ export const PackHeroHeroContainer = styled.div`
  
     @media screen and (max-width: 768px) {
         //top: 100px;
-        height: 1100px;  
+        height: 800px;  
       }
  
     
@@ -28,16 +28,16 @@ export const PackHeroHeroContainer = styled.div`
 
 
 
-export const PackHeroHeroButton = styled.button`
+export const ServicesMobButton = styled.button`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 8px 0px 0px 150px;
+    padding: 8px 42.9078px 11.5px 43.0922px;
     white-space: nowrap;
 
-    width: 500px;
+    width: 310px;
     height: 50px;
-    margin-top: 25px;
+    margin-top: 150px;
     cursor: pointer;
 
     font-style: normal;
@@ -64,7 +64,7 @@ export const PackHeroHeroButton = styled.button`
 `
 
 
-export const PackHeroWrapper = styled.div`
+export const ServicesWrapper = styled.div`
     display: grid;
     z-index: 1;
     height: 800px;
@@ -80,10 +80,10 @@ export const PackHeroWrapper = styled.div`
 
 `;
 
-export const PackHeroRow = styled.div`
+export const ServicesRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
-    gap: 125px;
+    gap: 0px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
@@ -92,7 +92,7 @@ export const PackHeroRow = styled.div`
         position: absolute;
          margin-left: 50%;
         transform: translateX(-50%);
-        gap: 200px;
+        gap: 0px;
         grid-template-areas: 'col2' 'col1';   
         }
 `;
@@ -133,6 +133,22 @@ export const Column2 = styled.div`
     }
 `;
 
+export const Column22 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    
+    grid-area: col2;
+    
+    @media screen and (max-width: 768px) {
+        zoom: 0.9;
+        justify-content: center;
+        align-items: center;
+        grid-auto-flow: row;
+        padding: 0%;
+        margin-bottom: 100px;
+       
+    }
+`;
 
 export const TextWrapper = styled.div`
     align-items: center;
@@ -145,50 +161,40 @@ export const TopLine = styled.p`
 
     color: ${({lightText}) => (lightText ? '#660099' : '#fff')};
     font-style: normal;
-    font-weight: 400;
-    font-size: 14.5008px;
+    font-weight: 900;
+    font-size: 36px;
     line-height: 28px;
-    /* or 193% */
+    /* identical to box height, or 78% */
 
     display: flex;
     align-items: center;
 
-    color: #69F490;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+    color: #233152;
 `;
 
 export const Heading = styled.h1`
     
-    width: 600px;
+    width: 400px;
     height: 31px;
    
     
    
     font-style: normal;
-    font-weight: 100;
-    font-size: 61.696px;
-    line-height: 72px;
-    margin-bottom: 50px;
-    /* or 117% */
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 40px;
+    /* or 83% */
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 
     color: #233152;
-    /* or 94% */
-
-    align-items: center;
-    text-align: left;
-    justify-content: left;
-
-    color: #000000;
     @media screen and (max-width: 768px) {
       
 
      align-items: center;
    
-     justify-content: left;
+     justify-content: center;
  
 
   }
@@ -198,27 +204,27 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     
-    width: 600px;
-    height: 122px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    width:600px;
+    height: 100px;
+    //margin-top: 10px;
+    //margin-bottom: 30px;
 
     
 
 
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-    /* or 133% */
+    font-size: 17.5008px;
+    line-height: 28px;
+    /* or 160% */
 
     display: flex;
-    align-items: flex-start;
+    align-items: left;
     text-align: left;
 
-    color: #000000;
-    @media screen and (max-width: 768px) {
-       width: 540px;
+    color: #747C82;
+    @media screen and (max-width: 640px) {
+        width: 500px;
     }
 `;
 
@@ -234,18 +240,27 @@ export const BtnWrap = styled.div`
     
 `
 
+
+
+
 export const ImgWrap = styled.div`
     width: 704.04px;
     height: 554px;
-    zoom: 0.85;
+    width: ${({lxw}) => (lxw ? '600px' : '800px')};
+    height: ${({lxw}) => (lxw ? '565px' : '700px')};
+    @media screen and (max-width: 768px) {
+        width: ${({lxw}) => (lxw ? '600px' : '675px')};
+         }
+   
 `;
 
 export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
-    
+    margin-left: ${({marg}) => (marg ? '40px' : '0px')};
     @media screen and (max-width: 768px) {
+        margin-left: ${({marg}) => (marg ? '-30px' : '0px')};
         transform: scale(0.7) translateY(-300px);
         margin: auto;
          }

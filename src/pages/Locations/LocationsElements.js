@@ -331,7 +331,7 @@ export const LocationsInfoHeader = styled.h2`
 export const LocationsInfoTextSection = styled.div`
     box-sizing: border-box;
     width: 386px;
-    height: 489px;
+    height: 470px;
     background: linear-gradient(180deg, #BAFCBA 0%, #CCFFCC 18.23%, #BDFFBD 58.85%, #5BFF5B 100%);
     border: 0.25px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -376,7 +376,7 @@ export const LocationsInfoTextHeader = styled.p`
 `
 export const LocationsInfoText = styled.p`
 
-    width: 316px;
+    width: 350px;
     height: 146px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -398,7 +398,7 @@ export const LocationsInfoButton = styled.button`
     flex-direction: row;
     align-items: flex-start;
     padding: 11.5px 42.9078px 11.5px 43.0922px;
-    
+    border: none;
     margin-left: 50%;
     transform: translateX(-50%);
     font-style: normal;
@@ -406,6 +406,7 @@ export const LocationsInfoButton = styled.button`
     font-size: 32px;
     line-height: 39px;
     white-space: nowrap;
+    cursor: pointer;
     /* identical to box height */
 
     display: flex;
@@ -415,8 +416,8 @@ export const LocationsInfoButton = styled.button`
 
     color: #FFFFFF;
     width: 247px;
-    height: 63px;
-
+    height: 43px;
+   margin-top: 60px;
 
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
@@ -428,8 +429,8 @@ export const LocationsInfoBg = styled.img`
     margin-left: -60px;
     margin-top: -70px;
     z-index: -1;
-    width: 525.54px;
-    height: 624.69px;
+    width: 500px;
+    height: 630px;
     
 
 `

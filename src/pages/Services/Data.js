@@ -218,3 +218,53 @@ export const service8 = {
     topLineS: false
 
 };
+
+export const mob = {
+    id: 'servicesMob',
+    lightBg: false,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'COMING SOON!',
+    headline: 'MOBILE APP: For CLIENTS',
+    description: "Update your availability at any time, and we'll match you with jobs in your area.",
+    lxw: false,
+    marg: true,
+    imgStart: false,
+    divStart: false,
+    shadow: true,
+    img: 'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/ServicesImg/MobileAppClientsHand.svg',
+    bg: '',
+    alt: 'Services',
+    tooo: '',
+    dark: false,
+    primary: true,
+    darkText: true,
+    topLineS: false
+
+};
+
+export const mob2 = {
+    id: 'servicesMob2',
+    lightBg: false,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: '',
+    headline: 'KEY FEATURES',
+    description: "⚫ Live tracking of service with estimated finish times and geolocation.",
+    description2: "⚫ Eligibility for discounts and rewards for recurring customers",
+    description3: "⚫ Get updates on our new services provided and any other relevant information",
+    lxw: false,
+    marg: true,
+    imgStart: true,
+    divStart: false,
+    shadow: true,
+    img: 'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/ServicesImg/MobileAppClientsPhone.svg',
+    bg: '',
+    alt: 'Services',
+    tooo: '',
+    dark: false,
+    primary: true,
+    darkText: true,
+    topLineS: false
+
+};

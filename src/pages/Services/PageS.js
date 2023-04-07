@@ -3,7 +3,8 @@ import Services from './Services';
 import ServicesHero from './SericesHero';
 import Info2 from './ServicesInfo2';
 import Info from './ServicesInfo';
-import { hero, service1, service2, service3, service4, service5, service6, service7, service8 } from './Data';
+import ServicesMob from './ServicesMob';
+import { hero, service1, service2, service3, service4, service5, service6, service7, service8, mob, mob2 } from './Data';
 const PageS = () => {
     const [isOpen, setIsOpen] = useState(false)
    
@@ -26,6 +27,8 @@ const PageS = () => {
             <Services {...service8}/>
             <Info/>
             <Info2/>
+            <ServicesMob {...mob}/>
+            <ServicesMob {...mob2}/>
             
            </>
           </>

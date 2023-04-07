@@ -32,10 +32,10 @@ export const ServicesHeroButton = styled.button`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 8px 42.9078px 11.5px 43.0922px;
+    padding: 8px 0px 0px 150px;
     white-space: nowrap;
 
-    width: 310px;
+    width: 500px;
     height: 50px;
     margin-top: 150px;
     cursor: pointer;

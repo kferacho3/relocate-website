@@ -139,3 +139,53 @@ export const pack5 = {
     darkText: false
 
 };
+
+export const mob = {
+    id: 'servicesMob3',
+    lightBg: false,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'COMING SOON!',
+    headline: 'MOBILE APP: For PACKERS',
+    description: "Mobile app will be used to carry out the same task of booking but allow for more features such as geolocation tracking.",
+    imgStart: true,
+    divStart: false,
+    shadow: true,
+    lxw: false,
+    marg: true,
+    img: 'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/JoinImg/MobileAppPackers.svg',
+    bg: '',
+    alt: 'Services',
+    tooo: '',
+    dark: false,
+    primary: true,
+    darkText: true,
+    topLineS: false
+
+};
+
+export const mob2 = {
+    id: 'servicesMob4',
+    lightBg: false,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: '',
+    headline: 'KEY FEATURES',
+    description: "⚫ Ensure optimal efficiency during a moving service by receiving real-time, live updates.",
+    description2: "⚫ Stay informed on potential bonuses, rewards, and other news by receiving regular updates.",
+    description3: "⚫ Be able to communicate with fellow packers in order to seek help, request a replacement, or address any related issue.",
+    imgStart: false,
+    divStart: false,
+    shadow: true,
+    lxw: true,
+    marg: false,
+    img: 'https://relocate-storage.s3.us-east-2.amazonaws.com/relocate-images/JoinImg/MobileAppPackersPhone.svg',
+    bg: '',
+    alt: 'Services',
+    tooo: '',
+    dark: false,
+    primary: true,
+    darkText: true,
+    topLineS: false
+
+};
