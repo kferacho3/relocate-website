@@ -41,10 +41,9 @@ const Info2 = () => {
                         <ServicesInfoIcon src = {s4} />
                         </ServicesInfoIconWrap>
                         <ServicesInfoTextHeader>Profssionalism</ServicesInfoTextHeader>
-                        <ServicesInfoText>At our company, we prioritize our clients and approach every 
-                        task with positivity, enthusiasm, and professionalism. Our guiding principle is 
-                        to always give more than we receive, and we are dedicated to providing exceptional 
-                        service and building lasting relationships based on trust and mutual respect.</ServicesInfoText>
+                        <ServicesInfoText>At our company, we prioritize our clients and approach every task
+                         with professionalism and enthusiasm.  We are dedicated to providing exceptional 
+                         service that exceeds our clients' expectations.</ServicesInfoText>
                     </ServicesInfoTextSection2>
                 </Column1>
                 

@@ -103,7 +103,7 @@ export const ServicesInfoHeader = styled.h2`
    }
 `
 export const ServicesInfoTextSection = styled.div`
-    width: 388.86px;
+    width: 420px;
     height: 350px;
    margin-top: 50px;
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
@@ -114,7 +114,7 @@ export const ServicesInfoTextSection = styled.div`
 
 `
 export const ServicesInfoTextSection2 = styled.div`
-    width: 389.84px;
+    width: 420px;
     height: 320px;
     left: 47.34px;
     margin-top: 70px;
@@ -164,7 +164,7 @@ export const ServicesInfoTextHeader = styled.p`
 `
 export const ServicesInfoText = styled.p`
 
-    width: 350px;
+    width: 370px;
     height: 146px;
     margin-left: 50%;
     transform: translateX(-50%);

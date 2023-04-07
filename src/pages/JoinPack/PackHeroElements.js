@@ -88,7 +88,9 @@ export const PackHeroRow = styled.div`
 
     @media screen and (max-width: 768px) {
         grid-auto-rows: 0.5fr;
-       
+        position: absolute;
+         margin-left: 50%;
+        transform: translateX(-50%);
         gap: 200px;
         grid-template-areas: 'col2' 'col1';   
         }
@@ -107,7 +109,7 @@ export const Column1 = styled.div`
        justify-content: center;
        width: 500px;
         zoom: 0.7;
-        left: 50%;
+        margin-left: 50%;
         transform: translateX(-50%);
 
     }
@@ -125,7 +127,7 @@ export const Column2 = styled.div`
         align-items: center;
         grid-auto-flow: row;
         padding: 0%;
-        margin-bottom: 100px;
+        margin-bottom: -200px;
        
     }
 `;

@@ -163,13 +163,26 @@ export const PackButton = styled.button`
     flex-direction: row;
     align-items: flex-start;
     padding: 11.5px 42.9078px 11.5px 43.0922px;
+    width: 225px;
+    height: 39px;
+    margin-left: calc(50% - 260px/2 + 6px);
+    margin-top: -100px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
 
-    width: 260px;
-    height: 63px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.248px;
+
+    color: #FFFFFF;
 
     background: linear-gradient(180deg, #16BC97 0%, #0044DC 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
-    border-radius: 6px;
+    border-radius: 80px;
 `
 
 
@@ -236,20 +249,18 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     
-    width: 562px;
+    width: 600px;
     height: 160px;
-    margin-top: -10px;
+    margin-top: -35px;
     margin-left: 50%;
     transform: translateX(-50%);
 
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    text-align: center;
-    /* or 133% */
+    font-size: 14.5px;
+    line-height: 20px;
+    /* or 145% */
 
-    display: flex;
     align-items: center;
 
     color: #424B5A;

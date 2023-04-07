@@ -527,8 +527,10 @@ export const HeroBookTextSection = styled.div`
     right: -15%;
     @media screen and (max-width: 768px) {
         zoom: 0.6;
-        width: 550px;
+        width: 575px;
+        height: 530;
         right: -7.5%;
+        margin-top: 20px;
         justify-content: center;
         
     }
@@ -555,7 +557,7 @@ export const HeroBookHead = styled.h4`
 `
 export const HeroBookText = styled.p`
    
-    height: 110px;
+    height: 200px;
     margin-top: 50px;
 
     font-style: normal;
@@ -575,9 +577,10 @@ export const HeroBookButton = styled.button`
     height: 55px;
     left: 39.83%;
     right: 37.9%;
-    top: 389px;
+    margin-top: 50px;
     cursor: pointer;
-    background: #69F490;
+    background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
+    border: none;
     border-radius: 50px;
 
 `

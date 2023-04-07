@@ -58,7 +58,7 @@ export const LocationsDemographicContainer = styled.div`
     height: 100%;
     //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     @media screen and (max-width: 550px) {
-   height: 400px;
+   height: 1050px;
 }
 `
 

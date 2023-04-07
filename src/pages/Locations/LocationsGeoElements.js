@@ -155,8 +155,11 @@ export const LocationsGeoRow = styled.div`
 
     @media screen and (max-width: 768px) {
         grid-auto-rows: 0.5fr;
-        margin-top: 0px;
-        gap: 100px;
+        position: absolute;
+         margin-left: 50%;
+        transform: translateX(-50%);
+        gap: 200px;
+        margin-top: -100px;
         grid-template-areas: 'col2' 'col1';   
         }
 `;
@@ -168,14 +171,18 @@ export const Column1 = styled.div`
     grid-area: col1;
     @media screen and (max-width: 768px) {
       
-        
-        display: flex;
+        //==position: absolute;
        align-items: center;
-       padding: 0%;
+     
        justify-content: center;
-        zoom: 0.65;
+       width: 600px;
+        zoom: 0.6;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
     }
 `;
+
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
@@ -185,11 +192,14 @@ export const Column2 = styled.div`
     
     @media screen and (max-width: 768px) {
         zoom: 0.85;
+        position: absolute;
         justify-content: center;
         align-items: center;
         grid-auto-flow: row;
         padding: 0%;
-        margin-bottom: -200px;
+        margin-bottom: -400px;
+        margin-left: 50%;
+        transform: translateX(-50%);
        
     }
 `;
