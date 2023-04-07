@@ -108,7 +108,7 @@ const Navbar = ({ toggle}) => {
         <SidebarNav onClick={showSidebar} sidebar={sidebar}>
                     <SidebarWrap>
                         <NavIcon  to='#'>
-                        <AiIcons.AiOutlineClose style={{ fontSize: '72px' }}  onClick={showSidebar} />
+                        <AiIcons.AiOutlineClose style={{ fontSize: '72px' }}  onClick={showSidebar} sidebar={sidebar} />
                         </NavIcon>
                         {SidebarData.map((item, index) => {
                         return <SubMenu  item={item} key={index} />;
