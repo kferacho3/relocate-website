@@ -18,7 +18,7 @@ export const Nav = styled.nav`
     left: 0;
     overflow: hidden;
   
-    z-index: 9999999;
+    z-index: 99999999999;
     margin-bottom: 120px;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
