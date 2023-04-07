@@ -4,12 +4,6 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
-export const Nav = styled.nav`
-
-  height: 20px;
-  display: flex;
-  z-index: -999;
-`;
 
 export const SideIcon = styled(LinkR)`
 
@@ -39,7 +33,7 @@ export const SidebarNav = styled.nav`
   position: fixed;
   top: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
-  z-index: 999999999;
+  z-index: 99999;
 
 `;
 

@@ -98,6 +98,7 @@ export const PackInfoHeader = styled.h2`
     color: #FFFFFF;
     @media screen and (max-width: 768px) {
         zoom: 0.6;
+        white-space: normal;
    }
 `
 export const PackInfoTextSection = styled.div`
