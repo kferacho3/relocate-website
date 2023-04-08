@@ -104,9 +104,11 @@ export const ServicesInfoHeader = styled.h2`
    }
 `
 export const ServicesInfoTextSection = styled.div`
+position: relative;
     width: 420px;
     height: 350px;
    margin-top: 50px;
+   overflow: hidden;
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
     border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -115,11 +117,12 @@ export const ServicesInfoTextSection = styled.div`
 
 `
 export const ServicesInfoTextSection2 = styled.div`
+    position: relative;
     width: 420px;
     height: 320px;
     left: 47.34px;
     margin-top: 70px;
-
+    overflow: hidden;
     background: linear-gradient(180deg, #5CFC5D 0%, #1ED81E 18.23%, #297D29 67.19%, #1D811E 100%);
     border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -135,10 +138,10 @@ export const ServicesInfoIcon = styled.img`
 
 `
 export const ServicesInfoIconWrap = styled.div`
-width: 101px;
-height: 105px;
-margin-top: 25px;
-margin-left: 50%;
+    width: 101px;
+    height: 105px;
+    margin-top: 25px;
+    margin-left: 50%;
     transform: translateX(-50%);
 
 
@@ -221,4 +224,24 @@ export const ServicesInfoBg = styled.img`
     height: 624.69px;
     
 
+`
+
+export const ServicesDeco1 = styled.img`
+   position: absolute;
+   width: 190px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: -50px;
+
+    transform: matrix(1, 0, 0, .5, 0, 0);
+`
+export const ServicesDeco2 = styled.img`
+  position: absolute;
+  width: 190px;
+    height: 60px;
+    margin-left: 280px;
+    //margin-right: -20px;
+    margin-top: -50px;
+
+    transform: matrix(1, 0, 0, .5, 0, 0);
 `

@@ -11,8 +11,9 @@ export const JoinPackContainer = styled.div`
     width: 100vw;
     left: 0px;
     border-radius: 0px;
-
+    position: relative;
     overflow: hidden;
+
   
  
     
@@ -34,6 +35,7 @@ export const PackContainer = styled.div`
     left: 0px;
     border-radius: 0px;
     overflow: hidden;
+    position: relative;
     //background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#010606')};
 
   
@@ -165,12 +167,14 @@ export const PackButton = styled.button`
     padding: 11.5px 42.9078px 11.5px 43.0922px;
     width: 225px;
     height: 39px;
+    white-space: nowrap;
     margin-left: calc(50% - 260px/2 + 6px);
     margin-top: -100px;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
+    border: none;
     /* identical to box height */
 
     display: flex;

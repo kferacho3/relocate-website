@@ -104,7 +104,8 @@ export const PackInfoHeader = styled.h2`
 export const PackInfoTextSection = styled.div`
     width: 386px;
     height: 379px;
-
+    position: relative;
+    overflow: hidden;
 
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
     border: 0.25px solid #FFFFFF;
@@ -209,4 +210,23 @@ export const PackInfoBg = styled.img`
 height: 520.37px;
     
 
+`
+export const PackDeco1 = styled.img`
+    position: absolute;
+    width: 190px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: -50px;
+
+    transform: matrix(1, 0, 0, .5, 0, 0);
+`
+export const PackDeco2 = styled.img`
+    position: absolute;
+    width: 190px;
+    height: 60px;
+    margin-left: 280px;
+    //margin-right: -20px;
+    margin-top: -50px;
+
+    transform: matrix(1, 0, 0, .5, 0, 0);
 `

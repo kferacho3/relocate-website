@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import { ServicesInfoSection, ServicesInfoBg, ServicesInfoWrapper, ServicesInfoRow,
+import { ServicesInfoSection, ServicesInfoBg, ServicesInfoWrapper, ServicesInfoRow, ServicesDeco1, ServicesDeco2,
          ServicesInfoHeader, ServicesInfoTextSection, ServicesInfoIcon, ServicesInfoTextHeader,
          ServicesInfoText, ServicesInfoButton, ServicesInfoIconWrap, Column1, Column2, Column22, Column3 } from './ServicesInfoElements';
-
 
 
 import deco1 from './ServImg/servDeco1.svg';
@@ -13,6 +12,9 @@ import s1 from './ServImg/servlogo1.svg';
 import s2 from './ServImg/servlogo2.svg';
 import s3 from './ServImg/servlogo3.svg';
 
+import dec1 from '../../images/deco3.svg';
+import dec2 from '../../images/deco4.svg';
+//import deco3 from './ServicesImg/servDeco.svg';
 
 
 
@@ -38,9 +40,11 @@ const Info = () => {
                 <Column1>
                 <ServicesInfoBg src = {deco1} />
                     <ServicesInfoTextSection>
+                        <ServicesDeco1 src={dec1}/>
                         <ServicesInfoIconWrap>
-                        <ServicesInfoIcon src = {s1} />
+                            <ServicesInfoIcon src = {s1} />
                         </ServicesInfoIconWrap>
+                        <ServicesDeco2 src={dec2}/>
                         <ServicesInfoTextHeader>Accessible!</ServicesInfoTextHeader>
                         <ServicesInfoText>Relocate takes pride in providing a personalized moving experience.
                          Our team is committed to ensuring that your move is stress-free and seamless, from start 
@@ -52,9 +56,11 @@ const Info = () => {
                 <Column2>
                 <ServicesInfoBg src = {deco2} />
                         <ServicesInfoTextSection>
-                            <ServicesInfoIconWrap>
+                        <ServicesDeco1 src={dec1}/>
+                        <ServicesInfoIconWrap>
                             <ServicesInfoIcon src = {s2} />
-                            </ServicesInfoIconWrap>
+                        </ServicesInfoIconWrap>
+                        <ServicesDeco2 src={dec2}/>
                             <ServicesInfoTextHeader>Economical!</ServicesInfoTextHeader>
                             <ServicesInfoText>Our estimates are conducted in real-time, using human verification and
                              accurate assessment to determine the cost of your move and ensure you're not overspending.
@@ -67,9 +73,11 @@ const Info = () => {
                     <ServicesInfoTextSection>
                 
                         
+                    <ServicesDeco1 src={dec1}/>
                         <ServicesInfoIconWrap>
-                        <ServicesInfoIcon src = {s3} />
+                            <ServicesInfoIcon src = {s3} />
                         </ServicesInfoIconWrap>
+                        <ServicesDeco2 src={dec2}/>
                         <ServicesInfoTextHeader>Efficient</ServicesInfoTextHeader>
                         <ServicesInfoText>You can now book our services without an in-home estimate and manage your entire experience
                          through your online dashboard. We will send vetted workers to complete your service efficiently while ensuring 
