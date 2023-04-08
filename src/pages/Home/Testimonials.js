@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { HeroTestContainer, HeroTestHeader, HeroTestMain, HeroTestApost1, HeroTestApost2,
+import { HeroTestContainer, HeroTestHeader, HeroTestMain, HeroTestApost1, HeroTestApost2, HeroTestTextSectionM,
          HeroTestMainStars, HeroTestSection, HeroTestTop, HeroTestNameHead, HeroTestNameDate, 
          HeroTestTextSection, HeroTestText, HeroTestRating, HeroTestDivContainer, HeroTestButton } from './HeroElements';
 
@@ -49,7 +49,7 @@ const Testimonials = () => {
             </HeroTestText>
           </HeroTestTextSection>
 
-          <HeroTestTextSection  style = {{gridArea: `col2`}} >
+          <HeroTestTextSectionM  style = {{gridArea: `col2`}} >
             <HeroTestTop>
                 <HeroTestNameHead>Ramakrishnan S., Chicago Illinois</HeroTestNameHead>
                 <HeroTestNameDate>Aug 07, 2021</HeroTestNameDate>
@@ -62,7 +62,7 @@ const Testimonials = () => {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                 nisi ut aliquip ex ea commodo consequat.
             </HeroTestText>
-          </HeroTestTextSection>
+          </HeroTestTextSectionM>
 
           <HeroTestTextSection style = {{gridArea: `col3`}}>
             <HeroTestTop>

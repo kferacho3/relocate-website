@@ -293,7 +293,7 @@ export const HeroTestSection = styled.div`
     background: #376392;
  
     width: 100vw;
-    height: 1000px;
+    height: 1200px;
 
   
   
@@ -351,16 +351,52 @@ export const HeroTestDivContainer = styled.div`
 `
 export const HeroTestTextSection = styled.div`
     box-sizing: border-box;
-    
+
     width: 359.95px;
-    max-height: 100%;
+    //height: 218.45px;
 
     background: linear-gradient(180deg, #000100 0%, rgba(39, 210, 11, 0.35) 100%);
     border: 1px solid #FFFFFF;
-    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     /* Inside auto layout */
 
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+
+    /* Inside auto layout */
+    @media screen and (max-width: 768px) {
+        width: 420px;
+       // height: 700px;
+    
+}
+   
+`
+export const HeroTestTextSectionM = styled.div`
+    box-sizing: border-box;
+    margin-top: 60px;
+    width: 359.95px;
+    //height: 218.45px;
+
+    background: linear-gradient(180deg, #000100 0%, rgba(39, 210, 11, 0.35) 100%);
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+
+    /* Inside auto layout */
+    @media screen and (max-width: 768px) {
+        width: 420px;
+        //height: 700px;
+    
+}
    
 `
 
@@ -372,7 +408,7 @@ export const HeroTestNameHead = styled.h3`
 
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16.5px;
     line-height: 16px;
     text-align: center;
     white-space: nowrap;
@@ -414,10 +450,14 @@ export const HeroTestTop = styled.div`
     top: 1px;
 
     border-bottom: 1px solid #FFFFFF;
+    @media screen and (max-width: 768px) {
+        width: 360px;
+        width: 420px;
+}
 `
 export const HeroTestText = styled.p`
 
-    width: 360px;
+    width: 300px;
     height: 144px;
 
     text-align: center;
@@ -429,9 +469,18 @@ export const HeroTestText = styled.p`
     /* or 171% */
 
     display: flex;
-    align-items: center;
+    align-items: left;
+    text-align: left;
+    margin-left: 5px;
 
     color: #E4E4E4;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: 768px) {
+        width: 360px;
+    
+}
 `
 export const HeroTestRating = styled.div`
     display: flex;
@@ -457,20 +506,20 @@ export const HeroTestButton = styled.button`
     border-radius: 80px;
 
     /* Inside auto layout */
-
+    margin-top: 70px;
     flex: none;
     order: 1;
     flex-grow: 0;
     @media screen and (max-width: 768px) {
    
-       margin-top: 325px;
+       margin-top: 450px;
         
     }
 `
 
 export const HeroBookSection = styled.div`
   
-    height: 600px;
+    height: 700px;
     width: 100vw;
     left: 0%;
     right: 0%;
@@ -507,7 +556,7 @@ export const HeroBookImg = styled.img`
 
 export const HeroBookImgWrap = styled.div`
     
-    height: 650px;
+    height: 700px;
     width: 500px;
  
     @media screen and (max-width: 768px) {
@@ -520,11 +569,11 @@ export const HeroBookImgWrap = styled.div`
 
 `
 export const HeroBookTextSection = styled.div`
-
     height: 495px;
     width: 750px;
     position: relative;
     right: -15%;
+    margin-top: -50px;
     @media screen and (max-width: 768px) {
         zoom: 0.6;
         width: 575px;
@@ -558,7 +607,7 @@ export const HeroBookHead = styled.h4`
 export const HeroBookText = styled.p`
    
     height: 200px;
-    margin-top: 50px;
+    margin-top: -50px;
 
     font-style: normal;
     font-weight: 400;
@@ -570,6 +619,13 @@ export const HeroBookText = styled.p`
     align-items: center;
 
     color: #FFFFFF;
+    @media screen and (max-width: 768px) {
+        margin-top: 0px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+      
+    }
 
 `
 export const HeroBookButton = styled.button`
@@ -582,6 +638,10 @@ export const HeroBookButton = styled.button`
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border: none;
     border-radius: 50px;
+    @media screen and (max-width: 768px) {
+        width: 550px;
+      
+    }
 
 `
 export const Column1 = styled.div`

@@ -92,8 +92,8 @@ export const PackReqWrapper = styled.div`
     margin-left: auto;
     justify-content: center;
     @media screen and (max-width: 768px) {
-       margin-left: -20px;
-       margin-top: -240px
+   
+       margin-top: -340px
     }
   
 

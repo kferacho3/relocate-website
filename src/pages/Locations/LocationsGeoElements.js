@@ -11,7 +11,7 @@ export const LocationsGeoContainer = styled.div`
     background: #fff;    
     height: 1000px;
     width: 100vw;
-    left: 0px;
+  
     border-radius: 0px;
     background: ${({lightBg}) => (lightBg ? '#ffffff' : '#376392')};
  

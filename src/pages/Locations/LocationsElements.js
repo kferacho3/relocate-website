@@ -149,7 +149,7 @@ export const Column2 = styled.div`
     padding: 0 15px;
     grid-area: col2;
     @media screen and (max-width: 768px) {
-        zoom: 0.7;
+        zoom: 0.65;
    }
     
 `;
@@ -217,7 +217,7 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     
-    width: 502px;
+    width: 480px;
     height: 191px;
 
 

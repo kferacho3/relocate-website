@@ -120,7 +120,7 @@ export const ServicesInfoTextSection2 = styled.div`
     position: relative;
     width: 420px;
     height: 320px;
-    left: 47.34px;
+    //left: 47.34px;
     margin-top: 70px;
     overflow: hidden;
     background: linear-gradient(180deg, #5CFC5D 0%, #1ED81E 18.23%, #297D29 67.19%, #1D811E 100%);
