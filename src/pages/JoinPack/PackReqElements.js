@@ -7,8 +7,9 @@ export const PackReqSection = styled.div`
     width: 100vw;
     height: 900px;
     overflow: hidden;
-   
-    background: #376392;
+   margin-top: 100px;
+    //background: #376392;
+    background: linear-gradient(180deg, #376392 0%, rgba(55, 99, 146, 0.6) 66.67%, rgba(255, 255, 255, 0) 100%);
     @media screen and (max-width: 768px) {
        
        height: 1000px;

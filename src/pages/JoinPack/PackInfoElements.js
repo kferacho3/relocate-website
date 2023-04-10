@@ -85,7 +85,7 @@ export const PackInfoHeader = styled.h2`
     width: 1000px;
     height: 44px;
     margin-left: 50%;
-    transform: translate(-50%, 70px);
+    transform: translate(-50%, 50px);
     font-style: normal;
     white-space: nowrap;
     font-weight: 800;
@@ -102,6 +102,9 @@ export const PackInfoHeader = styled.h2`
     color: #000000;
     @media screen and (max-width: 768px) {
         zoom: 0.6;
+        width: 500px;
+        line-height: 64px;
+        transform: translate(-50%, 50px);
         white-space: normal;
    }
 `

@@ -261,12 +261,12 @@ export const Subtitle = styled.p`
 
     font-style: normal;
     font-weight: 700;
-    font-size: 14.5px;
+    font-size: 16.5px;
     line-height: 20px;
     /* or 145% */
 
     align-items: center;
-
+    text-align: center;
     color: #424B5A;
 `;
 

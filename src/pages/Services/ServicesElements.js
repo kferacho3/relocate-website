@@ -244,9 +244,9 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     
-    width: 449px;
+    width: 475px;
     height: 122px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -256,7 +256,7 @@ export const Subtitle = styled.p`
     font-style: normal;
     font-weight: 700;
     font-size: 16.5px;
-    line-height: 24px;
+    line-height: 28px;
     /* or 133% */
 
     display: flex;
