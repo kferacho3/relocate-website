@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom';
-export const ServicesInfoSection = styled.div`
+export const HeroInfoSection = styled.div`
   
     overflow: hidden;
     width: 100vw;
     height: 835px;
-    background: #ffffff;
-    
-    
+    //background: #94DC9C;
+    background: linear-gradient(180deg, #376392 0%, #94DC9C 30.21%, #94DC9C 76.04%, #376392 100%);
     @media screen and (max-width: 768px) {
-        height: 1500px;
+        height: 1400px;
    }
 `
 
-export const ServicesInfoWrapper = styled.div`
+export const HeroInfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 600px;
+    height: 800px;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -25,7 +24,7 @@ export const ServicesInfoWrapper = styled.div`
 
 `;
 
-export const ServicesInfoRow = styled.div`
+export const HeroInfoRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
     gap: 75px;
@@ -80,73 +79,61 @@ export const Column3 = styled.div`
     
 `;
 
-export const ServicesInfoHeader = styled.h2`
+export const HeroInfoHeader = styled.h2`
  
-    width: 500px;
+    width: 631px;
     height: 44px;
     margin-left: 50%;
-    white-space: nowrap;
     transform: translate(-50%, 20px);
-
     font-style: normal;
+    white-space: nowrap;
     font-weight: 800;
     font-size: 48px;
     line-height: 44px;
+    
     /* identical to box height, or 92% */
 
     align-items: center;
     text-align: center;
 
-    color: #000000;
+    color: #FFFFFF;
     @media screen and (max-width: 768px) {
-        zoom: 0.8;
-    
+        zoom: 0.6;
+        white-space: normal;
    }
 `
-export const ServicesInfoTextSection = styled.div`
-position: relative;
-    width: 420px;
-    height: 350px;
-   margin-top: 50px;
-   overflow: hidden;
+export const HeroInfoTextSection = styled.div`
+    width: 386px;
+    height: 379px;
+    position: relative;
+    overflow: hidden;
+
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
     border: 0.25px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+   
   
 
 `
-export const ServicesInfoTextSection2 = styled.div`
-    position: relative;
-    width: 420px;
-    height: 320px;
-    //left: 47.34px;
-    margin-top: 70px;
-    overflow: hidden;
-    background: linear-gradient(180deg, #5CFC5D 0%, #1ED81E 18.23%, #297D29 67.19%, #1D811E 100%);
-    border: 0.25px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-  
 
-`
-export const ServicesInfoIcon = styled.img`
+export const HeroInfoIcon = styled.img`
     
     width: 100%;
     height: 100%;
     
 
 `
-export const ServicesInfoIconWrap = styled.div`
-    width: 101px;
-    height: 105px;
-    margin-top: 25px;
-    margin-left: 50%;
+export const HeroInfoIconWrap = styled.div`
+width: 101px;
+height: 105px;
+margin-top: 25px;
+margin-left: 50%;
     transform: translateX(-50%);
 
 
 `
-export const ServicesInfoTextHeader = styled.p`
+export const HeroInfoTextHeader = styled.p`
    
     height: 31px;
     white-space: nowrap;
@@ -157,8 +144,6 @@ export const ServicesInfoTextHeader = styled.p`
     font-weight: 700;
     font-size: 32px;
     line-height: 30px;
-    
-    -webkit-text-stroke: 0.1px #000000;
     /* or 94% */
 
     display: flex;
@@ -168,26 +153,28 @@ export const ServicesInfoTextHeader = styled.p`
 
     color: #ffffff;
 `
-export const ServicesInfoText = styled.p`
+export const HeroInfoText = styled.p`
 
-    width: 370px;
+    width: 350px;
     height: 146px;
     margin-left: 50%;
     transform: translateX(-50%);
-   margin-top: -30px;
+    margin-top: -30px;
+
     font-style: normal;
     font-weight: 700;
-    font-size: 14.5px;
-    line-height: 20px;
-    /* or 138% */
+    font-size: 14.5008px;
+    line-height: 24px;
+    /* or 166% */
 
     display: flex;
     align-items: center;
     text-align: center;
 
     color: #FFFFFF;
+    margin-top: 30px;
 `
-export const ServicesInfoButton = styled.button`
+export const HeroInfoButton = styled.button`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -216,34 +203,33 @@ export const ServicesInfoButton = styled.button`
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
 `
-export const ServicesInfoBg = styled.img`
+export const HeroInfoBg = styled.img`
     position: absolute;
     justify-content: center;
     margin-left: -60px;
-    margin-top: -70px;
+    margin-top: -60px;
     z-index: -1;
-    width: 525.54px;
-    height: 624.69px;
+    width: 479.17px;
+    height: 520.37px;
     
 
 `
-
-export const ServicesDeco1 = styled.img`
-   position: absolute;
-   width: 190px;
+export const HeroDeco1 = styled.img`
+    position: absolute;
+    width: 190px;
     height: 60px;
     margin-top: 10px;
     margin-left: -50px;
 
     transform: matrix(1, 0, 0, .5, 0, 0);
 `
-export const ServicesDeco2 = styled.img`
-  position: absolute;
-  width: 190px;
+export const HeroDeco2 = styled.img`
+    position: absolute;
+    width: 190px;
     height: 60px;
-    margin-left: 280px;
+    margin-left: 250px;
     //margin-right: -20px;
     margin-top: -50px;
 
     transform: matrix(1, 0, 0, .5, 0, 0);
-`
+    `

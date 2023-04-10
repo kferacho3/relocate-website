@@ -29,7 +29,7 @@ export const PackContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F0F8FF;    
+    background: #FFFFFF;    
     height: 1200px;
     width: 100vw;
     left: 0px;

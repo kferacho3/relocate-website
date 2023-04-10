@@ -8,9 +8,9 @@ import deco1 from './ServImg/servDeco1.svg';
 import deco2 from './ServImg/servDeco2.svg';
 import deco3 from './ServImg/servDeco3.svg';
 
-import s1 from './ServImg/servlogo1.svg';
-import s2 from './ServImg/servlogo2.svg';
-import s3 from './ServImg/servlogo3.svg';
+import s1 from '../../logos/servlogo1.svg';
+import s2 from '../../logos/servlogo2.svg';
+import s3 from '../../logos/servlogo3.svg';
 
 import dec1 from '../../images/deco3.svg';
 import dec2 from '../../images/deco4.svg';

@@ -10,15 +10,16 @@ import j4 from '../../logos/jobLogo4.svg';
 import j5 from '../../logos/jobLogo5.svg';
 import j6 from '../../logos/jobLogo6.svg';
 
-import d1 from '../../logos/packJobDeco1.svg';
-import d2 from '../../logos/packJobDeco2.svg';
-import d3 from '../../logos/packJobDeco3.svg';
-import d4 from '../../logos/packJobDeco4.svg';
-import d5 from '../../logos/packJobDeco5.svg';
-import d6 from '../../logos/packJobDeco6.svg';
+import d1 from '../../logos/miniDeco1.svg';
+import d2 from '../../logos/miniDeco2.svg';
+import d3 from '../../logos/miniDeco3.svg';
+import d4 from '../../logos/miniDeco4.svg';
+
 
 import deco1 from '../../images/deco1.svg';
 import deco2 from '../../images/deco2.svg';
+
+
 
 
 const PackReq = () => {
@@ -90,7 +91,7 @@ const PackReq = () => {
                   </PackReqTextSection>
                 </PackReqContainer>
 
-                <PackJobDivBg style={{ backgroundImage:`url(${d5})` }}/> 
+                <PackJobDivBg style={{ backgroundImage:`url(${d1})` }}/> 
                 <PackReqContainer>
                 <PackDeco1 src = {deco1}/>
                 <PackDeco2 src={deco2}/>
@@ -103,7 +104,7 @@ const PackReq = () => {
                   </PackReqTextSection>
                 </PackReqContainer>
 
-                <PackJobDivBg style={{ backgroundImage:`url(${d6})` }}/> 
+                <PackJobDivBg style={{ backgroundImage:`url(${d2})` }}/> 
                 <PackReqContainer>
                 <PackDeco1 src = {deco1}/>
                 <PackDeco2 src={deco2}/>

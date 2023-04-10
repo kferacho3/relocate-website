@@ -5,7 +5,8 @@ export const PackInfoSection = styled.div`
     overflow: hidden;
     width: 100vw;
     height: 835px;
-    background: #94DC9C;
+   // background: #94DC9C;
+   background: linear-gradient(180deg, #FFFFFF 0%, #E4F6E6 4.69%, #94DC9C 52.08%, rgba(148, 220, 156, 0) 100%);
     
     @media screen and (max-width: 768px) {
         height: 1400px;
@@ -81,21 +82,24 @@ export const Column3 = styled.div`
 
 export const PackInfoHeader = styled.h2`
  
-    width: 631px;
+    width: 1000px;
     height: 44px;
     margin-left: 50%;
-    transform: translate(-50%, 20px);
+    transform: translate(-50%, 70px);
     font-style: normal;
     white-space: nowrap;
     font-weight: 800;
-    font-size: 48px;
+    font-size: 60px;
     line-height: 44px;
+
+    ///text-shadow: #000 0.1px;
+   //text-stroke: 0.0001px #000000;
     /* identical to box height, or 92% */
 
     align-items: center;
     text-align: center;
 
-    color: #FFFFFF;
+    color: #000000;
     @media screen and (max-width: 768px) {
         zoom: 0.6;
         white-space: normal;

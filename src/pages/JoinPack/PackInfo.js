@@ -5,13 +5,13 @@ import { PackInfoSection, PackInfoBg, PackInfoWrapper, PackInfoRow, PackDeco1, P
 
 
 
-import deco1 from './PackImg/packDeco1.svg';
-import deco2 from './PackImg/packDeco2.svg';
-import deco3 from './PackImg/packDeco3.svg';
+import deco1 from '../../images/decoM1.svg';
+import deco2 from '../../images/decoM2.svg';
+import deco3 from '../../images/decoM3.svg';
 
-import s1 from './PackImg/packogo1.svg';
-import s2 from './PackImg/packogo2.svg';
-import s3 from './PackImg/packogo3.svg';
+import s1 from '../../logos/packogo1.svg';
+import s2 from '../../logos/packogo2.svg';
+import s3 from '../../logos/packogo3.svg';
 
 
 import dec1 from '../../images/deco3.svg';

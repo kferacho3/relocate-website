@@ -5,14 +5,14 @@ import { ServicesInfoSection, ServicesInfoBg, ServicesInfoWrapper, ServicesInfoR
 
 
 
-import deco4 from './ServImg/servDeco4.svg';
-import deco5 from './ServImg/servDeco5.svg';
-import deco6 from './ServImg/servDeco6.svg';
+import deco4 from './ServImg/servDeco1.svg';
+import deco5 from './ServImg/servDeco2.svg';
+import deco6 from './ServImg/servDeco3.svg';
 
 
-import s4 from './ServImg/servlogo4.svg';
-import s5 from './ServImg/servlogo5.svg';
-import s6 from './ServImg/servlogo6.svg';
+import s4 from '../../logos/servlogo1.svg';
+import s5 from '../../logos/servlogo2.svg';
+import s6 from '../../logos/servlogo3.svg';
 
 import dec1 from '../../images/deco1.svg';
 import dec2 from '../../images/deco2.svg';
