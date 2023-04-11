@@ -80,19 +80,26 @@ export const HomeButton = styled(LinkR)`
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
-    margin-left: 50%;
-    transform: translateX(-50%);
+  
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border-radius: 180px;
     height: 0px;
     width: 400px;
     margin-top: 75px;
+    &:hover {
+  
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 
 export const BtnWrap = styled.div`
-    display: flex;
+    display:block;
+    align-items: center;
     justify-content: flex-start;
-    height: 15px;
+  
+
+	margin: auto;
 
     @media screen and (max-width: 640px) {
         align-items: center;
@@ -568,7 +575,7 @@ export const HeroTestRating = styled.div`
 export const HeroTestButton = styled.button`
     box-sizing: border-box;
 
-    width: 250px;
+    width: 350px;
     height: 48px;
     cursor: pointer;
 
@@ -581,6 +588,12 @@ export const HeroTestButton = styled.button`
     flex: none;
     order: 1;
     flex-grow: 0;
+
+    &:hover {
+        
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
     @media screen and (max-width: 768px) {
    
        margin-top: 450px;
@@ -709,6 +722,11 @@ export const HeroBookButton = styled.button`
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border: none;
     border-radius: 50px;
+    
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
     @media screen and (max-width: 768px) {
         width: 550px;
       

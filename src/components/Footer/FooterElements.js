@@ -58,6 +58,7 @@ export const FooterWrapper = styled.div`
 export const FooterRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
     gap: 100px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col3 col2 col1'` : `'col1 col2 col3'`)};
@@ -381,18 +382,18 @@ export const FooterLinkTitle = styled.div`
 
 export const FooterBottomSection = styled.div`
     display: flex;
-    position: absolute;
+    position: relative;
     z-index: 99999;
-    width: 100vw;
+    width: 55vw;
     height: 80px;
-    margin-top: 450px;
-    margin-left: 50%;
+   // margin-top: 200px;
+    transform: translateY(20%);
+    //left: 50%;
     @media screen and (max-width: 850px) {
-        margin-left: 0%;
-        margin-top: 1300px;
+ 
         zoom: 0.6;
-        left: 50%;
-        transform: translateX(-50%);
+      
+        transform: translateY(20%);
     }
 `
 
@@ -454,8 +455,8 @@ export const WebsiteRights = styled.small`
    
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 12px;
+    line-height: 16px;
     /* or 177% */
 
     display: flex;
@@ -473,13 +474,13 @@ export const WebsiteTermsPolicy = styled.small`
 
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 27px;
+    font-size: 10px;
+    line-height: 16px;
     /* or 177% */
 
     display: flex;
     align-items: center;
-
+    margin-top: 0px;
     color: #747C82;
 `
 

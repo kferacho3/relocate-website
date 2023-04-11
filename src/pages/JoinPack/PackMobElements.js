@@ -61,6 +61,11 @@ export const PackMobButton = styled.button`
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border-radius: 80px;
     border: none;
+
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 
 
@@ -165,7 +170,7 @@ export const TopLine = styled.p`
     font-size: 36px;
     line-height: 28px;
     /* identical to box height, or 78% */
-
+    margin-top: 10px;
     display: flex;
     align-items: center;
 

@@ -347,9 +347,9 @@ export const LocationsInfoIcon = styled.img`
 
 `
 export const LocationsInfoIconWrap = styled.div`
-width: 101px;
-height: 105px;
-margin-left: 50%;
+    width: 101px;
+    height: 105px;
+    margin-left: 50%;
     transform: translateX(-50%);
 
 
@@ -384,7 +384,7 @@ export const LocationsInfoText = styled.p`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
     /* or 133% */
 
     display: flex;
@@ -422,6 +422,11 @@ export const LocationsInfoButton = styled.button`
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
+    
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 export const LocationsInfoBg = styled.img`
     position: absolute;

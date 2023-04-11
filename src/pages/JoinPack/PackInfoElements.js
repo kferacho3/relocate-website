@@ -169,7 +169,7 @@ export const PackInfoText = styled.p`
     font-style: normal;
     font-weight: 700;
     font-size: 14.5008px;
-    line-height: 28px;
+    line-height: 20px;
     /* or 193% */
 
     display: flex;
@@ -206,6 +206,11 @@ export const PackInfoButton = styled.button`
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
+
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 export const PackInfoBg = styled.img`
     position: absolute;

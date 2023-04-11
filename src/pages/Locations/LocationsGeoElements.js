@@ -42,7 +42,7 @@ export const LocationsGeoTextContainer = styled.div`
     
 `
 export const LocationsGeoLogo = styled.img`
-width: 100%;
+    width: 100%;
 
 
 `
@@ -127,6 +127,11 @@ export const LocationsGeoButton = styled.button`
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
+
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 
 
@@ -135,9 +140,11 @@ export const LocationsGeoWrapper = styled.div`
     z-index: 1;
     height: 800px;
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
+    align-items: center;
+
+    
+    //flex-direction: column;
+  
 
     @media screen and (max-width: 768px) {
         
@@ -155,9 +162,8 @@ export const LocationsGeoRow = styled.div`
 
     @media screen and (max-width: 768px) {
         grid-auto-rows: 0.5fr;
-        position: absolute;
-         margin-left: 50%;
-        transform: translateX(-50%);
+ 
+      
         gap: 200px;
         margin-top: -100px;
         grid-template-areas: 'col2' 'col1';   
@@ -197,7 +203,7 @@ export const Column2 = styled.div`
         align-items: center;
         grid-auto-flow: row;
         padding: 0%;
-        margin-bottom: -400px;
+        margin-bottom: 400px;
         margin-left: 50%;
         transform: translateX(-50%);
        

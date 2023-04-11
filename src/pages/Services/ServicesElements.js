@@ -128,6 +128,11 @@ export const ServicesButton = styled.button`
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
     border: none;
+
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 
 
@@ -244,7 +249,7 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     
-    width: 475px;
+    width: 450px;
     height: 122px;
     margin-top: 0px;
     margin-bottom: 30px;
@@ -256,7 +261,7 @@ export const Subtitle = styled.p`
     font-style: normal;
     font-weight: 700;
     font-size: 16.5px;
-    line-height: 28px;
+    line-height: 24px;
     /* or 133% */
 
     display: flex;
@@ -264,6 +269,9 @@ export const Subtitle = styled.p`
     text-align: center;
 
     color: #000000;
+    @media screen and (max-width: 768px) {
+        line-height: 20px;
+    }
 `;
 
 export const BtnWrap = styled.div`

@@ -225,7 +225,7 @@ export const mob = {
     lightText: false,
     lightTextDesc: true,
     topLine: 'COMING SOON!',
-    headline: 'MOBILE APP: For CLIENTS',
+    headline: 'MOBILE APP: FOR CLIENTS',
     description: "Update your availability at any time, and we'll match you with jobs in your area.",
     lxw: false,
     marg: true,

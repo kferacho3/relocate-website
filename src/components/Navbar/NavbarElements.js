@@ -114,6 +114,8 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
+    height: 80px;
+    transform: translateX(-100px);
  
 
         
@@ -135,20 +137,20 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.p`
-    
+    position: relative;
     margin-right: -75px;
     white-space: nowrap;
-    padding: 20px 80px;
+    padding: 20px 55px;
     font-style: normal;
-    font-weight: 600;
-    margin-bottom: 30px;
+    height: 120px;
+    margin-bottom: 40px;
+    width: calc(100% + 50px);
     /* or 429% */
-    margin-left: -50px;
+   // margin-left: -60px;
     display: flex;
     align-items: center;
     letter-spacing: 0px;
     text-decoration: none;
-    color: #222222;
     transition: all 0.2s ease-in-out;
    
   
@@ -257,16 +259,31 @@ export const NavLinks = styled(LinkR)`
     z-index: 99999;
     &:hover {
         color: #218207;
+        
         background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
+        border-radius: 50px;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         //border: 2px solid #69F490;
-        border-radius: 80px;
-        width: 110%;
+        opacity: calc(.8);
+        transition: all 0.2s ease-in-out;
+       // transition: all 280ms ease-in-out;
+       // border-radius: 80px;
+        //width: 130px;
+        width: calc(100% + 100px);
         height: 30%;
       
     }
     &:active {
         color: #218207;
-        border: 2px solid #69F490;
+        transition: all 30ms ease-in-out;
+        border: 1px  #69F490;
+       
         border-radius: 80px;
         width: 150%;
         height: 30%;
@@ -328,6 +345,9 @@ export const NavBtn = styled.button`
     background: #218207;
     border-radius: 80px;
     
+    &:hover{
+        opacity: 0.7;
+    }
  
     @media screen and (max-width: 870px) {
         display: none;

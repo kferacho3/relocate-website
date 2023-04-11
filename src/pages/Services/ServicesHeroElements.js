@@ -61,6 +61,12 @@ export const ServicesHeroButton = styled.button`
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border-radius: 80px;
     border: none;
+
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
+
 `
 
 

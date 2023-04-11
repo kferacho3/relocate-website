@@ -45,7 +45,7 @@ export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col1;
-
+    zoom: 0.8;
     @media screen and (max-width: 768px) {
         zoom: 0.75;
    }
@@ -55,6 +55,7 @@ export const Column2 = styled.div`
     margin-bottom: 115px;
     padding: 0 15px;
     grid-area: col2;
+    zoom: 0.8;
     @media screen and (max-width: 768px) {
         zoom: 0.7;
    }
@@ -64,6 +65,7 @@ export const Column22 = styled.div`
     margin-top: 115px;
     padding: 0 15px;
     grid-area: col2;
+    zoom: 0.8;
     @media screen and (max-width: 768px) {
         zoom: 0.75;
         margin-bottom: 15px;
@@ -74,6 +76,7 @@ export const Column3 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col3;
+    zoom: 0.8;
     @media screen and (max-width: 768px) {
         zoom: 0.75;
    }
@@ -104,14 +107,14 @@ export const ServicesInfoHeader = styled.h2`
    }
 `
 export const ServicesInfoTextSection = styled.div`
-position: relative;
+    position: relative;
     width: 420px;
     height: 350px;
-   margin-top: 50px;
-   overflow: hidden;
+    margin-top: 50px;
+    overflow: hidden;
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
-    border: 0.25px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //border: 0.25px solid #FFFFFF;
+    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
   
 
@@ -124,8 +127,8 @@ export const ServicesInfoTextSection2 = styled.div`
     margin-top: 70px;
     overflow: hidden;
     background: linear-gradient(180deg, #5CFC5D 0%, #1ED81E 18.23%, #297D29 67.19%, #1D811E 100%);
-    border: 0.25px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+   // border: 0.25px solid #FFFFFF;
+   //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
   
 
@@ -174,7 +177,7 @@ export const ServicesInfoText = styled.p`
     height: 146px;
     margin-left: 50%;
     transform: translateX(-50%);
-   margin-top: -30px;
+    margin-top: -30px;
     font-style: normal;
     font-weight: 700;
     font-size: 14.5px;
@@ -215,6 +218,11 @@ export const ServicesInfoButton = styled.button`
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
+    
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 export const ServicesInfoBg = styled.img`
     position: absolute;

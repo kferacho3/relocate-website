@@ -164,7 +164,7 @@ export const HeroInfoText = styled.p`
     font-style: normal;
     font-weight: 700;
     font-size: 14.5008px;
-    line-height: 24px;
+    line-height: 20px;
     /* or 166% */
 
     display: flex;
@@ -202,6 +202,11 @@ export const HeroInfoButton = styled.button`
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
+    
+    &:hover {
+        opacity: calc(.7);
+        transition: all 100ms ease-in-out;
+}
 `
 export const HeroInfoBg = styled.img`
     position: absolute;
