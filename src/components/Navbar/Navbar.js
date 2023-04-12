@@ -25,6 +25,7 @@ import {
      NavBottomText2,
      NavBottomTextSection
 } from './NavbarElements';
+import { NavHam } from './navHam';
 import * as ImIcons from 'react-icons/im';
 import { NavLink } from 'react-router-dom';
 const Navbar = ({ toggle}) => {
@@ -34,7 +35,7 @@ const Navbar = ({ toggle}) => {
     const showSidebar = () => setSidebar(!sidebar);
 
     const [scrollNav, setScrollNav] = useState(false)
-
+    const [isOpen, setOpen] = useState(false);
     const changeNav = ()=> {
         if(window.scrollY >= 10) {
             setScrollNav(true)
@@ -93,11 +94,12 @@ const Navbar = ({ toggle}) => {
                         <NavBottomText>WE ARE HIRING MOVERS & DRIVERS!  <NavBottomText2>Click here to apply!</NavBottomText2></NavBottomText>
                     </NavBottomTextSection>
                 </NavBottom>
+              
 
 
 
-                <SideIcon style={{ color: '#000' }} to='#'>
-                        <FaBars style={{ color: '#218207' }} onClick={showSidebar} />
+                <SideIcon style={{ color: 'linear-gradient(180deg, #00FF01 0%, #218207 100%)'}} to='#' onClick={showSidebar}>
+                        <NavHam  isOpen={isOpen} toggle={() => setOpen(!isOpen)} style={{ color: 'linear-gradient(180deg, #00FF01 0%, #218207 100%)' }}  />
                 </SideIcon>
           
          
@@ -107,9 +109,7 @@ const Navbar = ({ toggle}) => {
         </Nav>
         <SidebarNav onClick={showSidebar} sidebar={sidebar}>
                     <SidebarWrap>
-                        <NavIcon  to='#'>
-                        <AiIcons.AiOutlineClose style={{ fontSize: '72px' }}  onClick={showSidebar} sidebar={sidebar} />
-                        </NavIcon>
+                    
                         {SidebarData.map((item, index) => {
                         return <SubMenu  item={item} key={index} />;
                         })}
@@ -121,3 +121,15 @@ const Navbar = ({ toggle}) => {
 };
 
 export default Navbar;
+
+
+
+/*
+
+
+                        <NavIcon  to='#'>
+                        <AiIcons.AiOutlineClose style={{ fontSize: '72px' }}  onClick={showSidebar} sidebar={sidebar} />
+                        </NavIcon>
+
+
+*/

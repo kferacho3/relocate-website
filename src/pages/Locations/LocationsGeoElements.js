@@ -18,7 +18,7 @@ export const LocationsGeoContainer = styled.div`
  
     @media screen and (max-width: 768px) {
         
-        height: 1100px;  
+        height: 900px;  
       }
  
     
@@ -147,7 +147,7 @@ export const LocationsGeoWrapper = styled.div`
   
 
     @media screen and (max-width: 768px) {
-        
+        margin-top: 200px;
           height: 800px;  
         }
 
@@ -179,7 +179,10 @@ export const Column1 = styled.div`
       
         //==position: absolute;
        align-items: center;
-     
+          position: absolute;
+        justify-content: center;
+        align-items: center;
+        grid-auto-flow: row;
        justify-content: center;
        width: 600px;
         zoom: 0.6;
@@ -197,15 +200,15 @@ export const Column2 = styled.div`
     grid-area: col2;
     
     @media screen and (max-width: 768px) {
-        zoom: 0.85;
+      //  zoom: 0.85;
         position: absolute;
         justify-content: center;
         align-items: center;
         grid-auto-flow: row;
         padding: 0%;
-        margin-bottom: 400px;
+       // margin-bottom: 400px;
         margin-left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -70%);
        
     }
 `;

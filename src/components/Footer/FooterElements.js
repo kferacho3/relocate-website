@@ -30,7 +30,7 @@ export const FooterContainer = styled.footer`
     
 `;
 export const FooterMainContainer = styled.div`
-    margin-top: -50px;
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 1400px) {
@@ -383,7 +383,7 @@ export const FooterLinkTitle = styled.div`
 export const FooterBottomSection = styled.div`
     display: flex;
     position: relative;
-    z-index: 99999;
+   // z-index: 99999;
     width: 55vw;
     height: 80px;
    // margin-top: 200px;
@@ -393,7 +393,7 @@ export const FooterBottomSection = styled.div`
  
         zoom: 0.6;
       
-        transform: translateY(20%);
+        transform: translate(-10%, 20%);
     }
 `
 

@@ -26,7 +26,7 @@ export const SideIcon = styled(LinkR)`
 export const SidebarNav = styled.nav`
   margin-top: ${({ sidebar }) => (sidebar ? '120px' : '0px')};
  //margin-top: 120px;
-  background: #218207;
+  background: linear-gradient(180deg, #00FF01 0%, #218207 100%);
   width: 100vw;
   height: 100vh;
   justify-content: center;

@@ -276,7 +276,7 @@ export const LocationsInfoSection = styled.div`
     background: #376392;
     
     @media screen and (max-width: 768px) {
-        height: 1800px;
+        height: 1500px;
    }
 `
 
@@ -422,7 +422,7 @@ export const LocationsInfoButton = styled.button`
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;
-    
+
     &:hover {
         opacity: calc(.7);
         transition: all 100ms ease-in-out;
