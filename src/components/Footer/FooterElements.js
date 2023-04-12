@@ -383,17 +383,17 @@ export const FooterLinkTitle = styled.div`
 export const FooterBottomSection = styled.div`
     display: flex;
     position: relative;
-   // z-index: 99999;
+    z-index: 99999;
     width: 55vw;
     height: 80px;
    // margin-top: 200px;
-    transform: translateY(20%);
+    transform: translateY(-50%);
     //left: 50%;
     @media screen and (max-width: 850px) {
  
         zoom: 0.6;
       
-        transform: translate(-10%, 20%);
+        transform: translate(-10%,-100%);
     }
 `
 
