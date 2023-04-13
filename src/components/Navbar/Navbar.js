@@ -36,6 +36,7 @@ const Navbar = ({ toggle}) => {
 
     const [scrollNav, setScrollNav] = useState(false)
     const [isOpen, setOpen] = useState(false);
+    const changeHam = () =>  setOpen(isOpen);
     const changeNav = ()=> {
         if(window.scrollY >= 10) {
             setScrollNav(true)
@@ -107,7 +108,8 @@ const Navbar = ({ toggle}) => {
                    
        
         </Nav>
-        <SidebarNav onClick={showSidebar} sidebar={sidebar}>
+        {isOpen && (
+            <SidebarNav onClick={ () => { showSidebar(); setOpen();} } isOpen={isOpen} sidebar={sidebar}>
                     <SidebarWrap>
                     
                         {SidebarData.map((item, index) => {
@@ -115,6 +117,8 @@ const Navbar = ({ toggle}) => {
                         })}
                     </SidebarWrap>
                 </SidebarNav>
+      )}
+      
         </IconContext.Provider>
         </>
     );

@@ -393,7 +393,7 @@ export const FooterBottomSection = styled.div`
  
         zoom: 0.6;
       
-        transform: translate(-10%,-100%);
+        transform: translate(-10%,-50%);
     }
 `
 

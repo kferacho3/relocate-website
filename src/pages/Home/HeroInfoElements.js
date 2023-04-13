@@ -6,7 +6,9 @@ export const HeroInfoSection = styled.div`
     width: 100vw;
     height: 835px;
     //background: #94DC9C;
+    
     background: linear-gradient(180deg, #376392 0%, #94DC9C 30.21%, #94DC9C 76.04%, #376392 100%);
+   //background: conic-gradient(from 180deg at 50% 50%, #376392 -58.88deg, #376392 56.98deg, #94DC9C 91.96deg, #376392 135.85deg, #376392 166.63deg, #376392 200.61deg, #376392 222.09deg, #94DC9C 278.45deg, #376392 301.12deg, #376392 416.98deg);
     @media screen and (max-width: 768px) {
         height: 1400px;
    }
@@ -112,7 +114,7 @@ export const HeroInfoTextSection = styled.div`
     border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-   
+  // background: conic-gradient(from 180deg at 50% 50%, #376392 -58.88deg, #376392 56.98deg, #94DC9C 91.96deg, #376392 135.85deg, #376392 159.91deg, #94DC9C 179.88deg, #376392 198.1deg, #376392 222.09deg, #94DC9C 278.45deg, #376392 301.12deg, #376392 416.98deg);
   
 
 `

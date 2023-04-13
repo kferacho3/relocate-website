@@ -4,7 +4,7 @@ import logo from './BookImg/bookLogo.svg'
 
 
 import React, { useRef,  useState} from 'react';
-
+import Start from "./Form/Start";
 import {
   BookMoveContainer, BookMoveContainerImg
 } from './BookMoveElements';
@@ -32,6 +32,7 @@ function BookMove({isOpen, toggle}) {
 
   return (
 <>
+<Start/>
 <BookMoveContainer id= 'book'>
     <BookMoveContainerImg  style = {{ backgroundImage: `url(${bg})`}}/>
  

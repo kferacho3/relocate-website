@@ -21,11 +21,10 @@ const transition = { duration: 0.33 };
     
 
 export function NavHam({ toggle, isOpen }) {
-    const [sidebar, setSidebar] = useState(false);
-    const showSidebar = () => setSidebar(!sidebar);
+
     
   return (
-    <Button onClick={toggle} setSidebar ={!sidebar}  >
+    <Button onClick={toggle} >
       <svg width="30" height="30" viewBox="0 0 23 23">
         <Path
           animate={isOpen ? "open" : "closed"}
