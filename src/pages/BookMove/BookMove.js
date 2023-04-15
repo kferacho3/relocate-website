@@ -5,6 +5,10 @@ import logo from './BookImg/bookLogo.svg'
 
 import React, { useRef,  useState} from 'react';
 import Start from "./Form/Start";
+import Information from "./Form/Information";
+import Home from "./Form/Home";
+import Service from "./Form/Service";
+import Date from "./Form/Date";
 import {
   BookMoveContainer, BookMoveContainerImg
 } from './BookMoveElements';
@@ -33,12 +37,8 @@ function BookMove({isOpen, toggle}) {
   return (
 <>
 <Start/>
-<BookMoveContainer id= 'book'>
-    <BookMoveContainerImg  style = {{ backgroundImage: `url(${bg})`}}/>
- 
 
 
-</BookMoveContainer>
 </>
   );
 }

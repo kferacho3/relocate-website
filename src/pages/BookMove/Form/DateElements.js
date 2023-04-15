@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 
-export const ServiceContainer = styled.div`
+export const DateContainer = styled.div`
     position: relative;
     width: 100vw;
     height: 1000px;
@@ -10,7 +10,7 @@ export const ServiceContainer = styled.div`
 
 `
 
-export const ServiceFormContainer = styled.div`
+export const DateFormContainer = styled.div`
     width: 1350px;
     height: 800px;
     left: 83px;
@@ -38,7 +38,8 @@ export const ServiceFormContainer = styled.div`
         } 
 `
 
-export const ServiceHeader = styled.h1`
+
+export const DateHeader = styled.h1`
   
     width: 657px;
     height: 44px;
@@ -69,7 +70,7 @@ export const ServiceHeader = styled.h1`
         } 
 `
 
-export const ServiceTopline =styled.h2`
+export const DateTopline =styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
@@ -98,7 +99,7 @@ export const ServiceTopline =styled.h2`
         } 
 `
 
-export const ServiceForm = styled.form`
+export const DateForm = styled.form`
     zoom: 0.9;
     display: grid;
     margin-top: 50px;
@@ -106,7 +107,7 @@ export const ServiceForm = styled.form`
     grid-template-areas: 'col1' 'col2';
 `
 
-export const ServiceButtonWrap = styled.div`
+export const DateButtonWrap = styled.div`
     position: absolute;
     width: 958.5px;
     height: 67px;
@@ -116,7 +117,7 @@ export const ServiceButtonWrap = styled.div`
 
 `
 
-export const ServiceLeftButton = styled.button`
+export const DateLeftButton = styled.button`
 
     width: 200px;
     height: 67px;
@@ -136,7 +137,7 @@ export const ServiceLeftButton = styled.button`
     color: #FFFFFF;
 `
 
-export const ServiceRightButton = styled.button`
+export const DateRightButton = styled.button`
     position: absolute;
     width: 200px;
     height: 67px;
