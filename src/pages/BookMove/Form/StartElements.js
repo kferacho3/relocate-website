@@ -180,12 +180,12 @@ export const Col1 = styled.div`
        // z-index: 99999;
         background-color: wheat;
 
-}
-&:hover {
-        //z-index: 99999;
+    }
+    &:hover {
+            //z-index: 99999;
         opacity: 0.9;
-    cursor: pointer;
-  }
+        cursor: pointer;
+    }
 
     
 `

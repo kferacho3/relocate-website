@@ -37,7 +37,10 @@ function BookMove({isOpen, toggle}) {
   return (
 <>
 <Start/>
-
+<Information/>
+<Home/>
+<Service/>
+<Date/>
 
 </>
   );

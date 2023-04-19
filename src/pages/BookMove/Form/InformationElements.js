@@ -102,29 +102,32 @@ export const InformationTopline =styled.h2`
 
 export const InformationForm = styled.form`
     //zoom: 0.9;
-    position: relative;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-   // margin-top: 50px;
-    gap: 0px;
-    grid-template-areas: 'col1 col2';
+
 `
 
 export const InfoInputContainer = styled.div`
-
-
+    width: 900px;
+    top: 50px;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    left: 50%;
+    transform: translateX(-50%);
+   // margin-top: 50px;
+    gap: 100px;
+    grid-template-areas: 'col1 col2';
 `
 
 export const IFirstName = styled.input`
 
     box-sizing: border-box;
 
-    position: absolute;
-    width: 400.38px;
-    height: 57.53px;
+    position: relative;
+    width: 400px;
+    height: 40px;
   
-    top: 322px;
+
 
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -135,11 +138,10 @@ export const ILastName = styled.input`
 
     box-sizing: border-box;
 
-    position: absolute;
-    width: 435.38px;
-    height: 56.77px;
- 
-    top: 454.53px;
+    position: relative;
+    width: 400px;
+    height: 40px;
+
 
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -150,11 +152,11 @@ export const IPhoneNumber = styled.input`
 
     box-sizing: border-box;
 
-    position: absolute;
-    width: 435.38px;
-    height: 56.77px;
+    position: relative;
+    width: 400px;
+    height: 40px;
 
-    top: 586.31px;
+  
 
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -165,30 +167,52 @@ export const IEmail = styled.input`
 
     box-sizing: border-box;
 
-    position: absolute;
-    width: 435.38px;
-    height: 56.77px;
+    position: relative;
+    width: 400px;
+    height: 40px;
 
-    top: 718.08px;
+  
 
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 10px;
 `
+export const IInputContainer = styled.div`
+    position: relative;
+        
+    width: 407.88px;
+    height: 123px;
 
+`
+
+export const IInputText = styled.p`
+    position: relative;
+    width: 150.86px;
+    height: 18px;
+    white-space: nowrap;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+`
 export const ILocationContainer = styled.div`
-    position: absolute;
+    position: relative;
 
     width: 407.88px;
-    height: 83px;
+    height: 90px;
 
 `
 
 export const ILocationText = styled.p`
-    position: absolute;
+    position: relative;
     width: 150.86px;
     height: 18px;
-
+    white-space: nowrap;
 
     font-style: normal;
     font-weight: 700;
@@ -202,16 +226,72 @@ export const ILocationText = styled.p`
 
 export const ILocation = styled.input`
     box-sizing: border-box;
+    z-index: 9999;
+   // position: absolute;
+   width: 400px;
+    height: 40px;
 
-    position: absolute;
-    width: 407.88px;
-    height: 58px;
 
-    top: 322px;
 
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 10px;
+    color: #000;
+`
+
+export const IButton = styled.div`
+    position: relative;
+    top: 50px;
+    width: 407.88px;
+    height: 90px;
+`
+export const ILocationButton = styled.button`
+    //position: absolute;
+    width: 95px;
+    height: 95px;
+    zoom: 0.7;
+    cursor: pointer;
+  
+    margin-left: 50%;
+    transform: translateX(-50%);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background: none;
+    border: none;
+
+`
+export const ILocationRemove = styled.button`
+    //position: absolute;
+    width: 95px;
+    height: 95px;
+    zoom: 0.7;
+    cursor: pointer;
+  
+    margin-left: 50%;
+    transform: translateX(-50%);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background: none;
+    border: none;
+
+`
+export const ILocationButtonText = styled.p`
+    position: relative;
+    display: flex;
+   left: 50%;
+   transform: translateX(-50%);
+    width: 300px;
+    height: 18px;
+    white-space: nowrap;
+    top: -50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+   // display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
 `
 export const InformationButtonWrap = styled.div`
     position: absolute;
@@ -263,12 +343,13 @@ export const InformationRightButton = styled.button`
 `
 
 export const Col1 = styled.div`
-
+    position: relative;
     grid-area: col1;
     
 `
 export const Col2 = styled.div`
-
+    margin-top: -40px;
+   position: relative;
     grid-area: col2;
 
 `
