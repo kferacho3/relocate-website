@@ -42,7 +42,7 @@ export const InformationFormContainer = styled.div`
 
 export const InformationHeader = styled.h1`
   
-    width: 657px;
+    width: 1100px;
     height: 44px;
     margin-top: 200px;
     margin-left: 50%;
@@ -71,11 +71,11 @@ export const InformationHeader = styled.h1`
         } 
 `
 
-export const InformationTopline =styled.h2`
+export const InformationTopLine =styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 504px;
+    width: 700px;
     height: 36px;
 
     font-family: 'Inter';

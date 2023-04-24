@@ -1,7 +1,19 @@
-import React, {useState} from 'react';
-import { HeroInfoSection, HeroInfoBg, HeroInfoWrapper, HeroInfoRow, HeroDeco1, HeroDeco2,
-    HeroInfoHeader, HeroInfoTextSection, HeroInfoIcon, HeroInfoTextHeader,
-    HeroInfoText, HeroInfoButton, HeroInfoIconWrap, Column1, Column2, Column22, Column3 } from './HeroInfoElements';
+import React, { useState } from 'react';
+import {
+    Column1, Column2,
+    Column3,
+    HeroDeco1, HeroDeco2,
+    HeroInfoBg,
+    HeroInfoHeader,
+    HeroInfoIcon,
+    HeroInfoIconWrap,
+    HeroInfoRow,
+    HeroInfoSection,
+    HeroInfoText,
+    HeroInfoTextHeader,
+    HeroInfoTextSection,
+    HeroInfoWrapper
+} from './HeroInfoElements';
 
 
 
@@ -9,9 +21,9 @@ import deco1 from '../../images/decoM1.svg';
 import deco2 from '../../images/decoM2.svg';
 import deco3 from '../../images/decoM3.svg';
 
-import s1 from '../../logos/heroInfolLogo1.svg';
-import s2 from '../../logos/heroInfolLogo2.svg';
-import s3 from '../../logos/heroInfolLogo3.svg';
+import s1 from '../../logos/heroInfoLogo1.svg';
+import s2 from '../../logos/heroInfoLogo2.svg';
+import s3 from '../../logos/heroInfoLogo3.svg';
 
 
 import dec1 from '../../images/deco3.svg';

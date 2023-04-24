@@ -1,9 +1,25 @@
-import React, { useRef,  useState} from 'react';
+import React from 'react';
 
 import {
-  HomeContainer, HomeForm, HomeHeader, HomeButtonWrap, HomeLeftButton, HomeRightButton, HomeTopline,
-  HomeFormContainer, HomeOptContainer, HomeImgContainer, HomeImg,  HomeTextSection, HomeTextHeader,
-  HomeText, HomeWrapper, HomeRow, HomeInput, HomeOptWrap
+  HomeButtonWrap,
+  HomeContainer, HomeForm,
+  HomeFormContainer,
+  HomeFormHeader,
+  HomeFormTopLine,
+  HomeHeader,
+  HomeImg,
+  HomeImgContainer,
+  HomeInput,
+  HomeLeftButton,
+  HomeOptContainer,
+  HomeOptWrap,
+  HomeRightButton,
+  HomeRow,
+  HomeText,
+  HomeTextHeader,
+  HomeTextSection,
+  HomeTopLine,
+  HomeWrapper
 } from './HomeElements';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
@@ -23,143 +39,144 @@ function Home({isOpen, toggle}) {
 
 <HomeContainer>
   <HomeHeader>Choose which Home best suits your needs to get the best price matching.</HomeHeader>
-  <HomeTopline>Select from our affordable options to accomoHome you.</HomeTopline>
+  <HomeTopLine>Select from our affordable options to accomoHome you.</HomeTopLine>
   <HomeFormContainer>
 
       <HomeForm>
-      <HomeWrapper>
-                <HomeRow>
-                <div>
-                
-                <HomeOptWrap>
-                <HomeInput 
-                    type="radio"
-                    class="radio isHidden"
-                    value="Standard Home"
-                    name="home"
-                    id='home' />
-                <HomeOptContainer>
-                <HomeImgContainer>
-                  <HomeImg style={{ backgroundImage:`url(${h1})` }}/>
-                  </HomeImgContainer>
-                  <HomeTextSection>
-                    <HomeTextHeader>Standard Home</HomeTextHeader>
-                    <HomeText>A single-family homeowner typically owns the building and the land the building sits on. </HomeText>
-                  </HomeTextSection>
-                </HomeOptContainer>
-                </HomeOptWrap>
+        <HomeFormHeader>Choose type of Home for address:</HomeFormHeader>
+        <HomeFormTopLine>511 S Grand Ave Spencer, Idaho 51301</HomeFormTopLine>
+        <HomeWrapper>
+                  <HomeRow>
+                  <div>
+                  <HomeOptWrap>
+                  <HomeInput 
+                      type="radio"
+                      class="radio isHidden"
+                      value="Standard Home"
+                      name="home"
+                      id='home' />
+                  <HomeOptContainer>
+                  <HomeImgContainer>
+                    <HomeImg style={{ backgroundImage:`url(${h1})` }}/>
+                    </HomeImgContainer>
+                    <HomeTextSection>
+                      <HomeTextHeader>Standard Home</HomeTextHeader>
+                      <HomeText>A single-family homeowner typically owns the building and the land the building sits on. </HomeText>
+                    </HomeTextSection>
+                  </HomeOptContainer>
+                  </HomeOptWrap>
 
-                <HomeOptWrap>
-                <HomeInput  
-                    type="radio"
-                    class="radio isHidden"
-                    value="Apartment"
-                    name="home"
-                    id='home' />
-                <HomeOptContainer>
-                <HomeImgContainer>
-                  <HomeImg style={{ backgroundImage:`url(${h2})` }}/>
-                  </HomeImgContainer>
-                  <HomeTextSection>
-                    <HomeTextHeader>Apartment</HomeTextHeader>
-                    <HomeText>An apartment is a unit inside of a building structure composed of similarly styled individual units.</HomeText>
-                  </HomeTextSection>
-                </HomeOptContainer>
-                </HomeOptWrap>
-                
-                <HomeOptWrap>
-                <HomeInput 
-                    type="radio"
-                    class="radio isHidden"
-                    value="Storage Unit"
-                    name="home"
-                    id='home' />
-                <HomeOptContainer>
-                <HomeImgContainer>
-                  <HomeImg style={{ backgroundImage:`url(${h3})` }}/>
-                  </HomeImgContainer>
-                  <HomeTextSection>
-                    <HomeTextHeader>Storage Unit</HomeTextHeader>
-                    <HomeText>A storage unit may consist of a personal garage or a purchased unit at an establisgment such as “Public Storage”. </HomeText>
-                  </HomeTextSection>
-                </HomeOptContainer>
-                </HomeOptWrap>
+                  <HomeOptWrap>
+                  <HomeInput  
+                      type="radio"
+                      class="radio isHidden"
+                      value="Apartment"
+                      name="home"
+                      id='home' />
+                  <HomeOptContainer>
+                  <HomeImgContainer>
+                    <HomeImg style={{ backgroundImage:`url(${h2})` }}/>
+                    </HomeImgContainer>
+                    <HomeTextSection>
+                      <HomeTextHeader>Apartment</HomeTextHeader>
+                      <HomeText>An apartment is a unit inside of a building structure composed of similarly styled individual units.</HomeText>
+                    </HomeTextSection>
+                  </HomeOptContainer>
+                  </HomeOptWrap>
+                  
+                  <HomeOptWrap>
+                  <HomeInput 
+                      type="radio"
+                      class="radio isHidden"
+                      value="Storage Unit"
+                      name="home"
+                      id='home' />
+                  <HomeOptContainer>
+                  <HomeImgContainer>
+                    <HomeImg style={{ backgroundImage:`url(${h3})` }}/>
+                    </HomeImgContainer>
+                    <HomeTextSection>
+                      <HomeTextHeader>Storage Unit</HomeTextHeader>
+                      <HomeText>A storage unit may consist of a personal garage or a purchased unit at an establisgment such as “Public Storage”. </HomeText>
+                    </HomeTextSection>
+                  </HomeOptContainer>
+                  </HomeOptWrap>
 
-                </div>
+                  </div>
 
-                <div>
-                <HomeOptWrap>
-                <HomeInput 
-                    type="radio"
-                    class="radio isHidden"
-                    value="Townhome"
-                    name="home"
-                    id='home' />
-                <HomeOptContainer>
-                <HomeImgContainer>
-                  <HomeImg style={{ backgroundImage:`url(${h4})` }}/>
-                  </HomeImgContainer>
-                  <HomeTextSection>
-                    <HomeTextHeader>Townhome</HomeTextHeader>
-                    <HomeText>Townhomes are multifloor homes with their own entrance, bathroom and kitchen space. 
-                              Townhomes share two walls with neighbors unless the townhome is located at the end of a building. </HomeText>
-                  </HomeTextSection>
-                </HomeOptContainer>
-                </HomeOptWrap>
+                  <div>
+                  <HomeOptWrap>
+                  <HomeInput 
+                      type="radio"
+                      class="radio isHidden"
+                      value="Townhome"
+                      name="home"
+                      id='home' />
+                  <HomeOptContainer>
+                  <HomeImgContainer>
+                    <HomeImg style={{ backgroundImage:`url(${h4})` }}/>
+                    </HomeImgContainer>
+                    <HomeTextSection>
+                      <HomeTextHeader>Townhome</HomeTextHeader>
+                      <HomeText>Townhomes are multifloor homes with their own entrance, bathroom and kitchen space. 
+                                Townhomes share two walls with neighbors unless the townhome is located at the end of a building. </HomeText>
+                    </HomeTextSection>
+                  </HomeOptContainer>
+                  </HomeOptWrap>
 
-                <HomeOptWrap>
-                <HomeInput 
-                    type="radio"
-                    class="radio isHidden"
-                    value="Condomonium"
-                    name="home"
-                    id='home' />
-                <HomeOptContainer>
-                <HomeImgContainer>
-                  <HomeImg style={{ backgroundImage:`url(${h5})` }}/>
-                  </HomeImgContainer>
-                  <HomeTextSection>
-                    <HomeTextHeader>Condomonium</HomeTextHeader>
-                    <HomeText>Condominiums, or condos for short, are buildings made up of individual units that are owned. 
-                              They can look and feel like an apartment building or community.</HomeText>
-                  </HomeTextSection>
-                </HomeOptContainer>
-                </HomeOptWrap>
+                  <HomeOptWrap>
+                  <HomeInput 
+                      type="radio"
+                      class="radio isHidden"
+                      value="Condomonium"
+                      name="home"
+                      id='home' />
+                  <HomeOptContainer>
+                  <HomeImgContainer>
+                    <HomeImg style={{ backgroundImage:`url(${h5})` }}/>
+                    </HomeImgContainer>
+                    <HomeTextSection>
+                      <HomeTextHeader>Condomonium</HomeTextHeader>
+                      <HomeText>Condominiums, or condos for short, are buildings made up of individual units that are owned. 
+                                They can look and feel like an apartment building or community.</HomeText>
+                    </HomeTextSection>
+                  </HomeOptContainer>
+                  </HomeOptWrap>
 
-            <HomeOptWrap>
-                <HomeInput 
-                    type="radio"
-                    class="radio isHidden"
-                    value="Pod Container"
-                    name="home"
-                    id='home' />
-                <HomeOptContainer>
-                <HomeImgContainer>
-                  <HomeImg style={{ backgroundImage:`url(${h6})` }}/>
-                  </HomeImgContainer>
-                  <HomeTextSection>
-                    <HomeTextHeader>Pod Container</HomeTextHeader>
-                    <HomeText>Pods are long, rectanguar containers used for storing moving items. 
-                              Properties containing pods usually have more than one which all may vary in length.</HomeText>
-                  </HomeTextSection>
-                </HomeOptContainer>
-                </HomeOptWrap>
+              <HomeOptWrap>
+                  <HomeInput 
+                      type="radio"
+                      class="radio isHidden"
+                      value="Pod Container"
+                      name="home"
+                      id='home' />
+                  <HomeOptContainer>
+                  <HomeImgContainer>
+                    <HomeImg style={{ backgroundImage:`url(${h6})` }}/>
+                    </HomeImgContainer>
+                    <HomeTextSection>
+                      <HomeTextHeader>Pod Container</HomeTextHeader>
+                      <HomeText>Pods are long, rectanguar containers used for storing moving items. 
+                                Properties containing pods usually have more than one which all may vary in length.</HomeText>
+                    </HomeTextSection>
+                  </HomeOptContainer>
+                  </HomeOptWrap>
 
-       
-                </div>
+        
+                  </div>
 
-                </HomeRow>
-              </HomeWrapper>
+                  </HomeRow>
+                </HomeWrapper>
 
-   
-      <HomeButtonWrap>
-        <HomeLeftButton>BACK</HomeLeftButton>
-        <HomeRightButton>NEXT</HomeRightButton>
-      </HomeButtonWrap>
-      </HomeForm>
-    </HomeFormContainer>
-  </HomeContainer>
-</>
+            
+                <HomeButtonWrap>
+                  <HomeLeftButton>BACK</HomeLeftButton>
+                  <HomeRightButton>NEXT</HomeRightButton>
+                </HomeButtonWrap>
+            </HomeForm>
+          </HomeFormContainer>
+        </HomeContainer>
+      </>
   );
 }
 export default Home;

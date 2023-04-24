@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 export const StartContainer = styled.div`
-position: relative;
+    position: relative;
 
     width: 100vw;
     height: 1000px;
@@ -41,7 +41,7 @@ export const StartFormContainer = styled.div`
 
 export const StartHeader = styled.h1`
   
-    width: 657px;
+    width: 1100px;
     height: 44px;
     margin-top: 200px;
     margin-left: 50%;
@@ -55,7 +55,6 @@ export const StartHeader = styled.h1`
     line-height: 43px;
     /* identical to box height, or 149% */
 
-    display: flex;
     align-items: center;
     text-align: center;
 
@@ -70,11 +69,11 @@ export const StartHeader = styled.h1`
         } 
 `
 
-export const StartTopline =styled.h2`
+export const StartTopLine =styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 504px;
+    width: 700px;
     height: 36px;
 
     font-family: 'Inter';

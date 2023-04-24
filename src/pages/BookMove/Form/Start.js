@@ -1,15 +1,22 @@
-import React, { useRef,  useState} from 'react';
+import React from 'react';
 
 import {
-  StartContainer, StartForm, StartInput1, StartInput1Head, StartInput1Text, 
-  StartInput1Img, StartHeader, StartInput2, StartInput2Head, StartInput2Text, 
-  StartInput2Img, Col1, Col2, Sec1, Sec2, StartButtonWrap, StartLeftButton,
-  StartRightButton, StartTopline, StartFormContainer
+  Col1, Col2, Sec1, Sec2, StartButtonWrap,
+  StartContainer, StartForm,
+  StartFormContainer,
+  StartHeader,
+  StartInput1,
+  StartInput1Img,
+  StartInput2, StartInput2Head,
+  StartInput2Img,
+  StartInput2Text,
+  StartLeftButton,
+  StartRightButton, StartTopLine
 } from './StartElements';
 //import emailjs from 'emailjs-com';
-import "./Form.scss";
 import s1 from '../BookImg/startImg1.svg';
 import s2 from '../BookImg/startImg2.svg';
+import "./Form.scss";
 function Start({isOpen, toggle}) {
 
 
@@ -18,7 +25,7 @@ function Start({isOpen, toggle}) {
 
 <StartContainer>
   <StartHeader>Choose which service best suits your needs to get the best price matching.</StartHeader>
-  <StartTopline>Select from our affordable options to accomodate you.</StartTopline>
+  <StartTopLine>Select from our affordable options to accommodate your needed service.</StartTopLine>
   <StartFormContainer>
 
       <StartForm class="radio-group">

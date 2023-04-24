@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-import {Link as LinkS} from 'react-scroll';
 
-import {Link as LinkR} from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
     width: 100vw;
@@ -30,7 +28,7 @@ export const FooterContainer = styled.footer`
     
 `;
 export const FooterMainContainer = styled.div`
-    margin-top: 50px;
+    margin-top: -50px;
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 1400px) {
@@ -324,15 +322,23 @@ export const FooterIcon = styled(LinkR)`
 
 export const FooterText = styled(LinkR)`
     
-    color: #8B9F2C;
+    color: #3D4438;
     font-size: 16px;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0em;
     white-space: nowrap;
     text-align: left;
+    margin-top: 5px;
     cursor: pointer;
     text-decoration: none;
+    &:hover {
+        color: #218207;
+      
+    }
+    &:active {
+        color: #218207;
+    }
 
 
 `
@@ -367,11 +373,17 @@ export const FooterLinkTitle = styled.div`
     white-space: nowrap;
     /* or 120% */
 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.672px;
+    line-height: 28px;
+    /* identical to box height, or 150% */
+
     display: flex;
     align-items: center;
-    color: #2C2C2C;
-    text-align: left;
-    text-shadow: .5px .5px #8B9F2C;;
+    text-shadow: 0.5px 0.5px 0px #000000;
+    color: #2C69A7;
  
     
 `;
@@ -387,7 +399,7 @@ export const FooterBottomSection = styled.div`
     width: 55vw;
     height: 80px;
    // margin-top: 200px;
-    transform: translateY(-50%);
+    transform: translateY(20%);
     //left: 50%;
     @media screen and (max-width: 850px) {
  

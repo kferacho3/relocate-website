@@ -1,35 +1,32 @@
-import React from 'react'
+import React from 'react';
 import "./Footer.scss";
-import { 
-    FooterContainer,
-    FooterWrapper,
-    FooterRow,
-    FooterText,
-    FooterLeftContainer,
-    FooterMidContainer,
-    FooterRightContainer,
-    FooterLinksContainer,
-    FooterTopLine,
-    FooterLinkTitle,
-    FooterIcon,
-    FooterLinksWrapper,
-    SocialLogo, 
-    SocialLogoWrap,
-    SocialMediaWrap,
-    FooterLeftHead,
-    FooterLeftAddress,
-    FooterLeftEmail,
-    FooterLeftButton,
-    FooterLeftNumber,
-    FooterBottomLine,
-    FooterBottomLeftContainer,
-    FooterBottomSection,
-    FooterMainContainer,
-    WebsiteRights,
-    WebsiteTermsPolicy
-
-   
-  } from './FooterElements';
+import {
+  FooterBottomLeftContainer,
+  FooterBottomLine,
+  FooterBottomSection,
+  FooterContainer,
+  FooterIcon,
+  FooterLeftAddress,
+  FooterLeftButton,
+  FooterLeftContainer,
+  FooterLeftEmail,
+  FooterLeftHead,
+  FooterLeftNumber,
+  FooterLinkTitle,
+  FooterLinksWrapper,
+  FooterMainContainer,
+  FooterMidContainer,
+  FooterRightContainer,
+  FooterRow,
+  FooterText,
+  FooterTopLine,
+  FooterWrapper,
+  SocialLogo,
+  SocialLogoWrap,
+  SocialMediaWrap,
+  WebsiteRights,
+  WebsiteTermsPolicy
+} from './FooterElements';
 
   import * as AiIcons from 'react-icons/ai';
 
@@ -37,12 +34,12 @@ import {
 
 
   
-import fb from './FooterImg/Facebook.svg'
-import ig from './FooterImg/Instagram.svg'
-import ldin from './FooterImg/LinkdIn.svg'
-import tw from './FooterImg/Twitter.svg'
-import yt from './FooterImg/Youtube.svg'
-import logo from './FooterImg/footerLogo.svg'
+import fb from './FooterImg/Facebook.svg';
+import ig from './FooterImg/Instagram.svg';
+import ldin from './FooterImg/LinkdIn.svg';
+import tw from './FooterImg/Twitter.svg';
+import yt from './FooterImg/Youtube.svg';
+import logo from './FooterImg/footerLogo.svg';
 
 
 
@@ -56,7 +53,7 @@ const Footer = () => {
       };*/
 
 
-      //handles timed popup by eliminating raapid popup (useeffect helps)
+      //handles timed popup by eliminating rapid popup (useEffect helps)
       
 
 
@@ -80,13 +77,12 @@ const Footer = () => {
                       
                     
                       <FooterLinksWrapper>
-                            <FooterLinkTitle> Home </FooterLinkTitle>
-                                  <FooterText to='about'>About Us</FooterText>
-                                  <FooterText to='mission'>Mission Statement</FooterText>
-                                  <FooterText to='services'>Services</FooterText>
-                                  <FooterText to='how'>How It Works</FooterText>
-                                  <FooterText to='market'>Market</FooterText>  
-                                  <FooterText to='testimonials'>Testimonials</FooterText> 
+                            <FooterLinkTitle> About </FooterLinkTitle>
+                                  <FooterText to='/'>Home</FooterText>
+                                  <FooterText to='locations'>Locations</FooterText>
+                                  <FooterText to='pack'>Jobs</FooterText>
+                                  <FooterText to='metrics'>Relocation Metrics</FooterText>  
+                                  <FooterText to='faq'>FAQ</FooterText> 
                                   <FooterText to='book'>Book Now!</FooterText> 
                       </FooterLinksWrapper> 
 
@@ -103,21 +99,19 @@ const Footer = () => {
                       </FooterLinksWrapper> 
 
                       <FooterLinksWrapper>
-                            <FooterLinkTitle> Locations </FooterLinkTitle>
-                                  <FooterText to='atlanta'>Atlanta Market</FooterText>
-                                  <FooterText to='chicago'>Chicago Market</FooterText>
-                                  <FooterText to='geographic'>Geographic Planning</FooterText>
-                                  <FooterText to='info'>Info</FooterText>  
-                                  <FooterText to='book'></FooterText> 
+                            <FooterLinkTitle> Careers </FooterLinkTitle>
+                                  <FooterText to='/applyPacker'>Packer</FooterText>
+                                  <FooterText to='/applyDriver'>Driver</FooterText>
+                                  <FooterText to='/applyHandman'>Hand-man</FooterText>
+                                  <FooterText to='/applyPackman'>Pack-man</FooterText>  
+                                  <FooterText to='/applyCarrier'>Carrier</FooterText> 
                       </FooterLinksWrapper> 
 
                       <FooterLinksWrapper>
-                            <FooterLinkTitle> Join the Pack! </FooterLinkTitle>
-                                  <FooterText to='packer'>Packer</FooterText>
-                                  <FooterText to='driver'>Driver</FooterText>
-                                  <FooterText to='handman'>Hand-man</FooterText>
-                                  <FooterText to='packman'>Pack-man</FooterText>  
-                                  <FooterText to='carrier'>Carrier</FooterText> 
+                            <FooterLinkTitle> Contact </FooterLinkTitle>
+                                  <FooterText to='contact'>Contact Us</FooterText>
+                                  <FooterText to='support'>Customer Support</FooterText>
+                                  <FooterText to='movePrep'>Move Preparation</FooterText>
                       </FooterLinksWrapper> 
                   </FooterMidContainer>
                   <FooterRightContainer>

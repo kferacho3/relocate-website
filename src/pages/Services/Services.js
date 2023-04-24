@@ -1,36 +1,30 @@
 import React from 'react';
-import { BottomToTop} from '../../components/animations/animations';
 import "./services.scss";
 
 //import insp from '../../images/inspection.svg'
 
-import { 
-  ServicesContainer,
-  ServicesWrapper,
-  ServicesRow, 
-  ServicesLogo,
-  ServicesLogoWrap,
-  ServicesDeco1,
-  ServicesDeco2,
-  ServicesButton,
-  ServicesTextContainer,
-  Column1, 
-  Column2, 
-  TextWrapper, 
-  DivBg,
-  TopLine,
-  Heading,
-  Subtitle,
-  BtnWrap,
-  ImgWrap,
-  Img,
-  Img2
-  
-} from './ServicesElements';
-import "./services.scss";
-import { motion} from 'framer-motion';
 import deco1 from '../../images/deco1.svg';
 import deco2 from '../../images/deco2.svg';
+import {
+  Column1,
+  Column2,
+  DivBg,
+  Heading,
+  Img,
+  ImgWrap,
+  ServicesButton,
+  ServicesContainer,
+  ServicesDeco1,
+  ServicesDeco2,
+  ServicesLogo,
+  ServicesLogoWrap,
+  ServicesRow,
+  ServicesTextContainer,
+  ServicesWrapper,
+  Subtitle,
+  TextWrapper
+} from './ServicesElements';
+import "./services.scss";
 //import deco3 from './ServicesImg/servDeco.svg';
 
 

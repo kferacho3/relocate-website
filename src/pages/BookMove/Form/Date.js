@@ -1,8 +1,11 @@
-import React, { useRef,  useState} from 'react';
+import React from 'react';
 
 import {
-  DateContainer, DateForm, DateHeader, DateButtonWrap, 
-  DateLeftButton, DateRightButton, DateTopline, DateFormContainer
+  DateButtonWrap,
+  DateContainer, DateForm,
+  DateFormContainer,
+  DateHeader,
+  DateLeftButton, DateRightButton, DateTopLine
 } from './DateElements';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
@@ -16,7 +19,7 @@ function Date({isOpen, toggle}) {
 
 <DateContainer>
   <DateHeader>Choose which service best suits your needs to get the best price matching.</DateHeader>
-  <DateTopline>Select from our affordable options to accomodate you.</DateTopline>
+  <DateTopLine>Select from our affordable options to accomodate you.</DateTopLine>
   <DateFormContainer>
 
       <DateForm>

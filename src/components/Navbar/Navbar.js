@@ -1,33 +1,28 @@
-import React, {useState, useEffect} from 'react';
-import {FaBars} from 'react-icons/fa';
-import {IconContext} from 'react-icons/lib';
-import {animateScroll as scroll} from 'react-scroll';
+import React, { useEffect, useState } from 'react';
+import { IconContext } from 'react-icons/lib';
+import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../images/navbarLogo.svg';
-import pac from '../../images/pacman-svg.svg';
-import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../Sidebar/SidebarData';
 
-import {   SidebarNav, SidebarWrap, SideIcon} from '../Sidebar/SidebarElements';
+import * as ImIcons from 'react-icons/im';
+import { SidebarNav, SidebarWrap, SideIcon } from '../Sidebar/SidebarElements';
 import SubMenu from '../Sidebar/SubMenu';
 import "./Navbar.scss";
 import {
-     Nav, 
-     NavbarContainer, 
-     NavLogoCont,
-     NavMenu, 
-     NavItem,
-     NavLinks, 
-     NavBtn,
-     NavIcon,
-     NavNumber,
-     NavBottom,
-     NavBottomText,
-     NavBottomText2,
-     NavBottomTextSection
+    Nav,
+    NavbarContainer,
+    NavBottom,
+    NavBottomText,
+    NavBottomText2,
+    NavBottomTextSection,
+    NavBtn,
+    NavItem,
+    NavLinks,
+    NavLogoCont,
+    NavMenu,
+    NavNumber
 } from './NavbarElements';
 import { NavHam } from './navHam';
-import * as ImIcons from 'react-icons/im';
-import { NavLink } from 'react-router-dom';
 const Navbar = ({ toggle}) => {
   
     const [sidebar, setSidebar] = useState(false);
@@ -92,7 +87,7 @@ const Navbar = ({ toggle}) => {
 
                 <NavBottom>
                     <NavBottomTextSection>
-                        <NavBottomText>WE ARE HIRING MOVERS & DRIVERS!  <NavBottomText2>Click here to apply!</NavBottomText2></NavBottomText>
+                        <NavBottomText>WE ARE HIRING MOVERS & DRIVERS!  <NavBottomText2 to='/applyPage'>Click here to apply!</NavBottomText2></NavBottomText>
                     </NavBottomTextSection>
                 </NavBottom>
               

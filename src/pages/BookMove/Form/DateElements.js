@@ -41,7 +41,7 @@ export const DateFormContainer = styled.div`
 
 export const DateHeader = styled.h1`
   
-    width: 657px;
+    width: 1100px;
     height: 44px;
     margin-top: 200px;
     margin-left: 50%;
@@ -70,11 +70,11 @@ export const DateHeader = styled.h1`
         } 
 `
 
-export const DateTopline =styled.h2`
+export const DateTopLine =styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 504px;
+    width: 700px;
     height: 36px;
 
     font-family: 'Inter';

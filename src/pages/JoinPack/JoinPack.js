@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./joinPack.scss";
 //import Carousel from "framer-motion-carousel";
 
@@ -7,31 +7,27 @@ import "./joinPack.scss";
 
 
 
-import { 
-  PackContainer,
-  PackWrapper,
-  PackRow,
+import {
+  Column1,
+  Column2,
+  Img,
+  ImgWrap,
   PackBanner,
-  PackLogo,
-  PackName,
+  PackButton,
+  PackContainer,
   PackDeco1,
   PackDeco2,
-  PackButton,
-  PackTextContainer,
-  Column1, 
-  Column2, 
-  TextWrapper, 
   PackDivBg,
-  TopLine,
-  Heading,
-  Subtitle,
-  BtnWrap,
-  ImgWrap,
-  Img,
+  PackLogo,
   PackLogoWrap,
-  PackNameWrap
-  
-} from './PackElements'
+  PackName,
+  PackNameWrap,
+  PackRow,
+  PackTextContainer,
+  PackWrapper,
+  Subtitle,
+  TextWrapper
+} from './PackElements';
 
 
 import deco1 from '../../images/deco1.svg';
@@ -41,7 +37,7 @@ function NewlineText(props) {
   const text = props.text;
   return text.split('\n').map(str => <p>{str}</p>);
 }
-const JoinPack = ({lightBg, id, imgStart, divStart, darkText, description, divBg, headline, name, logo, img, alt}) => {
+const JoinPack = ({isOpen, toggle, lightBg, id, imgStart, divStart, darkText, description, divBg, headline, name, logo, img, alt, app}) => {
   return (
       
     <PackContainer lightBg={lightBg} id={id} >
@@ -69,7 +65,10 @@ const JoinPack = ({lightBg, id, imgStart, divStart, darkText, description, divBg
                     <TextWrapper>
                         <Subtitle darkText={darkText} class='font2'><NewlineText text ={description}/></Subtitle> 
                     </TextWrapper>
-                    <PackButton>Apply Now</PackButton>
+
+                    <PackButton onClick={toggle} to ={app}>Apply Now</PackButton>
+              
+
               </PackTextContainer>
             </Column1>
 

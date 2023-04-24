@@ -1,5 +1,5 @@
+import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 
 export const JoinPackContainer = styled.div`
     
@@ -19,7 +19,12 @@ export const JoinPackContainer = styled.div`
     
 `;
 
+export const JoinPackBtnWrap =styled.a`
+    height: 250px;
+    width: 250px;
+    z-index: 9999999999;
 
+`
 
 
 
@@ -160,21 +165,24 @@ export const PackDivBg = styled.img`
     position: absolute;
     transform: ${({divStart}) => (divStart ? `scaleX(1)` : `scaleX(-1)`)};
 `
-export const PackButton = styled.button`
+export const PackButton = styled(LinkR)`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 11.5px 42.9078px 11.5px 43.0922px;
-    width: 225px;
-    height: 39px;
+    width: 130px;
+    height: 20px;
     white-space: nowrap;
-    margin-left: calc(50% - 260px/2 + 6px);
+    margin-left:50%;
     margin-top: -100px;
+    transform: translateX(-50%);
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     border: none;
+    cursor: pointer;
+    text-decoration: none;
     /* identical to box height */
 
     display: flex;

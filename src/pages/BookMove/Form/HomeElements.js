@@ -41,7 +41,7 @@ export const HomeFormContainer = styled.div`
 
 export const HomeHeader = styled.h1`
   
-    width: 657px;
+    width: 1100px;
     height: 44px;
     margin-top: 200px;
     margin-left: 50%;
@@ -70,11 +70,11 @@ export const HomeHeader = styled.h1`
         } 
 `
 
-export const HomeTopline =styled.h2`
+export const HomeTopLine =styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 504px;
+    width: 700px;
     height: 36px;
 
     font-family: 'Inter';
@@ -211,7 +211,7 @@ export const HomeOptContainer = styled.div`
 `
 export const HomeImgContainer = styled.div`
     position: absolute;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 20px;
     width: 55px;
     height: 55px;
@@ -263,7 +263,7 @@ export const HomeWrapper = styled.div`
     z-index: 1;
     height: 800px;
     width: 100%;
-    margin-top: -50px;
+    margin-top: -300px;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
@@ -284,7 +284,41 @@ export const HomeRow = styled.div`
    
 
 `;
+export const HomeFormHeader = styled.h2`
+    width: 1095px;
+    height: 74px;
+    margin-left: 120px;
+    margin-top: 0px;
 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    align-items: center;
+
+    color: #FFFFFF;
+`
+
+export const HomeFormTopLine = styled.p`
+    width: 1095px;
+    height: 74px;
+    margin-left: 120px;
+    margin-top: -100px;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    align-items: center;
+    letter-spacing: -0.05em;
+
+    background: linear-gradient(180deg, #00FF01 0%, #A5FFA5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+`
 
 export const HomeText = styled.div`
    

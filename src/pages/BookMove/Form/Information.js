@@ -1,15 +1,30 @@
-import React, { useRef,  useState} from 'react';
+import React, { useState } from 'react';
 
 import {
-  InformationContainer, InformationForm, InformationHeader, InformationButtonWrap, IButton,
-  InformationLeftButton, InformationRightButton, InformationTopline, InformationFormContainer, 
-  InfoInputContainer, Col1, Col2, IFirstName, ILastName, IPhoneNumber, IEmail, ILocationContainer, 
-  ILocationText, ILocation, IInputContainer, IInputText, ILocationButtonText, ILocationButton, ILocationRemove
+  Col1, Col2,
+  IButton,
+  IEmail,
+  IFirstName,
+  IInputContainer, IInputText,
+  ILastName,
+  ILocation,
+  ILocationButton,
+  ILocationButtonText,
+  ILocationContainer,
+  ILocationRemove,
+  ILocationText,
+  IPhoneNumber,
+  InfoInputContainer,
+  InformationButtonWrap,
+  InformationContainer, InformationForm,
+  InformationFormContainer,
+  InformationHeader,
+  InformationLeftButton, InformationRightButton, InformationTopLine
 } from './InformationElements';
 //import emailjs from 'emailjs-com';
-import "./Form.scss";
 import butt from '../BookImg/InfoLocationButton.svg';
 import butt2 from '../BookImg/InfoLocationRemoveButton.svg';
+import "./Form.scss";
 //import s1 from '../BookImg/InformationImg1.svg';
 //import s2 from '../BookImg/InformationImg2.svg';
 function Information({isOpen, toggle}) {
@@ -37,9 +52,10 @@ function Information({isOpen, toggle}) {
   //LEFT SIDE
   const initialValues = { fname: "", lname: "", phone: "", email: "", add1: "", add2: "", add3: "", add4: "", add5: "" };
   const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [name, setName] = useState("");
+  
+  // const [formErrors, setFormErrors] = useState({});
+  // const [isSubmit, setIsSubmit] = useState(false);
+  // const [name, setName] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +64,7 @@ function Information({isOpen, toggle}) {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const form = useRef();
+  // const form = useRef();
 
 
 /*
@@ -75,36 +91,36 @@ const sendEmail = (e) => {
     e.target.reset();
   }
 */
-  const validate = (v) => {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!v.email) {
-      errors.email = "Refresh to send another message";
-    } else if (!regex.test(v.email)) {
-      errors.email = "Refresh to send another message";
-    }
-    if (!v.name) {
-      errors.name = "Name field can't be empty";
-    }
+  // const validate = (v) => {
+  //   const errors = {};
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  //   if (!v.email) {
+  //     errors.email = "Refresh to send another message";
+  //   } else if (!regex.test(v.email)) {
+  //     errors.email = "Refresh to send another message";
+  //   }
+  //   if (!v.name) {
+  //     errors.name = "Name field can't be empty";
+  //   }
 
-    if (!v.address) {
-      errors.address = "Address field can't be empty";
-    }
-    if (!v.city) {
-      errors.city = "City field can't be empty";
-    }
-    if (!v.zip) {
-      errors.zip = "Zipcode field can't be empty";
-    }
-    if (!v.phone) {
-      errors.phone = "Phone field can't be empty";
-    }
-    if (!v.message) {
-      errors.message = "Message field can't be empty";
-    }
+  //   if (!v.address) {
+  //     errors.address = "Address field can't be empty";
+  //   }
+  //   if (!v.city) {
+  //     errors.city = "City field can't be empty";
+  //   }
+  //   if (!v.zip) {
+  //     errors.zip = "Zipcode field can't be empty";
+  //   }
+  //   if (!v.phone) {
+  //     errors.phone = "Phone field can't be empty";
+  //   }
+  //   if (!v.message) {
+  //     errors.message = "Message field can't be empty";
+  //   }
 
-    return errors;
-  };
+  //   return errors;
+  // };
 
 
   return (
@@ -112,7 +128,7 @@ const sendEmail = (e) => {
 
 <InformationContainer>
   <InformationHeader>Choose which service best suits your needs to get the best price matching.</InformationHeader>
-  <InformationTopline>Select from our affordable options to accomodate you.</InformationTopline>
+  <InformationTopLine>Select from our affordable options to accommodate your needed service.</InformationTopLine>
   <InformationFormContainer>
 
       <InformationForm>
@@ -158,8 +174,6 @@ const sendEmail = (e) => {
                 type="text"
                 id="location"
                 placeholder="*Location"
-                type="text"
-                id="location"
                 value={singleLocation.location}
                 onChange={(e) => handleLocationChange(e, index)}
                 required

@@ -20,20 +20,6 @@ function BookMove({isOpen, toggle}) {
 
   // This function validates emails
 
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
   return (
 <>
 <Start/>

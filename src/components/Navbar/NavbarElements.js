@@ -1,6 +1,5 @@
+import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
-import {Link as LinkS} from 'react-scroll';
 import "./Navbar.scss";
 
 
@@ -205,7 +204,7 @@ export const NavBottomText = styled.p`
   
 `
 
-export const NavBottomText2 = styled.p`
+export const NavBottomText2 = styled(LinkR)`
     width: 500px;
     height: 20px;
     white-space: nowrap;
@@ -216,6 +215,7 @@ export const NavBottomText2 = styled.p`
     text-align: center;
     justify-content: center;
     grid-template-areas: col2;
+    text-decoration: none;
    // margin-left: -50px;
     cursor: pointer;
     /* identical to box height, or 207% */
@@ -241,6 +241,182 @@ export const NavBottomTextSection = styled.p`
         text-align: center;
 
     }
+`
+export const NavBottom2 = styled.div`
+   
+
+    overflow: hidden;
+    position: absolute;
+    height: 60px;
+    width: 100vw;
+    top: 80px; 
+    background: #6994F4;
+
+`
+
+export const NavBtnWrap = styled.div`
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    margin-top: 5px;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'btn1 btn2 btn3';
+
+`
+export const NavBotBtn = styled.button`
+    box-sizing: border-box;
+    grid-area: btn1;
+    width: 300px;
+    height: 30px;
+
+    top: 5px;
+   // border-image-source: linear-gradient(180deg, #218207 0%, rgba(0, 255, 1, 0.5) 100%);
+    background: #F1EFFF;
+    border-radius: 4px;
+   
+
+    /* Inside auto layout */
+    text-align: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    /* or 107% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    color: #000000;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+    transition: background 0.5s ease;
+
+  &:hover {
+        color: #218207;
+        --c: #98FB7D; /* the color */
+  
+        //color: #0000;
+        
+        background: 
+            linear-gradient(90deg,#69E969 50%,var(--c) ) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100%;
+
+        //background: linear-gradient(180deg, #69E969 100%, #98FB7D 50%);
+        transition: 0.5s;
+    }
+    &:hover:hover{
+        --_p: 100%
+    }
+
+`
+export const NavBotBtn2 = styled.button`
+    box-sizing: border-box;
+    grid-area: btn2;
+    width: 300px;
+    height: 30px;
+    top: 5px;
+    //border-image-source: linear-gradient(180deg, #218207 0%, rgba(0, 255, 1, 0.5) 100%);
+    background: #F1EFFF;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    text-align: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    /* or 107% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    color: #000000;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+    transition: background 0.5s ease;
+
+  &:hover {
+        color: #218207;
+        --c: #98FB7D; /* the color */
+  
+        //color: #0000;
+        
+        background: 
+            linear-gradient(90deg,#69E969 50%,var(--c) ) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100%;
+
+        //background: linear-gradient(180deg, #69E969 100%, #98FB7D 50%);
+        transition: 0.5s;
+    }
+    &:hover:hover{
+        --_p: 100%
+    }
+
+`
+export const NavBotBtn3 = styled.button`
+    box-sizing: border-box;
+    grid-area: btn3;
+    width: 300px;
+    height: 30px;
+
+    background: #F1EFFF;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    justify-content: center;
+    /* or 107% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    color: #000000;
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+
+    transition: background 0.5s ease;
+
+  &:hover {
+        color: #218207;
+        --c: #98FB7D; /* the color */
+  
+        //color: #0000;
+        
+        background: 
+            linear-gradient(90deg,#69E969 50%,var(--c) ) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100%;
+
+        //background: linear-gradient(180deg, #69E969 100%, #98FB7D 50%);
+        transition: 0.5s;
+    }
+    &:hover:hover{
+        --_p: 100%
+    }
+
+
 `
 export const NavLinks = styled(LinkR)`
     

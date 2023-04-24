@@ -1,5 +1,5 @@
+import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 
 export const HomeContainer = styled.div`
     
@@ -251,10 +251,10 @@ export const HeroServHeader = styled.h2`
 `
 export const HeroServText = styled.div`
    
-    width: 500px;
+    width: 520px;
     height: 61px;
   
-    margin-top: 25px;
+    margin-top: 22.5px;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
