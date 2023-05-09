@@ -2,17 +2,14 @@ import React from 'react';
 
 import Navbar2 from '../../components/Navbar/NavbarApplyForm';
 import {
-  ApplyPageButtonWrap,
   ApplyPageContainer, ApplyPageForm,
   ApplyPageFormContainer,
   ApplyPageHeader,
-  ApplyPageInput1,
   ApplyPageInput1Img,
-  ApplyPageInput2, ApplyPageInput2Head,
+  ApplyPageInput2Head,
   ApplyPageInput2Img,
   ApplyPageInput2Text,
-  ApplyPageLeftButton,
-  ApplyPageRightButton, ApplyPageTopLine,
+  ApplyPageTopLine,
   Col1, Col2, Col3, Col4, Col5,
   Sec1, Sec2
 } from './ApplyPageElements';
@@ -35,15 +32,9 @@ function ApplyPage({isOpen, toggle}) {
 
       <ApplyPageForm class="radio-group">
     
-      <ApplyPageInput1 type="radio"
-      class="radio isHidden"
-                    value="Truck & Packers"
-                    name="ApplyPage"
-                    id='ApplyPage'
-                    //checked={state.service === 'ApplyPage'}
-                    //onChange={handleInput}
-                    />
-        <Col1 class='radio' >
+  
+        <Col1 
+                    to='/applyInfoNav/applyPacker' class='radio' >
         <Sec1>
             <ApplyPageInput2Head>Packer</ApplyPageInput2Head>
             <ApplyPageInput2Text>Need both a truck and a set of packers for your move? 
@@ -55,15 +46,8 @@ function ApplyPage({isOpen, toggle}) {
         </Sec2>
       </Col1>
 
-          <ApplyPageInput2 type="radio"
-          class="radio isHidden"
-                        value="Packers Only"
-                        name="ApplyPage"
-                        id='ApplyPage'
-                      // checked={state.service === 'ApplyPage'}
-                      // onChange={handleInput}
-                      />
-          <Col2 class='radio' >
+     
+          <Col2  to='/applyInfoNav/applyDriver' class='radio' >
             <Sec2>
               <ApplyPageInput2Img src={a2}/>
             </Sec2>
@@ -75,17 +59,10 @@ function ApplyPage({isOpen, toggle}) {
 
             </Sec1>
           </Col2>
-          <ApplyPageInput2 type="radio"
-          class="radio isHidden"
-                        value="Packers Only"
-                        name="ApplyPage"
-                        id='ApplyPage'
-                      // checked={state.service === 'ApplyPage'}
-                      // onChange={handleInput}
-                      />
-          <Col3 class='radio' >
+  
+          <Col3  to='/applyInfoNav/applyHandman' class='radio' >
             <Sec2>
-              <ApplyPageInput2Img src={a3}/>
+              <ApplyPageInput1Img src={a3}/>
             </Sec2>
             <Sec1>
                 <ApplyPageInput2Head>Handman</ApplyPageInput2Head>
@@ -96,15 +73,8 @@ function ApplyPage({isOpen, toggle}) {
             </Sec1>
           </Col3>
 
-          <ApplyPageInput2 type="radio"
-          class="radio isHidden"
-                        value="Packers Only"
-                        name="ApplyPage"
-                        id='ApplyPage'
-                      // checked={state.service === 'ApplyPage'}
-                      // onChange={handleInput}
-                      />
-          <Col4 class='radio' >
+     
+          <Col4  to='/applyInfoNav/applyPackman' class='radio' >
             <Sec2>
               <ApplyPageInput2Img src={a4}/>
             </Sec2>
@@ -117,15 +87,8 @@ function ApplyPage({isOpen, toggle}) {
             </Sec1>
           </Col4>
 
-          <ApplyPageInput2 type="radio"
-          class="radio isHidden"
-                        value="Packers Only"
-                        name="ApplyPage"
-                        id='ApplyPage'
-                      // checked={state.service === 'ApplyPage'}
-                      // onChange={handleInput}
-                      />
-          <Col5 class='radio' >
+    
+          <Col5 to='/applyInfoNav/applyCarrier' class='radio' >
             <Sec2>
               <ApplyPageInput2Img src={a5}/>
             </Sec2>
@@ -137,11 +100,7 @@ function ApplyPage({isOpen, toggle}) {
 
             </Sec1>
           </Col5>
- 
-      <ApplyPageButtonWrap>
-        <ApplyPageLeftButton>BACK</ApplyPageLeftButton>
-        <ApplyPageRightButton>NEXT</ApplyPageRightButton>
-      </ApplyPageButtonWrap>
+
       </ApplyPageForm>
     </ApplyPageFormContainer>
   </ApplyPageContainer>
