@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import {
-  Col1, Col2,
+  Col1Info, Col2Info,
   IButton,
   IEmail,
   IFirstName,
@@ -20,7 +20,7 @@ import {
   InformationFormContainer,
   InformationHeader,
   InformationLeftButton, InformationRightButton, InformationTopLine
-} from './InformationElements';
+} from './FormElements';
 //import emailjs from 'emailjs-com';
 import butt from '../BookImg/InfoLocationButton.svg';
 import butt2 from '../BookImg/InfoLocationRemoveButton.svg';
@@ -134,7 +134,7 @@ const sendEmail = (e) => {
       <InformationForm>
           <InfoInputContainer>
           
-            <Col1>
+            <Col1Info>
             <IInputContainer>
                 <IInputText>First Name</IInputText>
                 <IFirstName onChange={handleChange} value={formValues.fname} id='fname' name='fname' type="text" placeholder="*First Name" required={true}/>
@@ -156,10 +156,10 @@ const sendEmail = (e) => {
               </IInputContainer>
             
 
-            </Col1>
+            </Col1Info>
   
 
-            <Col2>
+            <Col2Info>
       
              
             
@@ -205,7 +205,7 @@ const sendEmail = (e) => {
             
             
          
-            </Col2>
+            </Col2Info>
 
           </InfoInputContainer>
       <InformationButtonWrap>

@@ -100,11 +100,11 @@ const Footer = () => {
 
                       <FooterLinksWrapper>
                             <FooterLinkTitle> Careers </FooterLinkTitle>
-                                  <FooterText to='/applyPacker'>Packer</FooterText>
-                                  <FooterText to='/applyDriver'>Driver</FooterText>
-                                  <FooterText to='/applyHandman'>Hand-man</FooterText>
-                                  <FooterText to='/applyPackman'>Pack-man</FooterText>  
-                                  <FooterText to='/applyCarrier'>Carrier</FooterText> 
+                                  <FooterText to='/applyInfoNav/applyPacker'>Packer</FooterText>
+                                  <FooterText to='/applyInfoNav/applyDriver'>Driver</FooterText>
+                                  <FooterText to='/applyInfoNav/applyHandman'>Hand-man</FooterText>
+                                  <FooterText to='/applyInfoNav/applyPackman'>Pack-man</FooterText>  
+                                  <FooterText to='/applyInfoNav/applyCarrier'>Carrier</FooterText> 
                       </FooterLinksWrapper> 
 
                       <FooterLinksWrapper>

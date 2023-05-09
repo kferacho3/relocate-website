@@ -1,12 +1,13 @@
 import React from 'react';
 
+import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
 import {
   DateButtonWrap,
   DateContainer, DateForm,
   DateFormContainer,
   DateHeader,
   DateLeftButton, DateRightButton, DateTopLine
-} from './DateElements';
+} from './FormElements';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
 //import s1 from '../BookImg/DateImg1.svg';
@@ -18,12 +19,15 @@ function Date({isOpen, toggle}) {
 <>
 
 <DateContainer>
-  <DateHeader>Choose which service best suits your needs to get the best price matching.</DateHeader>
-  <DateTopLine>Select from our affordable options to accomodate you.</DateTopLine>
+  <DateHeader>Please select a preferred date for your move:</DateHeader>
+  <DateTopLine>Please note that you may reschedule your move after booking if necessary.</DateTopLine>
   <DateFormContainer>
 
       <DateForm>
-
+      <div className="calendar">
+        <CalendarComponent isMultiSelection={true} />
+        {/* <Calendar/> */}
+      </div>
 
    
       <DateButtonWrap>

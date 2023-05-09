@@ -20,7 +20,7 @@ import {
   HomeTextSection,
   HomeTopLine,
   HomeWrapper
-} from './HomeElements';
+} from './FormElements';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
 //import s1 from '../BookImg/HomeImg1.svg';

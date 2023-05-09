@@ -115,6 +115,7 @@ const Navbar = ({ toggle}) => {
       )}
       
         </IconContext.Provider>
+       
         </>
     );
 };

@@ -90,7 +90,7 @@ export const DivBg = styled.img`
     justify-content: center;
     margin-left: -75px;
     margin-top: -55px;
-    position: absolute;
+    position: relative;
     z-index: -9999999;
     transform: ${({divStart}) => (divStart ? `scaleX(-1)` : `scaleX(1)`)};
     @media screen and (max-width: 768px) {
@@ -161,7 +161,7 @@ export const ApplyPageWrapper = styled.div`
 export const ApplyPageRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
-    gap: 0px;
+    gap: 50px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
@@ -175,8 +175,8 @@ export const ApplyPageRow = styled.div`
 
 export const Column1 = styled.div`
     margin-bottom: -150px;
-    padding: 0 15px;
-        position: relative;
+    padding: 0 100px;
+    position: relative;
     grid-area: col1;
     @media screen and (max-width: 768px) {
       
@@ -191,7 +191,7 @@ export const Column1 = styled.div`
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
-    padding: 0 15px;
+    padding: 0 100px;
     
     position: relative;
     grid-area: col2;
@@ -648,7 +648,7 @@ export const ApplyCompany = styled.input`
     height: 60px;
     width: 280px;
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     left: 16px;
     right: 272px;
     top: 11px;
@@ -662,7 +662,7 @@ export const ApplyDOT = styled.input`
     height: 60px;
     width: 280px;
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     left: 296px;
     right: 0px;
     top: 11px;
@@ -675,7 +675,7 @@ export const ApplyCity = styled.input`
     width: 280px;
     box-sizing: border-box;
 
-    position: absolute;
+    position: relative;
     left: 16px;
     right: 272px;
     top: 82px;
@@ -687,7 +687,7 @@ export const ApplyCity = styled.input`
 export const ApplyRef = styled.input`
     box-sizing: border-box;
 
-    position: absolute;
+    position: relative;
     left: 296px;
     right: 0px;
     top: 82px;
@@ -701,7 +701,7 @@ export const ApplyTruckQuantity = styled.input`
     width: 280px;
     box-sizing: border-box;
 
-    position: absolute;
+    position: relative;
     left: 16px;
     right: 272px;
     top: 153px;
@@ -715,7 +715,7 @@ export const ApplyFirstName = styled.input`
     width: 280px;
     box-sizing: border-box;
 
-    position: absolute;
+    position: relative;
     left: 296px;
     right: 0px;
     top: 153px;
@@ -729,7 +729,7 @@ export const ApplyLastName = styled.input`
     width: 280px;
     box-sizing: border-box;
 
-    position: absolute;
+    position: relative;
     left: 16px;
     right: 272px;
     top: 224px;
@@ -742,7 +742,7 @@ export const ApplyPhone = styled.input`
     height: 60px;
     width: 280px;
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     left: 296px;
     right: 0px;
     top: 224px;
@@ -757,7 +757,7 @@ export const ApplyEmail = styled.input`
     width: 552px;
     box-sizing: border-box;
 
-    position: absolute;
+    position: relative;
     left: 296px;
     right: 0px;
     top: 224px;
@@ -767,7 +767,7 @@ export const ApplyEmail = styled.input`
     border-radius: 7px;
 `
 export const ApplyFormBtn = styled.button`
-    position: absolute;
+    position: relative;
     width: 310px;
     height: 48px;
     left: calc(50% - 310px/2);

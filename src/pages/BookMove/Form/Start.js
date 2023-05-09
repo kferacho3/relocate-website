@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Col1, Col2, Sec1, Sec2, StartButtonWrap,
+  Col1Start, Col2Start, Sec1, Sec2, StartButtonWrap,
   StartContainer, StartForm,
   StartFormContainer,
   StartHeader,
@@ -12,7 +12,7 @@ import {
   StartInput2Text,
   StartLeftButton,
   StartRightButton, StartTopLine
-} from './StartElements';
+} from './FormElements';
 //import emailjs from 'emailjs-com';
 import s1 from '../BookImg/startImg1.svg';
 import s2 from '../BookImg/startImg2.svg';
@@ -38,7 +38,7 @@ function Start({isOpen, toggle}) {
                     //checked={state.service === 'Start'}
                     //onChange={handleInput}
                     />
-        <Col1 class='radio' >
+        <Col1Start class='radio' >
         <Sec1>
             <StartInput2Head>Truck & Packers</StartInput2Head>
             <StartInput2Text>Need both a truck and a set of packers for your move? 
@@ -48,7 +48,7 @@ function Start({isOpen, toggle}) {
         <Sec2>
           <StartInput1Img src={s1}/>
         </Sec2>
-      </Col1>
+      </Col1Start>
       </label>
 
       <label>
@@ -60,7 +60,7 @@ function Start({isOpen, toggle}) {
                       // checked={state.service === 'Start'}
                       // onChange={handleInput}
                       />
-          <Col2 class='radio' >
+          <Col2Start class='radio' >
             <Sec2>
               <StartInput2Img src={s2}/>
             </Sec2>
@@ -71,7 +71,7 @@ function Start({isOpen, toggle}) {
                                 packers to complete your service.</StartInput2Text>
 
             </Sec1>
-          </Col2>
+          </Col2Start>
       </label>
       <StartButtonWrap>
         <StartLeftButton>BACK</StartLeftButton>

@@ -24,8 +24,8 @@ import {
   ApplyPageWrapper,
   ApplyPhone,
   ApplyRef, ApplyTruckQuantity,
-  Column1,
-  Column2,
+  Column1b,
+  Column2b,
   Heading,
   Subtitle,
   TextWrapper
@@ -128,7 +128,7 @@ const validate = (v) => {
         
             <ApplyPageWrapper>
                 <ApplyPageRow imgStart={imgStart}>
-                    <Column1  >
+                    <Column1b  >
                       <ApplyPageTextContainer style={{ background:`${divBg}`}}>
                         <ApplyPageDeco1 src={deco1.default}/>
                         <ApplyPageLogoWrap>
@@ -142,10 +142,10 @@ const validate = (v) => {
                         <ApplyPageButton>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer>
                  
-                    </Column1>
+                    </Column1b>
 
 
-                    <Column2>
+                    <Column2b>
                         <ApplyPageFormContainer ref={form} >{//onSubmit={sendEmail}
                         }
                 
@@ -199,7 +199,7 @@ const validate = (v) => {
                             <ApplyFormBtn>SEND</ApplyFormBtn>
 
                         </ApplyPageFormContainer>
-                    </Column2>
+                    </Column2b>
                     
                 </ApplyPageRow>
             </ApplyPageWrapper>

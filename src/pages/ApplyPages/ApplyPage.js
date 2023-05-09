@@ -1,19 +1,20 @@
 import React from 'react';
 
+import Navbar2 from '../../components/Navbar/NavbarApplyForm';
 import {
-    ApplyPageButtonWrap,
-    ApplyPageContainer, ApplyPageForm,
-    ApplyPageFormContainer,
-    ApplyPageHeader,
-    ApplyPageInput1,
-    ApplyPageInput1Img,
-    ApplyPageInput2, ApplyPageInput2Head,
-    ApplyPageInput2Img,
-    ApplyPageInput2Text,
-    ApplyPageLeftButton,
-    ApplyPageRightButton, ApplyPageTopLine,
-    Col1, Col2, Col3, Col4, Col5,
-    Sec1, Sec2
+  ApplyPageButtonWrap,
+  ApplyPageContainer, ApplyPageForm,
+  ApplyPageFormContainer,
+  ApplyPageHeader,
+  ApplyPageInput1,
+  ApplyPageInput1Img,
+  ApplyPageInput2, ApplyPageInput2Head,
+  ApplyPageInput2Img,
+  ApplyPageInput2Text,
+  ApplyPageLeftButton,
+  ApplyPageRightButton, ApplyPageTopLine,
+  Col1, Col2, Col3, Col4, Col5,
+  Sec1, Sec2
 } from './ApplyPageElements';
 //import emailjs from 'emailjs-com';
 import a1 from './ApplyImg/appImg1.svg';
@@ -21,13 +22,12 @@ import a2 from './ApplyImg/appImg2.svg';
 import a3 from './ApplyImg/appImg3.svg';
 import a4 from './ApplyImg/appImg4.svg';
 import a5 from './ApplyImg/appImg5.svg';
-
 function ApplyPage({isOpen, toggle}) {
 
 
   return (
 <>
-
+<Navbar2 isOpen={isOpen} toggle={toggle}/>
 <ApplyPageContainer id={'/applyPage'}>
   <ApplyPageHeader>Join the Pack!</ApplyPageHeader>
   <ApplyPageTopLine>Select the Position Best Suited for you</ApplyPageTopLine>
@@ -146,6 +146,7 @@ function ApplyPage({isOpen, toggle}) {
     </ApplyPageFormContainer>
   </ApplyPageContainer>
 </>
+
   );
 }
 export default ApplyPage;

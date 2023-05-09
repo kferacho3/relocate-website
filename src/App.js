@@ -9,6 +9,8 @@ import PageL from './pages/Locations/PageL';
 import PageS from './pages/Services/PageS';
 
 import ApplyPage from './pages/ApplyPages/ApplyPage';
+
+import ApplyInfoNav from './pages/ApplyPages/ApplyInfoNav';
 import ApplyCarrier from './pages/ApplyPages/MainPages/ApplyCarrier';
 import ApplyDriver from './pages/ApplyPages/MainPages/ApplyDriver';
 import ApplyHandman from './pages/ApplyPages/MainPages/ApplyHandman';
@@ -44,11 +46,16 @@ export function App() {
             <Route path='/pack' element={<PageJP />}  />  
             <Route path='/book' element={<BookMove />}  /> 
             <Route path='/applyPage' element={<ApplyPage />}  /> 
-            <Route path='/applyPacker' element={<ApplyPacker />}  /> 
-            <Route path='/applyDriver' element={<ApplyDriver />}  /> 
-            <Route path='/applyHandman' element={<ApplyHandman />}  /> 
-            <Route path='/applyPackman' element={<ApplyPackman />}  /> 
-            <Route path='/applyCarrier' element={<ApplyCarrier />}  /> 
+
+            <Route path='applyInfoNav' element={<ApplyInfoNav />}  > 
+              <Route path='applyPacker' element={<ApplyPacker />}  /> 
+              <Route path='applyDriver' element={<ApplyDriver />}  /> 
+              <Route path='applyHandman' element={<ApplyHandman />}  /> 
+              <Route path='applyPackman' element={<ApplyPackman />}  /> 
+              <Route path='applyCarrier' element={<ApplyCarrier />}  /> 
+            </Route>
+
+
           </Routes> 
 
           <Footer/>

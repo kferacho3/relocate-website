@@ -1,17 +1,15 @@
 import "./BookMove.scss";
-import bg from './BookImg/bookBg.svg'
-import logo from './BookImg/bookLogo.svg'
 
 
-import React, { useRef,  useState} from 'react';
-import Start from "./Form/Start";
-import Information from "./Form/Information";
-import Home from "./Form/Home";
-import Service from "./Form/Service";
+import React from 'react';
 import Date from "./Form/Date";
-import {
-  BookMoveContainer, BookMoveContainerImg
-} from './BookMoveElements';
+import Heavy from "./Form/Heavy";
+import Home from "./Form/Home";
+import Information from "./Form/Information";
+import Items from "./Form/Items";
+import Service from "./Form/Service";
+import Start from "./Form/Start";
+import Time from "./Form/Time";
 //import emailjs from 'emailjs-com';
 
 
@@ -23,10 +21,13 @@ function BookMove({isOpen, toggle}) {
   return (
 <>
 <Start/>
+<Service/>
 <Information/>
 <Home/>
-<Service/>
+<Items/>
+<Heavy/>
 <Date/>
+<Time/>
 
 </>
   );

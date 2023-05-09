@@ -1,20 +1,33 @@
 
 @font-face {
-    font-family: 'Inter-Regular';
-    src: url('Inter-Regular.woff') format('woff');
+    font-family: 'Inter-ExtraLight';
+        src: url('/Fonts/Inter-Light.woff') format('woff');
+    src: url('/Fonts/Inter-Thin.woff') format('woff');
+    src: url('/Fonts/Inter-Medium.woff') format('woff');
+    src: url('/Fonts/Inter-Regular.woff') format('woff');
+    src: url('/Fonts/Inter-SemiBold.woff') format('woff');
+    src: url('/Fonts/Inter-Bold.woff') format('woff');
+    src: url('/Fonts/Inter-ExtraBold.woff') format('woff');
+    src: url('/Fonts/Inter-Black.woff') format('woff');
+    src: url('/Fonts/Inter-ExtraLight.woff') format('woff');
+
     font-weight: normal;
     font-style: normal;
+
+    -webkit-font-smoothing: subpixel-antialiased !important;
  
  }
 
-  * {
+ body * {
 
-    font-family: "Inter";
-    /*font-family: Copperplate, "Copperplate", Georgia, serif;*/
+    font-family: "Inter-ExtraLight";
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    //font-family: Copperplate, "Copperplate", Georgia, serif;
     }
 
-html,body
+html, body
 {
+    
     width: 100%;
     height: 100%;
     margin: 0px;

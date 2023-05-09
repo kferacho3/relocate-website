@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import * as ImIcons from 'react-icons/im';
 import { IconContext } from 'react-icons/lib';
+import { Outlet } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../images/navbarLogo.svg';
 import { SidebarData } from '../Sidebar/SidebarData';
-
-import * as ImIcons from 'react-icons/im';
-import { SidebarNav, SidebarWrap, SideIcon } from '../Sidebar/SidebarElements';
+import { SideIcon, SidebarNav, SidebarWrap } from '../Sidebar/SidebarElements';
 import SubMenu from '../Sidebar/SubMenu';
 import "./Navbar.scss";
 import {
     Nav,
-    NavbarContainer,
     NavBotBtn,
     NavBotBtn2,
     NavBotBtn3,
@@ -21,7 +20,8 @@ import {
     NavLinks,
     NavLogoCont,
     NavMenu,
-    NavNumber
+    NavNumber,
+    NavbarContainer
 } from './NavbarElements';
 import { NavHam } from './navHam';
 const Navbar2 = ({ toggle}) => {
@@ -103,7 +103,7 @@ const Navbar2 = ({ toggle}) => {
           
          
             </NavbarContainer>
-                   
+            <Outlet/>
        
         </Nav>
         {isOpen && (

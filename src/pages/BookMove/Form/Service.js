@@ -1,23 +1,23 @@
 import React from 'react';
 
 import {
-    ServiceButtonWrap,
-    ServiceContainer, ServiceForm,
-    ServiceFormContainer,
-    ServiceHeader,
-    ServiceLeftButton, ServiceRightButton,
-    ServiceTopLine,
-    ServicesImg,
-    ServicesImgContainer,
-    ServicesInput,
-    ServicesOptContainer,
-    ServicesOptWrap,
-    ServicesRow,
-    ServicesText,
-    ServicesTextHeader,
-    ServicesTextSection,
-    ServicesWrapper
-} from './ServiceElements';
+  ServiceButtonWrap,
+  ServiceContainer, ServiceForm,
+  ServiceFormContainer,
+  ServiceHeader,
+  ServiceLeftButton, ServiceRightButton,
+  ServiceTopLine,
+  ServicesImg,
+  ServicesImgContainer,
+  ServicesInput,
+  ServicesOptContainer,
+  ServicesOptWrap,
+  ServicesRow,
+  ServicesText,
+  ServicesTextHeader,
+  ServicesTextSection,
+  ServicesWrapper
+} from './FormElements';
 //import emailjs from 'emailjs-com';
 import hour from '../../../logos/ClockIcon.svg';
 import house from '../../../logos/HouseIcon.svg';
