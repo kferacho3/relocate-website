@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
 import {
   DateButtonWrap,
   DateContainer, DateForm,
@@ -25,7 +24,6 @@ function Date({isOpen, toggle}) {
 
       <DateForm>
       <div className="calendar">
-        <CalendarComponent isMultiSelection={true} />
         {/* <Calendar/> */}
       </div>
 

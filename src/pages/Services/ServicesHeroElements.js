@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 
 export const ServicesHeroContainer = styled.div`
     
@@ -157,8 +156,8 @@ export const Column22 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     max-width: 540px;
 
 `;
@@ -171,7 +170,8 @@ export const TopLine = styled.p`
     font-size: 14.5008px;
     line-height: 28px;
     /* or 193% */
-
+   
+    justify-content: flex-start;
     display: flex;
     align-items: center;
 

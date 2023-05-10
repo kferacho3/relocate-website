@@ -17,6 +17,9 @@ import ApplyHandman from './pages/ApplyPages/MainPages/ApplyHandman';
 import ApplyPacker from './pages/ApplyPages/MainPages/ApplyPacker';
 import ApplyPackman from './pages/ApplyPages/MainPages/ApplyPackman';
 
+import ContactUs from './pages/Contact/ContactUs';
+import MovePrep from './pages/Contact/MovePrep';
+
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -54,6 +57,10 @@ export function App() {
               <Route path='applyPackman' element={<ApplyPackman />}  /> 
               <Route path='applyCarrier' element={<ApplyCarrier />}  /> 
             </Route>
+
+            <Route path='/contact' element={<ContactUs />}  /> 
+            <Route path='/movePrep' element={<MovePrep />}  /> 
+            
 
 
           </Routes> 

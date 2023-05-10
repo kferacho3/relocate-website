@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 
 export const ServicesContainer = styled.div`
     
@@ -35,7 +34,7 @@ export const ServicesTextContainer = styled.div`
    
     overflow: hidden;
     background: linear-gradient(180deg, #A4FFA4 0%, #C5FCC5 17.71%, #4CFF4C 71.87%, #4CC24C 90.62%);
-    border: 0.25px solid #000000;
+   // border: 0.25px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     

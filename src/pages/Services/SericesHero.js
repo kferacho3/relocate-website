@@ -1,26 +1,23 @@
 import React from 'react';
-import { BottomToTop} from '../../components/animations/animations';
 import "./services.scss";
 
 //import insp from '../../images/inspection.svg'
 
-import { 
-  ServicesHeroContainer,
-  ServicesWrapper,
-  ServicesRow, 
-  ServicesHeroButton,
-  Column1, 
-  Column2, 
-  TextWrapper, 
-  TopLine,
+import {
+  Column1,
+  Column2,
   Heading,
-  Subtitle,
+  Img,
   ImgWrap,
-  Img
-  
+  ServicesHeroButton,
+  ServicesHeroContainer,
+  ServicesRow,
+  ServicesWrapper,
+  Subtitle,
+  TextWrapper,
+  TopLine
 } from './ServicesHeroElements';
 import "./services.scss";
-import { motion} from 'framer-motion';
 
 //import deco3 from './ServicesImg/servDeco.svg';
 

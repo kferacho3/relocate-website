@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 export const PackInfoSection = styled.div`
   
     overflow: hidden;
@@ -115,7 +114,7 @@ export const PackInfoTextSection = styled.div`
     overflow: hidden;
 
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
-    border: 0.25px solid #FFFFFF;
+    //border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
   

@@ -1,24 +1,41 @@
-import React, {useState} from 'react';
-import { HeroServContainer, HeroServImg, HeroServTextSection, HeroServTextHeader,
-         HeroServImgContainer, HeroServDivBg, HeroDeco1, HeroDeco2, HeroServeWrapper,
-         HeroServeRow, HeroServText, HeroServicesSection, HeroServHeader} from './HeroElements';
+import React, { useState } from 'react';
+import {
+  HeroDeco1, HeroDeco2,
+  HeroServicesHeader,
+  HeroServicesSection
+} from './HeroElements';
 
-import house from '../../logos/HouseIcon.svg';
-import pack from '../../logos/PackingIcon.svg';
 import hour from '../../logos/ClockIcon.svg';
-import trash from '../../logos/TrashIcon.svg';
+import house from '../../logos/HouseIcon.svg';
 import night from '../../logos/NightIcon.svg';
-import vip from '../../logos/VIPIcon.svg';
+import pack from '../../logos/PackingIcon.svg';
 import storage from '../../logos/StorageIcon.svg';
 import tv from '../../logos/TVIcon.svg';
+import trash from '../../logos/TrashIcon.svg';
+import vip from '../../logos/VIPIcon.svg';
 
-import d1 from '../../logos/miniDeco1.svg';
-import d2 from '../../logos/miniDeco2.svg';
-import d3 from '../../logos/miniDeco3.svg';
-import d4 from '../../logos/miniDeco4.svg';
+import d1 from '../../images/heroServicesDivBg1.svg';
+import d2 from '../../images/heroServicesDivBg2.svg';
+
 
 import deco1 from '../../images/deco1.svg';
 import deco2 from '../../images/deco2.svg';
+
+import {
+  HeroServicesContainer,
+  HeroServicesDivBg,
+  HeroServicesImg,
+  HeroServicesImgContainer,
+  HeroServicesRow,
+  HeroServicesText,
+  HeroServicesTextHeader,
+  HeroServicesTextSection,
+  HeroServicesWrapper
+} from './HeroElements';
+
+
+
+
 
 
 
@@ -33,119 +50,120 @@ const Services = () => {
     return (
       <>
         <HeroServicesSection>
-              <HeroServeWrapper>
-                <HeroServeRow>
+        <HeroServicesHeader>See what our pack can do!</HeroServicesHeader>
+              <HeroServicesWrapper>
+                <HeroServicesRow>
                 <div>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d1})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d1})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${house})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>Moving Service</HeroServTextHeader>
-                    <HeroServText>Standard In-state moving service that includes Loading & Unloading services together or individually. </HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${house})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>Moving Service</HeroServicesTextHeader>
+                    <HeroServicesText>Standard In-state moving service that includes Loading & Unloading services together or individually. </HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d2})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d2})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${pack})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>Packing & Unpacking</HeroServTextHeader>
-                    <HeroServText>Packing of items for moving and/or storage. Unpacking can be added to moving service or done as a stand alone service.</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${pack})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>Packing & Unpacking</HeroServicesTextHeader>
+                    <HeroServicesText>Packing of items for moving and/or storage. Unpacking can be added to moving service or done as a stand alone service.</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d3})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d1})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${hour})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>Hourly Labor</HeroServTextHeader>
-                    <HeroServText>Physical Jobs that require strong hands can be done with the Hourly Labor Service. We will send a pack of workers to complete your task.</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${hour})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>Hourly Labor</HeroServicesTextHeader>
+                    <HeroServicesText>Physical Jobs that require strong hands can be done with the Hourly Labor Service. We will send a pack of workers to complete your task.</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d4})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d2})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${trash})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>Junk Removal</HeroServTextHeader>
-                    <HeroServText>Removal of Junk, Garbage, or Large Items at your designated location.</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${trash})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>Junk Removal</HeroServicesTextHeader>
+                    <HeroServicesText>Removal of Junk, Garbage, or Large Items at your designated location.</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
                 </div>
 
                 <div>
-                <HeroServDivBg style={{ backgroundImage:`url(${d1})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d2})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${night})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>Overnight Moving</HeroServTextHeader>
-                    <HeroServText>Some moves may need extra time or may simply not fall within your schedule. We provide Overnight moving services to help deviate from these issues.</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${night})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>Overnight Moving</HeroServicesTextHeader>
+                    <HeroServicesText>Some moves may need extra time or may simply not fall within your schedule. We provide Overnight moving services to help deviate from these issues.</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d2})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d1})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${vip})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>VIP Moving Services</HeroServTextHeader>
-                    <HeroServText>For special or large scale moves, we will provide the ultimate pack to ensure a Premium moving services is delivered!</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${vip})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>VIP Moving Services</HeroServicesTextHeader>
+                    <HeroServicesText>For special or large scale moves, we will provide the ultimate pack to ensure a Premium moving services is delivered!</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d3})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d2})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${storage})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>Storage</HeroServTextHeader>
-                    <HeroServText>We can simply load all of your items and unload them within a storage unit from our partnered facilities or one of your choice.</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${storage})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>Storage</HeroServicesTextHeader>
+                    <HeroServicesText>We can simply load all of your items and unload them within a storage unit from our partnered facilities or one of your choice.</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
 
-                <HeroServDivBg style={{ backgroundImage:`url(${d4})` }}/> 
-                <HeroServContainer>
+                <HeroServicesDivBg style={{ backgroundImage:`url(${d1})` }}/> 
+                <HeroServicesContainer>
                 <HeroDeco1 src = {deco1}/>
                 <HeroDeco2 src={deco2}/>
-                <HeroServImgContainer>
-                  <HeroServImg style={{ backgroundImage:`url(${tv})` }}/>
-                  </HeroServImgContainer>
-                  <HeroServTextSection>
-                    <HeroServTextHeader>TV Mounting</HeroServTextHeader>
-                    <HeroServText>Simple jobs such as T.V. mounting can be done by our Handy-man!</HeroServText>
-                  </HeroServTextSection>
-                </HeroServContainer>
+                <HeroServicesImgContainer>
+                  <HeroServicesImg style={{ backgroundImage:`url(${tv})` }}/>
+                  </HeroServicesImgContainer>
+                  <HeroServicesTextSection>
+                    <HeroServicesTextHeader>TV Mounting</HeroServicesTextHeader>
+                    <HeroServicesText>Simple jobs such as T.V. mounting can be done by our Handy-man!</HeroServicesText>
+                  </HeroServicesTextSection>
+                </HeroServicesContainer>
                 </div>
 
-                </HeroServeRow>
-              </HeroServeWrapper>
+                </HeroServicesRow>
+              </HeroServicesWrapper>
            
             </HeroServicesSection>
         

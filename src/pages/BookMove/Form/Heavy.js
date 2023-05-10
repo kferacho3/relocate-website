@@ -9,6 +9,7 @@ import {
 
   SecBackground,
   SecElementAmount,
+  SecElementBtnWrap,
   SecElementButtonContainer,
   SecElementButtonWrap,
   SecElementDiv,
@@ -54,10 +55,20 @@ function ItemList({ items, addItem }) {
         </SecElementImgWrap>
         <SecElementButtonContainer key={item.id}>
           <SecElementHeader>{item.name}</SecElementHeader>
+     
          <SecElementButtonWrap>
-          <SecElementPlus src={plus} onClick={() => addItem(item.id, item.label, item.count + 1)}/>
-          <SecElementMinus src={minus} onClick={() => addItem(item.id, item.label, item.count - 1)}/>
+         <SecElementBtnWrap src={minus} onClick={(event) => {
+                                                  if (item.count !== 0) {
+                                                    addItem(item.id, item.label, item.count= item.count - 1, event)
+                                                  }
+                          event.preventDefault();
+           }}>  <SecElementMinus src={minus} />
+          </SecElementBtnWrap>
+     
           <SecElementAmount>{item.count}</SecElementAmount>
+          <SecElementBtnWrap onClick={(event) => addItem(item.id, item.label, item.count = item.count + 1, event)}>
+            <SecElementPlus src={plus} />
+          </SecElementBtnWrap>
           </SecElementButtonWrap>
         </SecElementButtonContainer>
         </SecElementDiv>
@@ -70,24 +81,25 @@ function Heavy({isOpen}) {
     { id: 1, count: 0, name: "Piano", src: h1 },
     { id: 2, count: 0, name: "Safe", src: h2 },
     { id: 3, count: 0, name: "Oven / Stove", src: h3 },
-    { id: 4, count: 0, name: "Playroom", src: h4 },
-    { id: 5, count: 0, name: "Craft Room", src: h5 },
-    { id: 6, count: 0, name: "Kids / Nursery Room", src: h6 },
-    { id: 7, count: 0, name: "Attic", src: h7 },
-    { id: 8, count: 0, name: "Storage / Closet", src: h8 },
-    { id: 9, count: 0, name: "Dining Room", src: h9 },
-    { id: 10, count: 0, name: "Kitchen", src: h10 },
-    { id: 11, count: 0, name: "Garage", src: h11 },
-    { id: 12, count: 0, name: "Patio / Deck", src: h12 },
-    { id: 13, count: 0, name: "Exercise Room", src: h13 },
-    { id: 14, count: 0, name: "Laundry Room", src: h14 },
-    { id: 15, count: 0, name: "Office Space", src: h15 },
+    { id: 4, count: 0, name: "Refrigerator", src: h4 },
+    { id: 5, count: 0, name: "Large Freezer", src: h5 },
+    { id: 6, count: 0, name: "Aquarium / Terrarium", src: h6 },
+    { id: 7, count: 0, name: "Dishwasher", src: h7 },
+    { id: 8, count: 0, name: "Fine Art / Sculptures", src: h8 },
+    { id: 9, count: 0, name: "Washer / Dryer", src: h9 },
+    { id: 10, count: 0, name: "Antique / Fragile Furniture", src: h10 },
+    { id: 11, count: 0, name: "Grandfather Clock", src: h11 },
+    { id: 12, count: 0, name: "Pool Table", src: h12 },
+    { id: 13, count: 0, name: "Large Armoire", src: h13 },
+    { id: 14, count: 0, name: "Riding Lawn Mower", src: h14 },
+    { id: 15, count: 0, name: "Exercise Equipment", src: h15 },
   ]);
 
   // Define state variable to hold selected item data
   const [selectedItems, setSelectedItems] = useState([]);
 
-  function addItem(itemId, itemLabel, itemCount) {
+  function addItem(itemId, itemLabel, itemCount, event = {}) {
+    event.preventDefault();
     const itemIndex = selectedItems.findIndex(item => item.id === itemId);
     if (itemCount === 0) {
       // If the count is 0, remove the item from the selected items

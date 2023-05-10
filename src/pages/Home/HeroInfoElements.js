@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 export const HeroInfoSection = styled.div`
   
     overflow: hidden;
@@ -111,7 +110,7 @@ export const HeroInfoTextSection = styled.div`
     overflow: hidden;
 
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
-    border: 0.25px solid #FFFFFF;
+    //border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
   // background: conic-gradient(from 180deg at 50% 50%, #376392 -58.88deg, #376392 56.98deg, #94DC9C 91.96deg, #376392 135.85deg, #376392 159.91deg, #94DC9C 179.88deg, #376392 198.1deg, #376392 222.09deg, #94DC9C 278.45deg, #376392 301.12deg, #376392 416.98deg);
@@ -124,13 +123,15 @@ export const HeroInfoIcon = styled.img`
     width: 100%;
     height: 100%;
     
+    
 
 `
 export const HeroInfoIconWrap = styled.div`
-width: 101px;
-height: 105px;
-margin-top: 25px;
-margin-left: 50%;
+    width: 100px;
+    height: 100px;
+
+    margin-top: 25px;
+    margin-left: 50%;
     transform: translateX(-50%);
 
 

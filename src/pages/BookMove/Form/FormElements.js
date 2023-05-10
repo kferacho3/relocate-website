@@ -1709,16 +1709,20 @@ export const SecElementButtonContainer = styled.div`
     top: -10px;
 `
 export const SecElementButtonWrap = styled.div`
-    width: 80px;
+    
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-areas: 'itm1 itm2 itm3'; 
+    margin-top: -10px;
     margin-left: 50%;
     transform: translateX(-50%);
 `
 
-export const SecElementAmount = styled.p`
+export const SecElementAmount = styled.div`
     
+    grid-area: itm2;
     
-    margin-left: 28px;
-    margin-top: -36px;
    
     //top: 38px;
 
@@ -1733,16 +1737,26 @@ export const SecElementAmount = styled.p`
 
     color: #233152;
 `
+export const SecElementBtnWrap = styled.button`
+    border: none;
+    //background-image: url('./FormImg/minus.svg');
+  
+
+`
 export const SecElementPlus = styled.img`
+    cursor: pointer;
 
     width: 25px;
     height: 25px;
- 
+    grid-area: itm3;
 `
+
 export const SecElementMinus = styled.img`
-    margin-left: 25px;
+    cursor: pointer;
     width: 25px;
     height: 25px;
+   
+    grid-area: itm1;
 
 `
 export const Col1F = styled.div`

@@ -115,13 +115,13 @@ export const HeroServicesSection = styled.div`
 
 
     width: 100vw;
-    height: 1100px;
+    height: 1200px;
     overflow: hidden;
    
     background: linear-gradient(180deg, #FFFFFF 0%, #94DC9C 50%, rgba(148, 220, 156, 0) 100%);
     @media screen and (max-width: 768px) {
        
-       height: 1300px;
+       height: 1800px;
     }
    
 `
@@ -131,11 +131,12 @@ export const HeroServContainer = styled.div`
     z-index: 999;
     width: 600px;
     height: 150px;
-    margin-top: 70px;
+    margin-top: 150px;
     z-index: 9999;
+    
     align-items: center;
     background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
-    border: 0.25px solid #FFFFFF;
+    //border: 0.25px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     
@@ -144,9 +145,32 @@ export const HeroServContainer = styled.div`
     
  
 `
+export const HeroServicesHeader = styled.h2`
+ 
+    width: 631px;
+    height: 44px;
+    margin-left: 50%;
+    transform: translate(-50%, 100px);
+    font-style: normal;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 44px;
+    
+    /* identical to box height, or 92% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+    @media screen and (max-width: 768px) {
+        zoom: 0.6;
+        white-space: normal;
+   }
+`
 export const HeroServImgContainer = styled.div`
     position: absolute;
-    margin-left: 20px;
+    margin-left: 60px;
     margin-top: 20px;
     width: 55px;
     height: 55px;
@@ -164,8 +188,6 @@ export const HeroServImg = styled.div`
 export const HeroServTextSection = styled.div`
     width: 600px;
     height: 160px;
-    left: 108px;
-    top: 172px;
     overflow: hidden;
   
 `
@@ -192,15 +214,12 @@ export const HeroServTextHeader = styled.div`
 `
 
 export const HeroServeWrapper = styled.div`
-    display: grid;
-    z-index: 1;
-    height: 800px;
-    width: 100%;
-  margin-top: -50px;
+
+    margin-top: 100px;
     max-width: 1100px;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
     @media screen and (max-width: 768px) {
    
        margin-top: -340px
@@ -212,14 +231,17 @@ export const HeroServeWrapper = styled.div`
 export const HeroServeRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
-    gap: 50px;
+    zoom: 0.8;
+    gap: 200px;
     align-items: center;
+    justify-content: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
    
     @media screen and (max-width: 768px) {
         margin: auto;
-        margin-top: 100px;
+        zoom: 1;
+       // margin-top: 100px;
         grid-template-columns: 1fr;
         grid-template-areas:  'col1' 'col2';
         justify-content: center;
@@ -272,19 +294,196 @@ export const HeroServText = styled.div`
 `
 
 export const HeroServDivBg = styled.div`
-    width: 669.17px;
+    width: 750.17px;
     height: 290.66px;
     overflow: hidden;
     justify-content: center;
-    margin-left: -25px;
-    margin-top: -10px;
+    margin-left: -70px;
+    margin-top: 80px;
     position: absolute;
-    transform: matrix(1, 0, 0, .7, 0, 0);
+    transform: matrix(1, 0, 0, .9, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
    // z-index: -9999999;
 
 
 `
+export const HeroServicesicesSection = styled.div`
 
+
+    width: 100vw;
+    height: 1200px;
+    overflow: hidden;
+   
+    background: linear-gradient(180deg, #FFFFFF 0%, #94DC9C 50%, rgba(148, 220, 156, 0) 100%);
+    @media screen and (max-width: 768px) {
+       
+       height: 1800px;
+    }
+   
+`
+export const HeroServicesContainer = styled.div`
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+    width: 600px;
+    height: 150px;
+    margin-top: 150px;
+    z-index: 9999;
+    
+    align-items: center;
+    background: linear-gradient(180deg, #B1C9FF 0%, #6994F4 18.23%, #596D83 67.19%, #4D7EAF 100%);
+    //border: 0.25px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    
+    
+
+    
+ 
+`
+export const HeroServicesicesHeader = styled.h2`
+ 
+    width: 631px;
+    height: 44px;
+    margin-left: 50%;
+    transform: translate(-50%, 20px);
+    font-style: normal;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 44px;
+    
+    /* identical to box height, or 92% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+    @media screen and (max-width: 768px) {
+        zoom: 0.6;
+        white-space: normal;
+   }
+`
+export const HeroServicesImgContainer = styled.div`
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 55px;
+    height: 55px;
+
+`
+export const HeroServicesImg = styled.div`
+  
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    //grid-area: logo;
+`
+export const HeroServicesTextSection = styled.div`
+    width: 600px;
+    height: 160px;
+    overflow: hidden;
+  
+`
+export const HeroServicesTextHeader = styled.div`
+ 
+    width: 250px;
+    height: 75px;
+    margin-bottom: -20px;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+    margin-left: 50%;
+    transform: translate(-50%, 30px);
+
+   
+`
+
+export const HeroServicesWrapper = styled.div`
+
+    margin-top: 100px;
+    max-width: 1100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+    @media screen and (max-width: 768px) {
+   
+       margin-top: -340px
+    }
+  
+
+`;
+
+export const HeroServicesRow = styled.div`
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    zoom: 0.8;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+
+   
+    @media screen and (max-width: 768px) {
+        margin: auto;
+        zoom: 1;
+       // margin-top: 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas:  'col1' 'col2';
+        justify-content: center;
+        transform: scale(0.6);
+    }
+`;
+
+
+export const HeroServicesText = styled.div`
+   
+    width: 520px;
+    height: 61px;
+  
+    margin-top: 22.5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    /* or 160% */
+
+
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+`
+
+export const HeroServicesDivBg = styled.div`
+    width: 750.17px;
+    height: 290.66px;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: -70px;
+    margin-top: 80px;
+    position: absolute;
+    transform: matrix(1, 0, 0, .9, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+   // z-index: -9999999;
+
+
+`
 export const HeroDeco1 = styled.img`
     position: absolute;
     width: 144px;
@@ -367,7 +566,6 @@ export const HeroTestSection = styled.div`
   
  
 
-    overflow: hidden;
     background: #376392;
  
     width: 100vw;
@@ -404,6 +602,7 @@ export const HeroTestContainer = styled.div`
       
   }
 `
+
 
 export const HeroTestDivContainer = styled.div`
    
@@ -784,6 +983,7 @@ export const TopLine = styled.p`
     font-size: 15px;
     line-height: 13px;
 
+    justify-content: flex-start;
     color: #69F490;
 `;
 

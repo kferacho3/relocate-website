@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 
 export const PackHeroHeroContainer = styled.div`
     
@@ -153,6 +152,7 @@ export const TopLine = styled.p`
     font-weight: 400;
     font-size: 14.5008px;
     line-height: 28px;
+    justify-content: flex-start;
     /* or 193% */
 
     display: flex;

@@ -9,6 +9,7 @@ import {
 
   SecBackground,
   SecElementAmount,
+  SecElementBtnWrap,
   SecElementButtonContainer,
   SecElementButtonWrap,
   SecElementDiv,
@@ -51,11 +52,20 @@ function ItemList({ items, addItem }) {
           <SecElementImg src={item.src}/>
         </SecElementImgWrap>
         <SecElementButtonContainer key={item.id}>
-          <SecElementHeader>{item.name}</SecElementHeader>
-         <SecElementButtonWrap>
-          <SecElementPlus src={plus} onClick={() => addItem(item.id, item.label, item.count + 1)}/>
-          <SecElementMinus src={minus} onClick={() => addItem(item.id, item.label, item.count - 1)}/>
+            <SecElementHeader>{item.name}</SecElementHeader>
+            <SecElementButtonWrap>
+         <SecElementBtnWrap onClick={(event) => {
+                                                  if (item.count !== 0) {
+                                                    addItem(item.id, item.label, item.count= item.count - 1, event)
+                                                  }
+                          event.preventDefault();
+           }}>  <SecElementMinus src={minus} />
+          </SecElementBtnWrap>
+     
           <SecElementAmount>{item.count}</SecElementAmount>
+          <SecElementBtnWrap onClick={(event) => addItem(item.id, item.label, item.count = item.count + 1, event)}>
+            <SecElementPlus src={plus} />
+          </SecElementBtnWrap>
           </SecElementButtonWrap>
         </SecElementButtonContainer>
         </SecElementDiv>
@@ -84,7 +94,8 @@ function Items({isOpen, toggle}) {
   ]);
   const [selectedItems, setSelectedItems] = useState([]);
 
-  function addItem(itemId, itemLabel, itemCount) {
+  function addItem(itemId, itemLabel, itemCount, event = {}) {
+    event.preventDefault();
     const itemIndex = selectedItems.findIndex(item => item.id === itemId);
     if (itemCount === 0) {
       // If the count is 0, remove the item from the selected items

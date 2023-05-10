@@ -36,7 +36,8 @@ function MovePrep() {
               //iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
               //icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
               iconStyle = {element.style}
-              icon = {<element.icon />}
+              
+              //icon = {<element.icon />}
             >
               <h2 className="per" style={{color: element.col}} >{element.per}</h2>
               <h3 className="vertical-timeline-element-title">
