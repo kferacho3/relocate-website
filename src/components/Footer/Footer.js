@@ -109,8 +109,8 @@ const Footer = () => {
 
                       <FooterLinksWrapper>
                             <FooterLinkTitle> Contact </FooterLinkTitle>
-                                  <FooterText to='contact'>Contact Us</FooterText>
-                                  <FooterText to='support'>Customer Support</FooterText>
+                                  <FooterText to='connect'>Contact Us</FooterText>
+                                  <FooterText to='help'>Customer Support</FooterText>
                                   <FooterText to='movePrep'>Move Preparation</FooterText>
                       </FooterLinksWrapper> 
                   </FooterMidContainer>

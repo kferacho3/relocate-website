@@ -17,7 +17,8 @@ import ApplyHandman from './pages/ApplyPages/MainPages/ApplyHandman';
 import ApplyPacker from './pages/ApplyPages/MainPages/ApplyPacker';
 import ApplyPackman from './pages/ApplyPages/MainPages/ApplyPackman';
 
-import ContactUs from './pages/Contact/ContactUs';
+import Connect from './pages/Contact/Connect';
+import Help from './pages/Contact/Help';
 import MovePrep from './pages/Contact/MovePrep';
 
 import Footer from './components/Footer/Footer';
@@ -26,6 +27,8 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 
 import ScrollToTop from './components/ScrollToTop';
+
+
 
 export function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -58,7 +61,8 @@ export function App() {
               <Route path='applyCarrier' element={<ApplyCarrier />}  /> 
             </Route>
 
-            <Route path='/contact' element={<ContactUs />}  /> 
+            <Route path='/connect' element={<Connect />}  /> 
+            <Route path='/help' element={<Help />}  /> 
             <Route path='/movePrep' element={<MovePrep />}  /> 
             
 
