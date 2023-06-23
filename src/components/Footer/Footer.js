@@ -81,7 +81,7 @@ const Footer = () => {
                                   <FooterText to='/'>Home</FooterText>
                                   <FooterText to='locations'>Locations</FooterText>
                                   <FooterText to='pack'>Jobs</FooterText>
-                                  <FooterText to='metrics'>Relocation Metrics</FooterText>  
+                                  <FooterText to='relocationMetrics'>Relocation Metrics</FooterText>  
                                   <FooterText to='faq'>FAQ</FooterText> 
                                   <FooterText to='book'>Book Now!</FooterText> 
                       </FooterLinksWrapper> 
@@ -115,7 +115,7 @@ const Footer = () => {
                       </FooterLinksWrapper> 
                   </FooterMidContainer>
                   <FooterRightContainer>
-                  <FooterIcon to='/' style={{ backgroundImage:`url(${logo})` }}/>
+                    <FooterIcon to='/' style={{ backgroundImage:`url(${logo})` }}/>
                   </FooterRightContainer>
                 </FooterRow>
             </FooterWrapper>

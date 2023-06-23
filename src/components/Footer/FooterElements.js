@@ -31,13 +31,21 @@ export const FooterMainContainer = styled.div`
     margin-top: -50px;
     justify-content: center;
     align-items: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
     @media screen and (max-width: 1400px) {
        transform: scale(0.9);
+
+    margin-left: 0;
+    transform: 0;
     }
   
   
   @media screen and (max-width: 1200px) {
     transform: scale(0.7);
+
+    margin-left: 0;
+    transform: 0;
     }
   
 
@@ -158,6 +166,7 @@ export const FooterLeftHead = styled.div`
     left: 59px;
   
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -171,6 +180,7 @@ export const FooterLeftAddress = styled.div`
     right: 72.16%;
 
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -185,6 +195,7 @@ export const FooterLeftNumber = styled.div`
   
 
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -198,6 +209,7 @@ export const FooterLeftEmail = styled.div`
     right: 80.95%;
 
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -214,6 +226,8 @@ export const FooterLeftButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -236,7 +250,7 @@ export const FooterMidContainer = styled.div`
 
 
 
-    width: 30px;
+    width: 200px;
     height: 265px;
     grid-area: col2;
     gap: 50px;
@@ -266,7 +280,7 @@ export const FooterRightContainer = styled.div`
     width: 409px;
     height: 366px;
     right: 0px;
-    margin-left: 60%;
+    margin-left: 75%;
     grid-area: col3;
     @media screen and (max-width: 768px) {
         
@@ -373,7 +387,8 @@ export const FooterLinkTitle = styled.div`
     white-space: nowrap;
     /* or 120% */
 
-    font-family: 'Inter';
+    
+    font-family: "inter";
     font-style: normal;
     font-weight: 600;
     font-size: 18.672px;
@@ -397,6 +412,8 @@ export const FooterBottomSection = styled.div`
     position: relative;
     z-index: 99999;
     width: 55vw;
+
+    font-family: "inter";
     height: 80px;
    // margin-top: 200px;
     transform: translateY(20%);
@@ -465,6 +482,7 @@ export const WebsiteRights = styled.small`
  
     white-space: nowrap;
    
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -484,6 +502,7 @@ export const WebsiteTermsPolicy = styled.small`
     height: 17px;
     margin-top: 5px;
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
@@ -512,6 +531,7 @@ export const SocialIconText = styled.div`
     bottom: 0.36%;
 
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

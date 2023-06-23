@@ -77,14 +77,14 @@ export const NavLogo = styled(LinkR)`
     }
     @media screen and (max-width: 1350px) {
     transform: scale(0.9) translateX(-80px);
-}
-@media screen and (max-width: 1150px) {
-    transform:scale(0.85) translateX(-100px);
-}
-@media screen and (max-width: 950px) {
-    transform: scale(0.8) translateX(-240px);
+    }
+    @media screen and (max-width: 1150px) {
+        transform:scale(0.85) translateX(-100px);
+    }
+    @media screen and (max-width: 950px) {
+        transform: scale(0.8) translateX(-240px);
 
-}
+    }
     @media screen and (max-width: 870px)  {
         margin-left: -20px;
        
@@ -140,6 +140,8 @@ export const NavItem = styled.p`
     margin-right: -75px;
     white-space: nowrap;
     padding: 20px 55px;
+
+    font-family: "inter";
     font-style: normal;
     height: 120px;
     margin-bottom: 40px;
@@ -183,6 +185,8 @@ export const NavBottomText = styled.p`
     height: 20px;
     margin-top: -10px;
     white-space: nowrap;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 13.5008px;
@@ -208,6 +212,8 @@ export const NavBottomText2 = styled(LinkR)`
     width: 500px;
     height: 20px;
     white-space: nowrap;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 13.5008px;
@@ -246,6 +252,7 @@ export const NavLinks = styled(LinkR)`
     
     height: 28px;
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -297,6 +304,8 @@ export const NavIcon = styled.div`
     height: 40px;
     margin-left: 7.5px;
     z-index: 9999;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -317,7 +326,6 @@ export const NavBtn = styled.button`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 16px 46px 18px 24px;
     isolation: isolate;
     cursor: pointer;
     height: 45px;
@@ -327,26 +335,30 @@ export const NavBtn = styled.button`
     /* identical to box height, or 100% */
 
     margin-left: 10px;
-    display: flex;
+  
     align-items: center;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 14px;
     color: #FFFFFF;
-
+    text-align: center;
+    justify-content: center;
+    width: 200px;
 
     /* Inside auto layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    z-index: 0;
-    background: #218207;
+    background: linear-gradient(180deg, rgba(29, 119, 5, 0.8) 0%, rgba(22, 211, 169, 0.8) 0.01%, rgba(0, 255, 56, 0.8) 54.69%, rgba(22, 211, 169, 0.8) 100%);
+    //border: 2px solid #218207;
     border-radius: 80px;
-    
+   // color: #000;
+   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        
     &:hover{
         opacity: 0.7;
+        
     }
  
     @media screen and (max-width: 870px) {
@@ -364,6 +376,7 @@ export const NavNumber = styled(LinkR)`
     padding: 10px 20px;
     margin-left: 0px;
 
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 14.5008px;
@@ -446,6 +459,8 @@ export const NavBotBtn = styled.button`
     /* Inside auto layout */
     text-align: center;
     justify-content: center;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -496,6 +511,8 @@ export const NavBotBtn2 = styled.button`
     /* Inside auto layout */
     text-align: center;
     justify-content: center;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -543,6 +560,8 @@ export const NavBotBtn3 = styled.button`
     border-radius: 4px;
 
     /* Inside auto layout */
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -631,6 +650,8 @@ export const NavPacker = styled(LinkR)`
     /* Inside auto layout */
     text-align: center;
     justify-content: center;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -683,6 +704,8 @@ export const NavDriver = styled(LinkR)`
     /* Inside auto layout */
     text-align: center;
     justify-content: center;
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -732,6 +755,8 @@ export const NavHandman = styled(LinkR)`
 
 
     /* Inside auto layout */
+
+    font-family: "inter";
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -783,7 +808,7 @@ export const NavPackman = styled(LinkR)`
     background: #F1EFFF;
  
 
-    /* Inside auto layout */
+    font-family: "inter";
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -836,11 +861,12 @@ export const NavCarrier = styled(LinkR)`
     background: #F1EFFF;
 
     /* Inside auto layout */
+    font-family: "inter";
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
-    line-height: 16px;
     text-decoration: none;
+    line-height: 16px;
     text-align: center;
     justify-content: center;
     /* or 107% */

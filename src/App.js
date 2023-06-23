@@ -2,24 +2,25 @@ import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.scss';
 //import Home from './pages/index';
-import BookMove from './pages/BookMove/BookMove';
-import PageH from './pages/Home/PageH';
-import PageJP from './pages/JoinPack/PageJP';
-import PageL from './pages/Locations/PageL';
+import BookMove from './pages/About/BookMove/BookMove';
+import FAQ from './pages/About/FAQ/FAQ';
+import PageH from './pages/About/Home/PageH';
+import PageJP from './pages/About/JoinPack/PageJP';
+import PageL from './pages/About/Locations/PageL';
+import RelocationMetrics from './pages/About/RelocationMetrics/RelocationMetrics';
+
+import ApplyInfoNav from './pages/Careers/ApplyInfoNav';
+import ApplyPage from './pages/Careers/ApplyPage';
+import ApplyCarrier from './pages/Careers/MainPages/ApplyCarrier';
+import ApplyDriver from './pages/Careers/MainPages/ApplyDriver';
+import ApplyHandman from './pages/Careers/MainPages/ApplyHandman';
+import ApplyPacker from './pages/Careers/MainPages/ApplyPacker';
+import ApplyPackman from './pages/Careers/MainPages/ApplyPackman';
 import PageS from './pages/Services/PageS';
 
-import ApplyPage from './pages/ApplyPages/ApplyPage';
-
-import ApplyInfoNav from './pages/ApplyPages/ApplyInfoNav';
-import ApplyCarrier from './pages/ApplyPages/MainPages/ApplyCarrier';
-import ApplyDriver from './pages/ApplyPages/MainPages/ApplyDriver';
-import ApplyHandman from './pages/ApplyPages/MainPages/ApplyHandman';
-import ApplyPacker from './pages/ApplyPages/MainPages/ApplyPacker';
-import ApplyPackman from './pages/ApplyPages/MainPages/ApplyPackman';
-
-import Connect from './pages/Contact/Connect';
-import Help from './pages/Contact/Help';
-import MovePrep from './pages/Contact/MovePrep';
+import Connect from './pages/Contact/Connect/Connect';
+import Help from './pages/Contact/Help/Help';
+import MovePrep from './pages/Contact/MovePrep/MovePrep';
 
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
@@ -52,6 +53,9 @@ export function App() {
             <Route path='/pack' element={<PageJP />}  />  
             <Route path='/book' element={<BookMove />}  /> 
             <Route path='/applyPage' element={<ApplyPage />}  /> 
+            <Route path='/relocationMetrics' element={<RelocationMetrics />}/>
+
+            <Route path='/faq' element={<FAQ />}/>
 
             <Route path='applyInfoNav' element={<ApplyInfoNav />}  > 
               <Route path='applyPacker' element={<ApplyPacker />}  /> 
