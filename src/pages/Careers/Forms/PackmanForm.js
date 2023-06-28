@@ -1,6 +1,6 @@
-import emailjs from 'emailjs-com';
+//import emailjs from 'emailjs-com';
 import React, { useRef, useState } from 'react';
-import "./Apply.scss";
+//import "./Apply.scss";
 import {
   ApplyForm,
   ApplyFormButton,
@@ -41,7 +41,7 @@ const handleInput = (e) => {
 const form = useRef();
 
 
-
+/*
     const sendEmail = (e) => {
    
       e.preventDefault();
@@ -64,7 +64,7 @@ const form = useRef();
         setIsSubmit(true);
         e.target.reset();
       }
-
+*/
       const validate = (v) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -89,7 +89,7 @@ const form = useRef();
         <ApplyFormContainer id = {'/packmanForm'}>
         
         <div className='bit5'/>
-          <ApplyForm ref = {form}  onSubmit={sendEmail}>
+          <ApplyForm ref = {form}  /*onSubmit={sendEmail}*/>
             <h2>Contact Form</h2>
             <label htmlFor="name">Name</label>
             <ApplyFormInput

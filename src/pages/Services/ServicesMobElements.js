@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 
 export const ServicesMobContainer = styled.div`
     
@@ -18,7 +17,7 @@ export const ServicesMobContainer = styled.div`
  
     @media screen and (max-width: 768px) {
         //top: 100px;
-        height: 800px;  
+        height: 1000px;  
       }
  
     
@@ -73,14 +72,14 @@ export const ServicesWrapper = styled.div`
     display: grid;
     z-index: 1;
     height: 800px;
-    width: 100%;
+   
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
 
     @media screen and (max-width: 768px) {
-        
-          height: 500px;  
+          width: 100%;
+          height: 800px;  
         }
 
 `;
@@ -105,7 +104,7 @@ export const ServicesRow = styled.div`
 export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
- 
+    margin-left: 200px;
     grid-area: col1;
     @media screen and (max-width: 768px) {
       
@@ -133,7 +132,8 @@ export const Column2 = styled.div`
         align-items: center;
         grid-auto-flow: row;
         padding: 0%;
-        margin-bottom: -200px;
+       // margin-bottom: -200px;
+        //margin-left: 100px;
        
     }
 `;
@@ -164,27 +164,30 @@ export const TextWrapper = styled.div`
 
 export const TopLine = styled.p`
 
-    color: ${({lightText}) => (lightText ? '#660099' : '#fff')};
+color: ${({lightText}) => (lightText ? '#660099' : '#fff')};
     font-style: normal;
+    font-family: "inter";
     font-weight: 900;
     font-size: 36px;
     line-height: 28px;
     /* identical to box height, or 78% */
-    margin-top: 10px;
+    margin-top: 50px;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
 
     color: #233152;
 `;
 
 export const Heading = styled.h1`
     
+     
     width: 400px;
     height: 31px;
    
     
    
     font-style: normal;
+    font-family: "inter";
     font-weight: 900;
     font-size: 48px;
     line-height: 40px;

@@ -24,7 +24,7 @@ import {
 
 
 const ApplyPage3 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText, alt, headline, description, deco1, deco2,
-                     description2, description3, description4, description5, description6, description7, description8, 
+                     description2, description3, description4, description5, description6, description7, description8, too, 
                      description9, description10,description11, description12, description13, description14, description15}) => {
 
   return (
@@ -48,7 +48,13 @@ const ApplyPage3 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText,
                               <Subtitle3 darkText={darkText}>✓{description4}</Subtitle3> 
                               <Subtitle3 darkText={darkText}>✓{description5}</Subtitle3> 
                           </TextWrapper3>
-                          <ApplyPageButton>Apply Now!</ApplyPageButton>
+                          <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer3>
                   </Column1c>
 
@@ -64,7 +70,13 @@ const ApplyPage3 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText,
                               <Subtitle3 darkText={darkText}>✓{description9}</Subtitle3> 
                               <Subtitle3 darkText={darkText}>✓{description10}</Subtitle3> 
                           </TextWrapper3>
-                          <ApplyPageButton>Apply Now!</ApplyPageButton>
+                          <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer3>
                   </Column2c>
 
@@ -79,7 +91,13 @@ const ApplyPage3 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText,
                               <Subtitle3 darkText={darkText}>✓{description14}</Subtitle3> 
                               <Subtitle3 darkText={darkText}>✓{description15}</Subtitle3> 
                           </TextWrapper3>
-                          <ApplyPageButton>Apply Now!</ApplyPageButton>
+                          <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer3>
                   </Column3c>
                     

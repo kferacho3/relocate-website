@@ -1,6 +1,12 @@
-import React, {useState} from 'react';
-import { HeroBookSection,  HeroBookTextSection, HeroBookImg, HeroBookImgWrap,
-         HeroBookText, HeroBookHead, HeroBookButton,  } from './HeroElements';
+import React, { useState } from 'react';
+import {
+  HeroBookButton,
+  HeroBookHead,
+  HeroBookImg, HeroBookImgWrap,
+  HeroBookSection,
+  HeroBookText,
+  HeroBookTextSection,
+} from './HeroElements';
 
 
 
@@ -38,7 +44,7 @@ const Book = () => {
              belongings and give you peace of mind knowing that your move is in capable hands. 
              Choose Relocate for a hassle-free and worry-free move.
             </HeroBookText>
-            <HeroBookButton>FIND YOUR PACK!</HeroBookButton>
+            <HeroBookButton    to = '/book'>FIND YOUR PACK!</HeroBookButton>
         </HeroBookTextSection>
       </HeroBookSection>
 

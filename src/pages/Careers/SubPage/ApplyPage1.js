@@ -29,7 +29,7 @@ import {
                 
 
 const ApplyPage1 = ({pageBg, deco1, deco2, id, imgStart, divStart, img, divBg, 
-                     logo, darkText, description, headline, alt}) => {
+                     logo, darkText, description, headline, alt, too}) => {
 
   return (
       
@@ -50,7 +50,14 @@ const ApplyPage1 = ({pageBg, deco1, deco2, id, imgStart, divStart, img, divBg,
                         <TextWrapper>
                             <Subtitle darkText={darkText} class='font2'>{description}</Subtitle> 
                         </TextWrapper>
-                        <ApplyPageButton>Apply Now!</ApplyPageButton>
+                        <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}
+                            >Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer>
                  
                     </Column1>

@@ -46,7 +46,7 @@ const Home = ({lightBg, id, imgStart, lightText, img, darkText, alt,
                             <TopLine lightText={lightText}>{topLine}</TopLine>
                             <Subtitle darkText={darkText} ><NewlineText text ={description}/></Subtitle>
                             <BtnWrap>
-                            <HomeButton >{buttonLabel}</HomeButton>
+                            <HomeButton to='/book' >{buttonLabel}</HomeButton>
                             </BtnWrap>
   
                         </TextWrapper>

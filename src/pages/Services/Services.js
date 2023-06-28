@@ -62,7 +62,7 @@ const Services = ({lightBg, id, imgStart, divStart, img, divBg, logo, darkText, 
                       <Subtitle darkText={darkText} class='font2'><NewlineText text ={description}/></Subtitle> 
                   </TextWrapper>
                   
-                  <ServicesButton>Apply Now!</ServicesButton>
+                  <ServicesButton to='/book'>Book Now!</ServicesButton>
                 </ServicesTextContainer>
                  
                     </Column1>

@@ -1,26 +1,22 @@
 import React from 'react';
-import { BottomToTop} from '../../components/animations/animations';
 import "./services.scss";
 
 //import insp from '../../images/inspection.svg'
 
-import { 
-  ServicesMobContainer,
-  ServicesWrapper,
-  ServicesRow, 
-  ServicesMobButton,
-  Column1, 
-  Column2, 
-  TextWrapper, 
-  TopLine,
+import {
+  Column1,
+  Column2,
   Heading,
-  Subtitle,
+  Img,
   ImgWrap,
-  Img
-  
+  ServicesMobContainer,
+  ServicesRow,
+  ServicesWrapper,
+  Subtitle,
+  TextWrapper,
+  TopLine
 } from './ServicesMobElements';
 import "./services.scss";
-import { motion} from 'framer-motion';
 
 //import deco3 from './ServicesImg/servDeco.svg';
 
@@ -43,20 +39,15 @@ const ServicesMob = ({lightBg, id, imgStart, topLine, img, divBg, logo, darkText
                 <ServicesRow imgStart={imgStart}>
      
                 
-                <Column1  >
-              
+                <Column1  >              
                   <Heading>{headline}</Heading>
                   <TopLine>{topLine}</TopLine>
-                  <TextWrapper>
-                      
+                  <TextWrapper>                      
                       <Subtitle darkText={darkText} class='font2'>{description}</Subtitle> 
                       <Subtitle darkText={darkText} class='font2'>{description2}</Subtitle> 
                       <Subtitle darkText={darkText} class='font2'>{description3}</Subtitle> 
                   </TextWrapper>
-                  
-               
-                 
-                    </Column1>
+                </Column1>
 
 
                     <Column2>

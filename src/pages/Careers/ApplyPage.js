@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Outlet } from 'react-router-dom';
 import Navbar2 from '../../components/Navbar/NavbarApplyForm';
 import {
   ApplyPageContainer, ApplyPageForm,
@@ -34,7 +35,7 @@ function ApplyPage({isOpen, toggle}) {
     
   
         <Col1 
-                    to='/applyInfoNav/applyPacker' class='radio' >
+                    to='/applyPage/applyPacker' class='radio' >
         <Sec1>
             <ApplyPageInput2Head>Packer</ApplyPageInput2Head>
             <ApplyPageInput2Text>Need both a truck and a set of packers for your move? 
@@ -47,7 +48,7 @@ function ApplyPage({isOpen, toggle}) {
       </Col1>
 
      
-          <Col2  to='/applyInfoNav/applyDriver' class='radio' >
+          <Col2  to='/applyPage/applyDriver' class='radio' >
             <Sec2>
               <ApplyPageInput2Img src={a2}/>
             </Sec2>
@@ -60,7 +61,7 @@ function ApplyPage({isOpen, toggle}) {
             </Sec1>
           </Col2>
   
-          <Col3  to='/applyInfoNav/applyHandman' class='radio' >
+          <Col3  to='/applyPage/applyHandman' class='radio' >
             <Sec2>
               <ApplyPageInput1Img src={a3}/>
             </Sec2>
@@ -74,7 +75,7 @@ function ApplyPage({isOpen, toggle}) {
           </Col3>
 
      
-          <Col4  to='/applyInfoNav/applyPackman' class='radio' >
+          <Col4  to='/applyPage/applyPackman' class='radio' >
             <Sec2>
               <ApplyPageInput2Img src={a4}/>
             </Sec2>
@@ -88,7 +89,7 @@ function ApplyPage({isOpen, toggle}) {
           </Col4>
 
     
-          <Col5 to='/applyInfoNav/applyCarrier' class='radio' >
+          <Col5 to='/applyPage/applyCarrier' class='radio' >
             <Sec2>
               <ApplyPageInput2Img src={a5}/>
             </Sec2>
@@ -104,6 +105,7 @@ function ApplyPage({isOpen, toggle}) {
       </ApplyPageForm>
     </ApplyPageFormContainer>
   </ApplyPageContainer>
+  <Outlet/>
 </>
 
   );

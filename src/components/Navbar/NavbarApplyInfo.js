@@ -90,11 +90,11 @@ const Navbar3 = ({ toggle}) => {
 
                 <NavBottom3>
                     <NavBtnWrap2>
-                        <NavPacker to='/applyInfoNav/applyPacker'>Packer</NavPacker>
-                        <NavDriver to='/applyInfoNav/applyDriver'>Driver</NavDriver>
-                        <NavHandman to='/applyInfoNav/applyHandman'>Hand-man</NavHandman>
-                        <NavPackman to='/applyInfoNav/applyPackman'>Pack-man</NavPackman>  
-                        <NavCarrier to='/applyInfoNav/applyCarrier'>Carrier</NavCarrier> 
+                        <NavPacker to='/applyPage/applyPacker'>Packer</NavPacker>
+                        <NavDriver to='/applyPage/applyDriver'>Driver</NavDriver>
+                        <NavHandman to='/applyPage/applyHandman'>Hand-man</NavHandman>
+                        <NavPackman to='/applyPage/applyPackman'>Pack-man</NavPackman>  
+                        <NavCarrier to='/applyPage/applyCarrier'>Carrier</NavCarrier> 
                     </NavBtnWrap2>
                 </NavBottom3>
               

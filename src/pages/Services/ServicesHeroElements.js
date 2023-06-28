@@ -1,5 +1,5 @@
+import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
-
 export const ServicesHeroContainer = styled.div`
     
     display: flex;
@@ -27,33 +27,31 @@ export const ServicesHeroContainer = styled.div`
 
 
 
-export const ServicesHeroButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px 0px 0px 150px;
+export const ServicesHeroButton = styled(LinkR)`
+    padding: 20px 0px 0px 0px;
     white-space: nowrap;
 
     width: 500px;
     height: 50px;
-    margin-top: 150px;
+    margin-top: 100px;
     cursor: pointer;
-
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
     font-style: normal;
+    font-family: "inter";
     font-weight: 800;
     font-size: 24px;
     line-height: 32px;
     /* identical to box height, or 133% */
 
-    display: flex;
-    align-items: flex-start;
 
     color: #FFFFFF;
     /* identical to box height */
 
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
     letter-spacing: 1.248px;
 

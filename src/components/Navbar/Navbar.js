@@ -72,13 +72,10 @@ const Navbar = ({ toggle}) => {
                         <NavLinks to='/pack'  smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'> <ImIcons.ImPacman style={{ color:`#376392` }}/>Join the Pack!</NavLinks>
                     </NavItem>
 
-                    <NavItem>
-                        <NavLinks to='/book' smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'>Book Move</NavLinks>
-                    </NavItem>
 
                     <NavItem>
                         <NavNumber>+1-(312)-933-4773</NavNumber>
-                        <NavBtn >
+                        <NavBtn to='/book' >
                             BOOK NOW 
                         </NavBtn>
                     </NavItem>

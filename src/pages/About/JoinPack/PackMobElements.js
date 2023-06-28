@@ -170,9 +170,9 @@ export const TopLine = styled.p`
     font-size: 36px;
     line-height: 28px;
     /* identical to box height, or 78% */
-    margin-top: 10px;
+    margin-top: 50px;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
 
     color: #233152;
 `;

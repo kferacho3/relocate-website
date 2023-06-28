@@ -4,18 +4,18 @@ import React from 'react';
 //import insp from '../../images/inspection.svg'
 
 import {
-    Column1,
-    Column2,
-    Heading,
-    Img,
-    ImgWrap,
-    PackHeroHeroButton,
-    PackHeroHeroContainer,
-    PackHeroRow,
-    PackHeroWrapper,
-    Subtitle,
-    TextWrapper,
-    TopLine
+  Column1,
+  Column2,
+  Heading,
+  Img,
+  ImgWrap,
+  PackHeroHeroButton,
+  PackHeroHeroContainer,
+  PackHeroRow,
+  PackHeroWrapper,
+  Subtitle,
+  TextWrapper,
+  TopLine
 } from './PackHeroElements';
 
 
@@ -49,7 +49,7 @@ const PackHero = ({lightBg, id, imgStart, topLine, img, divBg, logo, darkText, d
                       <Subtitle darkText={darkText} class='font2'><NewlineText text ={description}/></Subtitle> 
                   </TextWrapper>
                   
-                  <PackHeroHeroButton>Get started</PackHeroHeroButton>
+                  <PackHeroHeroButton to='/applyPage'>Get started</PackHeroHeroButton>
                
                  
                     </Column1>

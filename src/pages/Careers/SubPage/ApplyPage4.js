@@ -113,7 +113,7 @@ z-index:200;
 top: 175px;
 left: 52px;
 `
-const ApplyPage4 = ({pageBg, id, imgStart, divStart, deco1, deco2, img, divBg, logo, darkText, description, headline, alt}) => {
+const ApplyPage4 = ({pageBg, id, imgStart, divStart, deco1, deco2, img, divBg, logo, darkText, description, headline, alt, too}) => {
 // This function validates emails
 
 const initialValues = {  company: "", dot: "", city: "", ref: "", truckNumber: "", firstName: "", lastName: "", email: "",phone: "", message: "", error: "" };
@@ -216,7 +216,13 @@ const validate = (v) => {
                         <TextWrapper>
                             <Subtitle4 darkText={darkText} class='font2'>{description}</Subtitle4> 
                         </TextWrapper>
-                        <ApplyPageButton>Apply Now!</ApplyPageButton>
+                        <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer>
                  
                     </Column1b>

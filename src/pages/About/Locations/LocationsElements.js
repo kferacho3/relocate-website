@@ -1,5 +1,5 @@
+import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
-
 export const LocationsContainer = styled.div`
     
     display: flex;
@@ -400,13 +400,15 @@ export const LocationsInfoText = styled.p`
 
     color: #000000;
 `
-export const LocationsInfoButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 11.5px 42.9078px 11.5px 43.0922px;
+export const LocationsInfoButton = styled(LinkR)`
+
+    padding: 10px 42.9078px 11.5px 43.0922px;
+    height: 20px;
+    width: 100px;
     border: none;
+    justify-content: center;
     margin-left: 50%;
+    text-decoration: none;
     transform: translateX(-50%);
     font-style: normal;
     font-family: "inter";
@@ -423,9 +425,9 @@ export const LocationsInfoButton = styled.button`
     letter-spacing: 1.248px;
 
     color: #FFFFFF;
-    width: 247px;
-    height: 43px;
-   margin-top: 60px;
+    width: 200px;
+    height: 30px;
+    margin-top: 40px;
 
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);

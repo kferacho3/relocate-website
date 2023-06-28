@@ -918,13 +918,37 @@ export const HeroBookText = styled.p`
     }
 
 `
-export const HeroBookButton = styled.button`
+export const HeroBookButton = styled(LinkR)`
    
-    height: 55px;
-    left: 39.83%;
-    right: 37.9%;
-    margin-top: 50px;
+   padding: 10px 0px 0px 0px;
+    white-space: nowrap;
+
+    width: 225px;
+    height: 40px;
+    margin-top: 25px;
     cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    font-family: "inter";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+
+
+    color: #FFFFFF;
+    /* identical to box height */
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1.248px;
+
+    background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
+    border-radius: 80px;
+    border: none;
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border: none;
     border-radius: 50px;

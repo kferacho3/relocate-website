@@ -116,6 +116,7 @@ export const FooterTopLine = styled.hr`
 
     @media screen and (max-width: 1400px) {
       zoom: 0.9;
+      margin-top: -200px;
     }
   
   

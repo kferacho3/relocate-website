@@ -29,7 +29,7 @@ import {
 const ApplyPage2 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText,  headline, 
                      headline2, deco1, deco2, description, description2, description3,  
                      description4, description5, description6, description7, description8, 
-                     description9, description10,description11, description12}) => {
+                     description9, description10,description11, description12, too}) => {
 
   return (
       
@@ -54,7 +54,13 @@ const ApplyPage2 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText,
                             <Subtitle2 darkText={darkText}>✓{description4}</Subtitle2> 
                             <Subtitle2 darkText={darkText}>✓{description5}</Subtitle2> 
                         </TextWrapper2>
-                        <ApplyPageButton>Apply Now!</ApplyPageButton>
+                        <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer2>
                  
                     </Column1b>
@@ -76,7 +82,13 @@ const ApplyPage2 = ({pageBg, id, imgStart, divStart, img, divBg, logo, darkText,
                               <Subtitle2 darkText={darkText}>✓{description9}</Subtitle2> 
                               <Subtitle2 darkText={darkText}>✓{description10}</Subtitle2> 
                         </TextWrapper2>
-                        <ApplyPageButton>Apply Now!</ApplyPageButton>
+                        <ApplyPageButton to={too}
+                            
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact={true}
+                            offset={-80}>Apply Now!</ApplyPageButton>
                       </ApplyPageTextContainer2>
                     </Column2b>
                     

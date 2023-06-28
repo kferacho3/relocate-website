@@ -136,10 +136,8 @@ export const LocationsGeoButton = styled.button`
 
 
 export const LocationsGeoWrapper = styled.div`
-    display: grid;
+
     z-index: 1;
-    height: 800px;
-    width: 100%;
     align-items: center;
 
     
@@ -147,8 +145,9 @@ export const LocationsGeoWrapper = styled.div`
   
 
     @media screen and (max-width: 768px) {
-        margin-top: 200px;
+        margin-top: 300px;
           height: 800px;  
+          width: 100%;
         }
 
 `;
@@ -156,7 +155,7 @@ export const LocationsGeoWrapper = styled.div`
 export const LocationsGeoRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
-    gap: 125px;
+    gap: 100px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
@@ -173,18 +172,18 @@ export const LocationsGeoRow = styled.div`
 export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
- 
+        
     grid-area: col1;
     @media screen and (max-width: 768px) {
       
         //==position: absolute;
-       align-items: center;
-          position: absolute;
+        align-items: center;
+        position: absolute;
         justify-content: center;
         align-items: center;
         grid-auto-flow: row;
-       justify-content: center;
-       width: 600px;
+        justify-content: center;
+        width: 600px;
         zoom: 0.6;
         margin-left: 50%;
         transform: translateX(-50%);
@@ -200,23 +199,25 @@ export const Column2 = styled.div`
     grid-area: col2;
     
     @media screen and (max-width: 768px) {
-      //  zoom: 0.85;
+       zoom: 1.2;
+       align-items: center;
         position: absolute;
         justify-content: center;
         align-items: center;
         grid-auto-flow: row;
-        padding: 0%;
-       // margin-bottom: 400px;
+        justify-content: center;
         margin-left: 50%;
-        transform: translate(-50%, -70%);
+        transform: translateX(-50%);
+        padding: 0%;
+        margin-top: 1000px;
        
     }
 `;
 
 
 export const TextWrapper = styled.div`
-align-items: center;
-text-align: center;
+    align-items: center;
+    text-align: center;
     max-width: 600px;
 
 `;

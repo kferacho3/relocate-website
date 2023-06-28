@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { Link as LinkR } from 'react-router-dom';
 export const ServicesContainer = styled.div`
     
     display: flex;
@@ -97,15 +98,15 @@ export const DivBg = styled.img`
  
 `
 
-export const ServicesButton = styled.button`
+export const ServicesButton = styled(LinkR)`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 11.5px 42.9078px 11.5px 43.0922px;
     white-space: nowrap;
 
-    width: 275px;
-    height: 50px;
+    width: 200px;
+    height: 30px;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 65px;
@@ -122,7 +123,9 @@ export const ServicesButton = styled.button`
     letter-spacing: 1.248px;
 
     color: #FFFFFF;
-
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
     background: linear-gradient(180deg, #279F85 0%, #3965C8 100%);
     box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
     border-radius: 80px;

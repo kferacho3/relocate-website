@@ -322,12 +322,14 @@ export const NavIcon = styled.div`
 
 `;
 
-export const NavBtn = styled.button`
+export const NavBtn = styled(LinkR)`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     isolation: isolate;
     cursor: pointer;
+    text-decoration:none;
+
     height: 45px;
     margin-right: 35px;
    
