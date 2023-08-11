@@ -50,7 +50,7 @@ export const Nav = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-  
+
     z-index: 99999999999;
     margin-bottom: 120px;
     @media screen and (max-width: 960px) {

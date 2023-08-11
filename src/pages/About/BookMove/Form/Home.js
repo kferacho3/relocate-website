@@ -4,16 +4,35 @@ import {
   HomeButtonWrap,
   HomeContainer, HomeForm,
   HomeFormContainer,
+  HomeFormHeader,
+  HomeFormTopLine,
   HomeHeader,
+  HomeImg,
+  HomeImgContainer,
+  HomeInput,
   HomeLeftButton,
-  HomeRightButton
+  HomeLeftSwitch,
+  HomeOptContainer,
+  HomeRightButton,
+  HomeRightSwitch,
+  HomeRow,
+  HomeText,
+  HomeTextHeader,
+  HomeTextSection,
+  HomeWrapper
 } from './FormElements';
-import PropertyForm from './Home2';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
 //import s1 from '../BookImg/HomeImg1.svg';
 //import s2 from '../BookImg/HomeImg2.svg';
+import h1 from '../../../../logos/homeFormLogos1.svg';
+import h2 from '../../../../logos/homeFormLogos2.svg';
+import h3 from '../../../../logos/homeFormLogos3.svg';
+import h4 from '../../../../logos/homeFormLogos4.svg';
+import h5 from '../../../../logos/homeFormLogos5.svg';
+import h6 from '../../../../logos/homeFormLogos6.svg';
 
+import arrow from './FormImg/homeArrow.svg';
 function Home({ values, handleChange, nextStep, prevStep }) {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
@@ -57,8 +76,6 @@ function Home({ values, handleChange, nextStep, prevStep }) {
         </HomeHeader>
         <HomeFormContainer>
           <HomeForm className="radio-group">
-          <PropertyForm />
-          {/*}
             {values.locations.map((location, index) => (
               <React.Fragment key={index}>
                 <HomeFormHeader>Choose type of Home for address:</HomeFormHeader>
@@ -206,6 +223,7 @@ function Home({ values, handleChange, nextStep, prevStep }) {
                         </HomeOptContainer>
                      
                     </div>
+                    {/* The rest of the code for other home options (Townhouse, Condominium, Pod Container) */}
                   </HomeRow>
                 </HomeWrapper>
               </React.Fragment>
@@ -228,7 +246,7 @@ function Home({ values, handleChange, nextStep, prevStep }) {
     }
   }}
 />
-           */}
+           
             <HomeButtonWrap>
               <HomeLeftButton onClick={handlePrevious}>BACK</HomeLeftButton>
               <HomeRightButton onClick={handleNext}>NEXT</HomeRightButton>
