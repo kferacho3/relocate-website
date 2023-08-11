@@ -248,13 +248,13 @@ const validate = (v) => {
           
                                 <div className="field">
                                 <McDot/>
-                                    <ApplyDOT className = "fontAwesome"   onChange={handleChange} value={formValues.dot} id='name' name='zip' type="text" placeholder="*Dot Number" required={true}/>
+                                    <ApplyDOT className = "fontAwesome"   onChange={handleChange} value={formValues.dot} id='name' name='dot' type="text" placeholder="*Dot Number" required={true}/>
                                 </div>
 
                             
                                 <div className="field">
                                 <TruckAmount/>
-                                    <ApplyTruckQuantity className = "fontAwesome"  onChange={handleChange} value={formValues.truckNumber} id='truckAmount' name='truckAmount' type="text" placeholder="*Truck Amount" required={true}/>
+                                    <ApplyTruckQuantity className = "fontAwesome"  onChange={handleChange} value={formValues.truckNumber} id='truckNumber' name='truckNumber' type="text" placeholder="*Truck Amount" required={true}/>
                                 </div>
 
                                 <div className="field">

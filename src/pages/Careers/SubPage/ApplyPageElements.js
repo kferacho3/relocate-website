@@ -141,10 +141,13 @@ export const ApplyPageButton = styled(LinkR)`
     border-radius: 80px;
     border: none;
 
-    &:hover {
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #279F85 0%, #3965C8 0%);
+  }
 `
 
 
@@ -867,7 +870,13 @@ export const ApplyFormBtn = styled.button`
     background: linear-gradient(180deg, #00FF01 0%, #5DD23D 100%);
     border-radius: 80px;
 
-
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #00FF01 0%, #5DD23D 0%);
+  }
 `
 
 

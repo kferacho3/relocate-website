@@ -203,6 +203,13 @@ export const FooterLeftNumber = styled.div`
     line-height: 20px;
 
     color: #218207;
+    cursor: pointer;
+      
+  &:hover {
+    text-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 export const FooterLeftEmail = styled.div`
     
@@ -241,6 +248,12 @@ export const FooterLeftButton = styled.button`
 
     background: #218207;
     border-radius: 80px;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const FooterMidContainer = styled.div`
@@ -330,7 +343,6 @@ export const FooterIcon = styled(LinkR)`
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
-    
 
 
 `
@@ -429,13 +441,16 @@ export const FooterBottomSection = styled.div`
 
 
 export const SocialMediaWrap = styled.div`
-
+    position: absolute;
+    right: -10%;
     display: flex;
 
     width: 300px;
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 768px) {
        
        margin-top: 50px;
+       left: 50%;
+       transform: translateX(-50%);
     
        }
  
@@ -469,20 +484,54 @@ export const SocialLogoWrap = styled(LinkR)`
 `;
 
 export const FooterBottomLeftContainer = styled.div`
-
-    width: 350px;
+    position: absolute;
+    left: 10%;
+    width: 450px;
     height: 60px;
 
 
 `
+export const FooterInfo = styled.div`
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #70767A;
+  display: flex;
+  align-items: center;
+        position: absolute;
+        left: -10%;
+        top:15px;
+  p {
+    margin: 0;
+    margin-right: 10px;
+  }
 
+  a {
+    
+    color: #70767A;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: 768px) {
+       
+       margin-top: -40px;
+       left: 50%;
+       transform: translateX(-50%);
+    
+       }
+`;
 export const WebsiteRights = styled.small`
   
     width: 250px;
     height: 17px;
- 
+    position: relative;
     white-space: nowrap;
-   
+
     font-family: "inter";
     font-style: normal;
     font-weight: 400;
@@ -499,21 +548,20 @@ export const WebsiteRights = styled.small`
 
 export const WebsiteTermsPolicy = styled.small`
 
-    width: 47px;
+    width: 100px;
     height: 17px;
-    margin-top: 5px;
-
+    //left: 17.5%;
+    //position: relative;
     font-family: "inter";
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 16px;
     /* or 177% */
-
+  
     display: flex;
     align-items: center;
-    margin-top: 0px;
-    color: #747C82;
+    color: #70767A;
 `
 
 export const SocialIconSection = styled.div`
@@ -521,6 +569,7 @@ export const SocialIconSection = styled.div`
     width: 420.56px;
     height: 38px;
     left: 0px;
+    
  
 `
 
@@ -597,4 +646,92 @@ export const VizSet = styled.div`
     align-items: center;
     
 
+`;
+
+
+///
+///
+///
+
+
+export const RoundedSocialButtons = styled.div`
+  text-align: center;
+  
+`;
+
+export const SocialButton = styled.a`
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+
+  &:hover,
+  &:focus {
+    transform: rotate(360deg);
+  }
+`;
+
+// Define other styled components here...
+
+export const FacebookButton = styled(SocialButton)`
+  background: #3b5998;
+  &:hover,
+  &:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+  }
+`;
+
+export const TwitterButton = styled(SocialButton)`
+  background: #55acee;
+  &:hover,
+  &:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+  }
+`;
+
+export const LinkedinButton = styled(SocialButton)`
+  background: #007bb5;
+  &:hover,
+  &:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+  }
+`;
+
+export const YoutubeButton = styled(SocialButton)`
+  background: #bb0000;
+  &:hover,
+  &:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+  }
+`;
+
+export const InstagramButton = styled(SocialButton)`
+  background: #125688;
+  &:hover,
+  &:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+  }
 `;

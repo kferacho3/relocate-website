@@ -86,11 +86,13 @@ export const HomeButton = styled(LinkR)`
     height: 0px;
     width: 400px;
     margin-top: 75px;
-    &:hover {
-  
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #00FF01 0%, #33CF09 0%);
+  }
 `
 
 export const BtnWrap = styled.div`
@@ -795,11 +797,13 @@ export const HeroTestButton = styled.button`
     order: 1;
     flex-grow: 0;
 
-    &:hover {
-        
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+      backdrop-filter: brightness(50%);
+  }
     @media screen and (max-width: 768px) {
    
        margin-top: 450px;
@@ -946,17 +950,18 @@ export const HeroBookButton = styled(LinkR)`
     text-align: center;
     letter-spacing: 1.248px;
 
-    background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
-    border-radius: 80px;
-    border: none;
+ 
     background: linear-gradient(180deg, #00FF01 0%, #33CF09 100%);
     border: none;
     border-radius: 50px;
     
-    &:hover {
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #00FF01 0%, #33CF09 0%);
+  }
     @media screen and (max-width: 768px) {
         width: 550px;
       

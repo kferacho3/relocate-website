@@ -11,7 +11,7 @@ export const contactHero = {
     lightTextDesc: true,
     topLine: 'We will be right with you :)',
     headline: 'Contact Us!',
-    description: "Need to express a concern? Select the button bellow to submit and inquiry and we will get back in touch ASAP!",
+    description: "To voice a concern, please click the button below to submit an inquiry. We will promptly address your message and get back to you as soon as possible.",
     btnLabel: 'Submit Inquiry',
     imgStart: false,
     divStart: false,

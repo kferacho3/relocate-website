@@ -144,9 +144,16 @@ export const StartLeftButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const StartRightButton = styled.button`
@@ -163,9 +170,16 @@ export const StartRightButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1Start = styled.div`
@@ -188,11 +202,14 @@ export const Col1Start = styled.div`
         background-color: wheat;
 
     }
-    &:hover {
-            //z-index: 99999;
-        opacity: 0.9;
-        cursor: pointer;
-    }
+
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    opacity: 0.9;
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 
     
 `
@@ -209,10 +226,12 @@ export const Col2Start = styled.div`
     cursor: pointer;
     
     grid-template-areas: 'img text1';
-    &:hover {
-        //z-index: 99999;
-        opacity: 0.9;
-    cursor: pointer;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    opacity: 0.9;
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
   }
       &:focus {
         opacity: 0.9;
@@ -255,6 +274,7 @@ export const StartInput1 = styled.input`
 
 }
 */
+
 `
 export const StartInput2 = styled.input`
 /*
@@ -491,7 +511,6 @@ export const ServiceForm = styled.form`
     zoom: 0.9;
     display: grid;
     margin-top: 50px;
-    gap: 50px;
     grid-template-areas: 'col1' 'col2';
 `
 
@@ -520,9 +539,16 @@ export const ServiceLeftButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const ServiceRightButton = styled.button`
@@ -539,9 +565,16 @@ export const ServiceRightButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1Service = styled.div`
@@ -571,31 +604,29 @@ export const ServicesSection = styled.div`
    
 `
 export const ServicesOptWrap = styled.div`
+
 `
 export const ServicesOptContainer = styled.div`
   
-    
-    width: 600px;
+    //pointer-events: none;
+    background-color: #fff;
+    width: 700px;
     height: 160px;
-    margin-top: 30px;
+    grid-area: col1;
     cursor: pointer;
-   // z-index: 999;
-    background: #FFF;
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-
-
-&:focus {
+    &:focus {
         outline: 10px solid #632ce4;
        // z-index: 99999;
         background-color: wheat;
 
     }
-    &:hover {
-            //z-index: 99999;
-        opacity: 0.9;
-        cursor: pointer;
-    }
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    opacity: 0.9;
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 export const ServicesImgContainer = styled.div`
     position: absolute;
@@ -616,7 +647,7 @@ export const ServicesImg = styled.div`
     //grid-area: logo;
 `
 export const ServicesTextSection = styled.div`
-    width: 600px;
+    width: 700px;
     height: 160px;
     left: 108px;
     top: 172px;
@@ -633,6 +664,7 @@ export const ServicesTextHeader = styled.div`
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
+    font-family: 'inter';
     line-height: 28px;
     /* identical to box height, or 87% */
     z-index: 1;
@@ -651,12 +683,12 @@ export const ServicesWrapper = styled.div`
     z-index: 1;
     height: 800px;
     width: 100%;
-  margin-top: -50px;
+  margin-top: 0px;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-    zoom: 0.9;
+    zoom: 0.85;
 
   
 
@@ -666,6 +698,7 @@ export const ServicesRow = styled.div`
     display: grid;
     grid-auto-columns: 1fr 1fr;
     gap: 50px;
+    row-gap: 0px;
     align-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
@@ -682,6 +715,7 @@ export const ServicesHeader = styled.h2`
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
+    font-family: 'inter';
     line-height: 28px;
     /* identical to box height, or 87% */
 
@@ -702,6 +736,7 @@ export const ServicesText = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14.5px;
+    font-family: 'inter';
     line-height: 30px;
     /* or 188% */
 
@@ -714,9 +749,7 @@ export const ServicesText = styled.div`
 `
 
 export const ServicesInput = styled.input`
-    width: 600px;
-    height: 160px;
-    cursor: pointer;
+  
     
 `
 
@@ -1054,6 +1087,12 @@ export const InformationLeftButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const InformationRightButton = styled.button`
@@ -1073,6 +1112,12 @@ export const InformationRightButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1Info = styled.div`
@@ -1214,6 +1259,44 @@ export const HomeButtonWrap = styled.div`
 
 `
 
+export const HomeLeftSwitch = styled.img`
+position: absolute;
+    width: 200px;
+    height: 67px;
+    left: -10%;
+    top: 45%;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transform: rotate(180deg);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+        zoom: 2;
+    color: #FFFFFF;
+`
+
+export const HomeRightSwitch = styled.img`
+    position: absolute;
+    width: 200px;
+    height: 67px;
+    right: -10%;
+    top: 45%;
+    zoom: 2;
+    //transform: rotate(180deg);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+
+    color: #FFFFFF;
+`
+
 export const HomeLeftButton = styled.button`
 
     width: 200px;
@@ -1232,6 +1315,12 @@ export const HomeLeftButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const HomeRightButton = styled.button`
@@ -1251,6 +1340,12 @@ export const HomeRightButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1Home = styled.div`
@@ -1284,28 +1379,28 @@ export const HomeOptWrap = styled.div`
 export const HomeOptContainer = styled.div`
   
     
+     //pointer-events: none;
+     background-color: #fff;
     width: 675px;
-    height: 130px;
-    margin-top: 30px;
+    margin-top: 40px;
+    height: 140px;
+    grid-area: col1;
     cursor: pointer;
-   // z-index: 999;
-    background: #FFF;
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-
-
-&:focus {
+    &:focus {
         outline: 10px solid #632ce4;
        // z-index: 99999;
         background-color: wheat;
 
     }
-    &:hover {
-            //z-index: 99999;
-        opacity: 0.9;
-        cursor: pointer;
-    }
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    opacity: 0.9;
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
+
 export const HomeImgContainer = styled.div`
     position: absolute;
     margin-left: 30px;
@@ -1339,11 +1434,13 @@ export const HomeTextHeader = styled.div`
     height: 75px;
     margin-bottom: -20px;
     white-space: nowrap;
+    font-family: 'inter';
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
     line-height: 28px;
     /* identical to box height, or 87% */
+
     z-index: 1;
     align-items: center;
     justify-content: center;
@@ -1360,7 +1457,7 @@ export const HomeWrapper = styled.div`
     z-index: 1;
     height: 800px;
     width: 100%;
-    margin-top: -300px;
+    margin-top: -200px;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
@@ -1390,6 +1487,7 @@ export const HomeFormHeader = styled.h2`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 58px;
 
     align-items: center;
@@ -1406,6 +1504,7 @@ export const HomeFormTopLine = styled.p`
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
+    font-family: 'inter';
     line-height: 39px;
     align-items: center;
     letter-spacing: -0.05em;
@@ -1426,6 +1525,7 @@ export const HomeText = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14.5px;
+    font-family: 'inter';
     line-height: 16px;
     /* or 188% */
 
@@ -1438,9 +1538,7 @@ export const HomeText = styled.div`
 `
 
 export const HomeInput = styled.input`
-    width: 600px;
-    height: 160px;
-    cursor: pointer;
+
     
 `
 
@@ -1458,7 +1556,7 @@ export const HomeInput = styled.input`
 
 
 
-export const ItemsContainer = styled.div`
+export const RoomsContainer = styled.div`
     position: relative;
     width: 100vw;
     height: 1000px;
@@ -1466,7 +1564,7 @@ export const ItemsContainer = styled.div`
 
 `
 
-export const ItemsFormContainer = styled.div`
+export const RoomsFormContainer = styled.div`
     width: 1350px;
     height: 800px;
     left: 83px;
@@ -1495,7 +1593,7 @@ export const ItemsFormContainer = styled.div`
 `
 
 
-export const ItemsHeader = styled.h1`
+export const RoomsHeader = styled.h1`
   
     width: 1100px;
     height: 44px;
@@ -1508,6 +1606,7 @@ export const ItemsHeader = styled.h1`
     font-style: normal;
     font-weight: 400;
     font-size: 29px;
+    font-family: 'inter';
     line-height: 43px;
     /* identical to box height, or 149% */
 
@@ -1525,7 +1624,7 @@ export const ItemsHeader = styled.h1`
         } 
 `
 
-export const ItemsTopLine =styled.h2`
+export const RoomsTopLine =styled.h2`
     margin-left: 50%;
     transform: translateX(-50%);
 
@@ -1536,6 +1635,7 @@ export const ItemsTopLine =styled.h2`
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
+    font-family: 'inter';
     line-height: 36px;
     /* identical to box height, or 189% */
 
@@ -1553,7 +1653,7 @@ export const ItemsTopLine =styled.h2`
         } 
 `
 
-export const ItemsForm = styled.form`
+export const RoomsForm = styled.form`
     zoom: 0.9;
     display: grid;
     margin-top: 50px;
@@ -1561,17 +1661,19 @@ export const ItemsForm = styled.form`
     grid-template-areas: 'col1' 'col2';
 `
 
-export const ItemsButtonWrap = styled.div`
+export const RoomsButtonWrap = styled.div`
     position: absolute;
     width: 958.5px;
     height: 67px;
     top: 87.5%;
     left: 50%;
+
+    z-index: 99999999;
     transform: translateX(-50%);
 
 `
 
-export const ItemsLeftButton = styled.button`
+export const RoomsLeftButton = styled.button`
 
     width: 200px;
     height: 67px;
@@ -1586,12 +1688,19 @@ export const ItemsLeftButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
-export const ItemsRightButton = styled.button`
+export const RoomsRightButton = styled.button`
     position: absolute;
     width: 200px;
     height: 67px;
@@ -1605,9 +1714,16 @@ export const ItemsRightButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 export const SecBackground = styled.div`
 
@@ -1694,6 +1810,7 @@ export const SecElementHeader = styled.p`
     font-style: normal;
     font-weight: 800;
     font-size: 15px;
+    font-family: 'inter';
     line-height: 23px;
     /* identical to box height, or 153% */
     align-items: center;
@@ -1715,6 +1832,8 @@ export const SecElementButtonWrap = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 0.5fr);
     grid-template-areas: 'itm1 itm2 itm3'; 
+
+    z-index: 99999999;
     margin-top: -10px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -1731,6 +1850,7 @@ export const SecElementAmount = styled.div`
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
+    font-family: 'inter';
     line-height: 48px;
     /* identical to box height, or 200% */
 
@@ -1832,6 +1952,7 @@ export const HeavyHeader = styled.h1`
     font-style: normal;
     font-weight: 400;
     font-size: 29px;
+    font-family: 'inter';
     line-height: 43px;
     /* identical to box height, or 149% */
 
@@ -1860,6 +1981,7 @@ export const HeavyTopLine =styled.h2`
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
+    font-family: 'inter';
     line-height: 36px;
     /* identical to box height, or 189% */
 
@@ -1891,6 +2013,8 @@ export const HeavyButtonWrap = styled.div`
     height: 67px;
     top: 87.5%;
     left: 50%;
+
+    z-index: 99999999;
     transform: translateX(-50%);
 
 `
@@ -1910,9 +2034,16 @@ export const HeavyLeftButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const HeavyRightButton = styled.button`
@@ -1929,9 +2060,16 @@ export const HeavyRightButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1H = styled.div`
@@ -2113,6 +2251,7 @@ export const DateHeader = styled.h1`
     font-style: normal;
     font-weight: 400;
     font-size: 29px;
+    font-family: 'inter';
     line-height: 43px;
     /* identical to box height, or 149% */
 
@@ -2172,6 +2311,7 @@ export const DateButtonWrap = styled.div`
     height: 67px;
     top: 87.5%;
     left: 50%;
+    z-index: 99999999;
     transform: translateX(-50%);
 
 `
@@ -2192,8 +2332,15 @@ export const DateLeftButton = styled.button`
     font-weight: 700;
     font-size: 48px;
     line-height: 65px;
+    font-family: 'inter';
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const DateRightButton = styled.button`
@@ -2210,9 +2357,16 @@ export const DateRightButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1D = styled.div`
@@ -2349,6 +2503,7 @@ export const TimeButtonWrap = styled.div`
     height: 67px;
     top: 87.5%;
     left: 50%;
+    z-index: 99999999;
     transform: translateX(-50%);
 
 `
@@ -2368,9 +2523,16 @@ export const TimeLeftButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const TimeRightButton = styled.button`
@@ -2387,9 +2549,16 @@ export const TimeRightButton = styled.button`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 
@@ -2432,11 +2601,13 @@ export const TimeOptContainer = styled.div`
         background-color: wheat;
 
     }
-    &:hover {
-            //z-index: 99999;
-        opacity: 0.9;
-        cursor: pointer;
-    }
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    opacity: 0.9;
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 export const TimeImgContainer = styled.div`
     position: absolute;
@@ -2474,6 +2645,7 @@ export const TimeTextHeader = styled.div`
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
+    font-family: 'inter';
     line-height: 28px;
     /* identical to box height, or 87% */
     z-index: 1;
@@ -2522,6 +2694,7 @@ export const TimeFormHeader = styled.h2`
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+    font-family: 'inter';
     line-height: 58px;
 
     align-items: center;
@@ -2537,6 +2710,7 @@ export const TimeFormTopLine = styled.p`
 
     font-style: normal;
     font-weight: 900;
+    font-family: 'inter';
     font-size: 32px;
     line-height: 39px;
     align-items: center;
@@ -2557,6 +2731,7 @@ export const TimeText = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14.5px;
+    font-family: 'inter';
     line-height: 24px;
     /* or 188% */
 
@@ -2569,9 +2744,7 @@ export const TimeText = styled.div`
 `
 
 export const TimeInput = styled.input`
-    width: 600px;
-    height: 160px;
-    cursor: pointer;
+
     
 `
 

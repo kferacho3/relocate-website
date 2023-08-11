@@ -4,52 +4,105 @@ import Date from "./Form/Date";
 import Heavy from "./Form/Heavy";
 import Home from "./Form/Home";
 import Information from "./Form/Information";
-import Items from "./Form/Items";
-import Service from "./Form/Service";
+import Rooms from './Form/Rooms';
+//import Service from "./Form/Service";
+import Service from './Form/Service2';
 import Start from "./Form/Start";
 import Time from "./Form/Time";
-
 function BookMove() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    occupation: '',
-    city: '',
-    packers: '',
-    service: '',
-    address: [],
-    home: '',
-    selectedItems: [],
-    selectedHeavy: [],
-    date: '',
-    time: ''
-    // Add service field to the form data
+    step1: {
+      packers: '',
+    },
+
+
+    step2: {
+      service: '',
+    },
+
+    step3: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      locations: [{ location: '' }],
+    },
+
+    step4: {
+      homes: [], // An array to store the home selections for each location
+    },
+
+    step5: {
+      selectedRooms: [],
+    },
+
+    step6: {
+      selectedHeavy: [],
+    },
+
+    //step7
+    step7: {
+      date: '',
+    },
+
+    //step8
+    step8: {
+      time: '',
+    },
   });
 
+  //Handle change to next step
   const nextStep = () => {
     setStep((prevStep) => prevStep + 1);
   };
   
+  //Handle change to previous step 
   const prevStep = () => {
     setStep((prevStep) => prevStep - 1);
   };
 
   // Handle fields change
-  const handleChange = (input) => (e) => {
-    setFormData({ ...formData, [input]: e.target.value });
+  const handleChange = (stepKey) => (input) => (e) => {
+    if (stepKey === 'step4') {
+      // Handling home selections for step4 (Home component)
+      const { name, value } = e.target;
+      const locationIndex = parseInt(input); // Convert input (location index) to a number
+  
+      setFormData((prevData) => {
+        const homes = [...prevData.step4.homes];
+        homes[locationIndex] = { ...homes[locationIndex], [name]: value };
+        return {
+          ...prevData,
+          step4: {
+            ...prevData.step4,
+            homes,
+          },
+        };
+      });
+    } else {
+      // For other steps, update the formData as usual
+      setFormData((prevData) => ({
+        ...prevData,
+        [stepKey]: {
+          ...prevData[stepKey],
+          [input]: e.target.value,
+        },
+      }));
+    }
   };
+  
 
   // Get the component corresponding to the current step
+  // Each component receives the following props:
   const getStepComponent = () => {
     switch (step) {
       case 1:
         return (
           <Start
             nextStep={nextStep}
-            handleChange={handleChange}
-            values={formData}
+            handleChange={handleChange('step1')}
+            values={formData.step1}
           />
         );
       case 2:
@@ -57,8 +110,8 @@ function BookMove() {
           <Service
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
+            handleChange={handleChange('step2')}
+            values={formData.step2}
           />
         );
       case 3:
@@ -66,30 +119,29 @@ function BookMove() {
           <Information
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
+            handleChange={handleChange('step3')}
+            values={formData.step3}
           />
         );
-      case 4:
-        return (
-          <Home
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
-          />
-        );
+        case 4:
+          return (
+            <Home
+              nextStep={nextStep}
+              prevStep={prevStep}
+              handleChange={handleChange('step4')}
+              values={{
+                locations: formData.step3.locations,
+                homes: formData.step4.homes,
+              }}
+            />
+          );
       case 5:
         return (
-          <Items
+          <Rooms
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
-            selectedItems={formData.selectedItems}
-            setSelectedItems={(selectedItems) =>
-              setFormData({ ...formData, selectedItems })
-            }
+            handleChange={handleChange('step5')}
+            values={formData.step5}
           />
         );
       case 6:
@@ -97,12 +149,8 @@ function BookMove() {
           <Heavy
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
-            selectedItems={formData.selectedHeavy}
-            setSelectedItems={(selectedHeavy) =>
-              setFormData({ ...formData, selectedHeavy })
-            }
+            handleChange={handleChange('step6')}
+            values={formData.step6}
           />
         );
       case 7:
@@ -110,8 +158,8 @@ function BookMove() {
           <Date
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
+            handleChange={handleChange('step7')}
+            values={formData.step7}
           />
         );
       case 8:
@@ -119,8 +167,8 @@ function BookMove() {
           <Time
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
-            values={formData}
+            handleChange={handleChange('step8')}
+            values={formData.step8}
           />
         );
       default:

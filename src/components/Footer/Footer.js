@@ -1,11 +1,13 @@
 import React from 'react';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import "./Footer.scss";
 import {
-  FooterBottomLeftContainer,
+  FacebookButton,
   FooterBottomLine,
   FooterBottomSection,
   FooterContainer,
   FooterIcon,
+  FooterInfo,
   FooterLeftAddress,
   FooterLeftButton,
   FooterLeftContainer,
@@ -21,11 +23,14 @@ import {
   FooterText,
   FooterTopLine,
   FooterWrapper,
-  SocialLogo,
-  SocialLogoWrap,
+  InstagramButton,
+  LinkedinButton,
+  RoundedSocialButtons,
   SocialMediaWrap,
+  TwitterButton,
   WebsiteRights,
-  WebsiteTermsPolicy
+  WebsiteTermsPolicy,
+  YoutubeButton
 } from './FooterElements';
 
   import * as AiIcons from 'react-icons/ai';
@@ -34,11 +39,6 @@ import {
 
 
   
-import fb from './FooterImg/Facebook.svg';
-import ig from './FooterImg/Instagram.svg';
-import ldin from './FooterImg/LinkdIn.svg';
-import tw from './FooterImg/Twitter.svg';
-import yt from './FooterImg/Youtube.svg';
 import logo from './FooterImg/footerLogo.svg';
 
 
@@ -124,28 +124,38 @@ const Footer = () => {
          </FooterMainContainer>
          <FooterBottomLine/>
             <FooterBottomSection>
-                <FooterBottomLeftContainer>
-                    <WebsiteRights>Relocate © {new Date().getFullYear()} All rights reserved</WebsiteRights>
-                    <WebsiteTermsPolicy>Terms</WebsiteTermsPolicy>
-                    <WebsiteTermsPolicy>FAQ</WebsiteTermsPolicy>
-                </FooterBottomLeftContainer>
+        
+
+           <FooterInfo>
+        <WebsiteRights>Relocate © {new Date().getFullYear()} All rights reserved</WebsiteRights>
+        <WebsiteTermsPolicy><a href="#">Terms</a></WebsiteTermsPolicy>
+        <WebsiteTermsPolicy style={{marginLeft: `-30px`}}><a href="#">Privacy</a></WebsiteTermsPolicy>
+      </FooterInfo>
                 
                 <SocialMediaWrap>
-                    <SocialLogoWrap>
-                      <SocialLogo src={fb} />
-                    </SocialLogoWrap>
-                    <SocialLogoWrap>
-                      <SocialLogo src={ig}/>
-                    <SocialLogoWrap>
-                    </SocialLogoWrap>
-                      <SocialLogo src={ldin}/>
-                    <SocialLogoWrap>
-                    </SocialLogoWrap>
-                      <SocialLogo src={tw} />
-                    <SocialLogoWrap>
-                    </SocialLogoWrap>
-                      <SocialLogo src={yt} />
-                    </SocialLogoWrap>
+                <RoundedSocialButtons>
+
+                  <FacebookButton href="https://www.facebook.com/" target="_blank">
+                    <FaFacebookF />
+                  </FacebookButton>
+
+                  <TwitterButton href="https://www.twitter.com/" target="_blank">
+                    <FaTwitter />
+                  </TwitterButton>
+
+                  <LinkedinButton href="https://www.linkedin.com/" target="_blank">
+                    <FaLinkedin />
+                  </LinkedinButton>
+
+                  <YoutubeButton href="https://www.youtube.com/" target="_blank">
+                    <FaYoutube />
+                  </YoutubeButton>
+
+                  <InstagramButton href="https://www.instagram.com/" target="_blank">
+                    <FaInstagram />
+                  </InstagramButton>
+
+                </RoundedSocialButtons>
                 </SocialMediaWrap>
 
             </FooterBottomSection>

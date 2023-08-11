@@ -143,6 +143,12 @@ export const ApplyPageLeftButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const ApplyPageRightButton = styled.button`
@@ -162,6 +168,12 @@ export const ApplyPageRightButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1 = styled(LinkR)`

@@ -1,8 +1,42 @@
+import { ImPacman } from 'react-icons/im';
+import { IoIosArrowDropdown } from 'react-icons/io';
 import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 import "./Navbar.scss";
 
+export const Pacman = styled(ImPacman)`
 
+   font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+    display: flex;
+    align-items: center;
+    
+    color: black;
+    &:hover {
+
+    color: #218207;
+  }
+`
+
+export const ArrowDropdown = styled(IoIosArrowDropdown)`
+
+   font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+    display: flex;
+    align-items: center;
+    
+    color: black;
+    &:hover {
+
+    color: #218207;
+  }
+`
 export const Nav = styled.nav`
    
     height: 120px;
@@ -15,7 +49,7 @@ export const Nav = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
-    overflow: hidden;
+    right: 0;
   
     z-index: 99999999999;
     margin-bottom: 120px;
@@ -39,7 +73,7 @@ export const NavbarContainer = styled.div`
 
 export const NavLogoCont = styled.div`
     margin-top: 2%;
-    margin-left: 60px;
+    margin-left: 5%;
     display: flex;
     align-items: center;
     width: 190px;
@@ -106,16 +140,43 @@ export const MobileIcon = styled(LinkR)`
         color: #000;
         }   
     `;
-
-export const NavMenu = styled.ul`
-
+export const NavEnd = styled.ul`
+    position: fixed;
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
     height: 80px;
-    transform: translateX(-100px);
- 
+    //transform: translateX(-100px);
+    right: 7.5%;
+
+        
+@media screen and (max-width: 1350px) {
+    transform: scale(0.9);
+}
+@media screen and (max-width: 1150px) {
+    transform:scale(0.7);
+}
+@media screen and (max-width: 950px) {
+    transform: scale(0.7) translateX(-200px);
+}
+
+    @media screen and (max-width: 870px) {
+       display: none;
+    }
+            
+
+`;
+export const NavMenu = styled.ul`
+    position: fixed;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+
+    height: 80px;
+    //transform: translateX(-100px);
+    right: 35%;
 
         
 @media screen and (max-width: 1350px) {
@@ -135,19 +196,16 @@ export const NavMenu = styled.ul`
 
 `;
 
-export const NavItem = styled.p`
-    position: relative;
-    margin-right: -75px;
-    white-space: nowrap;
-    padding: 20px 55px;
+export const NavItem = styled.div`
 
+    white-space: nowrap;
     font-family: "inter";
     font-style: normal;
     height: 120px;
-    margin-bottom: 40px;
-    width: calc(100% + 50px);
+    margin-bottom: 20px;
+    //width: calc(100% + 50px);
     /* or 429% */
-   // margin-left: -60px;
+    margin-left: 50px;
     display: flex;
     align-items: center;
     letter-spacing: 0px;
@@ -178,6 +236,7 @@ export const NavBottom = styled.div`
     width: 100vw;
     top: 90px; 
     background: #F5F7F9;
+    z-index: -1;
 
 `
 export const NavBottomText = styled.p`
@@ -231,6 +290,12 @@ export const NavBottomText2 = styled(LinkR)`
     text-align: center;
 
     color: #218207;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+    text-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
     @media screen and (max-width: 870px) {
         margin-left: -150px;
         font-size: 10px;
@@ -248,10 +313,132 @@ export const NavBottomTextSection = styled.p`
 
     }
 `
+
+export const NavLinksss = styled(LinkR)`
+    appearance: none;
+    //background-color: #FFFFFF;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+    display: flex;
+    align-items: center;
+    
+    color: #376392;
+    text-decoration: none;
+    height: 40px;
+    margin: 0;
+    opacity: 1;
+    padding: 1.25em 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1), background-color 100ms cubic-bezier(0.694, 0, 0.335, 1), color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    //z-index: 9999;
+
+  &:before {
+    animation: opacityFallbackOut 0.5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: #EBEBEB;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+ 
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+    border-radius: 50%;
+    color: #fff;
+
+  }
+
+  &:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    color: #fff;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+    background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
+    border-radius: 50%; /* Set your desired border radius here */
+  }
+
+  &:after {
+    background-color: #FFFFFF;
+  }
+
+  span {
+    z-index: 1;
+    position: relative;
+  }
+
+  &:hover {
+    ${Pacman}{
+        color: #fff;
+    }
+  
+  
+  }
+
+`;
+
 export const NavLinks = styled(LinkR)`
+  --b: 0.1em;
+  --c: #218207;
+    height: 28px;
+    
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+    display: flex;
+    align-items: center;
+    //background: linear-gradient(180deg, rgba(0, 255, 1, 0.5) 57.29%, rgba(43, 211, 222, 0) 100%);
+    color: #376392;
+    text-decoration: none;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  background-clip: text, padding-box;
+  -webkit-background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
+  &:hover {
+    color: 
+    linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    --_p: 100%;
+    --_s: 0.3s;
+  }
+`;
+
+export const StyledHoverText = styled(NavLinks)`
+  &:hover {
+    --_p: 100%;
+    --_s: 0.3s;
+  }
+`;
+
+export const NavLinkss = styled(LinkR)`
     
     height: 28px;
-
+    width: 100%;
     font-family: "inter";
     font-style: normal;
     font-weight: 400;
@@ -282,15 +469,12 @@ export const NavLinks = styled(LinkR)`
        // transition: all 280ms ease-in-out;
        // border-radius: 80px;
         //width: 130px;
-        width: calc(100% + 100px);
-        height: 30%;
-      
     }
     &:active {
         color: #218207;
         transition: all 30ms ease-in-out;
         border: 1px  #69F490;
-       
+
         border-radius: 80px;
         width: 150%;
         height: 30%;
@@ -323,49 +507,41 @@ export const NavIcon = styled.div`
 `;
 
 export const NavBtn = styled(LinkR)`
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    isolation: isolate;
-    cursor: pointer;
-    text-decoration:none;
+  //appearance: none;
+  background: radial-gradient(circle at 10% 20%, #00FF01 0%, rgb(250, 255, 209) 90%);
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "inter";
+    zoom: 0.8;
+  font-weight: 500;
+  letter-spacing: -2px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 0px;
 
-    height: 45px;
-    margin-right: 35px;
-   
-    border: none;
-    /* identical to box height, or 100% */
+  &:hover {
+    background-color: #FFC229;
+    box-shadow: #218207 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
 
-    margin-left: 10px;
-  
-    align-items: center;
+  &:active {
+    transform: scale(1.025);
+  }
 
-    font-family: "inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 14px;
-    color: #FFFFFF;
-    text-align: center;
-    justify-content: center;
-    width: 200px;
-
-    /* Inside auto layout */
-
-    background: linear-gradient(180deg, rgba(29, 119, 5, 0.8) 0%, rgba(22, 211, 169, 0.8) 0.01%, rgba(0, 255, 56, 0.8) 54.69%, rgba(22, 211, 169, 0.8) 100%);
-    //border: 2px solid #218207;
-    border-radius: 80px;
-   // color: #000;
-   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-        
-    &:hover{
-        opacity: 0.7;
-        
-    }
- 
-    @media screen and (max-width: 870px) {
-        display: none;
-    }
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
 `;
 
 export const NavNumber = styled(LinkR)`
@@ -390,31 +566,15 @@ export const NavNumber = styled(LinkR)`
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     z-index: 9999;
-    &:hover {
-       // background-image: url('./images/chest2.png');
-        
-    }
+  
+  &:hover {
+    text-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 
 `;
 
-export const NavBtnBG = styled.div`
-    padding: 20px 22px;
-    margin-left: -40px;
-    margin-top: 20px;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    outline: none;
-    border: none;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    background-image: url('./images/rainbow.png');
-    background-position: center;
-    background-size: cover;
-    transform: scale(7) translateX(14.5px);
-
-   
-`;
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -906,3 +1066,53 @@ export const NavCarrier = styled(LinkR)`
 
 
 `
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//*                                                                                                                                   ///
+//*                           Dropdown Nav                                                                                            ///   
+//*                                                                                                                                   ///
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+export const DropdownMenu = styled.ul`
+  //background: #fff;
+  color: #376392;
+  width: 200px;
+  position: absolute;
+  top: 50px;
+  margin-left: -40px;
+  list-style: none;
+  text-align: start;
+    z-index: 999;
+
+    //box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &.clicked {
+    display: none;
+  }
+`;
+
+export const DropdownMenuItem = styled.li`
+  background: #fff;
+  color: #376392;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &:hover {
+    background: #5cabff;
+  }
+`;
+
+export const DropdownLink = styled(LinkR)`
+color: #376392;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  color: #376392;
+  padding: 16px;
+`;

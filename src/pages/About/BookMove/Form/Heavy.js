@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
+import "./Form.scss";
 import {
   HeavyButtonWrap,
-  HeavyContainer, HeavyForm,
+  HeavyContainer,
+  HeavyForm,
   HeavyFormContainer,
   HeavyHeader,
-  HeavyLeftButton, HeavyRightButton, HeavyTopLine,
-
-  SecBackground,
+  HeavyLeftButton,
+  HeavyRightButton,
+  HeavyTopLine,
   SecElementAmount,
   SecElementBtnWrap,
   SecElementButtonContainer,
@@ -21,8 +23,6 @@ import {
   SecRow,
   SecWrapper
 } from './FormElements';
-//import emailjs from 'emailjs-com';
-import "./Form.scss";
 
 import h1 from './FormImg/formHeavy1.svg';
 import h2 from './FormImg/formHeavy2.svg';
@@ -49,42 +49,33 @@ function ItemList({ items, selectedHeavy, addItem }) {
   return (
     <>
       {items.map(item => (
-        <SecElementDiv>
-        <SecElementImgWrap>
-          <SecElementImg src={item.src}/>
-        </SecElementImgWrap>
-        <SecElementButtonContainer key={item.id}>
-          <SecElementHeader>{item.name}</SecElementHeader>
-     
-         <SecElementButtonWrap>
-         <SecElementBtnWrap src={minus} onClick={(event) => {
-                                                  if (item.count !== 0) {
-                                                    addItem(item.id, item.label, item.count= item.count - 1, event)
-                                                  }
-                          event.preventDefault();
-           }}>  <SecElementMinus src={minus} />
-          </SecElementBtnWrap>
-     
-          <SecElementAmount>{item.count}</SecElementAmount>
-          <SecElementBtnWrap onClick={(event) => addItem(item.id, item.label, item.count = item.count + 1, event)}>
-            <SecElementPlus src={plus} />
-          </SecElementBtnWrap>
-          </SecElementButtonWrap>
-        </SecElementButtonContainer>
+        <SecElementDiv key={item.id}>
+          <SecElementImgWrap>
+            <SecElementImg src={item.src} />
+          </SecElementImgWrap>
+          <SecElementButtonContainer>
+            <SecElementHeader>{item.name}</SecElementHeader>
+            <SecElementButtonWrap>
+              <SecElementBtnWrap src={minus} onClick={() => {
+                if (item.count !== 0) {
+                  addItem(item.id, item.label, item.count - 1);
+                }
+              }}>
+                <SecElementMinus src={minus} />
+              </SecElementBtnWrap>
+              <SecElementAmount>{item.count}</SecElementAmount>
+              <SecElementBtnWrap onClick={() => addItem(item.id, item.label, item.count + 1)}>
+                <SecElementPlus src={plus} />
+              </SecElementBtnWrap>
+            </SecElementButtonWrap>
+          </SecElementButtonContainer>
         </SecElementDiv>
       ))}
     </>
   );
 }
-function Heavy({nextStep, prevStep }) {
 
-  const handleNext = () => {
-    nextStep();
-  };
-
-  const handlePrevious = () => {
-    prevStep();
-  };
+function Heavy({ nextStep, prevStep }) {
   const [items, setItems] = useState([
     { id: 1, count: 0, name: "Piano", src: h1 },
     { id: 2, count: 0, name: "Safe", src: h2 },
@@ -103,19 +94,17 @@ function Heavy({nextStep, prevStep }) {
     { id: 15, count: 0, name: "Exercise Equipment", src: h15 },
   ]);
 
-  // Define state variable to hold selected item data
   const [selectedHeavy, setSelectedHeavy] = useState([]);
 
-  function addItem(itemId, itemLabel, itemCount, event = {}) {
-    event.preventDefault();
+  const addItem = (itemId, itemLabel, itemCount) => {
     const itemIndex = selectedHeavy.findIndex(item => item.id === itemId);
     if (itemCount === 0) {
-      // If the count is 0, remove the item from the selected items
+      // If the count is 0, remove the item from the selectedHeavy
       if (itemIndex >= 0) {
         setSelectedHeavy(selectedHeavy.filter(item => item.id !== itemId));
       }
     } else {
-      // If the count is not 0, update the item count or add the item to the selected items
+      // If the count is not 0, update the item count or add the item to the selectedHeavy
       const newItem = { id: itemId, label: itemLabel, count: itemCount };
       if (itemIndex >= 0) {
         setSelectedHeavy(
@@ -125,44 +114,41 @@ function Heavy({nextStep, prevStep }) {
         setSelectedHeavy([...selectedHeavy, newItem]);
       }
     }
-  }
+  };
 
-  function handleSubmit(event) {
+  const handleSubmit = event => {
     event.preventDefault();
-    // Here you can do something with the selectedItems, like submitting them to a server
+    // Here you can do something with the selectedHeavy, like submitting them to a server
     console.log(selectedHeavy);
-  }
+  };
+
+  const handleNext = () => {
+    nextStep();
+  };
+
+  const handlePrevious = () => {
+    prevStep();
+  };
 
   return (
-<>
-
-<HeavyContainer>
-  <HeavyHeader>HEAVY DUTY NOTICE:</HeavyHeader>
-  <HeavyTopLine>Please indicate which of the listed items you need to have moved. These objects typically require special equipment for transportation, so it's important for us to know in advance and prepare our packers accordingly.</HeavyTopLine>
-  <HeavyFormContainer>
-
-      <HeavyForm>
-    
-      <SecBackground>
-        <SecWrapper>
+    <HeavyContainer>
+      <HeavyHeader>HEAVY DUTY NOTICE:</HeavyHeader>
+      <HeavyTopLine>Please indicate which of the listed items you need to have moved. These objects typically require special equipment for transportation, so it's important for us to know in advance and prepare our packers accordingly.</HeavyTopLine>
+      <HeavyFormContainer>
+        <HeavyForm>
+          <SecWrapper>
             <SecRow>
-            
-            <ItemList items={items} selectedHeavy={selectedHeavy} addItem={addItem} />
-        <form onSubmit={handleSubmit}>
-          <button type="submit">Submit</button>
-        </form>
-
+              <ItemList items={items} selectedHeavy={selectedHeavy} addItem={addItem} />
             </SecRow>
-        </SecWrapper>
-      </SecBackground>
-      <HeavyButtonWrap>
-          <HeavyLeftButton onClick={handlePrevious}>BACK</HeavyLeftButton>
-          <HeavyRightButton onClick={handleNext}>NEXT</HeavyRightButton>
-      </HeavyButtonWrap>
-      </HeavyForm>
-    </HeavyFormContainer>
-  </HeavyContainer>
-</>
+          </SecWrapper>
+          <HeavyButtonWrap>
+            <HeavyLeftButton onClick={handlePrevious}>BACK</HeavyLeftButton>
+            <HeavyRightButton onClick={handleNext}>NEXT</HeavyRightButton>
+          </HeavyButtonWrap>
+        </HeavyForm>
+      </HeavyFormContainer>
+    </HeavyContainer>
   );
 }
+
 export default Heavy;

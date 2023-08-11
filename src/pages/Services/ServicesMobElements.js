@@ -61,10 +61,13 @@ export const ServicesMobButton = styled.button`
     border-radius: 80px;
     border: none;
     
-    &:hover {
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #00FF01 0%, #33CF09 0%);
+  }
 `
 
 
@@ -156,8 +159,9 @@ export const Column22 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
+    justify-content: left;
     max-width: 540px;
 
 `;
@@ -226,10 +230,10 @@ export const Subtitle = styled.p`
     line-height: 28px;
     /* or 160% */
 
-    display: flex;
+    //display: flex;
     align-items: left;
     text-align: left;
-
+    justify-content: left;
     color: #747C82;
     @media screen and (max-width: 640px) {
         width: 500px;

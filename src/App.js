@@ -97,13 +97,14 @@ export function App() {
 
             <Route path='/faq' element={<FAQ />}/>
             <Route path='/applyPage' element={<ApplyPage />}  /> 
+
             <Route path='/applyPage'  > 
-              <Route path='applyInfoNav' element={<ApplyInfoNav />} / > 
-              <Route path='applyPacker' element={<ApplyPacker />}  /> 
-              <Route path='applyDriver' element={<ApplyDriver />}  /> 
-              <Route path='applyHandman' element={<ApplyHandman />}  /> 
-              <Route path='applyPackman' element={<ApplyPackman />}  /> 
-              <Route path='applyCarrier' element={<ApplyCarrier />}  /> 
+              <Route path='applyInfoNav' element={<ApplyInfoNav />} /> 
+              <Route path='applyPacker' element={<ApplyPacker />} /> 
+              <Route path='applyDriver' element={<ApplyDriver />} /> 
+              <Route path='applyHandman' element={<ApplyHandman />} /> 
+              <Route path='applyPackman' element={<ApplyPackman />} /> 
+              <Route path='applyCarrier' element={<ApplyCarrier />} /> 
               
               <Route path='packerForm' element={<PackerForm />}  /> 
               <Route path='driverForm' element={<DriverForm />}  /> 
@@ -112,9 +113,9 @@ export function App() {
               <Route path='carrierForm' element={<CarrierForm />}  /> 
             </Route>
 
-            <Route path='/connect' element={<Connect />}  /> 
+            <Route path='/connect' element={<Connect />} /> 
             <Route path='/help' element={<Help />}  /> 
-            <Route path='/movePrep' element={<MovePrep />}  /> 
+            <Route path='/movePrep' element={<MovePrep />} /> 
             
 
 
@@ -124,5 +125,5 @@ export function App() {
           
         </Router>
        
-    );
+        );
 } export default App;

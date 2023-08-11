@@ -1,0 +1,218 @@
+
+/*
+input[type=radio] {
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(0deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%),
+                    -webkit-linear-gradient(90deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+              0 0 0 1px hsla(0,0%,0%,.6),
+              0 2px 3px hsla(0,0%,0%,.6),
+              0 4px 3px hsla(0,0%,0%,.4),
+              0 6px 6px hsla(0,0%,0%,.2),
+              0 10px 6px hsla(0,0%,0%,.2);
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin-right: 15px;
+  position: relative;
+  width: 15px;
+  -webkit-appearance: none;
+}
+input[type=radio]:after {
+  background-color: #444;
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+              0 1px 1px hsla(0,0%,100%,.8);
+  content: '';
+  display: block;
+  height: 7px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 7px;
+}
+input[type=radio]:checked:after {
+  background-color: #f66;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+              inset 0 2px 2px hsla(0,0%,100%,.4),
+              0 1px 1px hsla(0,0%,100%,.8),
+              0 0 2px 2px hsla(0,70%,70%,.4);
+}
+  */
+
+/* HIDE RADIO */
+  [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  /* IMAGE STYLES */
+  [type=radio] + div {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + div {
+   // outline: 5px solid rgba(0, 255, 1, 0.5);
+   border-top: 10px solid #47c465;
+   border-bottom:10px solid hsl(188, 100%, 50%);
+   background-image: 
+       linear-gradient(#47c465, #00deff),
+       linear-gradient(#47c465, #00deff)
+   ;
+    zoom: 1.01;
+    transition: all 0.4s ease-out;
+    opacity: 0.9;
+  }
+  
+  
+
+  [type=radio]:checked + div::after {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-out;
+    background-color: linear-gradient(180deg, #A4FFA4 0%, #C5FCC5 17.71%, #4CFF4C 71.87%, #4CC24C 90.62%);
+    border-radius: 8rem;
+    z-index: 2;
+  }
+  input {
+    box-sizing: border-box;
+    z-index: 9999;
+   // position: absolute;
+   width: 400px;
+    height: 50px;
+
+
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    
+  }
+  
+  input:focus {
+    border: 1px solid rgb(0, 208, 255);
+  }
+  
+  .locations {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first-division {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px 2rem 0;
+    width: 100%;
+  }
+
+  button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 2px;
+    //padding: 5px 10px;
+  }
+  .first-division button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+  
+    margin-top: 5rem;
+ 
+  }
+  
+  .second-division button {
+    margin-top: 65px;
+    color: red;
+    //border: 3px solid red;
+  }
+
+
+
+
+
+
+
+  @import url("https://cdn.syncfusion.com/ej2/material.css");
+p,
+.calendar,
+footer {
+  display: flex;
+  justify-content: center;
+}
+select {
+  width: 220px;
+}
+input,
+select {
+  position: static;
+  border: none;
+  height: 20px;
+}
+fieldset {
+  width: 220px;
+  height: 28px;
+  margin-left: 508px;
+}
+footer #cal {
+  background-color: #c70039;
+  color: white;
+  width: 130px;
+  height: 35px;
+}
+#cal:hover {
+  background-color: lighter;
+  cursor: pointer;
+}
+header #log {
+  margin-top: 15px;
+}
+header {
+  background-color: #c70039;
+  height: 50px;
+}
+div.btns {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  /* border: 2px solid black; */
+  padding: 10px;
+  grid-gap: 10px;
+  width: 300px;
+  margin-left: 29%;
+}
+.btns > div {
+  text-align: center;
+}
+.grid-item {
+  border: 1px solid grey;
+  height: 25px;
+  width: 60px;
+  display: flex;
+  color: grey;
+  text-align: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 10px;
+}
+.grid-item18 {
+  border: 1px solid grey;
+  width: 60px;
+  height: 25px;
+  padding: 6px;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 47%;
+  border-radius: 10px;
+}
+.grid-item:hover,
+.grid-item18:hover {
+  color: black;
+  cursor: pointer;
+}

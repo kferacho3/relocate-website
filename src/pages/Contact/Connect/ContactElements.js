@@ -64,10 +64,12 @@ export const ContactUsButton = styled.button`
     border-radius: 80px;
     border: none;
     
-    &:hover {
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 
@@ -392,6 +394,12 @@ export const PopUpLeftButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const PopUpRightButton = styled.button`
@@ -411,6 +419,12 @@ export const PopUpRightButton = styled.button`
     line-height: 65px;
 
     color: #FFFFFF;
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+  }
 `
 
 export const Col1P = styled.div`
@@ -616,7 +630,13 @@ export const PButton = styled.button`
     background: linear-gradient(180deg, #00FF01 0%, #40E314 100%);
     cursor: pointer;
     z-index: 5;
-
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #00FF01 0%, #40E314 0%);
+  }
 
 `
 

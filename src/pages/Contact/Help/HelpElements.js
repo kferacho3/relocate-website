@@ -1,3 +1,4 @@
+import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //*                                                                                                                                   ///
@@ -14,8 +15,8 @@ export const HelpHeroContainer = styled.div`
     position: relative;
     overflow: hidden;
     background: #fff;    
-    height: 700px;
-    top: 120px;
+    height: 1000px;
+   // top: 120px;
     width: 100vw;
     border-radius: 0px;
     background: ${({lightBg}) => (lightBg ? '#F0F8FF' : '#ffffff')};
@@ -30,7 +31,10 @@ export const HelpHeroContainer = styled.div`
 `;
 
 
-
+export const HelpHeroButtonWrap = styled(LinkS)`
+   width: 600px;
+    height: 50px;
+`
 
 
 export const HelpHeroButton = styled.button`
@@ -62,10 +66,13 @@ export const HelpHeroButton = styled.button`
     border-radius: 80px;
     border: none;
     
-    &:hover {
-        opacity: calc(.7);
-        transition: all 100ms ease-in-out;
-}
+    &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+      -0.125rem -0.125rem .65rem rgba(33, 130, 7, 0.5),
+      0.125rem 0.125rem .65rem rgba(31, 82, 16, 0.5);
+      background: linear-gradient(180deg, #00FF01 0%, #33CF09 0%);
+  }
 `
 
 
@@ -319,8 +326,9 @@ export const HelpResourceButton = styled.div`
     margin-top: 25px;
     margin-left: 50%;
     transform: translateX(-50%);
-      cursor: pointer;
-
+    cursor: pointer;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     background: ${({btnCol}) => (btnCol ? '#00FF01' : '#6994F4')};
     border: ${({btnCol}) => (btnCol ? '#00FF01' : '#6994F4')};
 
@@ -348,6 +356,7 @@ export const HelpResourceButton = styled.div`
         transition: all 100ms ease-in-out;
 }
 `
+
 
 
 export const HelpResourceWrapper = styled.div`
