@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import "./BookMove.scss";
 import Date from "./Form/Date";
 import Heavy from "./Form/Heavy";
-import Home from "./Form/Home";
 import Information from "./Form/Information";
 import Rooms from './Form/Rooms';
 //import Service from "./Form/Service";
+import { BackButton, BookMoveContainer, ButtonContainer, NextButton } from './Form/FormElements';
 import Service from './Form/Service2';
 import Start from "./Form/Start";
 import Time from "./Form/Time";
@@ -26,28 +26,25 @@ function BookMove() {
       lastName: '',
       email: '',
       phone: '',
-      locations: [{ location: '' }],
+      locations: [
+    ],
     },
 
     step4: {
-      homes: [], // An array to store the home selections for each location
-    },
-
-    step5: {
       selectedRooms: [],
     },
 
-    step6: {
+    step5: {
       selectedHeavy: [],
     },
 
     //step7
-    step7: {
+    step6: {
       date: '',
     },
 
     //step8
-    step8: {
+    step7: {
       time: '',
     },
   });
@@ -62,36 +59,30 @@ function BookMove() {
     setStep((prevStep) => prevStep - 1);
   };
 
-  // Handle fields change
-  const handleChange = (stepKey) => (input) => (e) => {
-    if (stepKey === 'step4') {
-      // Handling home selections for step4 (Home component)
-      const { name, value } = e.target;
-      const locationIndex = parseInt(input); // Convert input (location index) to a number
-  
-      setFormData((prevData) => {
-        const homes = [...prevData.step4.homes];
-        homes[locationIndex] = { ...homes[locationIndex], [name]: value };
-        return {
-          ...prevData,
-          step4: {
-            ...prevData.step4,
-            homes,
-          },
-        };
-      });
-    } else {
-      // For other steps, update the formData as usual
-      setFormData((prevData) => ({
+  const handlePropertyChange = (index) => (propertyData) => {
+    setFormData((prevData) => {
+      const updatedLocations = [...prevData.step3.locations];
+      updatedLocations[index] = propertyData;
+      
+      return {
         ...prevData,
-        [stepKey]: {
-          ...prevData[stepKey],
-          [input]: e.target.value,
+        step3: {
+          ...prevData.step3,
+          locations: updatedLocations,
         },
-      }));
-    }
+      };
+    });
   };
-  
+
+  const handleChange = (stepKey) => (input) => (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [stepKey]: {
+        ...prevData[stepKey],
+        [input]: e.target.value,
+      },
+    }));
+  };
 
   // Get the component corresponding to the current step
   // Each component receives the following props:
@@ -117,27 +108,25 @@ function BookMove() {
       case 3:
         return (
           <Information
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange('step3')}
-            values={formData.step3}
-          />
+          nextStep={nextStep}
+          prevStep={prevStep}
+          handleChange={handleChange('step3')}
+          handlePropertyChange={handlePropertyChange} // Pass the function
+          values={formData.step3}
+        />
         );
-        case 4:
-          return (
-            <Home
-              nextStep={nextStep}
-              prevStep={prevStep}
-              handleChange={handleChange('step4')}
-              values={{
-                locations: formData.step3.locations,
-                homes: formData.step4.homes,
-              }}
-            />
-          );
-      case 5:
+      case 4:
         return (
           <Rooms
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChange={handleChange('step4')}
+            values={formData.step4}
+          />
+        );
+      case 5:
+        return (
+          <Heavy
             nextStep={nextStep}
             prevStep={prevStep}
             handleChange={handleChange('step5')}
@@ -146,7 +135,7 @@ function BookMove() {
         );
       case 6:
         return (
-          <Heavy
+          <Date
             nextStep={nextStep}
             prevStep={prevStep}
             handleChange={handleChange('step6')}
@@ -155,20 +144,11 @@ function BookMove() {
         );
       case 7:
         return (
-          <Date
+          <Time
             nextStep={nextStep}
             prevStep={prevStep}
             handleChange={handleChange('step7')}
             values={formData.step7}
-          />
-        );
-      case 8:
-        return (
-          <Time
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange('step8')}
-            values={formData.step8}
           />
         );
       default:
@@ -178,10 +158,69 @@ function BookMove() {
   };
 
   return (
-    <div className="book-move">
-      {getStepComponent()}
-    </div>
+    <BookMoveContainer>
+      {step === 1 && (
+        <>
+          <Start
+            nextStep={nextStep}
+            handleChange={handleChange('step1')}
+            values={formData.step1}
+          />
+          <ButtonContainer>
+            <NextButton onClick={nextStep}>NEXT</NextButton>
+          </ButtonContainer>
+        </>
+      )}
+
+      {step === 7 && (
+        <>
+          <Time
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChange={handleChange('step7')}
+            values={formData.step7}
+          />
+          <ButtonContainer>
+            <BackButton onClick={prevStep}>BACK</BackButton>
+          </ButtonContainer>
+        </>
+      )}
+
+      {step !== 1 && step !== 7 && (
+        <>
+          {getStepComponent()}
+          <ButtonContainer>
+            <NextButton onClick={nextStep}>NEXT</NextButton>
+            <BackButton onClick={prevStep}>BACK</BackButton>
+          </ButtonContainer>
+        </>
+      )}
+    </BookMoveContainer>
   );
 }
 
 export default BookMove;
+
+
+/*
+
+    step3: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      locations: [
+        {
+        street: '',
+        property1: '',
+        property2: '',
+      }
+    
+    ],
+    },
+
+    this.props.locations.push({
+      'street':
+    })
+
+    */

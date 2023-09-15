@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 
 import "./Form.scss";
 import {
-  RoomsButtonWrap,
+  BookMoveHeader,
+  BookMoveTopLine,
   RoomsContainer,
   RoomsForm,
-  RoomsFormContainer,
-  RoomsHeader,
-  RoomsLeftButton,
-  RoomsRightButton,
-  RoomsTopLine,
   SecElementAmount,
   SecElementBtnWrap,
   SecElementButtonContainer,
@@ -54,6 +50,19 @@ function ItemList({ rooms, selectedRooms, addItem }) {
             <SecElementImg src={item.src} />
           </SecElementImgWrap>
           <SecElementButtonContainer>
+          <label>
+              <input
+                type="checkbox"
+                checked={item.count > 0}
+                value = {item.name + " " + item.count}
+                onChange={() =>
+                  item.count > 0
+                    ? addItem(item.id, item.label, 0)
+                    : addItem(item.id, item.label, 1)
+                }
+              />
+              {item.name} ({item.id + item.count})
+            </label>
             <SecElementHeader>{item.name}</SecElementHeader>
             <SecElementButtonWrap>
               <SecElementBtnWrap
@@ -82,7 +91,7 @@ function ItemList({ rooms, selectedRooms, addItem }) {
   );
 }
 
-function Rooms({ nextStep, prevStep }) {
+function Rooms() {
   const [rooms, setRooms] = useState([
     { id: 1, count: 0, name: "Master Bedroom", src: i1 },
     { id: 2, count: 0, name: "Standard Bedroom", src: i2 },
@@ -123,37 +132,19 @@ function Rooms({ nextStep, prevStep }) {
     }
   };
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    // Here you can do something with the selectedRooms, like submitting them to a server
-    console.log(selectedRooms);
-  };
 
-  const handleNext = () => {
-    nextStep();
-  };
-
-  const handlePrevious = () => {
-    prevStep();
-  };
 
   return (
     <RoomsContainer>
-      <RoomsHeader>Could you please specify the exact rooms that you require us to relocate?</RoomsHeader>
-      <RoomsTopLine>To ensure that we allocate the most suitable workforce for the job, it would be beneficial if you could provide us with a comprehensive inventory.</RoomsTopLine>
-      <RoomsFormContainer>
+      <BookMoveHeader>Could you please specify the exact rooms that you require us to relocate?</BookMoveHeader>
+      <BookMoveTopLine>To ensure that we allocate the most suitable workforce for the job, it would be beneficial if you could provide us with a comprehensive inventory.</BookMoveTopLine>
         <RoomsForm>
           <SecWrapper>
             <SecRow>
               <ItemList rooms={rooms} selectedRooms={selectedRooms} addItem={addItem} />
             </SecRow>
           </SecWrapper>
-          <RoomsButtonWrap>
-            <RoomsLeftButton onClick={handlePrevious}>BACK</RoomsLeftButton>
-            <RoomsRightButton onClick={handleNext}>NEXT</RoomsRightButton>
-          </RoomsButtonWrap>
         </RoomsForm>
-      </RoomsFormContainer>
     </RoomsContainer>
   );
 }

@@ -2,22 +2,19 @@ import React from 'react';
 
 import "./Form.scss";
 import {
-  TimeButtonWrap,
+  BookMoveHeader,
+  BookMoveTopLine,
   TimeContainer,
   TimeForm,
-  TimeFormContainer,
   TimeFormHeader,
-  TimeHeader,
   TimeImg,
   TimeImgContainer,
   TimeInput,
-  TimeLeftButton,
   TimeOptContainer,
   TimeRow,
   TimeText,
   TimeTextHeader,
   TimeTextSection,
-  TimeTopLine,
   TimeWrapper
 } from './FormElements';
 
@@ -26,20 +23,12 @@ import t2 from './FormImg/formTime2.svg';
 import t3 from './FormImg/formTime3.svg';
 import t4 from './FormImg/formTime4.svg';
 
-function Time({ nextStep, prevStep, values, handleChange }) {
-  const handleNext = () => {
-    nextStep();
-  };
-
-  const handlePrevious = () => {
-    prevStep();
-  };
+function Time({ values, handleChange }) {
 
   return (
     <TimeContainer>
-      <TimeHeader>Please indicate the preferred start time for your selected move on:</TimeHeader>
-      <TimeTopLine>We kindly ask that you select a time that suits your schedule best.</TimeTopLine>
-      <TimeFormContainer>
+      <BookMoveHeader>Please indicate the preferred start time for your selected move on:</BookMoveHeader>
+      <BookMoveTopLine>We kindly ask that you select a time that suits your schedule best.</BookMoveTopLine>
         <TimeForm className="radio-group">
           <TimeFormHeader>Choose a start time for location:</TimeFormHeader>
           <TimeWrapper>
@@ -134,11 +123,7 @@ function Time({ nextStep, prevStep, values, handleChange }) {
               </div>
             </TimeRow>
           </TimeWrapper>
-          <TimeButtonWrap>
-            <TimeLeftButton onClick={handlePrevious}>BACK</TimeLeftButton>
-          </TimeButtonWrap>
         </TimeForm>
-      </TimeFormContainer>
     </TimeContainer>
   );
 }

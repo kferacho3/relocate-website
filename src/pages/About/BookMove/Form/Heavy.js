@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 
 import "./Form.scss";
 import {
-  HeavyButtonWrap,
+  BookMoveHeader,
+  BookMoveTopLine,
   HeavyContainer,
   HeavyForm,
-  HeavyFormContainer,
-  HeavyHeader,
-  HeavyLeftButton,
-  HeavyRightButton,
-  HeavyTopLine,
   SecElementAmount,
-  SecElementBtnWrap,
   SecElementButtonContainer,
   SecElementButtonWrap,
   SecElementDiv,
@@ -45,7 +40,7 @@ import h15 from './FormImg/formHeavy15.svg';
 import minus from './FormImg/minus.svg';
 import plus from './FormImg/plus.svg';
 
-function ItemList({ items, selectedHeavy, addItem }) {
+function ItemList({ items, selectedHeavy, updateItemCount }) {
   return (
     <>
       {items.map(item => (
@@ -56,17 +51,32 @@ function ItemList({ items, selectedHeavy, addItem }) {
           <SecElementButtonContainer>
             <SecElementHeader>{item.name}</SecElementHeader>
             <SecElementButtonWrap>
-              <SecElementBtnWrap src={minus} onClick={() => {
-                if (item.count !== 0) {
-                  addItem(item.id, item.label, item.count - 1);
-                }
-              }}>
-                <SecElementMinus src={minus} />
-              </SecElementBtnWrap>
-              <SecElementAmount>{item.count}</SecElementAmount>
-              <SecElementBtnWrap onClick={() => addItem(item.id, item.label, item.count + 1)}>
-                <SecElementPlus src={plus} />
-              </SecElementBtnWrap>
+              <SecElementMinus
+                src={minus}
+                onClick={() => {
+                  if (item.count > 0) {
+                    updateItemCount(item.id, item.count - 1);
+                  }
+                }}
+              />
+              <SecElementAmount>
+                <input
+                  type="number"
+                  value={item.count}
+                  min={0}
+                  max={10}
+                  onChange={e => updateItemCount(item.id, parseInt(e.target.value))}
+                />
+                {item.count}
+              </SecElementAmount>
+              <SecElementPlus
+                src={plus}
+                onClick={() => {
+                  if (item.count < 10) {
+                    updateItemCount(item.id, item.count + 1);
+                  }
+                }}
+              />
             </SecElementButtonWrap>
           </SecElementButtonContainer>
         </SecElementDiv>
@@ -75,7 +85,7 @@ function ItemList({ items, selectedHeavy, addItem }) {
   );
 }
 
-function Heavy({ nextStep, prevStep }) {
+function Heavy() {
   const [items, setItems] = useState([
     { id: 1, count: 0, name: "Piano", src: h1 },
     { id: 2, count: 0, name: "Safe", src: h2 },
@@ -95,7 +105,12 @@ function Heavy({ nextStep, prevStep }) {
   ]);
 
   const [selectedHeavy, setSelectedHeavy] = useState([]);
-
+  const updateItemCount = (itemId, itemCount) => {
+    const updatedItems = items.map(item =>
+      item.id === itemId ? { ...item, count: itemCount } : item
+    );
+    setItems(updatedItems);
+  };
   const addItem = (itemId, itemLabel, itemCount) => {
     const itemIndex = selectedHeavy.findIndex(item => item.id === itemId);
     if (itemCount === 0) {
@@ -116,37 +131,19 @@ function Heavy({ nextStep, prevStep }) {
     }
   };
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    // Here you can do something with the selectedHeavy, like submitting them to a server
-    console.log(selectedHeavy);
-  };
-
-  const handleNext = () => {
-    nextStep();
-  };
-
-  const handlePrevious = () => {
-    prevStep();
-  };
 
   return (
     <HeavyContainer>
-      <HeavyHeader>HEAVY DUTY NOTICE:</HeavyHeader>
-      <HeavyTopLine>Please indicate which of the listed items you need to have moved. These objects typically require special equipment for transportation, so it's important for us to know in advance and prepare our packers accordingly.</HeavyTopLine>
-      <HeavyFormContainer>
+      <BookMoveHeader>HEAVY DUTY NOTICE:</BookMoveHeader>
+      <BookMoveTopLine>Please indicate which of the listed items you need to have moved. These objects typically require special equipment for transportation, so it's important for us to know in advance and prepare our packers accordingly.</BookMoveTopLine>
         <HeavyForm>
           <SecWrapper>
             <SecRow>
-              <ItemList items={items} selectedHeavy={selectedHeavy} addItem={addItem} />
+              <ItemList items={items} selectedHeavy={selectedHeavy} updateItemCount={updateItemCount}  addItem={addItem} />
             </SecRow>
           </SecWrapper>
-          <HeavyButtonWrap>
-            <HeavyLeftButton onClick={handlePrevious}>BACK</HeavyLeftButton>
-            <HeavyRightButton onClick={handleNext}>NEXT</HeavyRightButton>
-          </HeavyButtonWrap>
+     
         </HeavyForm>
-      </HeavyFormContainer>
     </HeavyContainer>
   );
 }

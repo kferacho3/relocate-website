@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 import './App.scss';
 //import Home from './pages/index';
 
@@ -70,60 +70,62 @@ import Navbar from './components/Navbar/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import Sidebar from './components/Sidebar/Sidebar';
 
+const ConditionalFooterWrapper = ({ children }) => {
+  const location = useLocation();
+  const shouldRenderFooter = location.pathname !== '/book'; // Change '/book' to the actual path of the BookMove route
 
+  return (
+    <>
+      {children}
+      {shouldRenderFooter && <Footer />}
+    </>
+  );
+};
 
 export function App() {
-  const [isOpen, setIsOpen] = useState(false)
- 
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
-      setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
   
-    return (
+  return (
+    <Router>
+      <ScrollToTop />
+      <Sidebar />
+      <Navbar toggle={toggle} />
 
-        <Router>
-        
-          <ScrollToTop/>
-          <Sidebar/>
-          <Navbar toggle={toggle}/>
- 
-          <Routes >
-            <Route path="/" element={<PageH />}/>
-            <Route path='/services' element={<PageS />}  />
-            <Route path='/locations' element={<PageL />}  />
-            <Route path='/pack' element={<PageJP />}  />  
-            <Route path='/book' element={<BookMove />}  /> 
-            <Route path='/relocationMetrics' element={<RelocationMetrics />}/>
+      <Routes>
+        <Route path="/" element={<ConditionalFooterWrapper> <PageH /> </ConditionalFooterWrapper>} />
+        <Route path="/services" element={<ConditionalFooterWrapper> <PageS /> </ConditionalFooterWrapper>} />
+        <Route path="/locations" element={<ConditionalFooterWrapper> <PageL /> </ConditionalFooterWrapper>} />
+        <Route path="/pack" element={<ConditionalFooterWrapper> <PageJP /> </ConditionalFooterWrapper>} />
+        <Route path="/book" element={<BookMove />} />
+        <Route path="/relocationMetrics" element={<ConditionalFooterWrapper> <RelocationMetrics /> </ConditionalFooterWrapper>} />
+        <Route path="/faq" element={<ConditionalFooterWrapper> <FAQ /> </ConditionalFooterWrapper>} />
+        <Route path="/applyPage" element={<ConditionalFooterWrapper> <ApplyPage /> </ConditionalFooterWrapper>} />
 
-            <Route path='/faq' element={<FAQ />}/>
-            <Route path='/applyPage' element={<ApplyPage />}  /> 
-
-            <Route path='/applyPage'  > 
-              <Route path='applyInfoNav' element={<ApplyInfoNav />} /> 
-              <Route path='applyPacker' element={<ApplyPacker />} /> 
-              <Route path='applyDriver' element={<ApplyDriver />} /> 
-              <Route path='applyHandman' element={<ApplyHandman />} /> 
-              <Route path='applyPackman' element={<ApplyPackman />} /> 
-              <Route path='applyCarrier' element={<ApplyCarrier />} /> 
-              
-              <Route path='packerForm' element={<PackerForm />}  /> 
-              <Route path='driverForm' element={<DriverForm />}  /> 
-              <Route path='handmanForm' element={<HandmanForm />}  /> 
-              <Route path='packmanForm' element={<PackerForm />}  /> 
-              <Route path='carrierForm' element={<CarrierForm />}  /> 
-            </Route>
-
-            <Route path='/connect' element={<Connect />} /> 
-            <Route path='/help' element={<Help />}  /> 
-            <Route path='/movePrep' element={<MovePrep />} /> 
-            
+        <Route path="/applyPage">
+        <Route path="applyInfoNav" element={<ConditionalFooterWrapper> <ApplyInfoNav /> </ConditionalFooterWrapper>} />
+          <Route path="applyPacker" element={<ConditionalFooterWrapper> <ApplyPacker /> </ConditionalFooterWrapper>} />
+          <Route path="applyDriver" element={<ConditionalFooterWrapper> <ApplyDriver /> </ConditionalFooterWrapper>} />
+          <Route path="applyHandman" element={<ConditionalFooterWrapper> <ApplyHandman /> </ConditionalFooterWrapper>} />
+          <Route path="applyPackman" element={<ConditionalFooterWrapper> <ApplyPackman /> </ConditionalFooterWrapper>} />
+          <Route path="applyCarrier" element={<ConditionalFooterWrapper> <ApplyCarrier /> </ConditionalFooterWrapper>} />
 
 
-          </Routes> 
+          <Route path="packerForm" element={<PackerForm />} />
+          <Route path="driverForm" element={<DriverForm />} />
+          <Route path="handmanForm" element={<HandmanForm />} />
+          <Route path="packmanForm" element={<PackerForm />} />
+          <Route path="carrierForm" element={<CarrierForm />} />
+        </Route>
 
-          <Footer/>
-          
-        </Router>
-       
-        );
-} export default App;
+        <Route path="/connect" element={<ConditionalFooterWrapper> <Connect /> </ConditionalFooterWrapper>} />
+        <Route path="/help" element={<ConditionalFooterWrapper> <Help /> </ConditionalFooterWrapper>} />
+        <Route path="/movePrep" element={<ConditionalFooterWrapper> <MovePrep /> </ConditionalFooterWrapper>} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

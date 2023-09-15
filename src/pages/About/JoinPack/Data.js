@@ -1,6 +1,6 @@
 export const hero = {
     id: 'servicesHero',
-    lightBg: false,
+    lightBg: false,                                                                                                                                        
     lightText: false,
     lightTextDesc: true,
     topLine: 'Search for a pack ro join nearby!',

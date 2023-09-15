@@ -48,6 +48,12 @@ input[type=radio]:checked:after {
     width: 0;
     height: 0;
   }
+  [type=number] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
   /* IMAGE STYLES */
   [type=radio] + div {
     cursor: pointer;
@@ -122,12 +128,12 @@ input[type=radio]:checked:after {
     display: flex;
     align-items: center;
   
-    margin-top: 5rem;
+   // margin-top: 5rem;
  
   }
   
   .second-division button {
-    margin-top: 65px;
+    //margin-top: 65px;
     color: red;
     //border: 3px solid red;
   }

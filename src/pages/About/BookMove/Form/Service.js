@@ -11,13 +11,10 @@ import vip from '../../../../logos/VIPIcon.svg';
 
 import "./Form.scss";
 import {
-  ServiceButtonWrap,
   ServiceContainer,
   ServiceForm,
   ServiceFormContainer,
   ServiceHeader,
-  ServiceLeftButton,
-  ServiceRightButton,
   ServiceTopLine,
   ServicesImg,
   ServicesImgContainer,
@@ -30,17 +27,8 @@ import {
   ServicesWrapper
 } from './FormElements';
 
-function Service({ nextStep, prevStep, handleChange, values }) {
-  const handleNext = (e) => {
-    e.preventDefault();
-    handleChange('service')({ target: { value: values.service } }); // Update the service field in the formData state
-    nextStep();
-  };
-  
-  const handlePrevious = (e) => {
-    e.preventDefault();
-    prevStep();
-  };
+function Service({ handleChange, values }) {
+
 
 
   return (
@@ -212,10 +200,6 @@ function Service({ nextStep, prevStep, handleChange, values }) {
                 </ServicesRow>
               </ServicesWrapper>
 
-            <ServiceButtonWrap>
-              <ServiceLeftButton onClick={handlePrevious}>BACK</ServiceLeftButton>
-              <ServiceRightButton onClick={handleNext}>NEXT</ServiceRightButton>
-            </ServiceButtonWrap>
           </ServiceForm>
         </ServiceFormContainer>
       </ServiceContainer>

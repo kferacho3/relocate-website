@@ -1,32 +1,32 @@
 import React from 'react';
 
 import {
-  Col1Start, Col2Start, Sec1, Sec2, StartButtonWrap,
+  BookMoveHeader,
+  BookMoveTopLine,
+  Col1Start, Col2Start,
+  Sec1, Sec2,
   StartContainer, StartForm,
   StartFormContainer,
-  StartHeader,
   StartInput1,
   StartInput1Img,
   StartInput2, StartInput2Head,
   StartInput2Img,
-  StartInput2Text,
-  StartRightButton, StartTopLine
+  StartInput2Text
 } from './FormElements';
 //import emailjs from 'emailjs-com';
 import s1 from '../BookImg/startImg1.svg';
 import s2 from '../BookImg/startImg2.svg';
 import "./Form.scss";
-function Start({ nextStep, handleChange, values }) {
-  const handleNext = () => {
-    nextStep();
-  };
+function Start({ handleChange, values }) {
+
 
   return (
     <>
       <StartContainer>
-        <StartHeader>Choose which service best suits your needs to get the best price matching.</StartHeader>
-        <StartTopLine>Select from our affordable options to accommodate your needed service.</StartTopLine>
+     
         <StartFormContainer>
+        <BookMoveHeader>Choose which service best suits your needs to get the best price matching.</BookMoveHeader>
+        <BookMoveTopLine>Select from our affordable options to accommodate your needed service.</BookMoveTopLine>
           <StartForm className="radio-group">
             <label>
               <StartInput1
@@ -73,9 +73,9 @@ function Start({ nextStep, handleChange, values }) {
                 </Sec1>
               </Col2Start>
             </label>
-            <StartButtonWrap>
-              <StartRightButton onClick={handleNext}>NEXT</StartRightButton>
-            </StartButtonWrap>
+          
+     
+           
           </StartForm>
         </StartFormContainer>
       </StartContainer>

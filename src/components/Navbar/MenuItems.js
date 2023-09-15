@@ -33,6 +33,11 @@ export const About = [
 
   export const Services = [
     {
+      title: 'All Services',
+      path: '/services',
+      cName: 'dropdown-link'
+    },
+    {
       title: 'Standard Moving',
       path: '/standard',
       cName: 'dropdown-link'
@@ -72,6 +77,7 @@ export const About = [
       path: '/tv',
       cName: 'dropdown-link'
     },
+
 
   ];
 

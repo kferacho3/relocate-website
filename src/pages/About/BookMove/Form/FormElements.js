@@ -1,6 +1,196 @@
 
 import 'react-calendar/dist/Calendar.css';
 import styled from 'styled-components';
+
+//
+//
+//
+export const BookMoveContainer = styled.div`
+  background: -moz-linear-gradient(top, #376392 0%, #C5D2DF 100%);
+  background: -webkit-linear-gradient(top, #376392 0%, #C5D2DF 100%);
+  background: linear-gradient(to bottom, #376392 0%, #C5D2DF 100%);
+  min-height: 150vh;
+  width: 100%;
+ // margin-top: -80px; 
+  // display: grid;
+  //grid-template-rows: auto auto;
+  overflow: hidden; /* Hide content that overflows the container */
+  overflow-y: auto; /* Allow vertical scrolling within the container if needed */
+`;
+
+
+export const BookMoveHeader = styled.h1`
+  
+    width: 1100px;
+    height: 44px;
+    margin-top: 200px;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 43px;
+    /* identical to box height, or 149% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #fff;
+    @media screen and (max-width: 870px) {
+       zoom: 0.9;
+       
+        }  
+        @media screen and (max-width: 640px) {
+            zoom: 0.8;
+       
+        } 
+`
+
+export const BookMoveTopLine =styled.h2`
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    width: 700px;
+    height: 36px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 36px;
+    /* identical to box height, or 189% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #F1F3FA;
+    @media screen and (max-width: 870px) {
+       zoom: 0.95;
+       
+        }  
+        @media screen and (max-width: 640px) {
+            zoom: 0.9;
+       
+        } 
+`
+
+export const BackButton = styled.button`
+  //appearance: none;
+  background: radial-gradient(circle at 10% 20%, #00FF01 0%, rgb(250, 255, 209) 90%);
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "inter";
+    zoom: 0.8;
+  font-weight: 500;
+  letter-spacing: -2px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 0px;
+  position: absolute;
+    width: 200px;
+    height: 67px;
+    left: 20%;
+    //top: 1200px;
+
+  &:hover {
+    background-color: #FFC229;
+    box-shadow: #218207 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+
+  &:active {
+    transform: scale(1.025);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+`;
+
+export const NextButton = styled.button`
+  //appearance: none;
+  position: absolute;
+  background: radial-gradient(circle at 10% 20%, #00FF01 0%, rgb(250, 255, 209) 90%);
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "inter";
+    zoom: 0.8;
+  font-weight: 500;
+  letter-spacing: -2px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 0px;
+  position: absolute;
+   
+    width: 200px;
+    height: 67px;
+    right: 20%;
+   
+
+    cursor: pointer;
+
+  &:hover {
+    background-color: #FFC229;
+    box-shadow: #218207 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+
+  &:active {
+    transform: scale(1.025);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+   
+    height: 125px;
+    width: 100vw;
+    box-shadow: 15px 10px 15px 0px rgba(0, 0, 0, 0.25), 0px 10px 15px 0px rgba(0, 0, 0, 0.25), 0px 10px 5px 5px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    //background: #FFFFFF;
+    position: fixed;
+   // padding: 0 50px;
+   // overflow: hidden;
+    background:#fff;
+   z-index: 9999999;
+   
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+    
+    
+ // box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a subtle effect */
+`;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //*                                                                                                                                   ///
 //*                           Start ELEMENTS                                                                                          ///   
@@ -13,7 +203,7 @@ import styled from 'styled-components';
 
 export const StartContainer = styled.div`
     position: relative;
-
+  
     width: 100vw;
     height: 1000px;
  
@@ -21,23 +211,12 @@ export const StartContainer = styled.div`
 `
 
 export const StartFormContainer = styled.div`
-    width: 1350px;
-    height: 800px;
-    left: 83px;
-    //top: 186px;
-
-    background: #376392;
-    border-radius: 30px;
-    z-index: 999999;
+   top: 100px;
+    //z-index: 999999;
     //margin-top: 50%;
-    right: 0;
-    margin-left: 50%;
-    transform: translate(-50%, 0%);
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;  
 
+    //bottom: 0;
+position: relative;
     @media screen and (max-width: 870px) {
         transform: translate(-50%, -50%) scale(0.8);
        
@@ -53,6 +232,7 @@ export const StartHeader = styled.h1`
     width: 1100px;
     height: 44px;
     margin-top: 200px;
+    position: relative;
     margin-left: 50%;
     transform: translateX(-50%);
   
@@ -108,7 +288,7 @@ export const StartTopLine =styled.h2`
 export const StartForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 50px;
 
    
@@ -510,7 +690,7 @@ export const ServiceTopLine =styled.h2`
 export const ServiceForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     grid-template-areas: 'col1' 'col2';
 `
 
@@ -768,12 +948,46 @@ export const ServicesInput = styled.input`
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+export const InfoWrapper = styled.div`
+    display: grid;
+    z-index: 1;
+    height: 200px;
+    width: 100%;
+    margin-top: 50px;
+    max-width: 1100px;
+    margin-right: auto;
+
+    justify-content: center;
+    zoom: 0.9;
+
+  
+
+`;
+
+export const InfoRow = styled.div`
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-column-gap: 200px;
+    align-items: center;
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)}; 
+
+`;
+
+export const LocationsRow = styled.div`
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-column-gap: 200px;
+    grid-row-gap: 200px;
+    align-items: center;
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)}; 
+
+`;
 
 
 export const InformationContainer = styled.div`
     position: relative;
     width: 100vw;
-    height: 1000px;
+    height: 100vh;
     
  
 
@@ -797,7 +1011,8 @@ export const InformationFormContainer = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;  
-
+    /* Specify how many rows this should span */
+  
     @media screen and (max-width: 870px) {
         transform: translate(-50%, -50%) scale(0.8);
        
@@ -868,6 +1083,8 @@ export const InformationTopLine =styled.h2`
 
 export const InformationForm = styled.form`
     //zoom: 0.9;
+    margin-top: 100px;
+    display: grid;
 
 `
 
@@ -875,14 +1092,11 @@ export const InfoInputContainer = styled.div`
     width: 900px;
     top: 50px;
     position: absolute;
-    display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
     left: 50%;
     transform: translateX(-50%);
    // margin-top: 50px;
-    gap: 100px;
-    grid-template-areas: 'col1 col2';
+ 
 `
 
 export const IFirstName = styled.input`
@@ -944,10 +1158,7 @@ export const IEmail = styled.input`
     border-radius: 10px;
 `
 export const IInputContainer = styled.div`
-    position: relative;
-        
-    width: 407.88px;
-    height: 123px;
+
 
 `
 
@@ -969,8 +1180,7 @@ export const IInputText = styled.p`
 export const ILocationContainer = styled.div`
     position: relative;
 
-    width: 407.88px;
-    height: 90px;
+
 
 `
 
@@ -1006,35 +1216,36 @@ export const ILocation = styled.input`
 `
 
 export const IButton = styled.div`
-    position: relative;
-    top: 50px;
-    width: 407.88px;
-    height: 90px;
-`
-export const ILocationButton = styled.button`
-    //position: absolute;
-    width: 95px;
-    height: 95px;
-    zoom: 0.7;
-    cursor: pointer;
-  
-    margin-left: 50%;
-    transform: translateX(-50%);
-     background-repeat: no-repeat;
-    background-size: cover;
-    background: none;
-    border: none;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 20px; /* Add some spacing between buttons and inputs */
+`;
 
-`
+
+export const ILocationButton = styled.button`
+position: absolute;
+
+  width: 95px;
+  height: 95px;
+  zoom: 0.7;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: none;
+  border: none;
+  margin-top: 7.5%; /* Add some spacing between buttons and inputs */
+  align-self: center; /* Center the button horizontally */
+`;
+
 export const ILocationRemove = styled.button`
-    //position: absolute;
+    position: absolute;
     width: 95px;
     height: 95px;
     zoom: 0.7;
     cursor: pointer;
+    margin-left: 30%; 
+    margin-top: -12.5%; 
   
-    margin-left: 50%;
-    transform: translateX(-50%);
      background-repeat: no-repeat;
     background-size: cover;
     background: none;
@@ -1126,13 +1337,24 @@ export const Col1Info = styled.div`
     
 `
 export const Col2Info = styled.div`
-    margin-top: -40px;
+
    position: relative;
     grid-area: col2;
 
 `
 
+///
+///
+///
 
+export const FormSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; /* Add some top margin for spacing */
+  height: 100%;
+  margin-bottom: -200px;
+`;
 
 
 
@@ -1244,7 +1466,7 @@ export const HomeTopLine =styled.h2`
 export const HomeForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 50px;
     grid-template-areas: 'col1' 'col2';
 `
@@ -1410,10 +1632,10 @@ export const HomeImgContainer = styled.div`
     z-index: 1;
 
 `
-export const HomeImg = styled.div`
-  
-    width: 100%;
-    height: 100%;
+export const HomeImg = styled.img`
+    position: absolute;
+    width: 55px;
+    height: 55px;
     background-repeat: no-repeat;
     background-size: cover;
   
@@ -1656,7 +1878,7 @@ export const RoomsTopLine =styled.h2`
 export const RoomsForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 50px;
     grid-template-areas: 'col1' 'col2';
 `
@@ -2002,7 +2224,7 @@ export const HeavyTopLine =styled.h2`
 export const HeavyForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 50px;
     grid-template-areas: 'col1' 'col2';
 `
@@ -2300,7 +2522,7 @@ export const DateTopLine =styled.h2`
 export const DateForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 50px;
     grid-template-areas: 'col1' 'col2';
 `
@@ -2492,7 +2714,7 @@ export const TimeTopLine =styled.h2`
 export const TimeForm = styled.form`
     zoom: 0.9;
     display: grid;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 50px;
     grid-template-areas: 'col1' 'col2';
 `

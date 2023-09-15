@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import {
-  HomeButtonWrap,
+  BookMoveHeader,
   HomeContainer, HomeForm,
-  HomeFormContainer,
-  //HomeFormHeader,
-  //HomeFormTopLine,
-  HomeHeader,
-  //HomeImg,
-  //HomeImgContainer,
-  //HomeInput,
-  HomeLeftButton,
-  //HomeLeftSwitch,
-  //HomeOptContainer,
-  HomeRightButton,
+  HomeFormContainer
 } from './FormElements';
 
 
@@ -35,47 +25,23 @@ import h5 from '../../../../logos/homeFormLogos5.svg';
 import h6 from '../../../../logos/homeFormLogos6.svg';
 */
 
-function Home({ values, handleChange, nextStep, prevStep }) {
+function Home({ values, handleChange}) {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
 
   useEffect(() => {
     setSelectedLocation(values.locations[0]?.location || ''); // Set the default selected location to the first location in the list
   }, [values.locations]);
-  const handleHomeChange = (locationIndex) => (e) => {
-    if (!e || !e.target) return; // Check if event or event.target is undefined
-    const { value } = e.target;
-    setSelectedLocation(value);
-    handleChange('step4')(locationIndex, 'home', value);
-  };
-  const handleLocationSelect = (location) => {
-    setSelectedLocation(location); // Update the selected location
-    const locationIndex = values.locations.findIndex((loc) => loc.location === location);
-    setCurrentLocationIndex(locationIndex); // Update the current location index
-  };
 
-  const handleNext = () => {
-    if (currentLocationIndex < values.locations.length - 1) {
-      setCurrentLocationIndex((prevIndex) => prevIndex + 1); // Move to the next location
-      setSelectedLocation(values.locations[currentLocationIndex + 1]?.location || ''); // Update the selected location
-    }
-    nextStep();
-  };
 
-  const handlePrevious = () => {
-    if (currentLocationIndex > 0) {
-      setCurrentLocationIndex((prevIndex) => prevIndex - 1); // Move to the previous location
-      setSelectedLocation(values.locations[currentLocationIndex - 1]?.location || ''); // Update the selected location
-    }
-    prevStep();
-  };
+
 
   return (
     <>
       <HomeContainer>
-        <HomeHeader>
+        <BookMoveHeader>
           Choose which Home best suits your needs to get the best price matching.
-        </HomeHeader>
+        </BookMoveHeader>
         <HomeFormContainer>
           <HomeForm className="radio-group">
           {/*
@@ -251,10 +217,6 @@ function Home({ values, handleChange, nextStep, prevStep }) {
 />
            */}
            <PropertyForm/>
-            <HomeButtonWrap>
-              <HomeLeftButton onClick={handlePrevious}>BACK</HomeLeftButton>
-              <HomeRightButton onClick={handleNext}>NEXT</HomeRightButton>
-            </HomeButtonWrap>
           </HomeForm>
         </HomeFormContainer>
       </HomeContainer>

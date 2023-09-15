@@ -11,10 +11,8 @@ import vip from '../../../../logos/VIPIcon.svg';
 
 
 import {
-  ServiceButtonWrap,
-  ServiceFormContainer,
-  ServiceLeftButton,
-  ServiceRightButton,
+  BookMoveHeader,
+  BookMoveTopLine,
   ServicesImg,
   ServicesImgContainer,
   ServicesInput,
@@ -24,27 +22,19 @@ import {
   ServicesTextHeader,
   ServicesTextSection,
   ServicesWrapper,
-  StartContainer, StartForm,
-  StartHeader,
-  StartTopLine
+  StartContainer, StartForm
 } from './FormElements';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
-function Service({ nextStep, prevStep, handleChange, values }) {
-  const handleNext = () => {
-    nextStep();
-  };
+function Service({handleChange, values }) {
 
-  const handlePrevious = () => {
-    prevStep();
-  };
 
   return (
     <>
       <StartContainer>
-        <StartHeader>Choose which service best suits your needs to get the best price matching.</StartHeader>
-        <StartTopLine>Select from our affordable options to accommodate your needed service.</StartTopLine>
-        <ServiceFormContainer>
+        <BookMoveHeader>Choose which service best suits your needs to get the best price matching.</BookMoveHeader>
+        <BookMoveTopLine>Select from our affordable options to accommodate your needed service.</BookMoveTopLine>
+     
           <StartForm className="radio-group">
           <ServicesWrapper>
                 <ServicesRow>
@@ -217,12 +207,9 @@ function Service({ nextStep, prevStep, handleChange, values }) {
             </label>
             </ServicesRow>
               </ServicesWrapper>
-              <ServiceButtonWrap>
-              <ServiceLeftButton onClick={handlePrevious}>BACK</ServiceLeftButton>
-              <ServiceRightButton onClick={handleNext}>NEXT</ServiceRightButton>
-            </ServiceButtonWrap>
+            
           </StartForm>
-        </ServiceFormContainer>
+      
       </StartContainer>
     </>
   );

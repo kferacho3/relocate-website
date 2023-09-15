@@ -51,8 +51,7 @@ export const Nav = styled.nav`
     left: 0;
     right: 0;
 
-    z-index: 99999999999;
-    margin-bottom: 120px;
+    z-index: 9999999;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
@@ -606,6 +605,7 @@ export const NavBtnWrap = styled.div`
     grid-template-areas: 'btn1 btn2 btn3';
 
 `
+
 export const NavBotBtn = styled.button`
     box-sizing: border-box;
     grid-area: btn1;

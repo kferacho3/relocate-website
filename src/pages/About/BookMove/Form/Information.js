@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 import {
+  BookMoveHeader,
+  BookMoveTopLine,
   Col1Info, Col2Info,
+  FormSection,
   IButton,
   IEmail,
   IFirstName,
   IInputContainer, IInputText,
   ILastName,
-  ILocation,
   ILocationButton,
   ILocationButtonText,
   ILocationContainer,
@@ -15,16 +17,16 @@ import {
   ILocationText,
   IPhoneNumber,
   InfoInputContainer,
-  InformationButtonWrap,
+  InfoRow,
+  InfoWrapper,
   InformationContainer, InformationForm,
-  InformationFormContainer,
-  InformationHeader,
-  InformationLeftButton, InformationRightButton, InformationTopLine
+  LocationsRow
 } from './FormElements';
 //import emailjs from 'emailjs-com';
 import butt from '../BookImg/InfoLocationButton.svg';
 import butt2 from '../BookImg/InfoLocationRemoveButton.svg';
 import "./Form.scss";
+import PropertyForm from './Home2';
 //import s1 from '../BookImg/InformationImg1.svg';
 //import s2 from '../BookImg/InformationImg2.svg';
 const initialFormValues = {
@@ -35,14 +37,8 @@ const initialFormValues = {
   addresses: [{ location: '' }],
 };
 
-function Information({ isOpen, toggle, nextStep, prevStep, values, handleLocationSelect }) {
-  const handleNext = () => {
-    nextStep();
-  };
+function Information({ isOpen, toggle, values, handleLocationSelect }) {
 
-  const handlePrevious = () => {
-    prevStep();
-  };
 
   const [locationList, setLocationList] = useState([{ location: '' }]);
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -103,12 +99,14 @@ function Information({ isOpen, toggle, nextStep, prevStep, values, handleLocatio
   return (
     <>
       <InformationContainer>
-        <InformationHeader>Choose which service best suits your needs to get the best price matching.</InformationHeader>
-        <InformationTopLine>Select from our affordable options to accommodate your needed service.</InformationTopLine>
-        <InformationFormContainer>
+        <BookMoveHeader>Choose which service best suits your needs to get the best price matching.</BookMoveHeader>
+        <BookMoveTopLine>Select from our affordable options to accommodate your needed service.</BookMoveTopLine>
           <InformationForm>
             <InfoInputContainer>
+            
               <Col1Info>
+              <InfoWrapper>
+              <InfoRow>
                 <IInputContainer>
                   <IInputText>First Name</IInputText>
                   <IFirstName
@@ -156,14 +154,22 @@ function Information({ isOpen, toggle, nextStep, prevStep, values, handleLocatio
                     required={true}
                   />
                 </IInputContainer>
+                </InfoRow>
+                </InfoWrapper>
               </Col1Info>
 
               <Col2Info>
+              <InfoWrapper>
+              <LocationsRow>
                 {locationList.map((singleLocation, index) => (
-                  <div key={index + 1} className="locations">
+                  <div key={index + 1}>
+                  <FormSection>
+                  <ILocationText>Location {index + 1}</ILocationText>
+                      <PropertyForm />
                     <div>
                       <ILocationContainer>
-                        <ILocationText>Location {index + 1}</ILocationText>
+                     
+                        {/*
                         <ILocation
                           name="location"
                           type="text"
@@ -174,7 +180,10 @@ function Information({ isOpen, toggle, nextStep, prevStep, values, handleLocatio
                           required
                           
                         />
+                        */}
+                      
                       </ILocationContainer>
+                  
                       {locationList.length - 1 === index && locationList.length < 5 && (
                         <IButton>
                           <ILocationButton
@@ -187,6 +196,7 @@ function Information({ isOpen, toggle, nextStep, prevStep, values, handleLocatio
                           </ILocationButton>
                         </IButton>
                       )}
+                  
                     </div>
                     <div className="second-division">
                       {locationList.length !== 1 && (
@@ -196,18 +206,19 @@ function Information({ isOpen, toggle, nextStep, prevStep, values, handleLocatio
                           className="remove-btn"
                           style={{ backgroundImage: `url(${butt2})` }}
                         ></ILocationRemove>
+                        
                       )}
+                      
                     </div>
+                    </FormSection>
                   </div>
+                  
                 ))}
+                </LocationsRow>
+                </InfoWrapper>
               </Col2Info>
             </InfoInputContainer>
-            <InformationButtonWrap>
-              <InformationLeftButton onClick={handlePrevious}>BACK</InformationLeftButton>
-              <InformationRightButton onClick={handleNext}>NEXT</InformationRightButton>
-            </InformationButtonWrap>
           </InformationForm>
-        </InformationFormContainer>
       </InformationContainer>
     </>
   );

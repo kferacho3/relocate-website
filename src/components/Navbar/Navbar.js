@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../images/navbarLogo.svg';
 import { SidebarData } from '../Sidebar/SidebarData';
@@ -70,7 +69,7 @@ const Navbar = ({ toggle}) => {
     };
     return (
         <>
-        <IconContext.Provider style={{ zIndex:`999999` }} value={{ color: '#fff'}}>
+      
         <Nav style={{ zIndex:`999999` }} scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogoCont style={{ backgroundImage:`url(${logo})` }} to='/' onClick={toggleHome} ></NavLogoCont>
@@ -78,7 +77,7 @@ const Navbar = ({ toggle}) => {
                 <NavMenu>
                             <NavItem>
                                 <NavLinks
-                                    to='/about'
+                                 
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -112,7 +111,7 @@ const Navbar = ({ toggle}) => {
                             </NavItem>
                             <NavItem>
                                 <NavLinks
-                                    to='/services'
+                                
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -178,7 +177,6 @@ const Navbar = ({ toggle}) => {
                             </NavItem>
                             <NavItem>
                                 <NavLinks
-                                    to='/contact'
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -250,7 +248,7 @@ const Navbar = ({ toggle}) => {
                 </SidebarNav>
       )}
       
-        </IconContext.Provider>
+       
        
         </>
     );

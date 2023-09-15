@@ -86,7 +86,7 @@ const Navbar3 = ({ toggle}) => {
                 <NavMenu>
                             <NavItem>
                                 <NavLinks
-                                    to='/about'
+                                 
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -120,7 +120,7 @@ const Navbar3 = ({ toggle}) => {
                             </NavItem>
                             <NavItem>
                                 <NavLinks
-                                    to='/services'
+                                
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -186,7 +186,6 @@ const Navbar3 = ({ toggle}) => {
                             </NavItem>
                             <NavItem>
                                 <NavLinks
-                                    to='/contact'
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -223,7 +222,7 @@ const Navbar3 = ({ toggle}) => {
                     <NavEnd>
                     <NavItem>
                         <NavNumber>+1-(312)-933-4773</NavNumber>
-                        <NavBtn  to='/pack' >
+                        <NavBtn  to='/book' >
                             BOOK NOW 
                         </NavBtn>
                     </NavItem>
