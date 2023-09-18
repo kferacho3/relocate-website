@@ -123,7 +123,7 @@ function BookMove() {
   
 // useState for Date
 
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState();
 
 
   const addLocation = (locationData) => {

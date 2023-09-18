@@ -18,10 +18,10 @@ import {
   TimeWrapper
 } from './FormElements';
 
-import t1 from './FormImg/formTime1.svg';
-import t2 from './FormImg/formTime2.svg';
-import t3 from './FormImg/formTime3.svg';
-import t4 from './FormImg/formTime4.svg';
+import t1 from '../FormImg/formTime1.svg';
+import t2 from '../FormImg/formTime2.svg';
+import t3 from '../FormImg/formTime3.svg';
+import t4 from '../FormImg/formTime4.svg';
 
 function Time({ state, handleInput }) {
 

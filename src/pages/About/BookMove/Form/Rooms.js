@@ -20,8 +20,8 @@ import {
   SecWrapper
 } from './FormElements';
 
-import minus from './FormImg/minus.svg';
-import plus from './FormImg/plus.svg';
+import minus from '../FormImg/minus.svg';
+import plus from '../FormImg/plus.svg';
 
 
 function ItemList({ rooms, selectedRooms, updateItemCount, addItem, handleInput, state }) {
