@@ -2,6 +2,64 @@
 import 'react-calendar/dist/Calendar.css';
 import styled from 'styled-components';
 
+/// Form Values 
+
+
+export const initialState = {
+    //text inputs
+    packers: '',
+    service: '',
+
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+
+    locations: [],
+   // selectedRooms: [],
+    //selectedHeavy: [],
+
+    date: '',
+
+    time: '',
+
+    selectedHeavy1: '',
+    selectedHeavy2: '',
+    selectedHeavy3: '',
+    selectedHeavy4: '',
+    selectedHeavy5: '',
+    selectedHeavy6: '',
+    selectedHeavy7: '',
+    selectedHeavy8: '',
+    selectedHeavy9: '',
+    selectedHeavy10: '',
+    selectedHeavy11: '',
+    selectedHeavy12: '',
+    selectedHeavy13: '',
+    selectedHeavy14: '',
+    selectedHeavy15: '',
+
+    selectedRooms1: '',
+    selectedRooms2: '',
+    selectedRooms3: '',
+    selectedRooms4: '',
+    selectedRooms5: '',
+    selectedRooms6: '',
+    selectedRooms7: '',
+    selectedRooms8: '',
+    selectedRooms9: '',
+    selectedRooms10: '',
+    selectedRooms11: '',
+    selectedRooms12: '',
+    selectedRooms13: '',
+    selectedRooms14: '',
+    selectedRooms15: '',
+
+
+    
+  };
+
+  
 //
 //
 //
@@ -98,7 +156,7 @@ export const BackButton = styled.button`
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  font-size: 0px;
+
   position: absolute;
     width: 200px;
     height: 67px;
@@ -116,8 +174,8 @@ export const BackButton = styled.button`
   }
 
   @media (min-width: 768px) {
-    font-size: 1.5rem;
-    padding: 0.75rem 2rem;
+   // font-size: 1.5rem;
+    //padding: 0.75rem 2rem;
   }
 `;
 
@@ -142,7 +200,7 @@ export const NextButton = styled.button`
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  font-size: 0px;
+
   position: absolute;
    
     width: 200px;
@@ -163,8 +221,7 @@ export const NextButton = styled.button`
   }
 
   @media (min-width: 768px) {
-    font-size: 1.5rem;
-    padding: 0.75rem 2rem;
+
   }
 `;
 
@@ -285,7 +342,7 @@ export const StartTopLine =styled.h2`
        
         } 
 `
-export const StartForm = styled.form`
+export const StartForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -422,6 +479,67 @@ export const Col2Start = styled.div`
 
 
 `
+
+export const InlineGroup = styled.div`
+  max-width: 9rem;
+  padding: 0.5rem;
+`;
+
+export const FormControl = styled.input`
+  text-align: right;
+`;
+
+export const IncrementButton = styled.button`
+  // Add your button styles here
+`;
+
+export const CustomNumberInput = styled(FormControl)`
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+`;
+
+
+export const SecInputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px; /* Adjust the width as needed */
+  //border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 4px;
+
+  input[type="number"] {
+    flex-grow: 1;
+    border: none;
+    text-align: center;
+    font-size: 16px; /* Adjust the font size as needed */
+    appearance: none; /* Hide the default number input arrows */
+  }
+`;
+
+export const SecElementPlusMinusContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const SecElementPlus = styled.img`
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+`;
+
+export const SecElementMinus = styled.img`
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+`;
+
+
+
 export const Sec1 = styled.div`
     width: 300px;
     grid-area: text1;
@@ -687,7 +805,7 @@ export const ServiceTopLine =styled.h2`
         } 
 `
 
-export const ServiceForm = styled.form`
+export const ServiceForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -1081,7 +1199,7 @@ export const InformationTopLine =styled.h2`
         } 
 `
 
-export const InformationForm = styled.form`
+export const InformationForm = styled.div`
     //zoom: 0.9;
     margin-top: 100px;
     display: grid;
@@ -1463,7 +1581,7 @@ export const HomeTopLine =styled.h2`
         } 
 `
 
-export const HomeForm = styled.form`
+export const HomeForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -1875,7 +1993,7 @@ export const RoomsTopLine =styled.h2`
         } 
 `
 
-export const RoomsForm = styled.form`
+export const RoomsForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -2056,7 +2174,7 @@ export const SecElementButtonWrap = styled.div`
     grid-template-areas: 'itm1 itm2 itm3'; 
 
     z-index: 99999999;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-left: 50%;
     transform: translateX(-50%);
 `
@@ -2064,8 +2182,9 @@ export const SecElementButtonWrap = styled.div`
 export const SecElementAmount = styled.div`
     
     grid-area: itm2;
-    
-   
+    margin-top: -10px;
+    margin-right: 10px;
+    margin-left: 10px;
     //top: 38px;
 
     font-family: 'Inter';
@@ -2086,6 +2205,7 @@ export const SecElementBtnWrap = styled.button`
   
 
 `
+/*
 export const SecElementPlus = styled.img`
     cursor: pointer;
 
@@ -2102,6 +2222,7 @@ export const SecElementMinus = styled.img`
     grid-area: itm1;
 
 `
+*/
 export const Col1F = styled.div`
 
     grid-area: sec1;
@@ -2221,7 +2342,7 @@ export const HeavyTopLine =styled.h2`
         } 
 `
 
-export const HeavyForm = styled.form`
+export const HeavyForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -2359,106 +2480,100 @@ export const CalendarContainer = styled.div`
   /* ~~~ container styles ~~~ */
   //00FF01
   //1F5210
-    max-width: 600px;
+    max-width: 300px;
     margin: auto;
     margin-top: 20px;
-    background: linear-gradient(180deg, #00FF01 0%, #1F5210 100%);;
+   // background: linear-gradient(180deg, #00FF01 0%, #1F5210 100%);;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     zoom: 2.25;
 
       /* ~~~ navigation styles ~~~ */
-.react-calendar {
-    
-    border-radius: 15px;
+      .react-calendar { 
+ width: 400px;
+ max-width: 100%;
+ background-color: #fff;
+ color: #333333;
+ border-radius: 8px;
+ box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+ font-family: Arial, Helvetica, sans-serif;
+ line-height: 1.125em;
 }
-  .react-calendar__navigation {
-    display: flex;
-    
-
-    .react-calendar__navigation__label {
-      font-weight: bold;
-      
-    }
-
-    .react-calendar__navigation__arrow {
-      flex-grow: 0.333;
-      
-    }
-  }
-
-   /* ~~~ label styles ~~~ */
-   .react-calendar__month-view__weekdays {
-    text-align: center;
-    
-  }
-
-  /* ~~~ button styles ~~~ */
-  button {
-    margin: 3px;
+.react-calendar__navigation button {
+ color: #000;
+ min-width: 44px;
+ background: none;
+ font-size: 16px;
+ margin-top: 8px;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+ background-color: #f8f8fa;
+}
+.react-calendar__navigation button[disabled] {
+ background-color: #f0f0f0;
+}
+abbr[title] {
+ text-decoration: none;
+}
+/* .react-calendar__month-view__days__day--weekend {
+ color: #d10000;
+} */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+ background: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
+ color: #fff;
+ box-shadow: 0 0 10px white;
+ border-radius: 100%;
+}
+.react-calendar__tile--now {
+    background: linear-gradient(to bottom, #36454F 0%, #273640 100%);
+ border-radius: 100%;
+ font-weight: bold;
+ color: #fff;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
     background: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
-    border: 0;
-    border-radius: 15px;
-    color: white;
-    padding: 5px 0;
+ border-radius: 100%;
+ font-weight: bold;
+ color: #fff;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+    background: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
+}
+.react-calendar__tile--active {
+ background: #6f48eb;
+ border-radius: 100%;
+ font-weight: bold;
+ color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+    background: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
+ color: white;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
+}
+.react-calendar__tile--range {
+    background: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
+ color: #6f48eb;
+ border-radius: 100%;
+}
+.react-calendar__tile--rangeStart {
 
-    &:hover {
-      background-color: #556b55;
-    }
 
-    &:active {
-      background-color: #a5c1a5;
-    }
+    background: linear-gradient(90deg, #16D3A9 0%, #00FF01 100%);
+ color: white;
+}
+.react-calendar__tile--rangeEnd {
 
-    &:focus, &:active {
-        background-color: #1F5210;
-    }
-  }
 
-  /* ~~~ day grid styles ~~~ */
-  .react-calendar__month-view__days {
-    display: grid !important;
-    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%; 
-
-    .react-calendar__tile {
-      max-width: initial !important;
-      
-    }
-  }
-
-  /* ~~~ neighboring month & weekend styles ~~~ */
-  .react-calendar__month-view__days__day--neighboringMonth {
-    opacity: 0.7;
     
-  }
-  .react-calendar__month-view__days__day--weekend {
-    color: #dfdfdf;
-    
-  }
-
-  /* ~~~ active day styles ~~~ */
-  .react-calendar__tile--range {
-      box-shadow: 0 0 6px 2px black;
-      
-  }
-
-  /* ~~~ other view styles ~~~ */
-  .react-calendar__year-view__months, 
-  .react-calendar__decade-view__years, 
-  .react-calendar__century-view__decades {
-    display: grid !important;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-
-    &.react-calendar__year-view__months {
-      grid-template-columns: 33.3% 33.3% 33.3%;
-      
-    }
-
-    .react-calendar__tile {
-      max-width: initial !important;
-    }
-  }
-
+ color: white;
+}
 `
 export const DateHeader = styled.h1`
   
@@ -2519,7 +2634,7 @@ export const DateTopLine =styled.h2`
         } 
 `
 
-export const DateForm = styled.form`
+export const DateForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -2711,7 +2826,7 @@ export const TimeTopLine =styled.h2`
         } 
 `
 
-export const TimeForm = styled.form`
+export const TimeForm = styled.div`
     zoom: 0.9;
     display: grid;
     margin-top: 100px;
@@ -2808,7 +2923,7 @@ export const TimeOptContainer = styled.div`
     width: 675px;
     height: 250px;
 
-
+    z-index: 9999;
 
     margin-top: 30px;
     cursor: pointer;
@@ -2817,20 +2932,37 @@ export const TimeOptContainer = styled.div`
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 
-&:focus {
-        outline: 10px solid #632ce4;
-       // z-index: 99999;
-        background-color: wheat;
+    &:focus {
+     outline: 10px solid #632ce4;
+    // z-index: 99999;
+     background-color: wheat;
 
-    }
-    &:not([disabled]):focus,
-  &:not([disabled]):hover {
-    opacity: 0.9;
-    box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
-      -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
-      0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
-  }
+ }
+ &:not([disabled]):focus,
+&:not([disabled]):hover {
+ opacity: 0.9;
+ box-shadow: 0 0 0.25rem rgba(0, 255, 1, 0.5),
+   -0.125rem -0.125rem 1rem rgba(33, 130, 7, 0.5),
+   0.125rem 0.125rem 1rem rgba(31, 82, 16, 0.5);
+}
 `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const TimeImgContainer = styled.div`
     position: absolute;
     margin-left: 10px;

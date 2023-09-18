@@ -26,7 +26,7 @@ import {
 import butt from '../BookImg/InfoLocationButton.svg';
 import butt2 from '../BookImg/InfoLocationRemoveButton.svg';
 import "./Form.scss";
-import PropertyForm from './Home2';
+import PropertyForm from './PropertyForm';
 //import s1 from '../BookImg/InformationImg1.svg';
 //import s2 from '../BookImg/InformationImg2.svg';
 const initialFormValues = {
@@ -37,10 +37,26 @@ const initialFormValues = {
   addresses: [{ location: '' }],
 };
 
-function Information({ isOpen, toggle, values, handleLocationSelect }) {
+function Information({             locationList,
+  setLocationList,
+  selectedSquareFootage,
+  selectedDistance,
+  unitNumber,
+  isElevatorReserved,
+  floorLevel,
+  podUnits,  
+   setSelectedSquareFootage,
+  setSelectedDistance,
+  setUnitNumber,
+  setIsElevatorReserved,
+  setFloorLevel,
+  setPodUnits,
+  propertyType, 
+  setPropertyType,
+   isOpen, toggle, state, handleLocationSelect, handleInput, addLocation }) {
 
 
-  const [locationList, setLocationList] = useState([{ location: '' }]);
+  
   const [formValues, setFormValues] = useState(initialFormValues);
 
   useEffect(() => {
@@ -96,6 +112,76 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
     setLocationList((prevLocationList) => [...prevLocationList, { location: '' }]);
   };
 
+
+  const handleAddLocation = () => {
+    if (propertyType === 'apartment' || propertyType === 'condo') {
+      // Create location data for apartment or condo
+      const locationData = {
+        propertyType,
+        unit: unitNumber, // Replace with the actual unit number
+        squareFootage: selectedSquareFootage, // Replace with the selected square footage
+        isElevatorReserved: isElevatorReserved, // Replace with the elevator reservation status
+        floorLevel: floorLevel, // Replace with the actual floor level
+        distanceToTruck: selectedDistance, // Replace with the selected distance to truck
+        // Add any other relevant data here for apartment or condo
+      };
+      
+      // Call the addLocation function and pass the location data
+      addLocation(locationData);
+    } else if (propertyType === 'home') {
+      // Create location data for a standard home
+      const locationData = {
+        propertyType,
+        squareFootage: selectedSquareFootage, // Replace with the selected square footage
+        floorLevel: floorLevel, // Replace with the actual floor level
+        distanceToTruck: selectedDistance, // Replace with the selected distance to truck
+        // Add any other relevant data here for a standard home
+      };
+      
+      // Call the addLocation function and pass the location data
+      addLocation(locationData);
+    } else if (propertyType === 'townhouse') {
+      // Create location data for a townhouse
+      const locationData = {
+        propertyType,
+        unit: unitNumber, // Replace with the actual unit number
+        squareFootage: selectedSquareFootage, // Replace with the selected square footage
+        floorLevel: floorLevel, // Replace with the actual floor level
+        distanceToTruck: selectedDistance, // Replace with the selected distance to truck
+        // Add any other relevant data here for a townhouse
+      };
+      
+      // Call the addLocation function and pass the location data
+      addLocation(locationData);
+    } else if (propertyType === 'storage') {
+      // Create location data for a storage unit
+      const locationData = {
+        propertyType,
+        squareFootage: selectedSquareFootage, // Replace with the selected square footage
+        isElevatorReserved: isElevatorReserved, // Replace with the elevator reservation status
+        floorLevel: floorLevel, // Replace with the actual floor level
+        distanceToTruck: selectedDistance, // Replace with the selected distance to truck
+        // Add any other relevant data here for a storage unit
+      };
+      
+      // Call the addLocation function and pass the location data
+      addLocation(locationData);
+    } else if (propertyType === 'pod') {
+      // Create location data for a Pod Container
+      const locationData = {
+        propertyType,
+        podUnits: podUnits, // Replace with the number of Pod Units
+        squareFootage: selectedSquareFootage, // Replace with the selected square footage
+        floorLevel: floorLevel, // Replace with the actual floor level
+        distanceToTruck: selectedDistance, // Replace with the selected distance to truck
+        // Add any other relevant data here for a Pod Container
+      };
+      
+      // Call the addLocation function and pass the location data
+      addLocation(locationData);
+    }
+  };
+
   return (
     <>
       <InformationContainer>
@@ -110,8 +196,8 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
                 <IInputContainer>
                   <IInputText>First Name</IInputText>
                   <IFirstName
-                    onChange={handleChange}
-                    value={formValues.firstname}
+                   onChange={handleInput}
+                    value={state.firstname}
                     name="firstname"
                     type="text"
                     placeholder="*First Name"
@@ -122,8 +208,8 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
                 <IInputContainer>
                   <IInputText>Last Name</IInputText>
                   <ILastName
-                    onChange={handleChange}
-                    value={formValues.lastname}
+                   onChange={handleInput}
+                    value={state.lastname}
                     name="lastname"
                     type="text"
                     placeholder="*Last Name"
@@ -134,8 +220,8 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
                 <IInputContainer>
                   <IInputText>Phone Number</IInputText>
                   <IPhoneNumber
-                    onChange={handleChange}
-                    value={formValues.phone}
+                    onChange={handleInput}
+                    value={state.phone}
                     name="phone"
                     type="text"
                     placeholder="*Phone Number"
@@ -146,8 +232,8 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
                 <IInputContainer>
                   <IInputText>Email Address</IInputText>
                   <IEmail
-                    onChange={handleChange}
-                    value={formValues.email}
+                   onChange={handleInput}
+                    value={state.email}
                     name="email"
                     type="text"
                     placeholder="*Email Address"
@@ -165,7 +251,28 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
                   <div key={index + 1}>
                   <FormSection>
                   <ILocationText>Location {index + 1}</ILocationText>
-                      <PropertyForm />
+                      <PropertyForm    
+                          locationList={locationList}
+                          setLocationList={setLocationList}
+                          selectedSquareFootage={selectedSquareFootage}
+                          selectedDistance={selectedDistance}
+                          unitNumber={unitNumber}
+                          isElevatorReserved={isElevatorReserved}
+                          floorLevel={floorLevel}
+                          podUnits={podUnits}       setSelectedSquareFootage={setSelectedSquareFootage}
+                          setSelectedDistance={setSelectedDistance}
+                          setUnitNumber={setUnitNumber}
+                          index = {index}
+                          setIsElevatorReserved={setIsElevatorReserved}
+                          setFloorLevel={setFloorLevel}
+                          setPodUnits={setPodUnits} 
+                          propertyType={propertyType} 
+                          setPropertyType={setPropertyType}
+                          handleAddLocation={handleAddLocation} addLocation={addLocation} 
+
+                />
+        
+
                     <div>
                       <ILocationContainer>
                      
@@ -188,7 +295,10 @@ function Information({ isOpen, toggle, values, handleLocationSelect }) {
                         <IButton>
                           <ILocationButton
                             type="button"
-                            onClick={handleLocationAdd}
+                            onClick={() => {
+                                handleLocationAdd();
+                                handleAddLocation();
+                              }}
                             className="add-btn"
                             style={{ backgroundImage: `url(${butt})` }}
                           >

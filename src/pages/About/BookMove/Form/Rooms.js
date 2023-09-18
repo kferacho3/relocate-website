@@ -7,7 +7,6 @@ import {
   RoomsContainer,
   RoomsForm,
   SecElementAmount,
-  SecElementBtnWrap,
   SecElementButtonContainer,
   SecElementButtonWrap,
   SecElementDiv,
@@ -16,32 +15,18 @@ import {
   SecElementImgWrap,
   SecElementMinus,
   SecElementPlus,
+  SecInputContainer,
   SecRow,
   SecWrapper
 } from './FormElements';
 
-import i1 from './FormImg/formRooms1.svg';
-import i2 from './FormImg/formRooms2.svg';
-import i3 from './FormImg/formRooms3.svg';
-import i4 from './FormImg/formRooms4.svg';
-import i5 from './FormImg/formRooms5.svg';
-
-import i10 from './FormImg/formRooms10.svg';
-import i6 from './FormImg/formRooms6.svg';
-import i7 from './FormImg/formRooms7.svg';
-import i8 from './FormImg/formRooms8.svg';
-import i9 from './FormImg/formRooms9.svg';
-
-import i11 from './FormImg/formRooms11.svg';
-import i12 from './FormImg/formRooms12.svg';
-import i13 from './FormImg/formRooms13.svg';
-import i14 from './FormImg/formRooms14.svg';
-import i15 from './FormImg/formRooms15.svg';
-
 import minus from './FormImg/minus.svg';
 import plus from './FormImg/plus.svg';
 
-function ItemList({ rooms, selectedRooms, addItem }) {
+
+function ItemList({ rooms, selectedRooms, updateItemCount, addItem, handleInput, state }) {
+ 
+
   return (
     <>
       {rooms.map(item => (
@@ -50,39 +35,40 @@ function ItemList({ rooms, selectedRooms, addItem }) {
             <SecElementImg src={item.src} />
           </SecElementImgWrap>
           <SecElementButtonContainer>
-          <label>
-              <input
-                type="checkbox"
-                checked={item.count > 0}
-                value = {item.name + " " + item.count}
-                onChange={() =>
-                  item.count > 0
-                    ? addItem(item.id, item.label, 0)
-                    : addItem(item.id, item.label, 1)
-                }
-              />
-              {item.name} ({item.id + item.count})
-            </label>
             <SecElementHeader>{item.name}</SecElementHeader>
             <SecElementButtonWrap>
-              <SecElementBtnWrap
-                src={minus}
-                onClick={() => {
-                  if (item.count !== 0) {
-                    addItem(item.id, item.label, item.count - 1);
-                  }
-                }}
-              >
-                <SecElementMinus src={minus} />
-              </SecElementBtnWrap>
               <SecElementAmount>
-                {selectedRooms.find(selectedItem => selectedItem.id === item.id)?.count || 0}
+                <label>
+                  <SecInputContainer>
+                    <SecElementMinus
+                      src={minus}
+                      onClick={() => {
+                        if (item.count > 0) {
+                          updateItemCount(item.id, item.count - 1);
+                        }
+                      }}
+                    />
+                    <input
+                      type="text"
+                      id={`selectedRooms${item.id}`}
+                      value={item.count}
+                      name={`selectedRooms${item.id}`}
+                      onChange={(e) => handleInput(e, item.id)}
+                      style={{ display: 'none' }}
+                      readOnly={true}
+                    />
+                    {item.count}
+                    <SecElementPlus
+                      src={plus}
+                      onClick={() => {
+                        if (item.count < 10) {
+                          updateItemCount(item.id, item.count + 1);
+                        }
+                      }}
+                    />
+                  </SecInputContainer>
+                </label>
               </SecElementAmount>
-              <SecElementBtnWrap
-                onClick={() => addItem(item.id, item.label, item.count + 1)}
-              >
-                <SecElementPlus src={plus} />
-              </SecElementBtnWrap>
             </SecElementButtonWrap>
           </SecElementButtonContainer>
         </SecElementDiv>
@@ -91,47 +77,48 @@ function ItemList({ rooms, selectedRooms, addItem }) {
   );
 }
 
-function Rooms() {
-  const [rooms, setRooms] = useState([
-    { id: 1, count: 0, name: "Master Bedroom", src: i1 },
-    { id: 2, count: 0, name: "Standard Bedroom", src: i2 },
-    { id: 3, count: 0, name: "Living Room / Den", src: i3 },
-    { id: 4, count: 0, name: "Playroom", src: i4 },
-    { id: 5, count: 0, name: "Craft Room", src: i5 },
-    { id: 6, count: 0, name: "Kids / Nursery Room", src: i6 },
-    { id: 7, count: 0, name: "Attic", src: i7 },
-    { id: 8, count: 0, name: "Storage / Closet", src: i8 },
-    { id: 9, count: 0, name: "Dining Room", src: i9 },
-    { id: 10, count: 0, name: "Kitchen", src: i10 },
-    { id: 11, count: 0, name: "Garage", src: i11 },
-    { id: 12, count: 0, name: "Patio / Deck", src: i12 },
-    { id: 13, count: 0, name: "Exercise Room", src: i13 },
-    { id: 14, count: 0, name: "Laundry Room", src: i14 },
-    { id: 15, count: 0, name: "Office Space", src: i15 },
-  ]);
+
+function Rooms({rooms, setRooms, handleInput, state  }) {
+
 
   const [selectedRooms, setSelectedRooms] = useState([]);
-
-  const addItem = (itemId, itemLabel, itemCount) => {
-    const itemIndex = selectedRooms.findIndex(item => item.id === itemId);
-    if (itemCount === 0) {
-      // If the count is 0, remove the item from the selectedRooms
-      if (itemIndex >= 0) {
-        setSelectedRooms(selectedRooms.filter(item => item.id !== itemId));
-      }
-    } else {
-      // If the count is not 0, update the item count or add the item to the selectedRooms
-      const newItem = { id: itemId, label: itemLabel, count: itemCount };
-      if (itemIndex >= 0) {
-        setSelectedRooms(
-          selectedRooms.map(item => (item.id === itemId ? newItem : item))
-        );
-      } else {
-        setSelectedRooms([...selectedRooms, newItem]);
-      }
-    }
+  const updateItemCount = (itemId, itemCount) => {
+    const updatedItems = rooms.map(item =>
+      item.id === itemId ? { ...item, count: itemCount } : item
+    );
+    setRooms(updatedItems);
   };
 
+  const addItem = (itemId, itemLabel, itemCount) => {
+    const itemIndex = selectedRooms.findIndex((item) => item.id === itemId);
+  
+    // Create a new item with the updated count
+    const newItem = { id: itemId, label: itemLabel, count: itemCount };
+  
+    setSelectedRooms((prevSelectedRooms) => {
+      // If the count is 0, remove the item from selectedRooms
+      if (itemCount === 0) {
+        return prevSelectedRooms.filter((item) => item.id !== itemId);
+      } else {
+        // If the count is not 0, update the item count or add the item to selectedRooms
+        if (itemIndex >= 0) {
+          // Update the count for an existing item
+          return prevSelectedRooms.map((item) =>
+            item.id === itemId ? newItem : item
+          );
+        } else {
+          // Add the new item to selectedRooms
+          return [...prevSelectedRooms, newItem];
+        }
+      }
+    });
+  
+
+  };
+  
+  
+
+  
 
 
   return (
@@ -141,7 +128,7 @@ function Rooms() {
         <RoomsForm>
           <SecWrapper>
             <SecRow>
-              <ItemList rooms={rooms} selectedRooms={selectedRooms} addItem={addItem} />
+              <ItemList setRooms={setRooms} state={state} rooms={rooms} selectedHeavy={selectedRooms} handleInput={handleInput} updateItemCount={updateItemCount}  addItem={addItem} />
             </SecRow>
           </SecWrapper>
         </RoomsForm>

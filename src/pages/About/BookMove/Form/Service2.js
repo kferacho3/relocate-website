@@ -26,7 +26,7 @@ import {
 } from './FormElements';
 //import emailjs from 'emailjs-com';
 import "./Form.scss";
-function Service({handleChange, values }) {
+function Service({handleInput, state }) {
 
 
   return (
@@ -45,8 +45,8 @@ function Service({handleChange, values }) {
                 value="Moving Service"
                 name="service"
                 id='Moving Service'
-                checked={values.service === 'Moving Service'}
-                onChange={handleChange('service')}
+                checked={state.service === 'Moving Service'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -66,8 +66,8 @@ function Service({handleChange, values }) {
                 value="Packing & Unpacking"
                 name="service"
                 id='Packing & Unpacking'
-                checked={values.service === 'Packing & Unpacking'}
-                onChange={handleChange('service')}
+                checked={state.service === 'Packing & Unpacking'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -87,8 +87,8 @@ function Service({handleChange, values }) {
                 value="Hourly Labor"
                 name="services"
                 id='Hourly Labor'
-                checked={values.service === 'Hourly Labor'}
-                onChange={handleChange('service')}
+                checked={state.service === 'Hourly Labor'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -108,8 +108,8 @@ function Service({handleChange, values }) {
                 value="Junk Removal"
                 name="service"
                 id='Junk Removal'
-                checked={values.service === 'Junk Removal'}
-                onChange={handleChange('service')}
+                checked={state.service === 'Junk Removal'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -129,8 +129,8 @@ function Service({handleChange, values }) {
                 value="Overnight Moving"
                 name="service"
                 id='Overnight Moving'
-                checked={values.service === 'Overnight Moving'}
-                onChange={handleChange('service')}
+                checked={state.service === 'Overnight Moving'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -150,8 +150,8 @@ function Service({handleChange, values }) {
                 value="VIP Moving Service"
                 name="service"
                 id='VIP Moving Service'
-                checked={values.service === 'VIP Moving Service'}
-                onChange={handleChange('service')}
+                checked={state.service === 'VIP Moving Service'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -171,8 +171,8 @@ function Service({handleChange, values }) {
                 value="Storage"
                 name="service"
                 id='Storage'
-                checked={values.service === 'Storage'}
-                onChange={handleChange('service')}
+                checked={state.service === 'Storage'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>
@@ -192,8 +192,8 @@ function Service({handleChange, values }) {
                 value="TV Mounting"
                 name="service"
                 id='TV Mounting'
-                checked={values.service === 'TV Mounting'}
-                onChange={handleChange('service')}
+                checked={state.service === 'TV Mounting'}
+                onChange={handleInput}
               />
               <ServicesOptContainer className='radio' >
               <ServicesImgContainer>

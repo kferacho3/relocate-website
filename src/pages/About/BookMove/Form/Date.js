@@ -11,19 +11,19 @@ import {
 
 import 'react-calendar/dist/Calendar.css';
 
-function Date() {
+function Date({ setDate, date }) {
   return (
     <DateContainer>
       <BookMoveHeader>Please select a preferred date for your move:</BookMoveHeader>
       <BookMoveTopLine>Please note that you may reschedule your move after booking if necessary.</BookMoveTopLine>
       <DateFormContainer>
-          <CalendarContainer>
-            <Calendar calendarType='US' />
-          </CalendarContainer>
-    
+        <CalendarContainer>
+          <Calendar calendarType='US' onChange={setDate} value={date} />
+        </CalendarContainer>
       </DateFormContainer>
     </DateContainer>
   );
 }
 
 export default Date;
+

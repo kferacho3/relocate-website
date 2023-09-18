@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import "./Form.scss";
 import {
@@ -15,32 +15,38 @@ import {
   SecElementImgWrap,
   SecElementMinus,
   SecElementPlus,
+  SecInputContainer,
   SecRow,
   SecWrapper
 } from './FormElements';
 
-import h1 from './FormImg/formHeavy1.svg';
-import h2 from './FormImg/formHeavy2.svg';
-import h3 from './FormImg/formHeavy3.svg';
-import h4 from './FormImg/formHeavy4.svg';
-import h5 from './FormImg/formHeavy5.svg';
-
-import h10 from './FormImg/formHeavy10.svg';
-import h6 from './FormImg/formHeavy6.svg';
-import h7 from './FormImg/formHeavy7.svg';
-import h8 from './FormImg/formHeavy8.svg';
-import h9 from './FormImg/formHeavy9.svg';
-
-import h11 from './FormImg/formHeavy11.svg';
-import h12 from './FormImg/formHeavy12.svg';
-import h13 from './FormImg/formHeavy13.svg';
-import h14 from './FormImg/formHeavy14.svg';
-import h15 from './FormImg/formHeavy15.svg';
-
 import minus from './FormImg/minus.svg';
 import plus from './FormImg/plus.svg';
 
-function ItemList({ items, selectedHeavy, updateItemCount }) {
+
+
+
+
+
+function ItemList({ items, selectedHeavy, updateItemCount, addItem, handleInput, state }) {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleButtonClick = (isNegative) => {
+    setQuantity((prevQuantity) => (isNegative ? prevQuantity - 1 : prevQuantity + 1));
+  };
+
+  const loadInputValues = () => {
+    const savedValues = JSON.parse(localStorage.getItem('inputValues')) || {};
+    return savedValues;
+  };
+
+  const [inputValues, setInputValues] = useState(loadInputValues());
+
+  useEffect(() => {
+    // Save input values to local storage whenever they change
+    localStorage.setItem('inputValues', JSON.stringify(inputValues));
+  }, [inputValues]);
+
   return (
     <>
       {items.map(item => (
@@ -51,32 +57,38 @@ function ItemList({ items, selectedHeavy, updateItemCount }) {
           <SecElementButtonContainer>
             <SecElementHeader>{item.name}</SecElementHeader>
             <SecElementButtonWrap>
-              <SecElementMinus
-                src={minus}
-                onClick={() => {
-                  if (item.count > 0) {
-                    updateItemCount(item.id, item.count - 1);
-                  }
-                }}
-              />
               <SecElementAmount>
-                <input
-                  type="number"
-                  value={item.count}
-                  min={0}
-                  max={10}
-                  onChange={e => updateItemCount(item.id, parseInt(e.target.value))}
-                />
-                {item.count}
+                <label>
+                  <SecInputContainer>
+                    <SecElementMinus
+                      src={minus}
+                      onClick={() => {
+                        if (item.count > 0) {
+                          updateItemCount(item.id, item.count - 1);
+                        }
+                      }}
+                    />
+                    <input
+                      type="text"
+                      id={`selectedHeavy${item.id}`}
+                      value={item.count}
+                      name={`selectedHeavy${item.id}`}
+                      onChange={(e) => handleInput(e, item.id)}
+                      style={{ display: 'none' }}
+                      readOnly={true}
+                    />
+                    {item.count}
+                    <SecElementPlus
+                      src={plus}
+                      onClick={() => {
+                        if (item.count < 10) {
+                          updateItemCount(item.id, item.count + 1);
+                        }
+                      }}
+                    />
+                  </SecInputContainer>
+                </label>
               </SecElementAmount>
-              <SecElementPlus
-                src={plus}
-                onClick={() => {
-                  if (item.count < 10) {
-                    updateItemCount(item.id, item.count + 1);
-                  }
-                }}
-              />
             </SecElementButtonWrap>
           </SecElementButtonContainer>
         </SecElementDiv>
@@ -85,24 +97,9 @@ function ItemList({ items, selectedHeavy, updateItemCount }) {
   );
 }
 
-function Heavy() {
-  const [items, setItems] = useState([
-    { id: 1, count: 0, name: "Piano", src: h1 },
-    { id: 2, count: 0, name: "Safe", src: h2 },
-    { id: 3, count: 0, name: "Oven / Stove", src: h3 },
-    { id: 4, count: 0, name: "Refrigerator", src: h4 },
-    { id: 5, count: 0, name: "Large Freezer", src: h5 },
-    { id: 6, count: 0, name: "Aquarium / Terrarium", src: h6 },
-    { id: 7, count: 0, name: "Dishwasher", src: h7 },
-    { id: 8, count: 0, name: "Fine Art / Sculptures", src: h8 },
-    { id: 9, count: 0, name: "Washer / Dryer", src: h9 },
-    { id: 10, count: 0, name: "Antique / Fragile Furniture", src: h10 },
-    { id: 11, count: 0, name: "Grandfather Clock", src: h11 },
-    { id: 12, count: 0, name: "Pool Table", src: h12 },
-    { id: 13, count: 0, name: "Large Armoire", src: h13 },
-    { id: 14, count: 0, name: "Riding Lawn Mower", src: h14 },
-    { id: 15, count: 0, name: "Exercise Equipment", src: h15 },
-  ]);
+
+function Heavy({handleInput, state, items, setItems }) {
+
 
   const [selectedHeavy, setSelectedHeavy] = useState([]);
   const updateItemCount = (itemId, itemCount) => {
@@ -111,6 +108,8 @@ function Heavy() {
     );
     setItems(updatedItems);
   };
+
+
   const addItem = (itemId, itemLabel, itemCount) => {
     const itemIndex = selectedHeavy.findIndex(item => item.id === itemId);
     if (itemCount === 0) {
@@ -129,7 +128,10 @@ function Heavy() {
         setSelectedHeavy([...selectedHeavy, newItem]);
       }
     }
-  };
+    
+
+    };
+
 
 
   return (
@@ -139,7 +141,7 @@ function Heavy() {
         <HeavyForm>
           <SecWrapper>
             <SecRow>
-              <ItemList items={items} selectedHeavy={selectedHeavy} updateItemCount={updateItemCount}  addItem={addItem} />
+              <ItemList setItems={setItems} state={state} items={items} selectedHeavy={selectedHeavy} handleInput={handleInput} updateItemCount={updateItemCount}  addItem={addItem} />
             </SecRow>
           </SecWrapper>
      

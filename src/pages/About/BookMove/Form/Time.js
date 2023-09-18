@@ -23,7 +23,7 @@ import t2 from './FormImg/formTime2.svg';
 import t3 from './FormImg/formTime3.svg';
 import t4 from './FormImg/formTime4.svg';
 
-function Time({ values, handleChange }) {
+function Time({ state, handleInput }) {
 
   return (
     <TimeContainer>
@@ -39,10 +39,10 @@ function Time({ values, handleChange }) {
                     type="radio"
                     className="radio isHidden"
                     value="Morning Service"
-                    name="Time"
+                    name="time"
                     id='Morning Service'
-                    checked={values.time === 'Moving Service'}
-                onChange={handleChange('time')}
+                    checked={state.time === 'Morning Service'}
+                    onChange={handleInput}
                   />
            
                   <TimeOptContainer>
@@ -61,10 +61,10 @@ function Time({ values, handleChange }) {
                     type="radio"
                     className="radio isHidden"
                     value="Evening Service"
-                    name="Time"
+                    name="time"
                     id='Evening Service'
-                    checked={values.time === 'Evening Service'}
-                onChange={handleChange('time')}
+                    checked={state.time === 'Evening Service'}
+                    onChange={handleInput}
                   />
                   <TimeOptContainer>
                     <TimeImgContainer>
@@ -77,16 +77,17 @@ function Time({ values, handleChange }) {
                   </TimeOptContainer>
                 </label>
               </div>
+
               <div>
               <label>
               <TimeInput
                     type="radio"
                     className="radio isHidden"
                     value="Afternoon Service"
-                    name="Time"
+                    name="time"
                     id='Afternoon Service'
-                    checked={values.time === 'Afternoon Service'}
-                onChange={handleChange('time')}
+                    checked={state.time === 'Afternoon Service'}
+                    onChange={handleInput}
                   />
            
                   <TimeOptContainer>
@@ -104,10 +105,10 @@ function Time({ values, handleChange }) {
                     type="radio"
                     className="radio isHidden"
                     value="Night Service"
-                    name="Time"
+                    name="time"
                     id='Night Service'
-                    checked={values.time === 'Night Service'}
-                onChange={handleChange('time')}
+                    checked={state.time === 'Night Service'}
+                    onChange={handleInput}
                   />
             
                   <TimeOptContainer>
@@ -129,3 +130,7 @@ function Time({ values, handleChange }) {
 }
 
 export default Time;
+
+
+
+

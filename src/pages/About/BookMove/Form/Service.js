@@ -27,7 +27,7 @@ import {
   ServicesWrapper
 } from './FormElements';
 
-function Service({ handleChange, values }) {
+function Service({ handleInput, state }) {
 
 
 
@@ -48,9 +48,11 @@ function Service({ handleChange, values }) {
                     className="radio isHidden"
                     value="Moving Service"
                     name="service"
-                    id='service'
-                    checked={values.service === 'Moving Service'}
-                    onChange={handleChange('service')} />
+                    id='Moving Service'
+                    checked={state.service === 'Moving Service'}
+                    onChange={handleInput}
+
+                    />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
                   <ServicesImg style={{ backgroundImage:`url(${house})` }}/>
@@ -66,9 +68,9 @@ function Service({ handleChange, values }) {
                     className="radio isHidden"
                     value="Packing & Unpacking"
                     name="service"
-                    id='service'
-                    checked={values.service === 'Packing & Unpacking'}
-                    onChange={handleChange('service')} 
+                    id='Packing & Unpacking'
+                    checked={state.service === 'Packing & Unpacking'}
+                      onChange={handleInput}
                     />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
@@ -88,8 +90,8 @@ function Service({ handleChange, values }) {
                     value="Hourly Labor"
                     name="service"
                     id='service'
-                    checked={values.service === 'Hourly Labor'}
-                    onChange={handleChange('service')}   />
+                    checked={state.service === 'Hourly Labor'}
+                      onChange={handleInput}  />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
                   <ServicesImg style={{ backgroundImage:`url(${hour})` }}/>
@@ -107,8 +109,8 @@ function Service({ handleChange, values }) {
                     value="Junk Removal"
                     name="service"
                     id='service'
-                    checked={values.service === 'Junk Removal'}
-                    onChange={handleChange('service')}  />
+                    checked={state.service === 'Junk Removal'}
+                      onChange={handleInput} />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
                   <ServicesImg style={{ backgroundImage:`url(${trash})` }}/>
@@ -128,8 +130,8 @@ function Service({ handleChange, values }) {
                     value="Overnight Moving"
                     name="service"
                     id='service'
-                    checked={values.packers === 'Overnight Moving'}
-                    onChange={handleChange('service')}  
+                    checked={state.packers === 'Overnight Moving'}
+                      onChange={handleInput} 
                     />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
@@ -147,8 +149,8 @@ function Service({ handleChange, values }) {
                     value="VIP Moving Service"
                     name="service"
                     id='service'
-                    checked={values.service === 'VIP Moving Service'}
-                    onChange={handleChange('service')}   />
+                    checked={state.service === 'VIP Moving Service'}
+                      onChange={handleInput}  />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
                   <ServicesImg style={{ backgroundImage:`url(${vip})` }}/>
@@ -165,8 +167,8 @@ function Service({ handleChange, values }) {
                     value="Storage"
                     name="service"
                     id='service'
-                    checked={values.service === 'Storage'}
-                    onChange={handleChange('service')}  />
+                    checked={state.service === 'Storage'}
+                      onChange={handleInput} />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
                   <ServicesImg style={{ backgroundImage:`url(${storage})` }}/>
@@ -183,8 +185,8 @@ function Service({ handleChange, values }) {
                     value="TV Mounting"
                     name="service"
                     id='service'
-                    checked={values.service === 'TV Mounting'}
-                    onChange={handleChange('service')}  />
+                    checked={state.service === 'TV Mounting'}
+                      onChange={handleInput} />
                 <ServicesOptContainer>
                 <ServicesImgContainer>
                   <ServicesImg style={{ backgroundImage:`url(${tv})` }}/>

@@ -17,7 +17,7 @@ import {
 import s1 from '../BookImg/startImg1.svg';
 import s2 from '../BookImg/startImg2.svg';
 import "./Form.scss";
-function Start({ handleChange, values }) {
+function Start({ handleInput, state }) {
 
 
   return (
@@ -35,8 +35,8 @@ function Start({ handleChange, values }) {
                 value="Truck & Packers"
                 name="packers"
                 id='packersTruck'
-                checked={values.packers === 'Truck & Packers'}
-                onChange={handleChange('packers')}
+                checked={state.packers === 'Truck & Packers'}
+                onChange={handleInput} 
               />
               <Col1Start className='radio' >
                 <Sec1>
@@ -58,8 +58,8 @@ function Start({ handleChange, values }) {
                 value="Packers Only"
                 name="packers"
                 id='packersOnly'
-                checked={values.packers === 'Packers Only'}
-                onChange={handleChange('packers')}
+                checked={state.packers === 'Packers Only'}
+                onChange={handleInput} 
               />
               <Col2Start className='radio' >
                 <Sec2>
